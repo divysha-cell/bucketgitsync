@@ -24,7 +24,7 @@
             ],
             "environment": null,
             "sourceSystemName": "Test1",
-            "ticketId": null,
+            "ticketId": "Test1",
             "description": null,
             "displayId": null,
             "reason": null,
