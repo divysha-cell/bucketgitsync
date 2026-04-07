@@ -1,0 +1,30 @@
+[
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/2",
+        "id": 2,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "AllAlerts",
+        "slaTypeValue": "[\"Access Disabled Accounts\"]",
+        "slaPeriod": 5.0,
+        "slaPeriodTimeUnit": "Seconds",
+        "criticalSlaPeriod": 1.0,
+        "criticalSlaPeriodTimeUnit": "Seconds",
+        "environments": [
+            "A_Podman_UpgradedLegacy"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/1",
+        "id": 1,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"Access Disabled Accounts\"]",
+        "slaPeriod": 5.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 1.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "A_Podman_UpgradedLegacy"
+        ]
+    }
+]
