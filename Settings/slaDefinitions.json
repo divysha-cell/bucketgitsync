@@ -1,5 +1,18 @@
 [
     {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/3",
+        "id": 3,
+        "slaType": "CasePriority",
+        "slaTypeValue": "[\"Low\"]",
+        "slaPeriod": 1.0,
+        "slaPeriodTimeUnit": "Hours",
+        "criticalSlaPeriod": 1.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Default Environment"
+        ]
+    },
+    {
         "name": "projects/project/locations/location/instances/instance/slaDefinitions/2",
         "id": 2,
         "slaType": "AlertRuleGenerator",
