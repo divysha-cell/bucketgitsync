@@ -1,0 +1,13 @@
+[
+    {
+        "id": 0,
+        "source": "MicrosoftDefenderATP",
+        "familyName": "Default",
+        "familyId": 0,
+        "product": "Microsoft Defender ATP",
+        "eventName": null,
+        "mappingStatus": null,
+        "changeSource": "ChangeSourceUnspecified",
+        "exampleEventFields": []
+    }
+]
