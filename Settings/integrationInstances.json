@@ -1,0 +1,159 @@
+[
+    {
+        "environment": "Default Environment",
+        "integrationIdentifier": "PaloAltoCortexXDR",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "System Default Instance",
+            "settings": [
+                {
+                    "propertyName": "Api Root",
+                    "value": "https://api-gcptesting.xdr.us.paloaltonetworks.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 93,
+                    "propertyDisplayName": "Api Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "PaloAltoCortexXDR",
+                    "integrationInstance": "c469a1bb-2517-4b92-957c-5599fe66ee39"
+                },
+                {
+                    "propertyName": "Api Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 94,
+                    "propertyDisplayName": "Api Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "PaloAltoCortexXDR",
+                    "integrationInstance": "c469a1bb-2517-4b92-957c-5599fe66ee39"
+                },
+                {
+                    "propertyName": "Api Key ID",
+                    "value": "56",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Int",
+                    "isMandatory": true,
+                    "id": 95,
+                    "propertyDisplayName": "Api Key ID",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "PaloAltoCortexXDR",
+                    "integrationInstance": "c469a1bb-2517-4b92-957c-5599fe66ee39"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 96,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "PaloAltoCortexXDR",
+                    "integrationInstance": "c469a1bb-2517-4b92-957c-5599fe66ee39"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Default Environment",
+        "integrationIdentifier": "VirusTotalV3",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "System Default Instance",
+            "settings": [
+                {
+                    "propertyName": "API Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 89,
+                    "propertyDisplayName": "API Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VirusTotalV3",
+                    "integrationInstance": "482aca48-abd0-408c-bce7-89edae0eacb7"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 90,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VirusTotalV3",
+                    "integrationInstance": "482aca48-abd0-408c-bce7-89edae0eacb7"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "GoogleSecOpsAiAgents",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "System All Environments Default Instance",
+            "settings": [
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 75,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verify the SSL certificate for the connection.",
+                    "integrationIdentifier": "GoogleSecOpsAiAgents",
+                    "integrationInstance": "7934bb8f-71a6-40ca-9019-f3dd49b49481"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "VirusTotalV3",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "VirusTotalV3_1",
+            "settings": [
+                {
+                    "propertyName": "API Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 103,
+                    "propertyDisplayName": "API Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VirusTotalV3",
+                    "integrationInstance": "406b11eb-6860-4a62-88fc-68c1b3cfaf86"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 104,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VirusTotalV3",
+                    "integrationInstance": "406b11eb-6860-4a62-88fc-68c1b3cfaf86"
+                }
+            ]
+        }
+    }
+]

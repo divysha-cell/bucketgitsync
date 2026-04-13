@@ -1,0 +1,40 @@
+[
+    {
+        "name": "projects/project/locations/location/instances/instance/caseTagDefinitions/5",
+        "id": 5,
+        "displayName": "Tagname1P",
+        "matchCriteria": "DataDriven",
+        "comparisonType": "Exact",
+        "priority": 1,
+        "canBeCaseTitle": false
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/caseTagDefinitions/4",
+        "id": 4,
+        "displayName": "newtagfromcase",
+        "matchCriteria": "DataDriven",
+        "comparisonType": "Exact",
+        "priority": 1,
+        "canBeCaseTitle": false
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/caseTagDefinitions/3",
+        "id": 3,
+        "displayName": "Tagname1P",
+        "matchCriteria": "ByEntityPropertyName",
+        "value": "1",
+        "propertyName": "12",
+        "comparisonType": "Exact",
+        "priority": 1,
+        "canBeCaseTitle": false
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/caseTagDefinitions/1",
+        "id": 1,
+        "displayName": "Simulated Case",
+        "matchCriteria": "System",
+        "comparisonType": "Exact",
+        "priority": 1,
+        "canBeCaseTitle": false
+    }
+]
