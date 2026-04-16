@@ -20,5 +20,16 @@
         "mappingStatus": null,
         "changeSource": "IngestedAlert",
         "exampleEventFields": []
+    },
+    {
+        "id": 0,
+        "source": "Arsight",
+        "familyName": "qwert",
+        "familyId": 0,
+        "product": "abc_Product",
+        "eventName": "bata Exfiltration",
+        "mappingStatus": null,
+        "changeSource": "IngestAlert",
+        "exampleEventFields": []
     }
 ]
