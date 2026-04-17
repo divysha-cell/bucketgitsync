@@ -7,7 +7,7 @@
         "product": "Cortex XDR",
         "eventName": null,
         "mappingStatus": null,
-        "changeSource": "ChangeSourceUnspecified",
+        "changeSource": 0,
         "exampleEventFields": []
     },
     {
@@ -18,7 +18,7 @@
         "product": "Cortex XDR",
         "eventName": "alert",
         "mappingStatus": null,
-        "changeSource": "IngestedAlert",
+        "changeSource": 1,
         "exampleEventFields": []
     },
     {
@@ -29,7 +29,7 @@
         "product": "Cortex XDR",
         "eventName": "incident",
         "mappingStatus": null,
-        "changeSource": "IngestedAlert",
+        "changeSource": 1,
         "exampleEventFields": []
     },
     {
@@ -40,7 +40,7 @@
         "product": "Cortex XDR",
         "eventName": "network_artifact",
         "mappingStatus": null,
-        "changeSource": "IngestedAlert",
+        "changeSource": 1,
         "exampleEventFields": []
     }
 ]
