@@ -1,80 +1,21 @@
 [
     {
-        "name": "projects/project/locations/location/instances/instance/environments/9",
         "id": 0,
-        "system": false,
-        "displayName": "qwerty",
-        "description": "qwerty",
-        "contact": "qwerty",
-        "contactEmails": "qwerty@gmail.com",
-        "contactPhone": "123456789",
-        "retentionDuration": 3,
-        "dynamicParameters": [
-            {
-                "value": "b",
-                "dynamicParameterId": 1,
-                "environmentId": 9
-            }
-        ],
-        "aliasesJson": "[]",
-        "dataAccessScopesJson": "[]",
-        "instanceUri": "",
-        "weight": 1
-    },
-    {
-        "name": "projects/project/locations/location/instances/instance/environments/7",
-        "id": 0,
-        "system": false,
-        "displayName": "Test",
-        "description": "Test",
-        "contact": "Test",
-        "contactEmails": "a@gmail.com",
-        "contactPhone": "1234567890",
-        "retentionDuration": 3,
-        "dynamicParameters": [
-            {
-                "value": "b",
-                "dynamicParameterId": 1,
-                "environmentId": 7
-            }
-        ],
-        "aliasesJson": "[]",
-        "dataAccessScopesJson": "[]",
-        "instanceUri": "",
-        "weight": 1
-    },
-    {
-        "name": "projects/project/locations/location/instances/instance/environments/6",
-        "id": 0,
-        "system": false,
-        "displayName": "manualdynamic",
-        "description": "manualdynamic",
-        "contact": "manualdynamic",
-        "contactEmails": "a@gmail.com",
-        "contactPhone": "1234567890",
-        "retentionDuration": 3,
-        "dynamicParameters": [
-            {
-                "value": "b",
-                "dynamicParameterId": 1,
-                "environmentId": 6
-            }
-        ],
-        "aliasesJson": "[]",
-        "dataAccessScopesJson": "[]",
-        "instanceUri": "",
-        "weight": 1
-    },
-    {
-        "name": "projects/project/locations/location/instances/instance/environments/5",
-        "id": 0,
-        "system": false,
-        "displayName": "1233333333333333333322222222222",
+        "name": "1233333333333333333322222222222",
         "description": "1233333333333333333322222222222",
-        "contact": "abcdhwqe12",
+        "contactName": "abcdhwqe12",
         "contactEmails": "a@gmail.com",
+        "contactEmailsList": null,
         "contactPhone": "1234567899",
-        "retentionDuration": 3,
+        "allowedActions": null,
+        "remediationDurationInDays": 0,
+        "shouldAllowRemediationActions": false,
+        "shouldNotifyOnRemediationActions": false,
+        "retentionDurationInMonths": 3,
+        "retentionDurationInMonthsInternal": null,
+        "base64Image": null,
+        "forDBMigration": false,
+        "environmentAllowedForAllUsers": false,
         "dynamicParameters": [
             {
                 "value": "d",
@@ -82,21 +23,31 @@
                 "environmentId": 5
             }
         ],
-        "aliasesJson": "[\"q\"]",
-        "dataAccessScopesJson": "[]",
-        "instanceUri": "",
-        "weight": 1
+        "properties": {},
+        "isSystem": false,
+        "aliases": [
+            "q"
+        ],
+        "instanceUrl": "",
+        "dataAccessScopes": []
     },
     {
-        "name": "projects/project/locations/location/instances/instance/environments/1",
         "id": 0,
-        "system": true,
-        "displayName": "Default Environment",
+        "name": "Default Environment",
         "description": "Default Environment",
-        "contact": "N/A",
-        "contactEmails": "example@example.com",
-        "contactPhone": "0000000000",
-        "retentionDuration": 3,
+        "contactName": null,
+        "contactEmails": "",
+        "contactEmailsList": null,
+        "contactPhone": null,
+        "allowedActions": null,
+        "remediationDurationInDays": 0,
+        "shouldAllowRemediationActions": false,
+        "shouldNotifyOnRemediationActions": false,
+        "retentionDurationInMonths": 3,
+        "retentionDurationInMonthsInternal": null,
+        "base64Image": null,
+        "forDBMigration": false,
+        "environmentAllowedForAllUsers": false,
         "dynamicParameters": [
             {
                 "value": "b",
@@ -104,9 +55,100 @@
                 "environmentId": 1
             }
         ],
-        "aliasesJson": "[]",
-        "dataAccessScopesJson": "[]",
-        "instanceUri": "",
-        "weight": 1
+        "properties": {},
+        "isSystem": true,
+        "aliases": [],
+        "instanceUrl": null,
+        "dataAccessScopes": []
+    },
+    {
+        "id": 0,
+        "name": "manualdynamic",
+        "description": "manualdynamic",
+        "contactName": "manualdynamic",
+        "contactEmails": "a@gmail.com",
+        "contactEmailsList": null,
+        "contactPhone": "1234567890",
+        "allowedActions": null,
+        "remediationDurationInDays": 0,
+        "shouldAllowRemediationActions": false,
+        "shouldNotifyOnRemediationActions": false,
+        "retentionDurationInMonths": 3,
+        "retentionDurationInMonthsInternal": null,
+        "base64Image": null,
+        "forDBMigration": false,
+        "environmentAllowedForAllUsers": false,
+        "dynamicParameters": [
+            {
+                "value": "b",
+                "dynamicParameterId": 1,
+                "environmentId": 6
+            }
+        ],
+        "properties": {},
+        "isSystem": false,
+        "aliases": [],
+        "instanceUrl": "",
+        "dataAccessScopes": []
+    },
+    {
+        "id": 0,
+        "name": "qwerty",
+        "description": "qwerty",
+        "contactName": "qwerty",
+        "contactEmails": "qwerty@gmail.com",
+        "contactEmailsList": null,
+        "contactPhone": "123456789",
+        "allowedActions": null,
+        "remediationDurationInDays": 0,
+        "shouldAllowRemediationActions": false,
+        "shouldNotifyOnRemediationActions": false,
+        "retentionDurationInMonths": 3,
+        "retentionDurationInMonthsInternal": null,
+        "base64Image": null,
+        "forDBMigration": false,
+        "environmentAllowedForAllUsers": false,
+        "dynamicParameters": [
+            {
+                "value": "b",
+                "dynamicParameterId": 1,
+                "environmentId": 10
+            }
+        ],
+        "properties": {},
+        "isSystem": false,
+        "aliases": [],
+        "instanceUrl": "",
+        "dataAccessScopes": []
+    },
+    {
+        "id": 0,
+        "name": "Test",
+        "description": "Test",
+        "contactName": "Test",
+        "contactEmails": "a@gmail.com",
+        "contactEmailsList": null,
+        "contactPhone": "1234567890",
+        "allowedActions": null,
+        "remediationDurationInDays": 0,
+        "shouldAllowRemediationActions": false,
+        "shouldNotifyOnRemediationActions": false,
+        "retentionDurationInMonths": 3,
+        "retentionDurationInMonthsInternal": null,
+        "base64Image": null,
+        "forDBMigration": false,
+        "environmentAllowedForAllUsers": false,
+        "dynamicParameters": [
+            {
+                "value": "b",
+                "dynamicParameterId": 1,
+                "environmentId": 7
+            }
+        ],
+        "properties": {},
+        "isSystem": false,
+        "aliases": [],
+        "instanceUrl": "",
+        "dataAccessScopes": []
     }
 ]
