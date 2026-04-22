@@ -1,17 +1,17 @@
 [
     {
-        "alias": "projects/project/locations/location/instances/instance/soarDomains/2",
+        "alias": "projects/spsstg-z3e8c/locations/us/instances/9067cfad-91c2-48f4-8d00-90fbdf3ad8dd/soarDomains/2",
         "id": 2,
-        "domain": "1.0.0.1/2",
-        "environments": "[\"Default Environment\"]",
+        "domain": "12@yah.com",
+        "environments": "[\"*\"]",
         "creationTimeUnixTimeInMs": 0,
         "modificationTimeUnixTimeInMs": 0
     },
     {
-        "alias": "projects/project/locations/location/instances/instance/soarDomains/1",
+        "alias": "projects/spsstg-z3e8c/locations/us/instances/9067cfad-91c2-48f4-8d00-90fbdf3ad8dd/soarDomains/1",
         "id": 1,
-        "domain": "172.0.0.1/24",
-        "environments": "[\"manualdynamic\"]",
+        "domain": "abc@g.com",
+        "environments": "[\"Default Environment\"]",
         "creationTimeUnixTimeInMs": 0,
         "modificationTimeUnixTimeInMs": 0
     }
