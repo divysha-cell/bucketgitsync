@@ -1,0 +1,10 @@
+[
+    {
+        "name": "projects/spsstg-mkpsb/locations/us/instances/706261c1-b1f9-45db-9818-81afd83f9fed/dynamicParameters/1",
+        "id": 1,
+        "displayName": "NewDynamicParam",
+        "parameterType": "String",
+        "defaultValue": "NewDynamicParam",
+        "optionalValuesJson": "[]"
+    }
+]
