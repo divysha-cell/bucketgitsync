@@ -1,0 +1,50 @@
+[
+    {
+        "name": "projects/spsstg-mkpsb/locations/us/instances/706261c1-b1f9-45db-9818-81afd83f9fed/caseStageDefinitions/8",
+        "id": 8,
+        "displayName": "casestageviasetting1",
+        "order": 15
+    },
+    {
+        "name": "projects/spsstg-mkpsb/locations/us/instances/706261c1-b1f9-45db-9818-81afd83f9fed/caseStageDefinitions/7",
+        "id": 7,
+        "displayName": "casestageviasetting",
+        "order": 7
+    },
+    {
+        "name": "projects/spsstg-mkpsb/locations/us/instances/706261c1-b1f9-45db-9818-81afd83f9fed/caseStageDefinitions/6",
+        "id": 6,
+        "displayName": "Research",
+        "order": 6
+    },
+    {
+        "name": "projects/spsstg-mkpsb/locations/us/instances/706261c1-b1f9-45db-9818-81afd83f9fed/caseStageDefinitions/5",
+        "id": 5,
+        "displayName": "Improvement",
+        "order": 5
+    },
+    {
+        "name": "projects/spsstg-mkpsb/locations/us/instances/706261c1-b1f9-45db-9818-81afd83f9fed/caseStageDefinitions/4",
+        "id": 4,
+        "displayName": "Incident",
+        "order": 4
+    },
+    {
+        "name": "projects/spsstg-mkpsb/locations/us/instances/706261c1-b1f9-45db-9818-81afd83f9fed/caseStageDefinitions/3",
+        "id": 3,
+        "displayName": "Investigation",
+        "order": 3
+    },
+    {
+        "name": "projects/spsstg-mkpsb/locations/us/instances/706261c1-b1f9-45db-9818-81afd83f9fed/caseStageDefinitions/2",
+        "id": 2,
+        "displayName": "Assessment",
+        "order": 2
+    },
+    {
+        "name": "projects/spsstg-mkpsb/locations/us/instances/706261c1-b1f9-45db-9818-81afd83f9fed/caseStageDefinitions/1",
+        "id": 1,
+        "displayName": "Triage",
+        "order": 1
+    }
+]
