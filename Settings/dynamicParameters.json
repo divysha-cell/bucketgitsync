@@ -1,0 +1,26 @@
+[
+    {
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/dynamicParameters/3",
+        "id": 3,
+        "displayName": "DPQWERTYUIOOIEWWERTYUIOOUYTREWEDSDFGHJKJHGF",
+        "parameterType": "String",
+        "defaultValue": "WERTYUI",
+        "optionalValuesJson": "[]"
+    },
+    {
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/dynamicParameters/2",
+        "id": 2,
+        "displayName": "DP2",
+        "parameterType": "List",
+        "defaultValue": "!@#$%^&*(",
+        "optionalValuesJson": "[\"DP!\",\"DP2\",\"DP3\",\"1234567\",\"!@#$%^&*(\",\"JKL\"]"
+    },
+    {
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/dynamicParameters/1",
+        "id": 1,
+        "displayName": "DP1",
+        "parameterType": "String",
+        "defaultValue": "DP1",
+        "optionalValuesJson": "[]"
+    }
+]

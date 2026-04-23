@@ -1,0 +1,29 @@
+[
+    {
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/emailTemplates/3",
+        "templateType": "Template",
+        "author": "c0240309-616e-4b24-b14a-e15f69f43a34",
+        "id": 3,
+        "content": "emailtemp3!@@#$%^&*()(*&^%#@#%^&*",
+        "displayName": "emailtemp3",
+        "environments": "[\"Default Environment\"]"
+    },
+    {
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/emailTemplates/2",
+        "templateType": "Template",
+        "author": "c0240309-616e-4b24-b14a-e15f69f43a34",
+        "id": 2,
+        "content": "emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2emailtemp2",
+        "displayName": "emailtemp2",
+        "environments": "[\"Default Environment\",\"staging-podman environment 001\",\"staging-podman environment 004\"]"
+    },
+    {
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/emailTemplates/1",
+        "templateType": "Template",
+        "author": "c0240309-616e-4b24-b14a-e15f69f43a34",
+        "id": 1,
+        "content": "content123",
+        "displayName": "emailtemp1",
+        "environments": "[\"*\"]"
+    }
+]

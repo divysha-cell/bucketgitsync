@@ -1,0 +1,98 @@
+[
+    {
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/environments/4",
+        "id": 0,
+        "system": false,
+        "displayName": "staging-podman environment 004",
+        "description": "staging-podman environment 001",
+        "contact": "dtest004",
+        "contactEmails": "dtest@gmail.com",
+        "contactPhone": "23456789097",
+        "retentionDuration": 3,
+        "dynamicParameters": [
+            {
+                "value": "DP1",
+                "dynamicParameterId": 1,
+                "environmentId": 4
+            },
+            {
+                "value": "!@#$%^&*(",
+                "dynamicParameterId": 2,
+                "environmentId": 4
+            },
+            {
+                "value": "WERTYUI",
+                "dynamicParameterId": 3,
+                "environmentId": 4
+            }
+        ],
+        "aliasesJson": "[]",
+        "dataAccessScopesJson": "[]",
+        "instanceUri": "",
+        "weight": 1
+    },
+    {
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/environments/2",
+        "id": 0,
+        "system": false,
+        "displayName": "staging-podman environment 001",
+        "description": "staging-podman environment 001",
+        "contact": "staging-podman contact",
+        "contactEmails": "staging001@gmail.com",
+        "contactPhone": "09878970000",
+        "retentionDuration": 3,
+        "dynamicParameters": [
+            {
+                "value": "DP1",
+                "dynamicParameterId": 1,
+                "environmentId": 2
+            },
+            {
+                "value": "!@#$%^&*(",
+                "dynamicParameterId": 2,
+                "environmentId": 2
+            },
+            {
+                "value": "WERTYUI",
+                "dynamicParameterId": 3,
+                "environmentId": 2
+            }
+        ],
+        "aliasesJson": "[\"stagingtest\"]",
+        "dataAccessScopesJson": "[]",
+        "instanceUri": "",
+        "weight": 1
+    },
+    {
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/environments/1",
+        "id": 0,
+        "system": true,
+        "displayName": "Default Environment",
+        "description": "Default Environment",
+        "contact": "N/A",
+        "contactEmails": "example@example.com",
+        "contactPhone": "0000000000",
+        "retentionDuration": 3,
+        "dynamicParameters": [
+            {
+                "value": "DP1",
+                "dynamicParameterId": 1,
+                "environmentId": 1
+            },
+            {
+                "value": "!@#$%^&*(",
+                "dynamicParameterId": 2,
+                "environmentId": 1
+            },
+            {
+                "value": "WERTYUI",
+                "dynamicParameterId": 3,
+                "environmentId": 1
+            }
+        ],
+        "aliasesJson": "[]",
+        "dataAccessScopesJson": "[]",
+        "instanceUri": "",
+        "weight": 1
+    }
+]

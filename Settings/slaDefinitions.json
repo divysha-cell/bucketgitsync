@@ -1,0 +1,57 @@
+[
+    {
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/slaDefinitions/4",
+        "id": 4,
+        "slaType": "AlertPriority",
+        "slaTypeValue": "[\"High\"]",
+        "slaPeriod": 1.0,
+        "slaPeriodTimeUnit": "Hours",
+        "criticalSlaPeriod": 1.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "*"
+        ]
+    },
+    {
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/slaDefinitions/3",
+        "id": 3,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"Phishing email detector\",\"Virus Found Or security risk found\",\"IRC Connections\",\"Out of working hours\",\"Remote Failed login\",\"Data Exfiltration\",\"Access Disabled Accounts\"]",
+        "slaPeriod": 10.0,
+        "slaPeriodTimeUnit": "Hours",
+        "criticalSlaPeriod": 20.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "*"
+        ]
+    },
+    {
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/slaDefinitions/2",
+        "id": 2,
+        "slaType": "CasePriority",
+        "slaTypeValue": "[\"Informative\"]",
+        "slaPeriod": 9.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 1.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "staging-podman environment 004"
+        ]
+    },
+    {
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/slaDefinitions/1",
+        "id": 1,
+        "slaType": "CaseStage",
+        "slaTypeValue": "[\"Assessment\"]",
+        "slaPeriod": 10.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 1.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Default Environment",
+            "staging-podman environment 001",
+            "staging-podman environment 004"
+        ]
+    }
+]

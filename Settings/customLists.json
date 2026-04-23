@@ -1,0 +1,30 @@
+[
+    {
+        "id": 5,
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/customLists/5",
+        "category": "all",
+        "entityIdentifier": "all",
+        "environments": "[\"*\"]"
+    },
+    {
+        "id": 4,
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/customLists/4",
+        "category": "new3",
+        "entityIdentifier": "testing3",
+        "environments": "[\"Default Environment\",\"staging-podman environment 001\",\"staging-podman environment 004\"]"
+    },
+    {
+        "id": 3,
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/customLists/3",
+        "category": "new2",
+        "entityIdentifier": "testing2",
+        "environments": "[\"staging-podman environment 001\"]"
+    },
+    {
+        "id": 2,
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/customLists/2",
+        "category": "a",
+        "entityIdentifier": "a",
+        "environments": "[\"staging-podman environment 004\"]"
+    }
+]
