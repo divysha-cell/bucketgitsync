@@ -1,0 +1,52 @@
+[
+    {
+        "name": "projects/spsstg-mkpsb/locations/us/instances/706261c1-b1f9-45db-9818-81afd83f9fed/caseTagDefinitions/6",
+        "id": 6,
+        "displayName": "TagviaSettings4",
+        "matchCriteria": "ByVendor",
+        "value": "DLP_Product",
+        "comparisonType": "Contain",
+        "priority": 3,
+        "canBeCaseTitle": false
+    },
+    {
+        "name": "projects/spsstg-mkpsb/locations/us/instances/706261c1-b1f9-45db-9818-81afd83f9fed/caseTagDefinitions/5",
+        "id": 5,
+        "displayName": "TagviaSettings3",
+        "matchCriteria": "ByRuleGenerator",
+        "value": "123we",
+        "comparisonType": "Contain",
+        "priority": 4,
+        "canBeCaseTitle": false
+    },
+    {
+        "name": "projects/spsstg-mkpsb/locations/us/instances/706261c1-b1f9-45db-9818-81afd83f9fed/caseTagDefinitions/4",
+        "id": 4,
+        "displayName": "TagviaSettings2",
+        "matchCriteria": "ByProduct",
+        "value": "DLP_Product",
+        "comparisonType": "Contain",
+        "priority": 2,
+        "canBeCaseTitle": false
+    },
+    {
+        "name": "projects/spsstg-mkpsb/locations/us/instances/706261c1-b1f9-45db-9818-81afd83f9fed/caseTagDefinitions/3",
+        "id": 3,
+        "displayName": "TagviaSettings1",
+        "matchCriteria": "ByEntityPropertyName",
+        "value": "123567890",
+        "propertyName": "Entity.Alert_Id",
+        "comparisonType": "Contain",
+        "priority": 1,
+        "canBeCaseTitle": false
+    },
+    {
+        "name": "projects/spsstg-mkpsb/locations/us/instances/706261c1-b1f9-45db-9818-81afd83f9fed/caseTagDefinitions/1",
+        "id": 1,
+        "displayName": "Simulated Case",
+        "matchCriteria": "System",
+        "comparisonType": "Exact",
+        "priority": 1,
+        "canBeCaseTitle": false
+    }
+]
