@@ -1,0 +1,64 @@
+[
+    {
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/12",
+        "templateType": "Template",
+        "id": 12,
+        "content": "content123",
+        "displayName": "emailtemp1",
+        "environments": "[\"*\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/11",
+        "templateType": "Template",
+        "author": "cb678aed-2830-4829-bd21-9c8bfda474d2",
+        "id": 11,
+        "content": "emailtemp3!@@#$%^&*()(*&^%#@#%^&*",
+        "displayName": "emailtemp3",
+        "environments": "[\"Default Environment\",\"qwerty\",\"Test\",\"manualdynamic\",\"1233333333333333333322222222222\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/10",
+        "templateType": "Template",
+        "author": "cb678aed-2830-4829-bd21-9c8bfda474d2",
+        "id": 10,
+        "content": "e",
+        "displayName": "ALl",
+        "environments": "[\"*\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/9",
+        "templateType": "Template",
+        "author": "cb678aed-2830-4829-bd21-9c8bfda474d2",
+        "id": 9,
+        "content": "Key ",
+        "displayName": "Default",
+        "environments": "[\"Default Environment\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/8",
+        "templateType": "Template",
+        "author": "cb678aed-2830-4829-bd21-9c8bfda474d2",
+        "id": 8,
+        "content": "Key Aspects of Jet Ski Testing\nWater Testing (Performance Evaluation):\nWOT Pull: Perform a Wide Open Throttle (WOT) test ",
+        "displayName": "12344444$$!2",
+        "environments": "[\"1233333333333333333322222222222\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/7",
+        "templateType": "Template",
+        "author": "cb678aed-2830-4829-bd21-9c8bfda474d2",
+        "id": 7,
+        "content": "Email content \nKey Aspects of Jet Ski Testing\nWater Testing (Performance Evaluation):\nWOT Pull: Perform a Wide Open Throttle (WOT) test for 10-15 seconds to ensure the jet ski reaches maximum RPMs and top speed.\nHandling: Assess the handling, especially if the hull has been treated with coatings like Super Slick 2000.\nElectric Conversion: Test controls (throttle, steering), battery levels, and ensure the vessel is waterproof.\nAcceleration and Vibration: Check for sluggish acceleration or unusual vibrations during operation.\nMechanical & Engine Testing:\nCompression Test: Measure engine cylinder compression, ensuring they are within roughly 10 PSI of each other.\nPressure Testing (2-Strokes): Use a leakdown tester to pressurize the engine to 6-9 PSI for about 3 minutes to identify leaks in gaskets.\nElectrical System: Check for starting issues, warning lights, and ensure the battery is charging properly with a multimeter.\n",
+        "displayName": "testing 2",
+        "environments": "[\"manualdynamic\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/6",
+        "templateType": "Template",
+        "author": "cb678aed-2830-4829-bd21-9c8bfda474d2",
+        "id": 6,
+        "content": "testing 1",
+        "displayName": "testing 1",
+        "environments": "[\"Test\"]"
+    }
+]
