@@ -1,26 +1,32 @@
 [
     {
-        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/caseCloseDefinitions/31",
-        "id": 31,
-        "rootCause": "manuallyadded-incoclusive",
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/caseCloseDefinitions/36",
+        "id": 36,
+        "rootCause": "editedmnaully- System/application malfunction",
+        "closeReason": "Malicious"
+    },
+    {
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/caseCloseDefinitions/35",
+        "id": 35,
+        "rootCause": "manuallyadded-inconclusive",
         "closeReason": "Inconclusive"
     },
     {
-        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/caseCloseDefinitions/30",
-        "id": 30,
-        "rootCause": "manuallyadded-maintenance",
-        "closeReason": "Maintenance"
-    },
-    {
-        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/caseCloseDefinitions/29",
-        "id": 29,
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/caseCloseDefinitions/34",
+        "id": 34,
         "rootCause": "manuallyadded-nonMalicious",
         "closeReason": "NotMalicious"
     },
     {
-        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/caseCloseDefinitions/28",
-        "id": 28,
-        "rootCause": "manuallyadded-inconclusive",
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/caseCloseDefinitions/33",
+        "id": 33,
+        "rootCause": "manuallyadded-maintenance",
+        "closeReason": "Maintenance"
+    },
+    {
+        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/caseCloseDefinitions/32",
+        "id": 32,
+        "rootCause": "manuallyadded-incoclusive",
         "closeReason": "Inconclusive"
     },
     {
@@ -176,7 +182,7 @@
     {
         "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/caseCloseDefinitions/2",
         "id": 2,
-        "rootCause": "editedmnaully- System/application malfunction",
+        "rootCause": "System/application malfunction",
         "closeReason": "Malicious"
     },
     {

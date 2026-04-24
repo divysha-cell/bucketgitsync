@@ -8,55 +8,55 @@
             "settings": [
                 {
                     "propertyName": "Api Root",
-                    "value": "https://api-gcptesting.xdr.us.paloaltonetworks.com",
+                    "value": "https://api-{fqdn}",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
                     "propertyType": "String",
                     "isMandatory": true,
-                    "id": 49,
+                    "id": 0,
                     "propertyDisplayName": "Api Root",
                     "propertyDescription": "",
                     "integrationIdentifier": "PaloAltoCortexXDR",
-                    "integrationInstance": "2a7e141b-363e-47bb-b662-a0d853ebdf71"
+                    "integrationInstance": "304c7091-2a47-466b-9e76-bccdd604c266"
                 },
                 {
                     "propertyName": "Api Key",
-                    "value": "***************",
+                    "value": "",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
                     "propertyType": "Password",
                     "isMandatory": true,
-                    "id": 50,
+                    "id": 0,
                     "propertyDisplayName": "Api Key",
                     "propertyDescription": "",
                     "integrationIdentifier": "PaloAltoCortexXDR",
-                    "integrationInstance": "2a7e141b-363e-47bb-b662-a0d853ebdf71"
+                    "integrationInstance": "304c7091-2a47-466b-9e76-bccdd604c266"
                 },
                 {
                     "propertyName": "Api Key ID",
-                    "value": "56",
+                    "value": "3",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
                     "propertyType": "Int",
                     "isMandatory": true,
-                    "id": 51,
+                    "id": 0,
                     "propertyDisplayName": "Api Key ID",
                     "propertyDescription": "",
                     "integrationIdentifier": "PaloAltoCortexXDR",
-                    "integrationInstance": "2a7e141b-363e-47bb-b662-a0d853ebdf71"
+                    "integrationInstance": "304c7091-2a47-466b-9e76-bccdd604c266"
                 },
                 {
                     "propertyName": "Verify SSL",
-                    "value": "True",
+                    "value": "",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
                     "propertyType": "Boolean",
                     "isMandatory": false,
-                    "id": 52,
+                    "id": 0,
                     "propertyDisplayName": "Verify SSL",
                     "propertyDescription": "",
                     "integrationIdentifier": "PaloAltoCortexXDR",
-                    "integrationInstance": "2a7e141b-363e-47bb-b662-a0d853ebdf71"
+                    "integrationInstance": "304c7091-2a47-466b-9e76-bccdd604c266"
                 }
             ]
         }
@@ -125,6 +125,42 @@
     },
     {
         "environment": "Default Environment",
+        "integrationIdentifier": "VirusTotalV3",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "VirusTotalV3_1",
+            "settings": [
+                {
+                    "propertyName": "API Key",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 0,
+                    "propertyDisplayName": "API Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VirusTotalV3",
+                    "integrationInstance": "a0785e54-c64f-4848-b36b-215c3c63f7e9"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "true",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 0,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VirusTotalV3",
+                    "integrationInstance": "a0785e54-c64f-4848-b36b-215c3c63f7e9"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Default Environment",
         "integrationIdentifier": "VirusTotal",
         "settings": {
             "instanceDescription": "",
@@ -160,37 +196,37 @@
         }
     },
     {
-        "environment": "Default Environment",
+        "environment": "*",
         "integrationIdentifier": "VirusTotalV3",
         "settings": {
             "instanceDescription": "",
-            "instanceName": "System Default Instance",
+            "instanceName": "VirusTotalV3_1",
             "settings": [
                 {
                     "propertyName": "API Key",
-                    "value": "***************",
+                    "value": "",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
                     "propertyType": "Password",
                     "isMandatory": true,
-                    "id": 29,
+                    "id": 0,
                     "propertyDisplayName": "API Key",
                     "propertyDescription": "",
                     "integrationIdentifier": "VirusTotalV3",
-                    "integrationInstance": "41dbacb1-39dd-4a27-99d3-d27d4ab21db1"
+                    "integrationInstance": "e2549d84-bdf8-4986-88a7-063d114d58bc"
                 },
                 {
                     "propertyName": "Verify SSL",
-                    "value": "True",
+                    "value": "true",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
                     "propertyType": "Boolean",
                     "isMandatory": false,
-                    "id": 30,
+                    "id": 0,
                     "propertyDisplayName": "Verify SSL",
                     "propertyDescription": "",
                     "integrationIdentifier": "VirusTotalV3",
-                    "integrationInstance": "41dbacb1-39dd-4a27-99d3-d27d4ab21db1"
+                    "integrationInstance": "e2549d84-bdf8-4986-88a7-063d114d58bc"
                 }
             ]
         }
@@ -220,36 +256,62 @@
     },
     {
         "environment": "*",
-        "integrationIdentifier": "VirusTotalV3",
+        "integrationIdentifier": "PaloAltoCortexXDR__0decb0b4-1f2b-4e15-a315-f0ba8ae06c2c",
         "settings": {
             "instanceDescription": "",
-            "instanceName": "VirusTotalV3_1",
+            "instanceName": "PaloAltoCortexXDR - Default Staging Instance",
             "settings": [
                 {
-                    "propertyName": "API Key",
+                    "propertyName": "Api Root",
+                    "value": "https://api-{fqdn}",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 0,
+                    "propertyDisplayName": "Api Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "PaloAltoCortexXDR__0decb0b4-1f2b-4e15-a315-f0ba8ae06c2c",
+                    "integrationInstance": "14a1c5f8-73de-4b94-8e2a-841349794790"
+                },
+                {
+                    "propertyName": "Api Key",
                     "value": "***************",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
                     "propertyType": "Password",
                     "isMandatory": true,
-                    "id": 71,
-                    "propertyDisplayName": "API Key",
+                    "id": 0,
+                    "propertyDisplayName": "Api Key",
                     "propertyDescription": "",
-                    "integrationIdentifier": "VirusTotalV3",
-                    "integrationInstance": "98c4ff73-256a-4ebd-89d8-6b2caf36b944"
+                    "integrationIdentifier": "PaloAltoCortexXDR__0decb0b4-1f2b-4e15-a315-f0ba8ae06c2c",
+                    "integrationInstance": "14a1c5f8-73de-4b94-8e2a-841349794790"
+                },
+                {
+                    "propertyName": "Api Key ID",
+                    "value": "3",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Int",
+                    "isMandatory": true,
+                    "id": 0,
+                    "propertyDisplayName": "Api Key ID",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "PaloAltoCortexXDR__0decb0b4-1f2b-4e15-a315-f0ba8ae06c2c",
+                    "integrationInstance": "14a1c5f8-73de-4b94-8e2a-841349794790"
                 },
                 {
                     "propertyName": "Verify SSL",
-                    "value": "True",
+                    "value": "",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
                     "propertyType": "Boolean",
                     "isMandatory": false,
-                    "id": 72,
+                    "id": 0,
                     "propertyDisplayName": "Verify SSL",
                     "propertyDescription": "",
-                    "integrationIdentifier": "VirusTotalV3",
-                    "integrationInstance": "98c4ff73-256a-4ebd-89d8-6b2caf36b944"
+                    "integrationIdentifier": "PaloAltoCortexXDR__0decb0b4-1f2b-4e15-a315-f0ba8ae06c2c",
+                    "integrationInstance": "14a1c5f8-73de-4b94-8e2a-841349794790"
                 }
             ]
         }
