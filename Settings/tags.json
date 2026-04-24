@@ -1,15 +1,44 @@
 [
     {
-        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/caseTagDefinitions/3",
-        "id": 3,
-        "displayName": "newtesttag",
+        "name": "projects/project/locations/location/instances/instance/caseTagDefinitions/7",
+        "id": 7,
+        "displayName": "newtag",
         "matchCriteria": "DataDriven",
         "comparisonType": "Exact",
         "priority": 1,
         "canBeCaseTitle": false
     },
     {
-        "name": "projects/spsstg-xm01l/locations/us/instances/fd149a51-8331-4d44-8fe5-fe4e7cf241cb/caseTagDefinitions/1",
+        "name": "projects/project/locations/location/instances/instance/caseTagDefinitions/5",
+        "id": 5,
+        "displayName": "Tagname1P",
+        "matchCriteria": "DataDriven",
+        "comparisonType": "Exact",
+        "priority": 1,
+        "canBeCaseTitle": false
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/caseTagDefinitions/4",
+        "id": 4,
+        "displayName": "newtagfromcase",
+        "matchCriteria": "DataDriven",
+        "comparisonType": "Exact",
+        "priority": 1,
+        "canBeCaseTitle": false
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/caseTagDefinitions/3",
+        "id": 3,
+        "displayName": "Tagname1P",
+        "matchCriteria": "ByEntityPropertyName",
+        "value": "1",
+        "propertyName": "12",
+        "comparisonType": "Exact",
+        "priority": 1,
+        "canBeCaseTitle": false
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/caseTagDefinitions/1",
         "id": 1,
         "displayName": "Simulated Case",
         "matchCriteria": "System",
