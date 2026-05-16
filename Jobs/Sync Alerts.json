@@ -1,6 +1,6 @@
 {
-    "lastRunStatus": 1,
-    "lastRunTime": 1778962990424,
+    "lastRunStatus": null,
+    "lastRunTime": null,
     "uniqueIdentifier": "0f888cbf-a13f-4884-b5f6-b0b183085330",
     "id": 0,
     "jobDefinitionId": 0,
@@ -14,42 +14,42 @@
     "version": 1,
     "parameters": [
         {
-            "id": 5096,
+            "id": 5153,
             "isMandatory": true,
             "name": "Environment Name",
             "type": 2,
             "value": "Default Environment,Env1,123,!@"
         },
         {
-            "id": 5097,
+            "id": 5154,
             "isMandatory": true,
             "name": "API Root",
             "type": 2,
             "value": "https://api.crowdstrike.com"
         },
         {
-            "id": 5098,
+            "id": 5155,
             "isMandatory": true,
             "name": "Client ID",
             "type": 2,
             "value": "38c5488700bd4741a75ba6a965843a9b"
         },
         {
-            "id": 5099,
+            "id": 5156,
             "isMandatory": true,
             "name": "Client Secret",
             "type": 3,
             "value": "***************"
         },
         {
-            "id": 5100,
+            "id": 5157,
             "isMandatory": false,
             "name": "Max Hours Backwards",
             "type": 1,
             "value": "24"
         },
         {
-            "id": 5101,
+            "id": 5158,
             "isMandatory": false,
             "name": "Verify SSL",
             "type": 0,
@@ -57,12 +57,12 @@
         }
     ],
     "runIntervalInSeconds": 60,
-    "creationTime": "2026-05-16T20:12:55.85Z",
-    "lastModificationTime": "2026-05-16T20:29:21.658Z",
+    "creationTime": "2026-05-16T20:30:54.084Z",
+    "lastModificationTime": "2026-05-16T20:33:15.369Z",
     "isSystemJob": false,
     "jobDefinitionName": "Sync Alerts",
     "agentIdentifier": null,
-    "advanced": false,
+    "advanced": true,
     "advancedConfig": {
         "timeZone": "Europe/London",
         "scheduleType": "Once",
