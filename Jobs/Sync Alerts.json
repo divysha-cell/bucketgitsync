@@ -1,6 +1,6 @@
 {
-    "lastRunStatus": 0,
-    "lastRunTime": 1778864979765,
+    "lastRunStatus": 1,
+    "lastRunTime": 1778962990424,
     "uniqueIdentifier": "0f888cbf-a13f-4884-b5f6-b0b183085330",
     "id": 0,
     "jobDefinitionId": 0,
@@ -14,54 +14,54 @@
     "version": 1,
     "parameters": [
         {
-            "id": 4897,
+            "id": 5096,
             "isMandatory": true,
             "name": "Environment Name",
             "type": 2,
-            "value": "Default Environment"
+            "value": "Default Environment,Env1,123,!@"
         },
         {
-            "id": 4898,
+            "id": 5097,
             "isMandatory": true,
             "name": "API Root",
             "type": 2,
             "value": "https://api.crowdstrike.com"
         },
         {
-            "id": 4899,
+            "id": 5098,
             "isMandatory": true,
             "name": "Client ID",
             "type": 2,
             "value": "38c5488700bd4741a75ba6a965843a9b"
         },
         {
-            "id": 4901,
+            "id": 5099,
+            "isMandatory": true,
+            "name": "Client Secret",
+            "type": 3,
+            "value": "***************"
+        },
+        {
+            "id": 5100,
             "isMandatory": false,
             "name": "Max Hours Backwards",
             "type": 1,
             "value": "24"
         },
         {
-            "id": 4902,
+            "id": 5101,
             "isMandatory": false,
             "name": "Verify SSL",
             "type": 0,
             "value": "false"
-        },
-        {
-            "id": 4900,
-            "isMandatory": true,
-            "name": "Client Secret",
-            "type": 3,
-            "value": "***************"
         }
     ],
     "runIntervalInSeconds": 60,
-    "creationTime": "2026-05-15T17:06:58.482Z",
-    "lastModificationTime": "2026-05-15T17:09:39.774Z",
+    "creationTime": "2026-05-16T20:12:55.85Z",
+    "lastModificationTime": "2026-05-16T20:29:21.658Z",
     "isSystemJob": false,
     "jobDefinitionName": "Sync Alerts",
-    "agentIdentifier": "",
+    "agentIdentifier": null,
     "advanced": false,
     "advancedConfig": {
         "timeZone": "Europe/London",

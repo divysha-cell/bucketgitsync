@@ -1,6 +1,6 @@
 {
-    "lastRunStatus": 1,
-    "lastRunTime": 1778865714218,
+    "lastRunStatus": 0,
+    "lastRunTime": 1778963058749,
     "uniqueIdentifier": "8f6d11bd-5407-438f-b8a0-9249fc8e0d8d",
     "id": 0,
     "jobDefinitionId": 0,
@@ -14,61 +14,61 @@
     "version": 1,
     "parameters": [
         {
-            "id": 4966,
-            "isMandatory": true,
-            "name": "Api Key",
-            "type": 3,
-            "value": "***************"
-        },
-        {
-            "id": 4964,
+            "id": 5083,
             "isMandatory": true,
             "name": "Environment Name",
             "type": 2,
             "value": "Default Environment"
         },
         {
-            "id": 4965,
+            "id": 5084,
             "isMandatory": false,
             "name": "Api Root",
             "type": 2,
             "value": "https://api-gcptesting.xdr.us.paloaltonetworks.com"
         },
         {
-            "id": 4967,
+            "id": 5086,
             "isMandatory": true,
             "name": "Api Key ID",
             "type": 2,
             "value": "56"
         },
         {
-            "id": 4968,
+            "id": 5087,
             "isMandatory": true,
             "name": "Max Hours Backwards",
             "type": 1,
             "value": "24"
         },
         {
-            "id": 4969,
+            "id": 5088,
             "isMandatory": false,
             "name": "User Mapping JSON",
             "type": 2,
             "value": "{\"Google SecOps Display Name\": \"XDR Username\"}"
         },
         {
-            "id": 4970,
+            "id": 5089,
             "isMandatory": false,
             "name": "Verify SSL",
             "type": 0,
-            "value": "true"
+            "value": "false"
+        },
+        {
+            "id": 5085,
+            "isMandatory": true,
+            "name": "Api Key",
+            "type": 3,
+            "value": "***************"
         }
     ],
     "runIntervalInSeconds": 3600,
-    "creationTime": "2026-05-15T17:08:16.896Z",
-    "lastModificationTime": "2026-05-15T17:21:54.242Z",
+    "creationTime": "2026-05-16T20:12:56.781Z",
+    "lastModificationTime": "2026-05-16T20:24:18.76Z",
     "isSystemJob": false,
     "jobDefinitionName": "Sync Incidents",
-    "agentIdentifier": "",
+    "agentIdentifier": null,
     "advanced": false,
     "advancedConfig": {
         "timeZone": "Europe/London",
