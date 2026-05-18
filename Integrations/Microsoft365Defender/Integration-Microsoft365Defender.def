@@ -97,9 +97,9 @@
     ],
     "IntegrationSupportedActions": [
         {
-            "Name": "Add Comment To Incident",
-            "Description": "Add comment to incident in Microsoft 365 Defender.",
-            "Id": 474,
+            "Name": "Execute Query",
+            "Description": "Execute hunting query in Microsoft 365 Defender.",
+            "Id": 469,
             "CreationTimeUnixTimeInMs": 1778663022536,
             "ModificationTimeUnixTimeInMs": 1778663022536
         },
@@ -107,20 +107,6 @@
             "Name": "Execute Custom Query",
             "Description": "Execute a custom hunting query in Microsoft 365 Defender.",
             "Id": 470,
-            "CreationTimeUnixTimeInMs": 1778663022536,
-            "ModificationTimeUnixTimeInMs": 1778663022536
-        },
-        {
-            "Name": "Execute Entity Query",
-            "Description": "Execute a hunting query based on entities in Microsoft 365 Defender. Note: this action prepares a where filter based on entities. Please refer to the documentation for more details. Supported entities: IP, Host, User, Hash, URL.",
-            "Id": 473,
-            "CreationTimeUnixTimeInMs": 1778663022536,
-            "ModificationTimeUnixTimeInMs": 1778663022536
-        },
-        {
-            "Name": "Execute Query",
-            "Description": "Execute hunting query in Microsoft 365 Defender.",
-            "Id": 469,
             "CreationTimeUnixTimeInMs": 1778663022536,
             "ModificationTimeUnixTimeInMs": 1778663022536
         },
@@ -135,6 +121,20 @@
             "Name": "Update Incident",
             "Description": "Update incident in Microsoft 365 Defender.",
             "Id": 472,
+            "CreationTimeUnixTimeInMs": 1778663022536,
+            "ModificationTimeUnixTimeInMs": 1778663022536
+        },
+        {
+            "Name": "Execute Entity Query",
+            "Description": "Execute a hunting query based on entities in Microsoft 365 Defender. Note: this action prepares a where filter based on entities. Please refer to the documentation for more details. Supported entities: IP, Host, User, Hash, URL.",
+            "Id": 473,
+            "CreationTimeUnixTimeInMs": 1778663022536,
+            "ModificationTimeUnixTimeInMs": 1778663022536
+        },
+        {
+            "Name": "Add Comment To Incident",
+            "Description": "Add comment to incident in Microsoft 365 Defender.",
+            "Id": 474,
             "CreationTimeUnixTimeInMs": 1778663022536,
             "ModificationTimeUnixTimeInMs": 1778663022536
         }

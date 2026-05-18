@@ -1,0 +1,282 @@
+{
+    "IsAvailableForCommunity": false,
+    "Identifier": "MicrosoftDefenderATP",
+    "ShouldInstalledInSystem": false,
+    "Version": 31.0,
+    "DisplayName": "Microsoft Defender ATP",
+    "Description": "Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) is a unified platform for preventative protection, post-breach detection, automated investigation, and response. Microsoft Defender ATP protects endpoints from cyber threats, detects advanced attacks and data breaches, automates security incidents and improves security posture. Google SecOps integration for Microsoft Defender ATP provides a list of actions to pull the data stored in Microsoft Defender ATP and use it in Google SecOps playbooks and manual actions, as well as a series of active response actions, such as isolate specific host or restrict app execution on host. In addition, integration provides a connector to ingest Microsoft Defender ATP alerts as Google SecOps Cases.",
+    "ImageBase64": "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",
+    "SvgImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"25\" height=\"25\" fill=\"currentColor\" viewBox=\"0 0 25 25\">\r\n  <path fill-rule=\"evenodd\" d=\"M13.05 2.75V12h9.2V2.75h-9.2zm0 19.5h9.2V13h-9.2v9.25zM2.75 12h9.2V2.75h-9.2V12zm0 10.25h9.2V13h-9.2v9.25z\" clip-rule=\"evenodd\"/>\r\n</svg>\r\n",
+    "IsCustom": false,
+    "PythonVersion": 3,
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "MicrosoftDefenderATP",
+            "PropertyName": "Login API Root",
+            "PropertyDescription": null,
+            "PropertyDisplayName": "Login API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://login.microsoftonline.com",
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1779087251811,
+            "ModificationTimeUnixTimeInMs": 1779087251811
+        },
+        {
+            "IntegrationIdentifier": "MicrosoftDefenderATP",
+            "PropertyName": "Api Root",
+            "PropertyDescription": null,
+            "PropertyDisplayName": "Api Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://api.securitycenter.windows.com",
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1779087251811,
+            "ModificationTimeUnixTimeInMs": 1779087251811
+        },
+        {
+            "IntegrationIdentifier": "MicrosoftDefenderATP",
+            "PropertyName": "Graph API Root",
+            "PropertyDescription": "The base URL for the Microsoft Graph API (e.g., https://graph.microsoft.com). If provided, V2 API endpoints will be used.",
+            "PropertyDisplayName": "Graph API Root",
+            "PropertyType": 2,
+            "IsMandatory": false,
+            "Value": "",
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1779087251811,
+            "ModificationTimeUnixTimeInMs": 1779087251811
+        },
+        {
+            "IntegrationIdentifier": "MicrosoftDefenderATP",
+            "PropertyName": "Client ID",
+            "PropertyDescription": null,
+            "PropertyDisplayName": "Client ID",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "",
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1779087251811,
+            "ModificationTimeUnixTimeInMs": 1779087251811
+        },
+        {
+            "IntegrationIdentifier": "MicrosoftDefenderATP",
+            "PropertyName": "Client Secret",
+            "PropertyDescription": null,
+            "PropertyDisplayName": "Client Secret",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": null,
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1779087251811,
+            "ModificationTimeUnixTimeInMs": 1779087251811
+        },
+        {
+            "IntegrationIdentifier": "MicrosoftDefenderATP",
+            "PropertyName": "Azure Active Directory ID",
+            "PropertyDescription": null,
+            "PropertyDisplayName": "Azure Active Directory ID",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "",
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1779087251811,
+            "ModificationTimeUnixTimeInMs": 1779087251811
+        },
+        {
+            "IntegrationIdentifier": "MicrosoftDefenderATP",
+            "PropertyName": "Verify SSL",
+            "PropertyDescription": null,
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": false,
+            "Value": "True",
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1779087251811,
+            "ModificationTimeUnixTimeInMs": 1779087251811
+        }
+    ],
+    "IntegrationSupportedActions": [
+        {
+            "Name": "Wait Task Status",
+            "Description": "Wait for Task Status",
+            "Id": 672,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "List Machines",
+            "Description": "Get Machines",
+            "Id": 673,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "List Indicators",
+            "Description": "List indicators in Microsoft Defender ATP.",
+            "Id": 674,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "List Alerts",
+            "Description": "Get Alerts",
+            "Id": 675,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Create Unisolate Machine Task",
+            "Description": "Create Unisolate Machine Task",
+            "Id": 676,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Delete Entity Indicators",
+            "Description": "Delete entity indicators in Microsoft Defender ATP. Supported entities: Filehash, URL, IP Address. Note: only MD5, SHA1 and SHA256 hashes are supported.",
+            "Id": 677,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Get Machine Vulnerabilities",
+            "Description": "Use the Get Machine Vulnerabilities action to list vulnerabilities associated with specific machines in Microsoft Defender for Endpoint. Supported Entities: IP Address, Hostname.",
+            "Id": 678,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Get Machine Related Alerts",
+            "Description": "Deprecated. Get Machine Related Alerts",
+            "Id": 679,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Execute Live Response Command",
+            "Description": "Use \"Execute Live Response Command\" action to execute a live response command in Microsoft Defender for Endpoint. Supported Entities: IP Address, Hostname. Note: Action is running as async, please adjust script timeout value in Google SecOps IDE for action, as needed.",
+            "Id": 680,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Get User Related Alerts",
+            "Description": "Use the Get User Related Alerts action to list alerts associated with specific users in Microsoft Defender for Endpoint. Supported Entities: User.",
+            "Id": 681,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Get Machine Recommendations",
+            "Description": "Use the Get Machine Recommendations action to retrieve a list of security recommendations for specific machines in Microsoft Defender for Endpoint.Supported Entities: IP Address, Hostname.",
+            "Id": 682,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Get Machine Logon Users",
+            "Description": "Get Machine Log on users",
+            "Id": 683,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Enrich Entities",
+            "Description": "This action allows a user to enrich Microsoft Defender ATP hosts, ips and file hashes. Note: File hash can be in sha1 or sha256 format.",
+            "Id": 684,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Get File Related Machines",
+            "Description": "Get File Related Machines. Note: For this action only SHA1 is supported",
+            "Id": 685,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Create Run Antivirus Scan Task",
+            "Description": "Create Run AV Scan Task",
+            "Id": 686,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Create Stop And Quarantine File Specific Machine Task",
+            "Description": "Create Stop and Quarantine a File on Specific Machine Task",
+            "Id": 687,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Get File Related Alerts",
+            "Description": "Deprecated. Get File Related Alerts. Note: For this action only SHA1 is supported",
+            "Id": 688,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Update Alert",
+            "Description": "Update Alerts",
+            "Id": 689,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Submit Entity Indicators",
+            "Description": "Submit entities as indicators in Microsoft Defender ATP. Supported entities: Filehash, URL, IP Address. Note: only MD5, SHA1 and SHA256 hashes are supported.",
+            "Id": 690,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Run Advanced Hunting Query",
+            "Description": "Run Advanced Hunting Query",
+            "Id": 691,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Ping",
+            "Description": "Test Connectivity",
+            "Id": 692,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Create Isolate Machine Task",
+            "Description": "Create Isolate Machine Task",
+            "Id": 693,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        },
+        {
+            "Name": "Get Current Task Status",
+            "Description": "Get Current Task Status",
+            "Id": 694,
+            "CreationTimeUnixTimeInMs": 1779087251826,
+            "ModificationTimeUnixTimeInMs": 1779087251826
+        }
+    ],
+    "Categories": [
+        "Endpoint Security",
+        "Security"
+    ],
+    "HasConnectors": false,
+    "DocumentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/microsoft-defender-atp",
+    "IsCertified": false,
+    "UploaderFullName": null,
+    "PublishComment": null,
+    "UploaderEmail": null,
+    "UploaderImageBase64": null,
+    "UploaderProfileLink": null,
+    "MinimumSystemVersion": 0.0,
+    "ProductionIntegrationIdentifier": null,
+    "Type": 0,
+    "Internal": false,
+    "GoogleSecOpsProduct": false,
+    "Id": 0,
+    "CreationTimeUnixTimeInMs": 1779087251811,
+    "ModificationTimeUnixTimeInMs": 1779087251811,
+    "Custom": false
+}
