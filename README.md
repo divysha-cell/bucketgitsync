@@ -67,7 +67,22 @@
 ## Playbooks
 |Name|Description|
 |----|-----------|
+|AWS EC2 Containment|This block allows the playbook to automatically stop EC2 instances that were identified in the alert as potentially compromised or suspicious, supporting the containment phase of the incident response process.|
+|AWS Enrichment|This block retrieves EC2 instance data associated with the case and provides context for other actions or analysis.|
+|AWS Instance Containment|This block allows you to stop EC2 instances that were identified in the alert as potentially compromised or suspicious, supporting the containment phase of the incident response process.It uses a boolean input to control manual or automatic execution and returns the containment result, false on failure, or an empty value if no action is taken.|
+|AWS User Containment|This block allows you to disable access for users referenced in the case, supporting containment actions during the incident response process. It uses a boolean input to control manual or automatic execution and returns the containment result, false on failure, or an empty value if no action is taken.|
+|AWS Users Containment|An embedded workflow that can receive inputs and return an output.|
+|Amazon Web Services Cloud Platform Starting Playbook|Amazon Web Services Cloud Platform Starting Playbook provides reference implementation of how Amazon Web Services Cloud Platform alerts can be processed in Google SecOps.|
+|Azure User Containment|This block applies containment actions to Azure user accounts by resetting passwords or disabling accounts. A boolean input controls manual or automatic mode. In automatic mode, the Disable Account and Password Reset flags determine which actions run. It returns true if successful, false on failure, or empty if no action is taken.|
+|GTI Enrichment|This block enhances case entities with Google Threat Intelligence enrichment information. Works for IPs, URLs, hostnames, domains, hashes (MD5, SHA-1, SHA-256), threat actors, and CVEs.|
+|Google SecOps Enrichment|This block retrieves relevant details about users and assets involved in the case, enhancing the context available for analysis and subsequent actions within Google SecOps SOAR.|
+|MITRE Enrichment|This block retrieves detailed information about MITRE ATT&CK techniques and their associated mitigations, providing valuable context to understand adversary behaviors and possible defensive actions.|
 |New Playbook||
+|Nw Playbook||
+|IMPORT 1 - SecMon_Enrichment_and_Triage_Block|An embedded workflow that can receive inputs and return an output.|
+|SecMon_Enrichment_and_Triage_Block|An embedded workflow that can receive inputs and return an output.|
+|Carbon Black Cloud Remediation||
+|Copy of Carbon Black Cloud Remediation - 1||
 
 
 ## Visual Families
