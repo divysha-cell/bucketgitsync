@@ -12,6 +12,7 @@ Event Name Field: event_type
 ### Parameters
 |Name|Description|Is Mandatory|Value|
 |----|-----------|------------|-----|
+|Proxy Password|The proxy password to authenticate with.||*****|
 |Lowest Incident Severity To Fetch|The lowest severity of the incidents to retrieve. If no value is provided, the connector ingest incidents with all severities.|||
 |Api Root|The API root of the Palo Alto XDR instance.|True|https://api-{fqdn}|
 |Api Key|The Palo Alto XDR API key.|True|*****|
@@ -31,6 +32,5 @@ Event Name Field: event_type
 |Script Timeout (Seconds)|The timeout limit, in seconds, for the Python process that runs the current script.|True|180|
 |Proxy Server Address|The address of the proxy server to use.|||
 |Proxy Username|The proxy username to authenticate with.|||
-|Proxy Password|The proxy password to authenticate with.||*****|
 |Artifacts To Ignore|A comma-separated list of artifacts to exclude from Google SecOps event creation.|||
 
