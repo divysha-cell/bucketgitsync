@@ -109,8 +109,58 @@
 ## Jobs
 |Name|Description|
 |----|-----------|
+|111Sync Comments - AutoTest 1|Automated test job instance configured by script. Index: 47|
+|11Refresh Token Renewal Job - AutoTest 1|Automated test job instance configured by script. Index: 43|
+|11Sync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 1|
+|134Freshservice Sync Tickets Conversations Job - AutoTest 1|Automated test job instance configured by script. Index: 23|
+|13Freshservice Sync Tickets Closure Job - AutoTest 1|Automated test job instance configured by script. Index: 24|
+|1Case Federation Sync Job - AutoTest 1|Automated test job instance configured by script. Index: 0|
+|1DRP Deduplication Job - AutoTest 1|Automated test job instance configured by script. Index: 20|
+|1Fr2eshservice Sync Tickets Conversations Job - AutoTest 1|Automated test job instance configured by script. Index: 7|
+|1Google Chronicle Alerts Creator Job - AutoTest 1|Automated test job instance configured by script. Index: 46|
+|1Luminar IOC and Leaked Credentials Job - AutoTest 1|Automated test job instance configured by script. Index: 19|
+|1Oauth Token Expiry Notification Job - AutoTest 1|Automated test job instance configured by script. Index: 22|
+|1Sync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 2|
+|2Case Federation Sync Job - AutoTest 1|Automated test job instance configured by script. Index: 0|
+|2Sync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 2|
+|2Token Renewal Job - AutoTest 1|Automated test job instance configured by script. Index: 21|
+|2nSync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 1|
+|3Case Federation Sync Job - AutoTest 1|Automated test job instance configured by script. Index: 0|
+|3Sync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 2|
+|4Case Federation Sync Job - AutoTest 1|Automated test job instance configured by script. Index: 0|
+|4Sync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 2|
+|5Case Federation Sync Job - AutoTest 1|Automated test job instance configured by script. Index: 0|
+|5Sync Alerts|This job will synchronize Google SecOps Alerts and Crowdstrike alerts. The job synchronizes comments and status. Requires “Crowdstrike Alert” tag on the case. Note: If the alert didn’t originate from “Alerts Connector” or “Identity Protections Detection Connector” you will need to add an “Alert_ID” context value for the job to be able to find the correct information.|
+|6Refresh Token Renewal Job|Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.|
+|6new Sync Alerts|This job will synchronize Google SecOps Alerts and Crowdstrike alerts. The job synchronizes comments and status. Requires “Crowdstrike Alert” tag on the case. Note: If the alert didn’t originate from “Alerts Connector” or “Identity Protections Detection Connector” you will need to add an “Alert_ID” context value for the job to be able to find the correct information.|
+|7Sync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 1|
+|CA Close Ticket In CA For Closed Case - AutoTest 1|Automated test job instance configured by script. Index: 26|
+|DRP Deduplication Job - AutoTest 1|Automated test job instance configured by script. Index: 4|
+|Freshservice Sync Tickets Closure Job - AutoTest 11|Automated test job instance configured by script. Index: 8|
+|Google Chronicle Sync Job - AutoTest 1|Automated test job instance configured by script. Index: 45|
 |Google Chronicle Sync Job|This job will synchronize information about Chronicle SOAR Cases and Chronicle SOAR Alerts with Chronicle SIEM. Note: This job is only supported from Chronicle SOAR version 6.1.44 and higher.|
+|LaunchScanAndGetAReport - AutoTest 1|Automated test job instance configured by script. Index: 31|
+|Luminar IOC and Leaked Credentials Job - AutoTest 1|Automated test job instance configured by script. Index: 3|
+|Oauth Token Expiry Notification Job - AutoTest 1|Automated test job instance configured by script. Index: 6|
+|Refresh Token Renewal Job - AutoTest 1|Automated test job instance configured by script. Index: 52|
+|S1ync Closed Alarms - AutoTest 1|Automated test job instance configured by script. Index: 27|
+|S5ync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 1|
+|Sync Alarm Comments - AutoTest 1|Automated test job instance configured by script. Index: 29|
+|Sync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 2|
 |Sync Alerts|This job will synchronize Google SecOps Alerts and Crowdstrike alerts. The job synchronizes comments and status. Requires “Crowdstrike Alert” tag on the case. Note: If the alert didn’t originate from “Alerts Connector” or “Identity Protections Detection Connector” you will need to add an “Alert_ID” context value for the job to be able to find the correct information.|
+|Sync Case Comments - AutoTest 1|Automated test job instance configured by script. Index: 28|
+|Sync Closed Alarms - AutoTest 1|Automated test job instance configured by script. Index: 9|
+|Sync Closed Cases - AutoTest 1|Automated test job instance configured by script. Index: 30|
+|Sync Closed Incidents By Tag - AutoTest 1|Automated test job instance configured by script. Index: 50|
+|Sync Closure - AutoTest 1|Automated test job instance configured by script. Index: 48|
+|Sync Comments - AutoTest 1|Automated test job instance configured by script. Index: 25|
+|Sync Incidents - AutoTest 1|Automated test job instance configured by script. Index: 33|
+|Sync Incidents V2 - AutoTest 1|Automated test job instance configured by script. Index: 32|
 |Sync Incidents|This job synchronizes Google SecOps Alerts and Palo Alto XDR Incidents. It ensures that comments and status are kept in sync between the two systems. For the job to identify the correct information, the Google SecOps case must have the "Palo Alto XDR Incident" tag. If the alert didn’t originate from "Palo Alto Cortex XDR Connector",  you will need to add an "Incident_ID" context value to the case for the job to be able to find the correct information.|
+|Sync Security Incidents - AutoTest 1|Automated test job instance configured by script. Index: 44|
+|Sync Table Record Comments - AutoTest 1|Automated test job instance configured by script. Index: 53|
+|Sync Table Record Comments By Tag - AutoTest 1|Automated test job instance configured by script. Index: 54|
+|SyncCloseOffenses - AutoTest 1|Automated test job instance configured by script. Index: 49|
+|Token Renewal Job - AutoTest 1|Automated test job instance configured by script. Index: 5|
 |new Sync Alerts|This job will synchronize Google SecOps Alerts and Crowdstrike alerts. The job synchronizes comments and status. Requires “Crowdstrike Alert” tag on the case. Note: If the alert didn’t originate from “Alerts Connector” or “Identity Protections Detection Connector” you will need to add an “Alert_ID” context value for the job to be able to find the correct information.|
 

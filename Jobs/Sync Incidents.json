@@ -1,6 +1,6 @@
 {
     "lastRunStatus": 1,
-    "lastRunTime": 1779170210043,
+    "lastRunTime": 1779278301113,
     "uniqueIdentifier": "766d641e-54d3-4629-8089-42fca4278e8d",
     "id": 0,
     "jobDefinitionId": 0,
@@ -10,53 +10,53 @@
     "creator": null,
     "description": "This job synchronizes Google SecOps Alerts and Palo Alto XDR Incidents. It ensures that comments and status are kept in sync between the two systems. For the job to identify the correct information, the Google SecOps case must have the \"Palo Alto XDR Incident\" tag. If the alert didn\u2019t originate from \"Palo Alto Cortex XDR Connector\",  you will need to add an \"Incident_ID\" context value to the case for the job to be able to find the correct information.",
     "isEnabled": true,
-    "isCustom": true,
+    "isCustom": false,
     "version": 1,
     "parameters": [
         {
-            "id": 5920,
+            "id": 7162,
             "isMandatory": true,
             "name": "Environment Name",
             "type": 2,
             "value": "Default Environment"
         },
         {
-            "id": 5921,
+            "id": 7163,
             "isMandatory": false,
             "name": "Api Root",
             "type": 2,
             "value": "https://api-gcptesting.xdr.us.paloaltonetworks.com"
         },
         {
-            "id": 5923,
+            "id": 7165,
             "isMandatory": true,
             "name": "Api Key ID",
             "type": 2,
             "value": "56"
         },
         {
-            "id": 5924,
+            "id": 7166,
             "isMandatory": true,
             "name": "Max Hours Backwards",
             "type": 1,
             "value": "24"
         },
         {
-            "id": 5925,
+            "id": 7167,
             "isMandatory": false,
             "name": "User Mapping JSON",
             "type": 2,
             "value": "{\"Google SecOps Display Name\": \"XDR Username\"}"
         },
         {
-            "id": 5926,
+            "id": 7168,
             "isMandatory": false,
             "name": "Verify SSL",
             "type": 0,
             "value": "true"
         },
         {
-            "id": 5922,
+            "id": 7164,
             "isMandatory": true,
             "name": "Api Key",
             "type": 3,
@@ -65,7 +65,7 @@
     ],
     "runIntervalInSeconds": 3600,
     "creationTime": "2026-05-16T20:55:39.136Z",
-    "lastModificationTime": "2026-05-19T06:06:04.127Z",
+    "lastModificationTime": "2026-05-20T11:58:21.17Z",
     "isSystemJob": false,
     "jobDefinitionName": "Sync Incidents",
     "agentIdentifier": "",
