@@ -14,7 +14,9 @@
         "Connector": {
             "newCrowdstrike - Alerts Connector": "addonon"
         },
-        "Job": {},
+        "Job": {
+            "Refresh Token Renewal Job - AutoTest 1": "abc"
+        },
         "Block": {}
     },
     "settings": {
