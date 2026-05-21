@@ -15,7 +15,8 @@
             "newCrowdstrike - Alerts Connector": "addonon"
         },
         "Job": {
-            "Refresh Token Renewal Job - AutoTest 1": "abc"
+            "Refresh Token Renewal Job - AutoTest 1": "abc",
+            "projects/project/locations/location/instances/instance/integrations/MicrosoftTeams/jobs/163/jobInstances/128": "abc"
         },
         "Block": {}
     },
