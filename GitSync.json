@@ -16,7 +16,10 @@
         },
         "Job": {
             "Refresh Token Renewal Job - AutoTest 1": "abc",
-            "projects/project/locations/location/instances/instance/integrations/MicrosoftTeams/jobs/163/jobInstances/128": "abc"
+            "projects/project/locations/location/instances/instance/integrations/MicrosoftTeams/jobs/163/jobInstances/128": "abc",
+            "Luminar IOC and Leaked Credentials Job - AutoTest 1": "abc",
+            "CA Close Ticket In CA For Closed Case - AutoTest 1": "abc",
+            "Sync Comments - AutoTest 1": "abc"
         },
         "Block": {}
     },

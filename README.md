@@ -40,5 +40,7 @@
 ## Jobs
 |Name|Description|
 |----|-----------|
-|Refresh Token Renewal Job - AutoTest 1|hey this is manually added Automated test job instance configured by script. Index: 52|
+|CA Close Ticket In CA For Closed Case - AutoTest 1|Automated test job instance configured by script. Index: 26|
+|Luminar IOC and Leaked Credentials Job - AutoTest 1|Automated test job instance configured by script. Index: 3|
+|Sync Comments - AutoTest 1|Automated test job instance configured by script. Index: 25|
 
