@@ -73,7 +73,7 @@
 |LaunchScanAndGetAReport - AutoTest 1|Automated test job instance configured by script. Index: 31|
 |Luminar IOC and Leaked Credentials Job - AutoTest 1|Automated test job instance configured by script. Index: 3|
 |Oauth Token Expiry Notification Job - AutoTest 1|Automated test job instance configured by script. Index: 6|
-|projects/project/locations/location/instances/instance/integrations/MicrosoftTeams/jobs/163/jobInstances/128|hey this is manually added Automated test job instance configured by script. Index: 52|
+|Refresh Token Renewal Job - AutoTest 1|hey this is manually added Automated test job instance configured by script. Index: 52|
 |S1ync Closed Alarms - AutoTest 1|Automated test job instance configured by script. Index: 27|
 |S5ync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 1|
 |Sync Alarm Comments - AutoTest 1|Automated test job instance configured by script. Index: 29|

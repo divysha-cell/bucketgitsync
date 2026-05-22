@@ -512,16 +512,16 @@ Automated test job instance configured by script. Index: 6
 |Client Secret|Password|False|*****|
 |Refresh Token|Password|True|*****|
 
-## projects/project/locations/location/instances/instance/integrations/MicrosoftTeams/jobs/163/jobInstances/128
+## Refresh Token Renewal Job - AutoTest 1
 hey this is manually added Automated test job instance configured by script. Index: 52
 
 
-**Run Interval In Seconds:** None
+**Run Interval In Seconds:** 60
 
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-||String|False|test_str_34c14f52|
+|Integration Environments|String|False|test_str_34c14f52|
 
 
 abc## S1ync Closed Alarms - AutoTest 1
