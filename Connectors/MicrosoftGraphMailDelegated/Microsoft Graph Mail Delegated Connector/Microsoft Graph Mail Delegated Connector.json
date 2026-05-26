@@ -31,9 +31,9 @@
         },
         {
             "connectorIdentifier": null,
-            "paramName": "Environment Regex Pattern",
-            "paramValue": ".*",
-            "description": "A regular expression pattern to run on the value found in the Environment Field Name field. This parameter lets you manipulate the environment field using the regular expression logic. Use the default value .* to retrieve the required raw Environment Field Name value. If the regular expression pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+            "paramName": "Email Exclude Pattern",
+            "paramValue": "",
+            "description": "A regular expression to exclude specific emails from ingestion, such as spam or news. This parameter works with both the subject and body of the email.",
             "type": 2,
             "mode": 2,
             "isDisplayed": true,
@@ -45,9 +45,9 @@
         },
         {
             "connectorIdentifier": null,
-            "paramName": "Email Exclude Pattern",
-            "paramValue": "",
-            "description": "A regular expression to exclude specific emails from ingestion, such as spam or news. This parameter works with both the subject and body of the email.",
+            "paramName": "Environment Regex Pattern",
+            "paramValue": ".*",
+            "description": "A regular expression pattern to run on the value found in the Environment Field Name field. This parameter lets you manipulate the environment field using the regular expression logic. Use the default value .* to retrieve the required raw Environment Field Name value. If the regular expression pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
             "type": 2,
             "mode": 2,
             "isDisplayed": true,
@@ -465,7 +465,9 @@
         }
     ],
     "allowList": [
-        "saf"
+        "saf",
+        "wqer",
+        "wqrqw"
     ],
     "integrationVersion": 18.0,
     "isScriptConnector": true,
