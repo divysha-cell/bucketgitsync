@@ -17,7 +17,8 @@
             "Palo Alto Cortex XDR Connector": "Addon !@12",
             "Google Chronicle - Chronicle Alerts Connector": "Addon !@12",
             "new Crowdstrike - Alerts Connector": "Addon !@12",
-            "cdemnAlienVault USM Appliance Connector": "Addon !@12"
+            "cdemnAlienVault USM Appliance Connector": "Addon !@12",
+            "DRP Violations Connector": "Addon !@12"
         },
         "Job": {
             "Refresh Token Renewal Job - AutoTest 1": "abc",

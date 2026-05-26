@@ -4,6 +4,7 @@
 |Name|Description|Has Mappings|
 |----|-----------|------------|
 |cdemnAlienVault USM Appliance Connector|asdfghjgfdsadfghjhgfdsdfghj|False|
+|DRP Violations Connector|DRP Violations Connector|False|
 
 
 ## Playbooks
