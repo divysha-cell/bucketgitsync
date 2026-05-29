@@ -8,7 +8,9 @@
             "PaloAltoCortexXDR": "AddonReadme",
             "Microsoft365Defender": "AddonReadme"
         },
-        "Mappings": {},
+        "Mappings": {
+            "PaloAltoCortexXDR": "Addon"
+        },
         "Visual Family": {
             "Copy of Copy of AV_THBn": "An add-on is an optional software component, plugin, or extension that expands the capabilities of base software. It lets users personalize and automate their digital tools. Add-ons serve a variety of purposes, including ad-blocking in browsers, gameplay modifications, and workflow enhancements."
         },
