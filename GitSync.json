@@ -6,7 +6,12 @@
             "CrowdStrikeFalcon": "AddonReadme",
             "MicrosoftGraphMailDelegated": "AddonReadme",
             "PaloAltoCortexXDR": "AddonReadme",
-            "Microsoft365Defender": "AddonReadme"
+            "Microsoft365Defender": "AddonReadme",
+            "Connectors": "ReadmeAddon",
+            "AlienVaultAppliance": "ReadmeAddon",
+            "AbuseIPDB": "ReadmeAddon",
+            "ActiveDirectory": "ReadmeAddon",
+            "GitSync": "ReadmeAddon"
         },
         "Mappings": {
             "PaloAltoCortexXDR": "Addon"

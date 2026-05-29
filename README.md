@@ -1,5 +1,15 @@
 # GitSync
 
+## Integrations
+|Name|Description|
+|----|-----------|
+|AbuseIPDB|Leverage the AbuseIPDB threat intelligence API with this integration.|
+|Active Directory|Microsoft Active Directory integration facilitates the centralized management and synchronization of Windows user accounts with Security Center's administrator and cardholder accounts.|
+|AlienVault USM Appliance|USM Appliance includes the essential security capabilities and continuously delivered threat intelligence needed to quickly and easily identify and respond to threats in your physical and virtual infrastructure.|
+|Connectors|A set of custom connectors created for Google SecOps Community to power up automation capabilities.|
+|GitSync|Sync Google SecOps integrations, playbooks, and settings with a GitHub, BitBucket or GitLab instance|
+
+
 ## Connectors
 |Name|Description|Has Mappings|
 |----|-----------|------------|
