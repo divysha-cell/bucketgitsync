@@ -1,0 +1,24 @@
+[
+    {
+        "id": 0,
+        "source": "Jira",
+        "familyName": "Default",
+        "familyId": 0,
+        "product": "Atlassian",
+        "eventName": null,
+        "mappingStatus": null,
+        "changeSource": 0,
+        "exampleEventFields": []
+    },
+    {
+        "id": 0,
+        "source": "Jira",
+        "familyName": "Default",
+        "familyId": 0,
+        "product": "Professional Services",
+        "eventName": null,
+        "mappingStatus": null,
+        "changeSource": 0,
+        "exampleEventFields": []
+    }
+]

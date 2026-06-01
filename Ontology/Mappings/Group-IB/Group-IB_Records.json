@@ -1,0 +1,13 @@
+[
+    {
+        "id": 0,
+        "source": "Group-IB",
+        "familyName": "Default",
+        "familyId": 0,
+        "product": "Group-IB",
+        "eventName": "",
+        "mappingStatus": null,
+        "changeSource": 0,
+        "exampleEventFields": []
+    }
+]

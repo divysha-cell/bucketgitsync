@@ -1,0 +1,13 @@
+[
+    {
+        "id": 0,
+        "source": "h",
+        "familyName": "Default",
+        "familyId": 0,
+        "product": "h",
+        "eventName": "h",
+        "mappingStatus": null,
+        "changeSource": 1,
+        "exampleEventFields": []
+    }
+]

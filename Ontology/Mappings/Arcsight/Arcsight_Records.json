@@ -1,0 +1,68 @@
+[
+    {
+        "id": 0,
+        "source": "Arcsight",
+        "familyName": "DLP",
+        "familyId": 0,
+        "product": "DLP_Product",
+        "eventName": "Data Exfiltration",
+        "mappingStatus": null,
+        "changeSource": 1,
+        "exampleEventFields": []
+    },
+    {
+        "id": 0,
+        "source": "Arcsight",
+        "familyName": "Login",
+        "familyId": 0,
+        "product": "Windows:OutOfWorkingHours",
+        "eventName": "Out of working hours",
+        "mappingStatus": null,
+        "changeSource": 1,
+        "exampleEventFields": []
+    },
+    {
+        "id": 0,
+        "source": "Arcsight",
+        "familyName": "IPS",
+        "familyId": 0,
+        "product": "IPS_Product",
+        "eventName": "IRC Connections",
+        "mappingStatus": null,
+        "changeSource": 1,
+        "exampleEventFields": []
+    },
+    {
+        "id": 0,
+        "source": "Arcsight",
+        "familyName": "AV",
+        "familyId": 0,
+        "product": "symantec:ep:risk:file",
+        "eventName": "Virus found",
+        "mappingStatus": null,
+        "changeSource": 1,
+        "exampleEventFields": []
+    },
+    {
+        "id": 0,
+        "source": "Arcsight",
+        "familyName": "MailRelayOrTAP",
+        "familyId": 0,
+        "product": "Phishing email detector",
+        "eventName": "Email check",
+        "mappingStatus": null,
+        "changeSource": 1,
+        "exampleEventFields": []
+    },
+    {
+        "id": 0,
+        "source": "Arcsight",
+        "familyName": "Default",
+        "familyId": 0,
+        "product": null,
+        "eventName": null,
+        "mappingStatus": null,
+        "changeSource": 0,
+        "exampleEventFields": []
+    }
+]
