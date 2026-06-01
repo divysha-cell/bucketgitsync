@@ -12,9 +12,9 @@
     "IntegrationProperties": [],
     "IntegrationSupportedActions": [
         {
-            "Name": "Render Template",
-            "Description": "This action will render a Jinja2 template using a JSON input.  ",
-            "Id": 1933,
+            "Name": "Entity Insight",
+            "Description": "This action will use a Jinja2 template to create Entity Insights from a JSON object.  The input JSON object must be in the format of EntityResult.",
+            "Id": 1936,
             "CreationTimeUnixTimeInMs": 1779445420987,
             "ModificationTimeUnixTimeInMs": 1779445420987
         },
@@ -26,16 +26,16 @@
             "ModificationTimeUnixTimeInMs": 1779445420987
         },
         {
-            "Name": "Render Template from Array",
-            "Description": "Render Template, but for lists.  Loops through a list and applies the Jinja template to each list item.",
-            "Id": 1935,
+            "Name": "Render Template",
+            "Description": "This action will render a Jinja2 template using a JSON input.  ",
+            "Id": 1933,
             "CreationTimeUnixTimeInMs": 1779445420987,
             "ModificationTimeUnixTimeInMs": 1779445420987
         },
         {
-            "Name": "Entity Insight",
-            "Description": "This action will use a Jinja2 template to create Entity Insights from a JSON object.  The input JSON object must be in the format of EntityResult.",
-            "Id": 1936,
+            "Name": "Render Template from Array",
+            "Description": "Render Template, but for lists.  Loops through a list and applies the Jinja template to each list item.",
+            "Id": 1935,
             "CreationTimeUnixTimeInMs": 1779445420987,
             "ModificationTimeUnixTimeInMs": 1779445420987
         }

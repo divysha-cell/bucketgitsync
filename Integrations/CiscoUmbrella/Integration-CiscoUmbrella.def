@@ -37,44 +37,16 @@
     ],
     "IntegrationSupportedActions": [
         {
-            "Name": "Add Domain",
-            "Description": "Add domain to the OpenDNS block list",
-            "Id": 2065,
+            "Name": "List Top Domains",
+            "Description": "Use the \u201cList Top Domains\u201d action to return information about top domains from Cisco Popularity List.",
+            "Id": 2057,
             "CreationTimeUnixTimeInMs": 1780302643962,
             "ModificationTimeUnixTimeInMs": 1780302643962
         },
         {
-            "Name": "Delete Domain",
-            "Description": "Delete domain from the OpenDNS block list",
-            "Id": 2064,
-            "CreationTimeUnixTimeInMs": 1780302643962,
-            "ModificationTimeUnixTimeInMs": 1780302643962
-        },
-        {
-            "Name": "Get Associated Domains",
-            "Description": "Get associated domains for  a particular hostname",
-            "Id": 2063,
-            "CreationTimeUnixTimeInMs": 1780302643962,
-            "ModificationTimeUnixTimeInMs": 1780302643962
-        },
-        {
-            "Name": "Get Domain Security Info",
-            "Description": "Provide security information about a domain (as an attachment)",
-            "Id": 2062,
-            "CreationTimeUnixTimeInMs": 1780302643962,
-            "ModificationTimeUnixTimeInMs": 1780302643962
-        },
-        {
-            "Name": "Get Domain Status",
-            "Description": "Provide domain status, its content categories, and security categories.Supported entities: Hostname, URL",
-            "Id": 2066,
-            "CreationTimeUnixTimeInMs": 1780302643962,
-            "ModificationTimeUnixTimeInMs": 1780302643962
-        },
-        {
-            "Name": "Get Malicious Domains",
-            "Description": "Get malicious domains for an IP address",
-            "Id": 2061,
+            "Name": "Ping",
+            "Description": "Test Connectivity",
+            "Id": 2058,
             "CreationTimeUnixTimeInMs": 1780302643962,
             "ModificationTimeUnixTimeInMs": 1780302643962
         },
@@ -93,16 +65,44 @@
             "ModificationTimeUnixTimeInMs": 1780302643962
         },
         {
-            "Name": "List Top Domains",
-            "Description": "Use the \u201cList Top Domains\u201d action to return information about top domains from Cisco Popularity List.",
-            "Id": 2057,
+            "Name": "Get Malicious Domains",
+            "Description": "Get malicious domains for an IP address",
+            "Id": 2061,
             "CreationTimeUnixTimeInMs": 1780302643962,
             "ModificationTimeUnixTimeInMs": 1780302643962
         },
         {
-            "Name": "Ping",
-            "Description": "Test Connectivity",
-            "Id": 2058,
+            "Name": "Get Domain Security Info",
+            "Description": "Provide security information about a domain (as an attachment)",
+            "Id": 2062,
+            "CreationTimeUnixTimeInMs": 1780302643962,
+            "ModificationTimeUnixTimeInMs": 1780302643962
+        },
+        {
+            "Name": "Get Associated Domains",
+            "Description": "Get associated domains for  a particular hostname",
+            "Id": 2063,
+            "CreationTimeUnixTimeInMs": 1780302643962,
+            "ModificationTimeUnixTimeInMs": 1780302643962
+        },
+        {
+            "Name": "Delete Domain",
+            "Description": "Delete domain from the OpenDNS block list",
+            "Id": 2064,
+            "CreationTimeUnixTimeInMs": 1780302643962,
+            "ModificationTimeUnixTimeInMs": 1780302643962
+        },
+        {
+            "Name": "Add Domain",
+            "Description": "Add domain to the OpenDNS block list",
+            "Id": 2065,
+            "CreationTimeUnixTimeInMs": 1780302643962,
+            "ModificationTimeUnixTimeInMs": 1780302643962
+        },
+        {
+            "Name": "Get Domain Status",
+            "Description": "Provide domain status, its content categories, and security categories.Supported entities: Hostname, URL",
+            "Id": 2066,
             "CreationTimeUnixTimeInMs": 1780302643962,
             "ModificationTimeUnixTimeInMs": 1780302643962
         }
