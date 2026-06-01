@@ -11,7 +11,22 @@
             "AlienVaultAppliance": "ReadmeAddon",
             "AbuseIPDB": "ReadmeAddon",
             "ActiveDirectory": "ReadmeAddon",
-            "GitSync": "ReadmeAddon"
+            "GitSync": "ReadmeAddon",
+            "AWSIAM": "ReadmeAddon",
+            "TemplateEngine": "ReadmeAddon",
+            "AWSS3": "ReadmeAddon",
+            "AzureActiveDirectory": "ReadmeAddon",
+            "Enrichment": "ReadmeAddon",
+            "AWSIAMAccessAnalyzer": "ReadmeAddon",
+            "CBResponse": "ReadmeAddon",
+            "CaServiceDesk": "ReadmeAddon",
+            "CheckPointFirewall": "ReadmeAddon",
+            "DigitalShadows": "ReadmeAddon",
+            "EmailUtilities": "ReadmeAddon",
+            "BlueLiv": "ReadmeAddon",
+            "Akamai": "ReadmeAddon",
+            "MicrosoftGraphMail": "ReadmeAddon",
+            "ConnectWise": "ReadmeAddon"
         },
         "Mappings": {
             "PaloAltoCortexXDR": "Addon"
