@@ -15,6 +15,7 @@
 |Carbon Black Response|Highly scalable, real-time EDR with unparalleled visibility for top security operations centers and incident response teams|
 |CA Service Desk Manager|CA Service Desk Manager is designed to help IT service desk analysts make every moment count through a dynamic experience so they can deliver great customer service without the fear of overbearing processes or metrics. With the solution, teams can embrace teamwork rather than working from siloed knowledge stashes and disjointed communications.|
 |Check Point Firewall|VPN-1 is a firewall and VPN product developed by Check Point Software Technologies Ltd. VPN-1 is a stateful firewall which also filters traffic by inspecting the application layer.|
+|CiscoUmbrella|Cisco Umbrella is a cloud security platform that provides the first line of defense against threats on the internet. Protect users in minutes.|
 |ConnectWise|Seamlessly transition projects and tasks to keep your communication flowing without ever worrying about accountability and visibility.|
 |Connectors|A set of custom connectors created for Google SecOps Community to power up automation capabilities.|
 |DigitalShadows|Digital Shadows is designed to protect you from external threats, continually identifying where your assets are exposed, providing sufficient context to understand the risk, and options for remediation.|
