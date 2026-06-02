@@ -7,7 +7,7 @@
         "product": "Exchange",
         "eventName": "Email file",
         "mappingStatus": null,
-        "changeSource": 0,
+        "changeSource": "ChangeSourceUnspecified",
         "exampleEventFields": []
     },
     {
@@ -18,7 +18,7 @@
         "product": "Exchange",
         "eventName": "Exchange Mail Connector Mail Received",
         "mappingStatus": null,
-        "changeSource": 0,
+        "changeSource": "ChangeSourceUnspecified",
         "exampleEventFields": []
     },
     {
@@ -29,7 +29,7 @@
         "product": "Exchange",
         "eventName": "Attached Email File",
         "mappingStatus": null,
-        "changeSource": 0,
+        "changeSource": "ChangeSourceUnspecified",
         "exampleEventFields": []
     },
     {
@@ -40,7 +40,7 @@
         "product": "Exchange",
         "eventName": "Email Received in Monitoring Mailbox",
         "mappingStatus": null,
-        "changeSource": 0,
+        "changeSource": "ChangeSourceUnspecified",
         "exampleEventFields": []
     }
 ]
