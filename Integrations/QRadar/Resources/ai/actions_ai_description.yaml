@@ -1,0 +1,1364 @@
+Add Offense Note:
+  ai_description: >-
+    Adds a note to a specific IBM QRadar offense. This action allows security analysts
+    to document findings or provide updates directly within the QRadar platform from
+    Google SecOps.
+
+
+    ### Parameters Description
+
+
+    | Parameter | Type | Mandatory | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Offense ID | Integer | Yes | The unique identifier of the QRadar offense to
+    which the note will be added. |
+
+    | Note Text | String | Yes | The actual text content of the note to be appended
+    to the offense. |
+
+
+    ### Flow Description
+
+
+    1. **Parameter Extraction:** The action retrieves the QRadar API configuration
+    (Root URL, Token, and Version) and the specific action parameters (Offense ID
+    and Note Text).
+
+    2. **Manager Initialization:** It initializes the QRadar communication manager
+    using the provided credentials.
+
+    3. **API Interaction:** The action sends a POST request to the QRadar API endpoint
+    `/api/siem/offenses/{offense_id}/notes` containing the note text.
+
+    4. **Error Handling:** It specifically checks for 'Not Found' errors (if the offense
+    ID does not exist) and general execution errors, reporting the status back to
+    the SOAR.
+
+    5. **Completion:** The action concludes by returning a success or failure status
+    based on the API response.
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: true
+    can_mutate_internal_data: false
+    can_update_entities: false
+    external_data_mutation_explanation: >-
+      Adds a new note to an existing offense in the IBM QRadar system via a POST request
+      to the /api/siem/offenses/{offense_id}/notes endpoint.
+    fetches_data: false
+    internal_data_mutation_explanation: null
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+Get Rule MITRE Coverage:
+  ai_description: "Retrieves MITRE ATT&CK mapping details for specific QRadar rules\
+    \ using the QRadar Use Case Manager application. This action helps security analysts\
+    \ understand the defensive coverage provided by their QRadar environment by identifying\
+    \ the tactics and techniques associated with specific detection rules.\n\n###\
+    \ Parameters\n| Parameter | Type | Mandatory | Description |\n| :--- | :--- |\
+    \ :--- | :--- |\n| Rule Names | String | Yes | A comma-separated list of QRadar\
+    \ rule names for which the action should return MITRE details. |\n| Create Insight\
+    \ | Boolean | No | If enabled (default is true), the action will create a formatted\
+    \ Case Insight containing information about the MITRE coverage (Tactics, Techniques,\
+    \ and Confidence levels) of the rules. |\n\n### Flow Description\n1. **Initialization:**\
+    \ The action extracts connection details (API Root, Token) and user parameters\
+    \ (Rule Names, Insight preference).\n2. **Data Fetching:** It communicates with\
+    \ the QRadar Use Case Manager service via the `/console/plugins/app_proxy:UseCaseManager_Service/api/mappings`\
+    \ endpoint to retrieve all available rule-to-MITRE mappings.\n3. **Filtering:**\
+    \ The script processes the provided list of rule names and matches them against\
+    \ the retrieved mappings from QRadar.\n4. **Reporting:** \n    * Successfully\
+    \ matched rules are added to the action's JSON result.\n    * A data table titled\
+    \ 'MITRE Coverage' is added to the case, summarizing the rule names and their\
+    \ associated tactics.\n    * If 'Create Insight' is true, a detailed HTML insight\
+    \ is generated, displaying Tactics, Techniques, and color-coded confidence levels\
+    \ (High: Red, Medium: Orange, Low: Green).\n5. **Completion:** The action provides\
+    \ a summary message indicating which rules were found and which (if any) were\
+    \ missing from the Use Case Manager."
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: true
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: true
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: >-
+      The action creates a case insight and adds a data table to the Google SecOps
+      case containing MITRE ATT&CK mapping details for the queried rules.
+  categories:
+    enrichment: true
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+List Reference Maps:
+  ai_description: >-
+    ### General Description
+
+    This action lists the reference maps available in IBM QRadar. Reference maps are
+    collection data structures in QRadar that store data in a key-value format. This
+    action is primarily used for administrative visibility or to identify available
+    data collections that can be used in subsequent playbook steps for lookups or
+    data manipulation.
+
+
+    ### Parameters Description
+
+    | Parameter | Type | Mandatory | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Fields To Return | String | No | A comma-separated list of specific fields to
+    be returned for each reference map (e.g., 'name, element_type'). If left empty,
+    all available fields are returned by default. |
+
+    | Filter Condition | String | No | A QRadar-compliant filter string used to narrow
+    down the results (e.g., `element_type = 'ALNIC'`). |
+
+    | Number Of Elements To Return | Integer | Yes | The maximum number of reference
+    map records to retrieve. Defaults to 25. If a negative value is provided, the
+    action defaults to 25. |
+
+
+    ### Additional Notes
+
+    - This action uses the QRadar REST API `/api/reference_data/maps` endpoint.
+
+    - It utilizes the 'Range' header to handle pagination based on the 'Number Of
+    Elements To Return' parameter.
+
+
+    ### Flow Description
+
+    1. **Initialization**: The action initializes the QRadar manager using the provided
+    API Root, Token, and Version.
+
+    2. **Parameter Processing**: It extracts the user-provided fields, filter conditions,
+    and result limits. It validates that the limit is a positive integer.
+
+    3. **API Request**: The action sends a GET request to the QRadar reference data
+    API, applying the specified filters and field selections.
+
+    4. **Data Parsing**: The raw JSON response is parsed into internal data models
+    representing QRadar Reference Maps.
+
+    5. **Output**: The list of reference maps is returned as a JSON object to the
+    Google SecOps platform for use in playbooks.
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: false
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: null
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+List Reference Maps of Sets:
+  ai_description: >-
+    Lists reference maps of sets available in IBM QRadar. This action allows users
+    to retrieve metadata about the collection of reference maps of sets, which are
+    data structures used in QRadar to store multi-dimensional data. Users can filter
+    the results based on specific conditions and limit the number of returned elements.
+
+
+    ### Parameters
+
+    | Parameter Name | Type | Mandatory | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Fields To Return | String | No | Specify which fields should be returned by
+    the action (e.g., 'name, element_type'). If left empty, all available fields are
+    returned. |
+
+    | Filter Condition | String | No | Specify a filter condition to return only specific
+    elements (e.g., 'element_type = ALN'). |
+
+    | Number Of Elements To Return | Integer | Yes | Specify the maximum number of
+    elements to return. Default is 25. If a negative value is provided, the default
+    limit is used. |
+
+
+    ### Flow Description
+
+    1. **Parameter Extraction:** The action retrieves the API configuration (Root,
+    Token, Version) and the user-provided parameters (Fields, Filter, Limit).
+
+    2. **Limit Validation:** If the 'Number Of Elements To Return' is less than zero,
+    it defaults to 25.
+
+    3. **API Interaction:** The action initializes the QRadar Manager and calls the
+    `get_reference_maps_of_sets` method, which sends a GET request to the `/api/reference_data/map_of_sets`
+    endpoint.
+
+    4. **Data Processing:** The manager applies the requested fields and filter conditions
+    via query parameters and handles pagination using the 'Range' header.
+
+    5. **Result Output:** The retrieved reference maps are converted to JSON and added
+    to the action's result. If no data is found, a success message indicating no data
+    is returned.
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: false
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: null
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+List Reference Sets:
+  ai_description: >-
+    Lists reference sets available in IBM QRadar. This action interacts with the QRadar
+    Reference Data API to retrieve metadata about configured reference sets, such
+    as their names, element types, and creation times. It allows for filtering results
+    based on specific conditions and selecting which fields to include in the output.
+
+
+    ### Parameters Description
+
+
+    | Parameter | Type | Mandatory | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Fields To Return | String | No | A comma-separated list of specific fields to
+    be returned for each reference set. If left empty, all available fields are returned
+    by default. |
+
+    | Filter Condition | String | No | An AQL-style filter string used to narrow down
+    the results (e.g., `element_type = 'IP'`). |
+
+    | Number Of Elements To Return | Integer | Yes | The maximum number of reference
+    sets to retrieve in a single execution. Defaults to 25. If a negative value is
+    provided, the action uses the default limit of 25. |
+
+
+    ### Additional Notes
+
+    - This action does not operate on specific entities; it performs a global listing
+    of reference sets within the QRadar environment.
+
+    - The results are returned as a JSON array in the action's output.
+
+
+    ### Flow Description
+
+    1. **Initialization**: The action initializes the QRadar API manager using the
+    provided API Root, Token, and Version.
+
+    2. **Parameter Extraction**: It retrieves the user-defined parameters for fields,
+    filters, and result limits.
+
+    3. **API Request**: It sends a GET request to the `/api/reference_data/sets` endpoint,
+    applying the `Range` header for pagination based on the requested limit.
+
+    4. **Data Processing**: The response is parsed into a list of reference set objects.
+
+    5. **Output**: The retrieved data is attached to the action's result as a JSON
+    object, and the action completes with a success message.
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: false
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: null
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+List Reference Tables:
+  ai_description: >-
+    ### General Description
+
+    Lists the reference tables available in IBM QRadar. This utility action allows
+    security analysts to discover and retrieve metadata about reference tables stored
+    in the QRadar reference data collection, which are often used for storing mapping
+    data, blacklists, or other stateful information.
+
+
+    ### Parameters Description
+
+
+    | Parameter | Type | Mandatory | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Fields To Return | String | No | A comma-separated list of specific fields to
+    be returned for each table. If left empty, all available fields are returned by
+    default. |
+
+    | Filter Condition | String | No | A QRadar-compliant filter expression used to
+    narrow down the results (e.g., `element_type = 'IP'`). |
+
+    | Number Of Elements To Return | Integer | Yes | The maximum number of reference
+    table records to retrieve. If a negative value is provided, the action defaults
+    to 25. |
+
+
+    ### Additional Notes
+
+    - This action does not require any entities to run.
+
+    - The results are returned as a JSON array containing the raw metadata for each
+    reference table found.
+
+
+    ### Flow Description
+
+    1. **Initialization**: The action initializes the QRadar API manager using the
+    configured API Root, Token, and Version.
+
+    2. **Parameter Extraction**: It extracts the user-provided fields, filter conditions,
+    and the result limit.
+
+    3. **Request Construction**: It constructs a GET request targeting the QRadar
+    Reference Data API endpoint for tables (`/api/reference_data/tables`).
+
+    4. **Pagination Handling**: The action applies the result limit by setting the
+    `Range` header in the HTTP request.
+
+    5. **Data Retrieval**: It executes the request and parses the response into a
+    list of reference table objects.
+
+    6. **Output**: The retrieved data is added to the action's JSON results and the
+    execution is completed.
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: false
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: null
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+Lookup for a Key in Reference Map:
+  ai_description: >-
+    ### General Description
+
+    This action checks if a specific key exists within a designated QRadar Reference
+    Map. It is used to retrieve the associated metadata or values stored in QRadar's
+    reference data structures based on a provided key identifier. This is a read-only
+    operation that does not modify the reference map or any external system state.
+
+
+    ### Parameters Description
+
+    | Parameter | Type | Mandatory | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Name | String | Yes | The name of the QRadar Reference Map to search within.
+    |
+
+    | Key | String | Yes | The specific key identifier to look for in the reference
+    map. The search is case-insensitive. |
+
+
+    ### Flow Description
+
+    1. **Initialization**: The action initializes the QRadar manager using the provided
+    API Root, Token, and Version.
+
+    2. **Data Retrieval**: It makes a GET request to the QRadar API to fetch the full
+    content of the Reference Map specified by the `Name` parameter.
+
+    3. **Key Search**: The action processes the retrieved map data using a utility
+    function that iterates through the map's dictionary to find a match for the provided
+    `Key` (case-insensitive).
+
+    4. **Result Processing**: If a match is found, the associated data (including
+    the key and its values) is added to the action's JSON results.
+
+    5. **Completion**: The action concludes by reporting whether the key was found
+    and providing the retrieved data if applicable.
+
+
+    ### Additional Notes
+
+    - This action does not operate on SOAR entities (IPs, Hostnames, etc.) automatically.
+    It performs a direct lookup based on the string values provided in the parameters.
+
+    - If the Reference Map does not exist or the key is not found, the action will
+    complete successfully but return a `false` result value.
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: false
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: null
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+"Lookup for a Key in Reference Map of Sets":
+  ai_description: "### General Description\nThe **Lookup for a Key in Reference Map\
+    \ of Sets** action is designed to verify the existence of a specific key within\
+    \ a designated QRadar Reference Map of Sets. This action is primarily used for\
+    \ general data validation and retrieval from QRadar's reference data collections,\
+    \ allowing users to check if identifiers (such as IP addresses, usernames, or\
+    \ custom keys) are present in managed lists.\n\n### Parameters Description\n|\
+    \ Parameter | Type | Mandatory | Description |\n| :--- | :--- | :--- | :--- |\n\
+    | Name | String | Yes | The name of the QRadar Reference Map of Sets to be queried.\
+    \ |\n| Key | String | Yes | The specific key to search for within the retrieved\
+    \ reference map. |\n\n### Additional Notes\n- This action does not operate on\
+    \ entities and does not require any entity context to run.\n- The search performed\
+    \ on the retrieved map data is case-insensitive.\n- If the key is found, the action\
+    \ returns the associated data objects as a JSON result.\n\n### Flow Description\n\
+    1. **Parameter Extraction**: The action retrieves the QRadar API configuration\
+    \ (Root, Token, Version) and the action-specific parameters (`Name` and `Key`).\n\
+    2. **API Interaction**: It connects to the QRadar API and fetches the full content\
+    \ of the specified Reference Map of Sets using the provided name.\n3. **Search\
+    \ Logic**: The action iterates through the map's data, performing a case-insensitive\
+    \ comparison between the provided `Key` and the keys present in the map.\n4. **Result\
+    \ Processing**: \n    - If matches are found, the associated data (including metadata\
+    \ like `first_seen`, `last_seen`, and `source`) is added to the action's JSON\
+    \ results.\n    - The action completes with a success status and a message indicating\
+    \ whether the key was found or not."
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: false
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: null
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+Lookup for a Value in Reference Map:
+  ai_description: >-
+    ### General Description
+
+    Checks if a specific value is present within a designated QRadar Reference Map.
+    This action is used to verify the existence of data points (such as indicators,
+    usernames, or IDs) against managed lists in QRadar, providing the associated map
+    data if a match is found.
+
+
+    ### Parameters Description
+
+
+    | Parameter | Type | Mandatory | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Name | String | Yes | The name of the QRadar Reference Map to be queried. |
+
+    | Value | String | Yes | The specific value to search for within the reference
+    map. |
+
+
+    ### Additional Notes
+
+    - This action does not automatically iterate over entities in the current scope.
+    It performs a lookup based strictly on the provided 'Name' and 'Value' parameters.
+
+    - If the value is found, the action returns a JSON array containing the map entry
+    details.
+
+
+    ### Flow Description
+
+    1. **Parameter Extraction**: The action retrieves the QRadar API configuration
+    (Root, Token, Version) and the action-specific parameters ('Name' and 'Value').
+
+    2. **API Interaction**: It connects to the QRadar API and performs a GET request
+    to the reference data maps endpoint, applying a filter to search for the specific
+    value.
+
+    3. **Data Processing**: The QRadar manager parses the response. If the map exists
+    and contains the value, it extracts the relevant data.
+
+    4. **Result Reporting**: If found, the action adds the retrieved data to the execution
+    results as a JSON object and sets the action status to successful. If not found,
+    it reports that the value is missing from the map.
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: false
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: null
+  categories:
+    enrichment: true
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+"Lookup for a Value in Reference Map of Sets":
+  ai_description: >-
+    ### General Description
+
+    Checks if a specific value exists within a QRadar Reference Map of Sets. This
+    action is used to verify if a data point is present in complex QRadar reference
+    structures where keys map to sets of values. It is particularly useful for checking
+    if an indicator or identifier belongs to a specific group or category maintained
+    in QRadar, such as a list of authorized users or known malicious assets.
+
+
+    ### Parameters
+
+    | Parameter | Type | Mandatory | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Name | String | Yes | The name of the QRadar Reference Map of Sets to query.
+    |
+
+    | Value | String | Yes | The specific value to search for within the sets contained
+    in the map. |
+
+
+    ### Additional Notes
+
+    This action does not operate on entities. It performs a direct lookup based on
+    the provided parameters. If the value is found, the action returns the specific
+    data associated with that value in the JSON result. If the Reference Map of Sets
+    is not found, the action will report a failure.
+
+
+    ### Flow Description
+
+    1. **Parameter Extraction**: Retrieves the Reference Map name and the target value
+    from the action input parameters.
+
+    2. **API Connection**: Establishes a connection to the QRadar API using the integration's
+    configuration (API Root, Token, and Version).
+
+    3. **Data Retrieval**: Calls the QRadar API to fetch the entire content of the
+    specified Reference Map of Sets.
+
+    4. **Value Search**: Searches through the retrieved data structure using a utility
+    function to find the target `Value` within any of the sets (lists) associated
+    with the map's keys.
+
+    5. **Output Generation**: If a match is found, the matching data is added to the
+    action's JSON results, and the action completes with a success message. If no
+    match is found, it reports that the value was not located.
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: false
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: null
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+Lookup for a Value in Reference Set:
+  ai_description: "### General Description\nThe **Lookup for a Value in Reference\
+    \ Set** action allows users to verify if a specific value exists within a designated\
+    \ QRadar reference set. This action is primarily used to check indicators (such\
+    \ as IP addresses, usernames, or file hashes) against whitelists, blacklists,\
+    \ or other custom reference data stored in QRadar.\n\n### Parameters Description\n\
+    | Parameter | Type | Mandatory | Description |\n| :--- | :--- | :--- | :--- |\n\
+    | **Name** | String | Yes | The exact name of the QRadar reference set to be queried.\
+    \ |\n| **Value** | String | Yes | The specific value to search for within the\
+    \ reference set. |\n\n### Additional Notes\nThis action performs a targeted lookup\
+    \ using the QRadar API's filtering capabilities. It does not automatically process\
+    \ entities from the Google SecOps case; instead, it requires the specific value\
+    \ to be provided as an input parameter. The action returns detailed metadata about\
+    \ the value if found, including when it was first and last seen and the source\
+    \ that added it.\n\n### Flow Description\n1. **Initialization**: The action retrieves\
+    \ the QRadar integration configuration (API Root, Token, and Version) and the\
+    \ user-provided parameters (**Name** and **Value**).\n2. **API Request**: It constructs\
+    \ a GET request to the QRadar `reference_data/sets` endpoint, applying a filter\
+    \ to find the specific value within the named set.\n3. **Data Retrieval**: \n\
+    \    - If the value is found, the action retrieves the associated data object\
+    \ (containing fields like `first_seen`, `last_seen`, and `source`).\n    - If\
+    \ the value is not found, or if the reference set does not exist, the action captures\
+    \ the appropriate response.\n4. **Output**: The action attaches the retrieved\
+    \ data as a JSON result to the action output and provides a summary message indicating\
+    \ whether the lookup was successful."
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: false
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: null
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+Lookup for a Value in Reference Tables:
+  ai_description: >-
+    ### General Description
+
+    The **Lookup for a Value in Reference Tables** action is designed to check if
+    a specific value exists within a designated QRadar reference table. This utility
+    action is primarily used to validate data against QRadar's internal reference
+    collections, such as watchlists or mapping tables, without requiring the data
+    to be associated with a specific entity in the Google SecOps environment.
+
+
+    ### Parameters Description
+
+
+    | Parameter | Type | Mandatory | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Name | String | Yes | The name of the QRadar reference table to query. |
+
+    | Value | String | Yes | The specific value to search for within the reference
+    table. |
+
+
+    ### Flow Description
+
+    1. **Connection Setup**: The action establishes a connection to the QRadar API
+    using the provided API Root and Token.
+
+    2. **Data Retrieval**: It fetches the complete content of the reference table
+    specified by the 'Name' parameter via a GET request to the QRadar reference data
+    API.
+
+    3. **Recursive Search**: The action processes the retrieved table data using a
+    utility function that recursively traverses the dictionary structure to find any
+    matches for the 'Value' parameter.
+
+    4. **Result Output**: If the value is found, the action returns the matching data
+    objects (including inner and outer keys) as a JSON result and sets the action
+    status to success. If no match is found, it informs the user accordingly.
+
+
+    ### Additional Notes
+
+    - This action does not iterate over entities; it operates strictly on the provided
+    'Value' parameter.
+
+    - The search logic is designed to handle nested data structures common in QRadar
+    reference tables.
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: false
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: null
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+Ping:
+  ai_description: >-
+    ### General Description
+
+    Verifies the connectivity between Google SecOps and a QRadar instance. This action
+    is primarily used during the initial setup or troubleshooting phases to ensure
+    that the provided credentials and network path are valid and that the QRadar API
+    is responsive.
+
+
+    ### Parameters Description
+
+    | Parameter | Type | Mandatory | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | API Root | String | Yes | The base URL of the QRadar instance (e.g., `https://qradar.example.com`).
+    |
+
+    | API Token | String | Yes | The security token used for authenticating requests
+    to the QRadar API. |
+
+    | API Version | String | No | The specific version of the QRadar API to target.
+    If not provided, the default version is used. |
+
+
+    ### Flow Description
+
+    1. **Parameter Extraction:** The action retrieves the `API Root`, `API Token`,
+    and `API Version` from the integration configuration.
+
+    2. **Manager Initialization:** It initializes the `QRadarManager` with the provided
+    credentials.
+
+    3. **Connectivity Test:** The manager executes a `test_connectivity` call, which
+    performs a `GET` request to the QRadar API's version endpoint (`/api/help/versions`).
+
+    4. **Result Handling:** If the request is successful, the action completes with
+    a success status. If a connection error or API error occurs, it catches the exception,
+    logs the error, and returns a failure status.
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: false
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: null
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+QRadar AQL Search:
+  ai_description: >-
+    ### General Description
+
+    The **QRadar AQL Search** action enables users to execute arbitrary Ariel Query
+    Language (AQL) queries against a QRadar instance. This action is designed for
+    flexible data retrieval, allowing security analysts to perform complex searches
+    for events or flows directly from Google SecOps. The results are returned as a
+    raw JSON object and are also formatted into a CSV data table for easy viewing
+    within the case wall.
+
+
+    ### Parameters
+
+    | Parameter | Type | Mandatory | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Query Format | String | Yes | The AQL query string to execute. Example: `SELECT
+    * FROM events LIMIT 10 LAST 10 MINUTES`. |
+
+
+    ### Flow Description
+
+    1. **Initialization**: The action retrieves the AQL query from the input parameters
+    and initializes the QRadar manager using the provided configuration (API Root,
+    Token, and Version).
+
+    2. **Query Execution (First Run)**: If it is the first time the action is running
+    for a specific task, it submits the AQL query to the QRadar Ariel API. QRadar
+    returns a unique `search_id` for the job.
+
+    3. **Asynchronous Polling**: The action is asynchronous. In subsequent runs, it
+    uses the `search_id` to poll the QRadar API and check if the search status is
+    'COMPLETED'.
+
+    4. **Data Retrieval**: Once the search job is finished, the action fetches the
+    complete result set from QRadar.
+
+    5. **Result Processing**: The action parses the results, adds the raw data as
+    a JSON result, and converts the data into a CSV format to populate a data table
+    in the SOAR interface.
+
+    6. **Cleanup**: After successfully retrieving the data, the action sends a request
+    to QRadar to delete the search job, ensuring efficient resource management on
+    the QRadar appliance.
+
+
+    ### Additional Notes
+
+    - This action runs asynchronously to handle potentially long-running queries without
+    blocking the playbook execution.
+
+    - The action performs a cleanup step by deleting the search job in QRadar after
+    completion; this is a standard API lifecycle management step and does not affect
+    security data.
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: false
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: null
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+QRadar Simple AQL Search:
+  ai_description: >-
+    ### General Description
+
+    The **QRadar Simple AQL Search** action allows users to execute custom Ariel Query
+    Language (AQL) queries against IBM QRadar's Events or Flows tables. It provides
+    a simplified interface to build queries by specifying fields, filters, timeframes,
+    and sorting options without needing to write the full AQL syntax manually. This
+    action is designed to retrieve log or network flow data for investigation and
+    visibility.
+
+
+    ### Parameters Description
+
+    | Parameter | Type | Mandatory | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | **Table Name** | String (Dropdown) | Yes | Specifies whether to query the 'Events'
+    or 'Flows' table. |
+
+    | **Fields To Return** | String | No | A comma-separated list of fields to retrieve.
+    Defaults to '*' (all fields). |
+
+    | **Where Filter** | String | No | The SQL-like WHERE clause for filtering results
+    (e.g., `severity > 5`). Do not include the 'WHERE' keyword. |
+
+    | **Time Frame** | String (Dropdown) | No | Predefined time ranges (e.g., 'Last
+    Hour', 'Last Week') or 'Custom'. |
+
+    | **Start Time** | String | No | Mandatory if 'Time Frame' is set to 'Custom'.
+    Expected format: ISO-8601. |
+
+    | **End Time** | String | No | Optional end time for 'Custom' time frames. Defaults
+    to current time if omitted. |
+
+    | **Sort Field** | String | No | The field name used to sort the results. |
+
+    | **Sort Order** | String (Dropdown) | No | Specifies 'ASC' (Ascending) or 'DESC'
+    (Descending) order. Requires 'Sort Field' to be provided. |
+
+    | **Max Results To Return** | Integer | No | Limits the number of records returned.
+    Default is 50. |
+
+
+    ### Flow Description
+
+    1. **Query Construction**: The action extracts the input parameters and assembles
+    a valid AQL query string. It handles logic for timeframes, mapping predefined
+    selections (like 'Last Hour') to AQL syntax or using custom timestamps.
+
+    2. **Search Initiation**: It submits the generated query to the QRadar Ariel API
+    and retrieves a unique search ID.
+
+    3. **Asynchronous Polling**: Since the action is asynchronous, it enters a polling
+    state, periodically checking the status of the search ID until the state reaches
+    'COMPLETED'.
+
+    4. **Data Retrieval**: Once the search is finished, the action fetches the result
+    set from QRadar and deletes the search ID from the remote system to clean up.
+
+    5. **Output Generation**: The results are attached to the action as a raw JSON
+    object and displayed in the Google SecOps UI as a formatted 'Results' data table.
+
+
+    ### Additional Notes
+
+    - If 'Custom' is selected for the **Time Frame**, the **Start Time** parameter
+    must be provided, otherwise the action will fail.
+
+    - The action automatically handles the 'START', 'STOP', or 'LAST' clauses in the
+    AQL query based on the timeframe configuration.
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: false
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: null
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+Similar Events Query:
+  ai_description: >-
+    ### General Description
+
+    The **Similar Events Query** action executes an asynchronous AQL (Ariel Query
+    Language) search in IBM QRadar to identify events related to specific entities
+    (Address, Hostname, or User) within a Google SecOps case. This action helps analysts
+    find historical context and identify patterns of activity associated with indicators
+    by retrieving event details such as source/destination IPs, usernames, event names,
+    and magnitudes.
+
+
+    ### Parameters Description
+
+    | Parameter | Type | Mandatory | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | **Time Delta In Minutes** | Integer | No | Defines the lookback period (in minutes)
+    for the AQL query. Defaults to 10 minutes if not specified. |
+
+    | **Events Limit To Fetch** | Integer | Yes | The maximum number of event records
+    to retrieve from QRadar for each entity. Defaults to 25. |
+
+    | **Fields To Display** | String | No | A comma-separated list of additional QRadar
+    event fields to include in the results beyond the default set. |
+
+    | **Hostname Field Name** | String | No | The specific AQL field name in QRadar
+    to use when searching for Hostname entities. |
+
+    | **Source IP Address Field Name** | String | No | The specific AQL field name
+    in QRadar to use when searching for the source IP of Address entities. |
+
+    | **Destination IP Address Field Name** | String | No | The specific AQL field
+    name in QRadar to use when searching for the destination IP of Address entities.
+    |
+
+    | **Username Field Name** | String | No | The specific AQL field name in QRadar
+    to use when searching for Username entities. |
+
+
+    ### Flow Description
+
+    1. **Entity Filtering:** The action identifies all Address, Hostname, and User
+    entities in the current context.
+
+    2. **Query Construction:** For each entity, it constructs a specialized AQL query
+    using the provided field names and time constraints.
+
+    3. **Search Initiation:** It sends the queries to the QRadar Ariel API and receives
+    unique search IDs.
+
+    4. **Asynchronous Polling:** The action enters an 'In Progress' state, periodically
+    checking the status of each search ID in QRadar.
+
+    5. **Data Retrieval:** Once a search completes, the action fetches the resulting
+    event data.
+
+    6. **Output Generation:** The retrieved events are formatted into data tables
+    (one per entity) and a comprehensive JSON result is attached to the action output.
+
+
+    ### Additional Notes
+
+    - This action is asynchronous and may take some time to complete depending on
+    the volume of data in QRadar and the specified time delta.
+
+    - If no specific field names (e.g., Hostname Field Name) are provided, the action
+    uses default QRadar field mappings (e.g., hostname, sourceip, destinationip, Username).
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: true
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: >-
+      Adds data tables containing similar event details to the Case Wall for each
+      processed entity.
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types:
+    - ADDRESS
+    - HOSTNAME
+    - USERUNIQNAME
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: true
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+Similar Flows Query:
+  ai_description: >-
+    ### General Description
+
+    The **Similar Flows Query** action executes a predefined Ariel Query Language
+    (AQL) search in IBM QRadar to identify network flows associated with specific
+    IP Address entities. This action is designed to help investigators find related
+    network activity for a suspicious IP within a specific timeframe by querying the
+    QRadar flows database.
+
+
+    ### Parameters Description
+
+    | Parameter | Type | Mandatory | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | **Time Delta In Minutes** | Integer | No | Specifies the lookback window (in
+    minutes) from the current time to search for flows. Defaults to 10 if not provided.
+    |
+
+    | **Flows Limit To Fetch** | Integer | Yes | The maximum number of flow records
+    to retrieve from QRadar for each entity. Defaults to 25. |
+
+    | **Fields To Display** | String | No | A comma-separated list of additional AQL
+    fields to include in the results beyond the default set. |
+
+    | **Source IP Address Field Name** | String | No | Allows overriding the default
+    AQL field name used for the source IP address (default is 'sourceip'). |
+
+    | **Destination IP Address Field Name** | String | No | Allows overriding the
+    default AQL field name used for the destination IP address (default is 'destinationip').
+    |
+
+
+    ### Flow Description
+
+    1. **Entity Filtering**: The action identifies all `ADDRESS` entities in the current
+    scope.
+
+    2. **Search Initiation**: For each entity, it constructs an AQL query targeting
+    the `flows` table and initiates an asynchronous search task in QRadar via a POST
+    request.
+
+    3. **Status Polling**: Because the action is asynchronous, it enters an 'In Progress'
+    state, periodically checking the status of the search IDs in QRadar.
+
+    4. **Data Retrieval**: Once the searches are marked as completed in QRadar, the
+    action fetches the flow records.
+
+    5. **Output Generation**: The retrieved flows are formatted into CSV-style data
+    tables and attached to the case wall for each entity. The raw data is also provided
+    in the action's JSON results.
+
+
+    ### Additional Notes
+
+    - This action is asynchronous and may take several seconds to complete depending
+    on the volume of data in QRadar and the specified time delta.
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: false
+    can_mutate_internal_data: true
+    can_update_entities: false
+    external_data_mutation_explanation: null
+    fetches_data: true
+    internal_data_mutation_explanation: >-
+      The action creates data tables on the case wall to display the retrieved flow
+      information for each IP address entity.
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types:
+    - ADDRESS
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: true
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
+Update Offense:
+  ai_description: >-
+    Updates a specific IBM QRadar offense with new status, assignment, and metadata.
+    This action allows security analysts to programmatically manage the lifecycle
+    of an offense within QRadar directly from Google SecOps.
+
+
+    ### Parameters Description
+
+
+    | Parameter | Type | Mandatory | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Offense ID | Integer | Yes | The unique identifier of the QRadar offense to
+    be updated. |
+
+    | Assigned To | String | No | The username of the QRadar user to whom the offense
+    should be assigned. |
+
+    | Status | String | Yes | The new status for the offense. Options include 'Don't
+    change', 'Closed', or 'Hidden'. |
+
+    | Closing Reason | String | No | The text description of the closing reason. This
+    is required by QRadar logic if the 'Status' is set to 'Closed'. |
+
+    | Follow Up | Boolean | No | If set to true, marks the offense for follow-up in
+    QRadar. |
+
+    | Protected | Boolean | No | If set to true, marks the offense as protected to
+    prevent it from being removed by QRadar's data retention policies. |
+
+
+    ### Additional Notes
+
+    - If the 'Status' is set to 'Closed', the action will first attempt to resolve
+    the 'Closing Reason' string into its corresponding internal QRadar ID before submitting
+    the update.
+
+    - If 'Status' is set to 'Don't change', the status field will not be included
+    in the update request.
+
+
+    ### Flow Description
+
+    1. **Parameter Extraction:** The action retrieves the API configuration and the
+    specific update parameters (ID, Status, Assignee, etc.).
+
+    2. **Closing Reason Resolution:** If the user intends to close the offense, the
+    action queries the QRadar API to find the internal ID associated with the provided
+    'Closing Reason' text.
+
+    3. **External Update:** The action performs a POST request to the QRadar `/api/siem/offenses/{offense_id}`
+    endpoint, passing the modified attributes.
+
+    4. **Result Processing:** Upon a successful update, the action retrieves the updated
+    offense object and attaches it as a JSON result to the action execution.
+  capabilities:
+    can_create_case_comments: false
+    can_create_insight: false
+    can_modify_alert_data: false
+    can_mutate_external_data: true
+    can_mutate_internal_data: false
+    can_update_entities: false
+    external_data_mutation_explanation: >-
+      Updates the status, assignee, follow-up status, and protection status of a specific
+      offense in IBM QRadar via a POST request.
+    fetches_data: true
+    internal_data_mutation_explanation: null
+  categories:
+    enrichment: false
+  entity_usage:
+    entity_types: []
+    filters_by_additional_properties: false
+    filters_by_alert_identifier: false
+    filters_by_case_identifier: false
+    filters_by_creation_time: false
+    filters_by_entity_type: false
+    filters_by_identifier: false
+    filters_by_is_artifact: false
+    filters_by_is_enriched: false
+    filters_by_is_internal: false
+    filters_by_is_pivot: false
+    filters_by_is_suspicious: false
+    filters_by_is_vulnerable: false
+    filters_by_modification_time: false
