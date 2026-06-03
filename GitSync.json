@@ -64,7 +64,8 @@
             "Devo": "ReadmeAddon",
             "GoogleBigQuery": "ReadmeAddon",
             "GoogleCloudAssetInventory": "ReadmeAddon",
-            "GoogleCloudCompute": "ReadmeAddon"
+            "GoogleCloudCompute": "ReadmeAddon",
+            "MISP": "ReadmeAddon"
         },
         "Mappings": {
             "PaloAltoCortexXDR": "Addon"
