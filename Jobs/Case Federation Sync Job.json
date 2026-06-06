@@ -1,0 +1,59 @@
+{
+    "lastRunStatus": null,
+    "lastRunTime": null,
+    "uniqueIdentifier": "3ae31fe1-7e6a-4731-8955-af4316f01dda",
+    "id": 0,
+    "jobDefinitionId": 0,
+    "name": "Case Federation Sync Job",
+    "integration": "CaseFederation",
+    "script": "from __future__ import annotations\n\nimport dataclasses\nimport json\n\nfrom TIPCommon.base.job import Job\n\nfrom constants import FEDERATION_SYNC_JOB_SCRIPT_NAME, SUCCESS_STATUS_CODE\nfrom exceptions import MissingParameterError\nfrom FederationSyncManager import (\n    FederationSyncManager,\n    ApiClientParameters,\n    AuthParameters,\n    FederationSyncExecutionData,\n)\n\nLAST_EXECUTION_DATA_KEY = \"lastExecutionData\"\n\n\nclass CaseFederationSyncJob(Job):\n\n    def _validate_params(self) -> None:\n        \"\"\"Validate job params\"\"\"\n\n        if not self.params.target_platform or not self.params.api_key:\n            raise MissingParameterError(\n                \"API Key and Target Platform must be provided\"\n            )\n\n    def _init_api_clients(self) -> FederationSyncManager:\n        \"\"\"\n        Create a federation synchronization manager instance, that will sync the cases.\n\n        If this platform is marked as primary, then sync will be done to localhost.\n        Otherwise, we expect a target platform to sync to, and an API key for\n        authentication as parameters.\n        \"\"\"\n        session = self.soar_job.session\n\n        return FederationSyncManager(\n            session,\n            self.logger,\n            ApiClientParameters(\n                sync_api_root=f\"https://{self.params.target_platform}/api\",\n            ),\n            AuthParameters(api_key=self.params.api_key),\n            chronicle_soar=self.soar_job,\n        )\n\n    def _perform_job(self) -> None:\n        \"\"\"Perform the main flow of job\"\"\"\n        previous_execution_data = self._fetch_previous_execution_data()\n        self.logger.info(\n            f\"Previous execution details: {previous_execution_data.execution_message}\"\n        )\n\n        sync_result = self.api_client.sync_cases_from(\n            previous_execution_data.continuation_token\n        )\n\n        if sync_result.status_code == SUCCESS_STATUS_CODE:\n            new_execution_data = sync_result.execution_data\n            if new_execution_data.continuation_token is None:\n                self.logger.info(\n                    \"Sync finished successfully, without any cases to sync. \"\n                    \"Keeping the previous execution data: \"\n                    f\"{previous_execution_data.execution_message}\"\n                )\n\n            else:\n                self._save_next_execution_data(new_execution_data)\n                self.logger.info(\n                    f\"Sync finished successfully, execution details: \"\n                    f\"{new_execution_data.execution_message}\"\n                )\n\n        else:\n            self.logger.error(\n                f\"Sync finished unsuccessfully with status code \"\n                f\"{sync_result.status_code}, keeping previous execution data: \"\n                f\"{previous_execution_data.execution_message}\"\n            )\n\n    def _fetch_previous_execution_data(self) -> FederationSyncExecutionData:\n        \"\"\"Fetch the previous execution data of the job by its unique id.\n\n        Returns:\n            The previous execution data.\n        \"\"\"\n        previous_execution_data_json = self.soar_job.get_job_context_property(\n            identifier=self.name_id, property_key=LAST_EXECUTION_DATA_KEY\n        )\n\n        if previous_execution_data_json is None:\n            # This is the first run, provide default first values to sync all items\n            return FederationSyncExecutionData(\n                continuation_token=None,\n                execution_message=(\n                    \"This is the first execution, starting sync of all relevant cases.\"\n                ),\n            )\n\n        previous_execution_data = json.loads(previous_execution_data_json)\n        return FederationSyncExecutionData(\n            continuation_token=previous_execution_data[\"continuation_token\"],\n            execution_message=previous_execution_data[\"execution_message\"],\n        )\n\n    def _save_next_execution_data(\n        self, execution_data: FederationSyncExecutionData\n    ) -> None:\n        \"\"\"Save the current execution data of the job, with its unique id.\n\n        Args:\n            execution_data: Data to save about the current sync execution.\n        \"\"\"\n        self.soar_job.set_job_context_property(\n            identifier=self.name_id,\n            property_key=LAST_EXECUTION_DATA_KEY,\n            property_value=json.dumps(dataclasses.asdict(execution_data)),\n        )\n\n\ndef main() -> None:\n    CaseFederationSyncJob(FEDERATION_SYNC_JOB_SCRIPT_NAME).start()\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "creator": null,
+    "description": "This job will sync case metadata to an external platform for central management.",
+    "isEnabled": false,
+    "isCustom": true,
+    "version": 1,
+    "parameters": [
+        {
+            "id": 1435,
+            "isMandatory": true,
+            "name": "Target Platform",
+            "type": 2,
+            "value": "hgfds"
+        },
+        {
+            "id": 1436,
+            "isMandatory": true,
+            "name": "API Key",
+            "type": 3,
+            "value": "***************"
+        }
+    ],
+    "runIntervalInSeconds": 14400,
+    "creationTime": "2026-06-06T07:24:27.117Z",
+    "lastModificationTime": "2026-06-06T07:24:27.117Z",
+    "isSystemJob": false,
+    "jobDefinitionName": "Case Federation Sync Job",
+    "agentIdentifier": "",
+    "advanced": false,
+    "advancedConfig": {
+        "timeZone": "Europe/London",
+        "scheduleType": "Once",
+        "oneTimeSchedule": {
+            "startDate": {
+                "year": 2026,
+                "month": 6,
+                "day": 5
+            },
+            "time": {
+                "hours": 13,
+                "minutes": 13,
+                "seconds": 0,
+                "nanos": 0
+            },
+            "interval": 0
+        },
+        "dailySchedule": null,
+        "weeklySchedule": null,
+        "monthlySchedule": null
+    }
+}
