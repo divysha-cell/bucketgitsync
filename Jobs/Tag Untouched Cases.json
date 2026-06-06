@@ -1,18 +1,39 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/Tools/jobs/81/jobInstances/377",
+    "lastRunStatus": null,
+    "lastRunTime": null,
+    "uniqueIdentifier": "d23e3743-fe71-4ec7-aa8f-cc8d2a0cb0ac",
     "id": 0,
-    "job": "Tag Untouched Cases",
+    "jobDefinitionId": 0,
+    "name": "Tag Untouched Cases",
     "integration": "Tools",
-    "createTime": 1780763222339,
-    "updateTime": 1780763222339,
-    "custom": true,
     "script": "# Copyright 2025 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\nfrom __future__ import annotations\n\nimport datetime\n\nfrom SiemplifyJob import SiemplifyJob\nfrom SiemplifyUtils import output_handler\n\nSCRIPT_NAME = \"TagCasesBasedOnLastModifiedTime\"\n\n\n@output_handler\ndef main():\n    siemplify = SiemplifyJob()\n    siemplify.script_name = SCRIPT_NAME  # In order to use the SiemplifyLogger, you must assign a name to the script.\n    maxTime = siemplify.parameters.get(\"Unmodified Time\")\n    tags = siemplify.parameters.get(\"Tags\")\n\n    siemplify.LOGGER.info(\"----------------- Main - Started -----------------\")\n    try:\n        timeNow = datetime.datetime.now()\n        update_time_to = timeNow - datetime.timedelta(hours=int(maxTime))\n\n        case_ids = siemplify.get_cases_ids_by_filter(\n            status=\"OPEN\",\n            start_time_from_unix_time_in_ms=None,\n            start_time_to_unix_time_in_ms=None,\n            close_time_from_unix_time_in_ms=None,\n            close_time_to_unix_time_in_ms=None,\n            update_time_from_unix_time_in_ms=None,\n            update_time_to_unix_time_in_ms=update_time_to.timestamp() * 1000,\n            operator=None,\n            sort_by=\"START_TIME\",\n            sort_order=\"DESC\",\n            max_results=10000,\n        )\n\n        if len(case_ids):\n            siemplify.LOGGER.info(f\"The following cases will be affected: {case_ids}\")\n            tags_list = []\n            tags_list.extend(t.strip() for t in tags.split(\",\"))\n            tags_string = \", \".join(tags_list)\n\n            for cid in case_ids:\n                for tag in tags_list:\n                    siemplify.add_tag(tag=tag, case_id=cid, alert_identifier=None)\n\n            siemplify.LOGGER.info(\n                f\"Successfully Tagged {len(case_ids)} cases with tags: {tags_string}\",\n            )\n\n        else:\n            siemplify.LOGGER.info(\n                f\"No Cases open for longer than {maxTime} hours were found\",\n            )\n\n    except Exception as e:\n        siemplify.LOGGER.error(f\"General error performing Job {SCRIPT_NAME}\")\n        siemplify.LOGGER.exception(e)\n        raise\n\n    siemplify.LOGGER.info(\"----------------- Main - Finished -----------------\")\n    siemplify.end_script()\n\n\nif __name__ == \"__main__\":\n    main()\n",
-    "agent": "",
-    "uniqueIdentifier": "9c3d8394-e182-404d-92c7-aba1c880d958",
-    "enabled": false,
-    "displayName": "Tag Untouched Cases",
+    "creator": null,
     "description": "This job will search all open cases, and identify cases that have not been touched in Max Time hours, and apply the tag/tags listed in the tags parameter",
-    "intervalSeconds": 3600,
+    "isEnabled": false,
+    "isCustom": true,
+    "version": 1,
+    "parameters": [
+        {
+            "id": 4311,
+            "isMandatory": true,
+            "name": "Tags",
+            "type": 2,
+            "value": "Open Case Review"
+        },
+        {
+            "id": 4312,
+            "isMandatory": true,
+            "name": "Unmodified Time",
+            "type": 1,
+            "value": "8"
+        }
+    ],
+    "runIntervalInSeconds": 3600,
+    "creationTime": "2026-06-06T17:02:52.386Z",
+    "lastModificationTime": "2026-06-06T17:02:52.386Z",
+    "isSystemJob": false,
+    "jobDefinitionName": "Tag Untouched Cases",
+    "agentIdentifier": "",
     "advanced": false,
     "advancedConfig": {
         "timeZone": "Europe/London",
@@ -30,22 +51,9 @@
                 "nanos": 0
             },
             "interval": 0
-        }
-    },
-    "parameters": [
-        {
-            "id": 3928,
-            "mandatory": true,
-            "type": "String",
-            "displayName": "Tags",
-            "value": "Open Case Review"
         },
-        {
-            "id": 3929,
-            "mandatory": true,
-            "type": "Int",
-            "displayName": "Unmodified Time",
-            "value": "8"
-        }
-    ]
+        "dailySchedule": null,
+        "weeklySchedule": null,
+        "monthlySchedule": null
+    }
 }

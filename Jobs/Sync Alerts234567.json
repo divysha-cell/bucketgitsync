@@ -1,20 +1,60 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/SentinelOneV2/jobs/70/jobInstances/329",
+    "lastRunStatus": 1,
+    "lastRunTime": 1780765225873,
+    "uniqueIdentifier": "f0b1f336-3d5e-4147-9e7c-4b702411cf26",
     "id": 0,
-    "job": "Sync Alerts",
+    "jobDefinitionId": 0,
+    "name": "Sync Alerts234567",
     "integration": "SentinelOneV2",
-    "createTime": 1780763073585,
-    "updateTime": 1780763120031,
-    "custom": true,
     "script": "from __future__ import annotations\n\nimport datetime\nimport time\nfrom collections import defaultdict\nfrom typing import TYPE_CHECKING\n\nfrom requests.exceptions import ConnectionError as RequestsConnectionError\n\nfrom SiemplifyUtils import convert_datetime_to_unix_time\nfrom TIPCommon.base.action.data_models import (\n    CloseCaseOrAlertInconclusiveRootCauses,\n    CloseCaseOrAlertMaliciousRootCauses,\n    CloseCaseOrAlertNotMaliciousRootCauses,\n)\nfrom TIPCommon.base.job.base_sync_job import BaseSyncJob\nfrom TIPCommon.base.job.job_case import JobCase, SyncMetadata\nfrom TIPCommon.data_models import CaseDataStatus\n\nimport constants\nfrom exceptions import SentinelOneV2ManagerError\nfrom SentinelOneV2Factory import API_VERSION_2_1, SentinelOneV2ManagerFactory\nfrom SentinelOneV2ManagerV2 import SentinelOneV2ManagerV2\n\nif TYPE_CHECKING:\n    from typing import Any, NoReturn\n\n    from collections.abc import Callable\n\n    from TIPCommon.types import SingleJson\n\n    from datamodelsV2 import Alert\n\n\nclass SyncAlertsV2(BaseSyncJob[SentinelOneV2ManagerV2]):\n    \"\"\"Syncs alerts between Google SecOps and SentinelOne V2.1.\"\"\"\n\n    def __init__(self) -> None:\n        \"\"\"Initializes the job.\"\"\"\n        super().__init__(\n            job_name=constants.SYNC_ALERTS_JOB_NAME,\n            context_identifier=constants.SYNC_ALERTS_CONTEXT_IDENTIFIER,\n            tags_identifiers=[constants.SECOPS_CASE_TAG],\n        )\n        self.sync_limit: int = constants.CASES_SYNC_LIMIT\n        self.manager: SentinelOneV2ManagerV2 | None = None\n        self.alert_cache: dict[str, Alert] = {}\n\n    def _init_api_clients(self) -> None:\n        \"\"\"Initializes the SentinelOne V2 API client.\"\"\"\n        self.manager = SentinelOneV2ManagerFactory(API_VERSION_2_1).get_manager(\n            api_root=self.params.api_root,\n            api_token=self.params.api_token,\n            verify_ssl=self.params.verify_ssl,\n            force_check_connectivity=True,\n            logger=self.logger,\n        )\n\n    def _retry(self, func: Callable[..., Any], *args: Any, **kwargs: Any) -> Any:\n        \"\"\"Retries a function call with exponential backoff upon connection failure.\"\"\"\n\n        for attempt in range(constants.MAX_RETRIES + 1):\n            try:\n                if attempt > constants.INITIAL_ATTEMPT:\n                    self._init_api_clients()\n\n                return func(*args, **kwargs)\n\n            except (RequestsConnectionError, SentinelOneV2ManagerError) as error:\n                is_last_attempt = attempt == constants.MAX_RETRIES\n\n                if is_last_attempt:\n                    error_msg = (\n                        f\"Max retries ({constants.MAX_RETRIES}) reached for \"\n                        f\"{func.__name__}. Error: {error}\"\n                    )\n                    self.logger.error(error_msg)\n                    raise SentinelOneV2ManagerError(error_msg) from error\n\n                delay: int = constants.RETRY_INITIAL_DELAY * (\n                    constants.RETRY_BACKOFF_FACTOR**attempt\n                )\n\n                self.logger.error(\n                    f\"API Error in {func.__name__}: {error}. \"\n                    f\"Retrying in {delay}s...\"\n                )\n\n                time.sleep(delay)\n\n        raise SentinelOneV2ManagerError(\n            f\"Unexpected retry flow exit for {func.__name__}\"\n        )\n\n    def _is_valid_s1_id(self, value: Any) -> bool:\n        \"\"\"Checks if a value is a valid numeric S1 ID.\"\"\"\n        if not value:\n            return False\n\n        value_string: str = str(value).strip()\n        min_len = constants.MIN_ALERT_ID_LENGTH\n\n        return value_string.isdigit() and len(value_string) >= min_len\n\n    def _extract_product_ids_from_case(self, job_case: JobCase) -> list[str]:\n        \"\"\"Returns sorted list of unique SentinelOne IDs in the case.\"\"\"\n        return sorted(self.get_product_ids_from_case_alerts(job_case).keys())\n\n    def modified_synced_case_ids_by_product(\n        self,\n        alert_ids: list[str],\n        sorted_modified_ids: list[tuple[str, int]]\n    ) -> list[tuple[str, int]]:\n        \"\"\"Identifies cases requiring sync based on S1 updates.\"\"\"\n        valid_ids: list[str] = [tid for tid in alert_ids if self._is_valid_s1_id(tid)]\n        if not valid_ids:\n            return []\n\n        updates: list[Alert] = self._fetch_product_alerts(valid_ids)\n        if not updates:\n            return []\n\n        modified_cases: list[tuple[str, int]] = []\n        alert_to_case_map: dict[str, str] = self._build_alert_lookup()\n        case_time_map = dict(sorted_modified_ids)\n\n        for alert in updates:\n            case_id: str | None = alert_to_case_map.get(str(alert.alert_id))\n            if not case_id:\n                continue\n\n            alert_ts: int = self._extract_alert_timestamp_ms(alert)\n            s1_status: str = str(getattr(alert, \"incident_status\", \"\")).lower()\n            is_resolved = s1_status == constants.SENTINELONE_RESOLVED.lower()\n\n            if alert_ts <= self.last_run_time and not is_resolved:\n                continue\n\n            alert_timestamp = self._extract_alert_timestamp_ms(alert)\n            case_timestamp = case_time_map.get(case_id, 0)\n            final_ts: int = max(alert_timestamp, case_timestamp)\n            modified_cases.append((case_id, final_ts))\n\n        return modified_cases\n\n    def _build_alert_lookup(self) -> dict[str, str]:\n        \"\"\"Builds a map of {AlertID: CaseID} from processed items.\"\"\"\n        return {\n            alert_id: case_id\n            for case_id, alert_ids in self.processed_items.items()\n            for alert_id in alert_ids\n        }\n\n    def _fetch_product_alerts(self, alert_ids: list[str]) -> list[Alert]:\n        \"\"\"Fetches alerts from S1 in batches using retry logic.\"\"\"\n        results: list[Alert] = []\n        ids_to_fetch: list[str] = []\n        chunk_size: int = constants.FETCH_ALERTS_CHUNK_SIZE\n\n        for aid in alert_ids:\n            if aid in self.alert_cache:\n                results.append(self.alert_cache[aid])\n            else:\n                ids_to_fetch.append(aid)\n\n        if not ids_to_fetch:\n            return results\n\n        if not self.manager:\n            self._init_api_clients()\n\n        for i in range(0, len(ids_to_fetch), chunk_size):\n            batch: list[str] = ids_to_fetch[i: i + chunk_size]\n            try:\n                batch_res: list[Alert] = self._retry(\n                    self.manager.get_cloud_detection_alerts,\n                    alert_ids=batch,\n                )\n                self.alert_cache.update({str(a.alert_id): a for a in batch_res})\n                results.extend(batch_res)\n\n            except (RequestsConnectionError, SentinelOneV2ManagerError) as error:\n                self.logger.error(f\"Failed to fetch batch starting at {i}: {error}\")\n\n        return results\n\n    def _extract_alert_timestamp_ms(self, alert: Alert) -> int:\n        \"\"\"Parses the alert timestamp to Unix milliseconds.\"\"\"\n        ts_str: str | None = (\n            getattr(alert, \"updated_at\", None) or\n            getattr(alert, \"created_at\", None)\n        )\n        if ts_str:\n            try:\n                dt_obj = datetime.datetime.fromisoformat(ts_str.replace(\"Z\", \"+00:00\"))\n                return convert_datetime_to_unix_time(dt_obj)\n\n            except ValueError:\n                self.logger.warn(f\"Failed to parse timestamp string: {ts_str}\")\n\n        return self.last_run_time\n\n    def map_product_data_to_case(self, job_case: JobCase) -> None:\n        \"\"\"Maps S1 data to SecOps case using local mapping.\"\"\"\n        ids_map: SingleJson = self.get_product_ids_from_case_alerts(job_case)\n        job_case.product_ids_from_secops_alerts = ids_map\n\n        if not ids_map:\n            return\n\n        s1_alerts: list[Alert] = self._fetch_product_alerts(list(ids_map.keys()))\n        self._map_alerts_to_metadata(job_case, s1_alerts, ids_map)\n        self.remove_synced_data_from_db(job_case, s1_alerts)\n\n    def get_product_ids_from_case_alerts(self, job_case: JobCase) -> SingleJson:\n        \"\"\"Extracts Sentinelone alerts IDs from case alerts.\"\"\"\n        mapping: SingleJson = {}\n        for alert in job_case.case_detail.alerts:\n            found_id: str | None = self._get_alert_product_id(alert)\n            if found_id:\n                mapping[found_id] = alert\n\n        return mapping\n\n    def _get_alert_product_id(self, alert: Any) -> str | None:\n        \"\"\"Helper to extract SentinelOne ID from an alert object safely.\"\"\"\n        if self._is_valid_s1_id(alert.ticket_id):\n            return str(alert.ticket_id)\n\n        if alert.alert_group_identifier:\n            context_value: str | None = self.soar_job.get_context_property(\n                constants.ENTITY_TYPE,\n                alert.alert_group_identifier,\n                constants.ALERT_ID_CONTEXT_PROPERTY\n            )\n            if self._is_valid_s1_id(context_value):\n                return str(context_value)\n\n        return None\n\n    def _map_alerts_to_metadata(\n        self,\n        job_case: JobCase,\n        alerts: list[Alert],\n        ids_map: SingleJson\n    ) -> None:\n        \"\"\"Links SentinelOne objects and sets metadata manually.\"\"\"\n        for alert in alerts:\n            s1_id_string: str = str(alert.alert_id)\n            match: Any = ids_map.get(s1_id_string)\n            if match:\n                if not getattr(match, \"incident\", None):\n                    match.incident = alert\n\n                job_case.alert_metadata[match.identifier] = SyncMetadata(\n                    status=str(alert.incident_status).lower(),\n                    severity=None,\n                    incident_id=s1_id_string,\n                    closure_reason=alert.verdict,\n                    closure_comment=\"\"\n                )\n\n    def remove_synced_data_from_db(\n        self,\n        job_case: JobCase,\n        product_details: list[Alert],\n    ) -> None:\n        \"\"\"Removes synced entries from DB if both alerts are closed.\"\"\"\n        case_id: str = str(job_case.case_detail.id_)\n\n        alert_lookup = {str(a.alert_id): a for a in product_details}\n\n        for alert in job_case.case_detail.alerts:\n            alert_s1_id: str | None = self._get_alert_product_id(alert)\n            if not alert_s1_id:\n                continue\n\n            matching_s1_alert = alert_lookup.get(alert_s1_id)\n\n            if not matching_s1_alert:\n                continue\n\n            if self.is_alert_and_product_closed(job_case, matching_s1_alert):\n                entries = [(case_id, str(matching_s1_alert.alert_id))]\n                self._remove_synced_entries(entries)\n\n    def is_alert_and_product_closed(self, job_case: JobCase, s1_alert: Alert) -> bool:\n        \"\"\"Checks if both SecOps alert and SentinelOne Alert are closed.\"\"\"\n        product_id: str = str(s1_alert.alert_id)\n        secops_alert: Any = job_case.product_ids_from_secops_alerts.get(product_id)\n        if not secops_alert:\n            return False\n\n        is_alert_closed: bool = secops_alert.status == constants.ALERT_CLOSED_STATUS\n        s1_status: str = str(s1_alert.incident_status).lower()\n        is_product_closed: bool = s1_status == constants.SENTINELONE_RESOLVED.lower()\n\n        return is_alert_closed and is_product_closed\n\n    def sync_status(self, job_case: JobCase) -> None:\n        \"\"\"Orchestrates bi-directional status sync.\"\"\"\n        sync_result: Any = job_case.get_status_to_sync(constants.SENTINELONE_RESOLVED)\n        self._sync_product_status_to_case(sync_result, job_case)\n        self._sync_case_status_to_product(sync_result, job_case)\n\n    def _sync_product_status_to_case(self, sync_result: Any, job_case: JobCase) -> None:\n        \"\"\"Syncs S1 -> SecOps status.\"\"\"\n        for alert, meta in sync_result.alerts_to_close_in_soar:\n            reason, root_cause = self._map_s1_verdict_to_secops(meta.closure_reason)\n            self.logger.info(\n                f\"Syncing closure for S1 Alert {meta.incident_id} with \"\n                f\"verdict {meta.closure_reason}\"\n            )\n            self.sync_product_status_to_case(\n                case_id=job_case.case_detail.id_,\n                alert_id=alert.identifier,\n                reason=reason,\n                root_cause=root_cause,\n                comment=(\n                    f\"Closed via Sync. SentinelOne Alert \"\n                    f\"{meta.incident_id} Resolved.\"\n                )\n            )\n            self._remove_synced_entries([(job_case.case_detail.id_, meta.incident_id)])\n\n    def _map_s1_verdict_to_secops(self, verdict: str) -> tuple[str, str]:\n        \"\"\"Maps SentinelOne verdict to SecOps reason.\"\"\"\n        if verdict == constants.SENTINELONE_TRUE_POSITIVE:\n            return (\n                constants.REASON_MALICIOUS,\n                CloseCaseOrAlertMaliciousRootCauses.OTHER.value,\n            )\n\n        if verdict == constants.SENTINELONE_FALSE_POSITIVE:\n            return (\n                constants.REASON_NOT_MALICIOUS,\n                CloseCaseOrAlertNotMaliciousRootCauses.OTHER.value,\n            )\n\n        return (\n            constants.REASON_INCONCLUSIVE,\n            CloseCaseOrAlertInconclusiveRootCauses.NO_CLEAR_CONCLUSION.value,\n        )\n\n    def _sync_case_status_to_product(self, sync_result: Any, job_case: JobCase) -> None:\n        \"\"\"Manages the flow if there are alerts to close.\"\"\"\n        requests = sync_result.incidents_to_close_in_product\n        if not requests:\n            return\n\n        case_id = str(job_case.case_detail.id_)\n        case_reason = self._get_case_closure_reason(job_case)\n        verdict_groups, alert_ids = self._build_verdict_batches(requests, case_reason)\n\n        if alert_ids:\n            self._process_status_batches(case_id, verdict_groups, alert_ids)\n\n    def _get_case_closure_reason(self, job_case: JobCase) -> str | None:\n        \"\"\"Gets case closure reason if applicable.\"\"\"\n        if job_case.case_detail.status != CaseDataStatus.CLOSED:\n            return None\n\n        try:\n            details_list: list[SingleJson] = self.soar_job.get_case_closure_details(\n                [job_case.case_detail.id_]\n            )\n            return details_list[0].get(\"reason\", \"\") if details_list else None\n\n        except Exception as error:  # pylint: disable=broad-exception-caught\n            self.logger.error(f\"Failed to get case closure reason: {error}\")\n            return None\n\n    def _build_verdict_batches(\n        self,\n        closure_requests: list[SingleJson],\n        case_closure_reason: str | None,\n    ) -> tuple[dict[str, list[str]], list[str]]:\n        \"\"\"Groups alerts by target verdict using defaultdict.\"\"\"\n        verdict_groups = defaultdict(list)\n        alert_ids: list = []\n\n        for req in closure_requests:\n            alert_id = req[\"meta\"].incident_id\n            reason = self._determine_secops_closure_reason(req, case_closure_reason)\n            verdict = self._map_secops_reason_to_s1_verdict(reason)\n            verdict_groups[verdict].append(alert_id)\n            alert_ids.append(alert_id)\n\n        return verdict_groups, alert_ids\n\n    def _determine_secops_closure_reason(\n        self,\n        closure_request: SingleJson,\n        case_closure_reason: str | None,\n    ) -> str:\n        \"\"\"Selects appropriate closure reason.\"\"\"\n        if closure_request.get(\"is_case_closed\") and case_closure_reason:\n            return case_closure_reason\n\n        return closure_request.get(\"reason\", \"\")\n\n    def _map_secops_reason_to_s1_verdict(self, reason: str) -> str | None:\n        \"\"\"Maps SecOps reason to SentinelOne verdict.\"\"\"\n        if not reason:\n            return None\n\n        clean_reason: str = reason.strip()\n        if clean_reason == constants.REASON_MALICIOUS:\n            return constants.SENTINELONE_TRUE_POSITIVE\n\n        if clean_reason == constants.REASON_NOT_MALICIOUS:\n            return constants.SENTINELONE_FALSE_POSITIVE\n\n        return None\n\n    def _process_status_batches(\n        self, case_id: str, verdict_groups: dict, alert_ids: list[str]\n    ) -> None:\n        \"\"\"Handles the retry wrapper, logging, and database cleanup.\"\"\"\n        try:\n            self._retry(self._execute_sentinelone_api_calls, verdict_groups, alert_ids)\n            self._remove_synced_entries([(case_id, aid) for aid in alert_ids])\n        except (RequestsConnectionError, SentinelOneV2ManagerError) as error:\n            self.logger.error(f\"Batch sync failed for Case {case_id}: {error}\")\n\n    def _execute_sentinelone_api_calls(\n        self,\n        verdict_groups: dict[str, list[str]],\n        alert_ids: list[str],\n    ) -> None:\n        \"\"\"Runs the SentinelOne API calls.\"\"\"\n        for verdict, ids in verdict_groups.items():\n            if verdict and ids:\n                self.manager.update_cloud_detection_alert_verdict(\n                    alert_ids=ids, analyst_verdict=verdict\n                )\n                self.logger.info(f\"Updated verdict '{verdict}' for IDs: {ids}\")\n\n        if not alert_ids:\n            return\n\n        self.manager.update_cloud_detection_alert_incident_status(\n            alert_ids=alert_ids, status=constants.SENTINELONE_RESOLVED\n        )\n        self.logger.info(f\"Resolved S1 Alerts IDs: {alert_ids}\")\n\n    def sync_comments(self, job_case: JobCase) -> None:\n        \"\"\"SentinelOne -> SecOps Comments Sync.\n\n        Args:\n            job_case (JobCase): The SecOps case to sync comments for.\n        \"\"\"\n\n    def sync_severity(self, job_case: JobCase) -> None:\n        \"\"\"SentinelOne -> SecOps Priority Sync.\n\n        Args:\n            job_case (JobCase): The SecOps case to sync severity for.\n        \"\"\"\n\n    def sync_assignee(self, job_case: JobCase) -> None:\n        \"\"\"SentinelOne -> SecOps Assignee Sync.\n\n        Args:\n            job_case (JobCase): The SecOps case to sync assignee for.\n        \"\"\"\n\n    def sync_tags(self, job_case: JobCase) -> None:\n        \"\"\"SentinelOne -> SecOps Tags Sync.\n\n        Args:\n            job_case (JobCase): The SecOps case to sync tags for.\n        \"\"\"\n\n    def _get_secops_closure_details(self, product_class: str) -> tuple[str, str]:\n        return self._map_s1_verdict_to_secops(product_class)\n\n\ndef main() -> NoReturn:\n    \"\"\"Main entry point.\"\"\"\n    SyncAlertsV2().start()\n\n\nif __name__ == \"__main__\":\n    main()\n",
-    "lastRunStatus": "Error",
-    "lastRunTime": 1780763120012,
-    "agent": "",
-    "uniqueIdentifier": "40b08261-47dd-460e-aecf-ad77de8ff26f",
-    "enabled": true,
-    "displayName": "Sync Alerts234567",
+    "creator": null,
     "description": "This job will synchronize Google SecOps Alerts and SentinelOne alerts. The job synchronizes status. Requires \u201cSentinelOne Alert\u201d tag on the case. Note: If the alert didn\u2019t originate from \u201cAlerts Connector\u201d you will need to add an \u201cAlert_ID\u201d Alert Context Value for the job to be able to find the correct information.",
-    "intervalSeconds": 7200,
+    "isEnabled": true,
+    "isCustom": true,
+    "version": 1,
+    "parameters": [
+        {
+            "id": 3986,
+            "isMandatory": true,
+            "name": "Environment Name",
+            "type": 2,
+            "value": "Default Environment"
+        },
+        {
+            "id": 3987,
+            "isMandatory": true,
+            "name": "API Root",
+            "type": 2,
+            "value": "sdfghj"
+        },
+        {
+            "id": 3989,
+            "isMandatory": false,
+            "name": "Max Hours Backwards",
+            "type": 1,
+            "value": "24"
+        },
+        {
+            "id": 3990,
+            "isMandatory": false,
+            "name": "Verify SSL",
+            "type": 0,
+            "value": "true"
+        },
+        {
+            "id": 3988,
+            "isMandatory": true,
+            "name": "API Token",
+            "type": 3,
+            "value": "***************"
+        }
+    ],
+    "runIntervalInSeconds": 7200,
+    "creationTime": "2026-06-06T17:00:20.333Z",
+    "lastModificationTime": "2026-06-06T17:00:25.902Z",
+    "isSystemJob": false,
+    "jobDefinitionName": "Sync Alerts",
+    "agentIdentifier": "",
     "advanced": false,
     "advancedConfig": {
         "timeZone": "Europe/London",
@@ -32,43 +72,9 @@
                 "nanos": 0
             },
             "interval": 0
-        }
-    },
-    "parameters": [
-        {
-            "id": 3603,
-            "mandatory": true,
-            "type": "String",
-            "displayName": "Environment Name",
-            "value": "Default Environment"
         },
-        {
-            "id": 3604,
-            "mandatory": true,
-            "type": "String",
-            "displayName": "API Root",
-            "value": "sdfghj"
-        },
-        {
-            "id": 3606,
-            "mandatory": false,
-            "type": "Int",
-            "displayName": "Max Hours Backwards",
-            "value": "24"
-        },
-        {
-            "id": 3607,
-            "mandatory": false,
-            "type": "Boolean",
-            "displayName": "Verify SSL",
-            "value": "true"
-        },
-        {
-            "id": 3605,
-            "mandatory": true,
-            "type": "Password",
-            "displayName": "API Token",
-            "value": "***************"
-        }
-    ]
+        "dailySchedule": null,
+        "weeklySchedule": null,
+        "monthlySchedule": null
+    }
 }
