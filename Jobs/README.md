@@ -1,4 +1,12 @@
-## CA Close Ticket In CA For Closed Case - AutoTest 1
+## 12 Actions Monitor
+Notifies of all the actions, that have individually failed at least 3 times, in the last 3 hours
+
+
+**Run Interval In Seconds:** 3600
+
+
+
+Readme Addon## CA Close Ticket In CA For Closed Case - AutoTest 1
 Automated test job instance. Index: 21
 
 

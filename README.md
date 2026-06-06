@@ -165,6 +165,7 @@
 ## Jobs
 |Name|Description|
 |----|-----------|
+|12 Actions Monitor|Notifies of all the actions, that have individually failed at least 3 times, in the last 3 hours|
 |CA Close Ticket In CA For Closed Case - AutoTest 1|Automated test job instance. Index: 21|
 |CA Close Ticket In CA For Closed Case - AutoTest 2|Automated test job instance. Index: 48|
 |CA Close Ticket In CA For Closed Case|Sync closure of the tickets at the CA Desk Manager with Siemplify cases closure.|
