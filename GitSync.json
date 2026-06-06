@@ -6,7 +6,9 @@
         "Visual Family": {},
         "Playbook": {},
         "Connector": {},
-        "Job": {},
+        "Job": {
+            "Siemplify Job- Cases Collector": "Readme Addon"
+        },
         "Block": {}
     },
     "settings": {
