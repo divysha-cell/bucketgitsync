@@ -1,0 +1,53 @@
+{
+    "lastRunStatus": null,
+    "lastRunTime": null,
+    "uniqueIdentifier": "16a6ae49-e1aa-455c-9975-84b9fee5d0db",
+    "id": 0,
+    "jobDefinitionId": 0,
+    "name": "Close Cases Based On Search - AutoTest 2",
+    "integration": "Tools",
+    "script": "# Copyright 2025 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\nfrom __future__ import annotations\n\nimport json\n\nfrom SiemplifyJob import SiemplifyJob\nfrom SiemplifyUtils import output_handler\nfrom TIPCommon.rest.soar_api import execute_bulk_close_case, search_cases_by_everything\n\nSCRIPT_NAME = \"CloseCasesBasedOnSearch\"\n\n\n@output_handler\ndef main():\n    siemplify = SiemplifyJob()\n    siemplify.script_name = SCRIPT_NAME\n    siemplify.LOGGER.info(\"----------------- Main - Started -----------------\")\n    try:\n        payload = json.loads(siemplify.parameters.get(\"Search Payload\"))\n        payload[\"isCaseClosed\"] = False\n        results = search_cases_by_everything(siemplify, payload).get(\"results\")\n        case_ids = [item.get(\"id\") for item in results]\n\n        if case_ids:\n            siemplify.LOGGER.info(f\"The following cases will be affected: {case_ids}\")\n\n            execute_bulk_close_case(\n                chronicle_soar=siemplify,\n                case_ids=case_ids,\n                close_reason=int(siemplify.parameters.get(\"Close Reason\")),\n                root_cause=siemplify.parameters.get(\"Root Cause\"),\n                close_comment=siemplify.parameters.get(\"Close Comment\"),\n            )\n            siemplify.LOGGER.info(f\"Successfully closed {len(case_ids)} cases\")\n\n        else:\n            siemplify.LOGGER.info(\"No cases found with the search payload\")\n\n    except Exception as e:\n        siemplify.LOGGER.error(f\"General error performing Job {SCRIPT_NAME}\")\n        siemplify.LOGGER.exception(e)\n        raise\n\n    siemplify.LOGGER.info(\"----------------- Main - Finished -----------------\")\n    siemplify.end_script()\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "creator": null,
+    "description": "Automated test job instance. Index: 30",
+    "isEnabled": false,
+    "isCustom": true,
+    "version": 1,
+    "parameters": [
+        {
+            "id": 1447,
+            "isMandatory": false,
+            "name": "Search Payload",
+            "type": 2,
+            "value": "test_str_a9b580bb"
+        },
+        {
+            "id": 1448,
+            "isMandatory": true,
+            "name": "Close Comment",
+            "type": 2,
+            "value": "test_str_1058bec6"
+        },
+        {
+            "id": 1449,
+            "isMandatory": true,
+            "name": "Close Reason",
+            "type": 1,
+            "value": "60"
+        },
+        {
+            "id": 1450,
+            "isMandatory": true,
+            "name": "Root Cause",
+            "type": 2,
+            "value": "test_str_8aa8d771"
+        }
+    ],
+    "runIntervalInSeconds": 60,
+    "creationTime": "2026-06-06T07:24:48.779Z",
+    "lastModificationTime": "2026-06-06T07:24:48.779Z",
+    "isSystemJob": false,
+    "jobDefinitionName": "Close Cases Based On Search",
+    "agentIdentifier": null,
+    "advanced": false,
+    "advancedConfig": null
+}
