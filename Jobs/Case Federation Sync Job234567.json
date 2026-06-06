@@ -1,6 +1,6 @@
 {
-    "lastRunStatus": 0,
-    "lastRunTime": 1780737884957,
+    "lastRunStatus": 1,
+    "lastRunTime": 1780741486199,
     "uniqueIdentifier": "28677763-5cdd-4e2e-bd2a-c475c693e640",
     "id": 0,
     "jobDefinitionId": 0,
@@ -30,7 +30,7 @@
     ],
     "runIntervalInSeconds": 3600,
     "creationTime": "2026-06-06T07:24:30.26Z",
-    "lastModificationTime": "2026-06-06T09:24:44.975Z",
+    "lastModificationTime": "2026-06-06T10:24:46.215Z",
     "isSystemJob": false,
     "jobDefinitionName": "Case Federation Sync Job",
     "agentIdentifier": "",
