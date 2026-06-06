@@ -1,0 +1,66 @@
+{
+    "name": "projects/project/locations/location/instances/instance/integrations/ServiceDeskPlusV3/jobs/89/jobInstances/340",
+    "id": 0,
+    "job": "Sync Closed Requests By Tag",
+    "integration": "ServiceDeskPlusV3",
+    "createTime": 1780763093751,
+    "updateTime": 1780763093751,
+    "custom": true,
+    "script": "from SiemplifyJob import SiemplifyJob\nfrom SiemplifyUtils import output_handler, convert_datetime_to_unix_time, unix_now\n\nfrom TIPCommon.extraction import extract_action_param\nfrom TIPCommon.rest.soar_api import get_full_case_details\nfrom TIPCommon.types import SingleJson\n\nfrom constants import (\n    INTEGRATION_NAME,\n    SYNC_CLOSURE_SCRIPT_NAME,\n    SERVICE_DESK_PLUS_TAG,\n    REQUESTS_TAG,\n    TAG_SEPARATOR,\n    CANCELLED_STATUS,\n    CLOSED_STATUS,\n    RESOLVED_STATUS,\n    REASON,\n    ROOT_CAUSE,\n    COMMENT,\n    CASE_STATUS_CLOSED,\n    CASE_STATUS_OPEN,\n    DEFAULT_HOURS_BACKWARDS,\n    MIN_HOURS_BACKWARDS,\n)\nfrom ServiceDeskPlusManagerV3 import ServiceDeskPlusManagerV3\nfrom ServiceDeskPlusV3Exceptions import (\n    NoteNotFoundException,\n    ServiceDeskPlusV3Exception,\n)\nfrom utils import get_last_success_time\n\n\n@output_handler\ndef main():\n    siemplify = SiemplifyJob()\n    siemplify.script_name = SYNC_CLOSURE_SCRIPT_NAME\n    siemplify.LOGGER.info(\"--------------- JOB STARTED ---------------\")\n\n    api_root = extract_action_param(\n        siemplify=siemplify, param_name=\"Api Root\", is_mandatory=True, print_value=True\n    )\n    api_key = extract_action_param(\n        siemplify=siemplify, param_name=\"Api Key\", is_mandatory=True, print_value=False\n    )\n    hours_backwards = extract_action_param(\n        siemplify=siemplify,\n        param_name=\"Max Hours Backwards\",\n        input_type=int,\n        print_value=True,\n        default_value=DEFAULT_HOURS_BACKWARDS,\n    )\n    verify_ssl = extract_action_param(\n        siemplify=siemplify,\n        param_name=\"Verify SSL\",\n        default_value=True,\n        input_type=bool,\n        print_value=True,\n    )\n\n    try:\n        fetch_time = get_last_success_time(\n            siemplify, offset_with_metric={\"hours\": hours_backwards}, print_value=False\n        )\n        fetch_time_ms = convert_datetime_to_unix_time(fetch_time)\n        siemplify.LOGGER.info(\n            f\"Last fetch time. Date time:{fetch_time}. Unix:{fetch_time_ms}\"\n        )\n        new_timestamp = unix_now()\n\n        if hours_backwards < MIN_HOURS_BACKWARDS:\n            raise Exception(\n                '\"Max Hours Backwards\" parameter must be greater or equal to '\n                f\"{MIN_HOURS_BACKWARDS}\"\n            )\n\n        servicedesk_manager = ServiceDeskPlusManagerV3(\n            api_root=api_root, api_key=api_key, verify_ssl=verify_ssl\n        )\n\n        cases_id = siemplify.get_cases_by_filter(\n            tags=[SERVICE_DESK_PLUS_TAG],\n            statuses=[CASE_STATUS_CLOSED],\n            start_time_unix_time_in_ms=fetch_time_ms,\n        )\n\n        closed_cases = []\n        open_cases = []\n\n        for case_id in cases_id:\n            case = get_full_case_details(siemplify, case_id)\n            closed_cases.append(case)\n\n        siemplify.LOGGER.info(\n            f\"Found {len(closed_cases)} closed cases with tag \"\n            f\"{SERVICE_DESK_PLUS_TAG} since last fetch time.\"\n        )\n\n        siemplify.LOGGER.info(\"--- Start Closing Requests in ServiceDeskPlus ---\")\n\n        for case in closed_cases:\n            case_tags = [\n                item.get(\"displayName\", item.get(\"tag\"))\n                for item in case.get(\"tags\", [])\n                if REQUESTS_TAG in item.get(\"displayName\", item.get(\"tag\"))\n            ]\n            request_ids = [tag.split(TAG_SEPARATOR)[1].strip() for tag in case_tags]\n            request_id = next(\n                (id for id in request_ids if is_valid_request_id(siemplify, id)), None\n            )\n            if request_id:\n                try:\n                    servicedesk_manager.update_request_status(request_id, CLOSED_STATUS)\n                    siemplify.LOGGER.info(\n                        f\"ServiceDeskPlus request - {request_id} status was updated\"\n                        f\" to {CLOSED_STATUS}\"\n                    )\n                except NoteNotFoundException:\n                    siemplify.LOGGER.error(\n                        f\"Job wasn't able to close the Request with ID {request_id}. \"\n                        f\"Reason: Request wasn't found in {INTEGRATION_NAME}.\"\n                    )\n                except Exception as e:\n                    siemplify.LOGGER.error(\n                        \"Failed to close the request \"\n                        f\"{request_id} in {INTEGRATION_NAME}.\"\n                    )\n                    siemplify.LOGGER.exception(e)\n\n        siemplify.LOGGER.info(\n            \"--- Finished synchronizing closed cases from Siemplify \"\n            \"to ServiceDeskPlus requests ---\"\n        )\n\n        cases_id = siemplify.get_cases_by_filter(\n            tags=[SERVICE_DESK_PLUS_TAG], statuses=[CASE_STATUS_OPEN]\n        )\n        for case_id in cases_id:\n            case = get_full_case_details(siemplify, case_id)\n            open_cases.append(case)\n\n        siemplify.LOGGER.info(\n            f\"Found {len(open_cases)} open cases with tag {SERVICE_DESK_PLUS_TAG}.\"\n        )\n\n        siemplify.LOGGER.info(\"--- Start Closing Alerts in Siemplify ---\")\n\n        for case in open_cases:\n            case_tags = [\n                item.get(\"displayName\", item.get(\"tag\"))\n                for item in case.get(\"tags\", [])\n                if REQUESTS_TAG in item.get(\"displayName\", item.get(\"tag\"))\n            ]\n            request_ids = [tag.split(TAG_SEPARATOR)[1].strip() for tag in case_tags]\n            request_id = next(\n                (id for id in request_ids if is_valid_request_id(siemplify, id)), None\n            )\n            if request_id:\n                try:\n                    request = servicedesk_manager.get_request(request_id)\n                    if request:\n                        if request.status in [\n                            CLOSED_STATUS,\n                            CANCELLED_STATUS,\n                            RESOLVED_STATUS,\n                        ]:\n                            close_alerts_for_case(\n                                siemplify=siemplify,\n                                case=case,\n                                request_status=request.status,\n                            )\n                except NoteNotFoundException:\n                    siemplify.LOGGER.error(\n                        \"Job wasn't able to get details for the Request with \"\n                        f\"ID {request_id}. Reason: Request wasn't \"\n                        f\"found in {INTEGRATION_NAME}.\"\n                    )\n                except Exception as e:\n                    siemplify.LOGGER.error(\n                        f\"Failed to get details for the request {request_id} \"\n                        f\"from {INTEGRATION_NAME}.\"\n                    )\n                    siemplify.LOGGER.exception(e)\n\n        siemplify.save_timestamp(new_timestamp=new_timestamp)\n        siemplify.LOGGER.info(\n            \" --- Finish synchronize closed requests from ServiceDeskPlus to Siemplify cases --- \"\n        )\n        siemplify.LOGGER.info(\"--------------- JOB FINISHED ---------------\")\n\n    except Exception as error:\n        siemplify.LOGGER.error(f\"Got exception on main handler. Error: {error}\")\n        siemplify.LOGGER.exception(error)\n        raise\n\n\ndef close_alerts_for_case(\n    siemplify: SiemplifyJob,\n    case: SingleJson,\n    request_status: str,\n) -> None:\n    \"\"\"Close alerts for case.\n\n    Args:\n        siemplify(SiemplifyJob): The SiemplifyJob object.\n        case(SingleJson): The case object.\n        request_status(str): The status of the request.\n    \"\"\"\n    case_id = case.get(\"id\")\n    for item in case.get(\"tags\", case.get(\"alerts\", [])):\n        alert_id = item.get(\"alert\", item.get(\"identifier\", \"\"))\n        if alert_id:\n            try:\n                siemplify.close_alert(\n                    root_cause=ROOT_CAUSE,\n                    reason=REASON,\n                    comment=COMMENT.format(status=request_status),\n                    case_id=case_id,\n                    alert_id=alert_id,\n                )\n                siemplify.LOGGER.info(f\"Alert {alert_id} was closed\")\n\n            except ServiceDeskPlusV3Exception as error:\n                siemplify.LOGGER.error(\n                    f\"Failed to close alert {alert_id} of \" f\"case {case_id}\"\n                )\n                siemplify.LOGGER.exception(error)\n\n\ndef is_valid_request_id(siemplify, request_id):\n    try:\n        request_id = int(request_id)\n    except Exception:\n        siemplify.LOGGER.error(f\"Request id: {request_id} is in invalid format.\")\n        return False\n\n    if request_id < 1:\n        siemplify.LOGGER.error(f\"Request id should be a positive number.\")\n        return False\n    return True\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "agent": "",
+    "uniqueIdentifier": "4a284cf3-1441-45a9-ac87-e16bc7895e82",
+    "enabled": false,
+    "displayName": "Sync Closed Requests By Tag",
+    "description": "This job will synchronize ServiceDeskPlus requests that were created within Siemplify Case playbook and Siemplify cases. Note: in ServiceDeskPlus statuses \"Cancelled\", \"Closed\" and \"Resolved\" are treated as closed. Additionally, in order for the job to work, it\u2019s required for the case to have 2 tags. First tag should be \"ServiceDeskPlus\" and the second should be with the prefix \"ServiceDeskPlus Requests:{request id}\".",
+    "intervalSeconds": 3600,
+    "advanced": false,
+    "advancedConfig": {
+        "timeZone": "Europe/London",
+        "scheduleType": "Once",
+        "oneTimeSchedule": {
+            "startDate": {
+                "year": 2026,
+                "month": 6,
+                "day": 7
+            },
+            "time": {
+                "hours": 16,
+                "minutes": 1,
+                "seconds": 0,
+                "nanos": 0
+            },
+            "interval": 0
+        }
+    },
+    "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/service-desk-plus-v3#sync_closed_requests_by_tag",
+    "parameters": [
+        {
+            "id": 3686,
+            "mandatory": true,
+            "type": "String",
+            "displayName": "Api Root",
+            "value": "whttp://{IP OR FQDN}:8080/api/v3/"
+        },
+        {
+            "id": 3688,
+            "mandatory": false,
+            "type": "String",
+            "displayName": "Max Hours Backwards",
+            "value": "24"
+        },
+        {
+            "id": 3689,
+            "mandatory": false,
+            "type": "Boolean",
+            "displayName": "Verify SSL",
+            "value": "false"
+        },
+        {
+            "id": 3687,
+            "mandatory": true,
+            "type": "Password",
+            "displayName": "Api Key",
+            "value": "***************"
+        }
+    ]
+}
