@@ -1,0 +1,214 @@
+{
+    "IsAvailableForCommunity": false,
+    "Identifier": "SOCRadar",
+    "ShouldInstalledInSystem": false,
+    "Version": 1.0,
+    "DisplayName": "SOCRadar",
+    "Description": "Bidirectional integration between SOCRadar Extended Threat Intelligence (XTI) and Google SecOps SOAR. Ingests SOCRadar alarms as cases, provides IOC enrichment, threat feed collection, rapid reputation lookups, and full alarm lifecycle management. Support: integration@socradar.io",
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAeUlEQVR4nO3PQQkAMAzAwOqoiPmXNxF7HINABFxm93zdcEEDWtCAFjSgBQ1oQQNa0IAWNKAFDWhBA1rQgBY0oAUNaEEDWtCAFjSgBQ1oQQNa0IAWNKAFDWhBA1rQgBY0oAUNaEEDWtCAFjSgBQ1oQQNa0IAWNKAFj12ZJSBbHtAw7QAAAABJRU5ErkJggg==",
+    "SvgImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"64\" height=\"64\">\n  <rect width=\"100\" height=\"100\" rx=\"12\" fill=\"#1a1a2e\"/>\n  <text x=\"50\" y=\"42\" font-family=\"Arial,sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#e94560\" text-anchor=\"middle\">SOC</text>\n  <text x=\"50\" y=\"62\" font-family=\"Arial,sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f3460\" text-anchor=\"middle\">Radar</text>\n  <circle cx=\"50\" cy=\"78\" r=\"4\" fill=\"#e94560\" opacity=\"0.6\"/>\n  <circle cx=\"50\" cy=\"78\" r=\"8\" fill=\"none\" stroke=\"#e94560\" stroke-width=\"1\" opacity=\"0.4\"/>\n  <circle cx=\"50\" cy=\"78\" r=\"12\" fill=\"none\" stroke=\"#e94560\" stroke-width=\"0.5\" opacity=\"0.2\"/>\n</svg>\n",
+    "IsCustom": false,
+    "PythonVersion": 3,
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "SOCRadar",
+            "PropertyName": "API Root",
+            "PropertyDescription": "SOCRadar API base URL.",
+            "PropertyDisplayName": "API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://platform.socradar.com/api",
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1781676044071,
+            "ModificationTimeUnixTimeInMs": 1781676044071
+        },
+        {
+            "IntegrationIdentifier": "SOCRadar",
+            "PropertyName": "API Key",
+            "PropertyDescription": "SOCRadar platform API key with Incident API V4 permissions.",
+            "PropertyDisplayName": "API Key",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": null,
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1781676044071,
+            "ModificationTimeUnixTimeInMs": 1781676044071
+        },
+        {
+            "IntegrationIdentifier": "SOCRadar",
+            "PropertyName": "Company ID",
+            "PropertyDescription": "SOCRadar company identifier (numeric).",
+            "PropertyDisplayName": "Company ID",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": null,
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1781676044071,
+            "ModificationTimeUnixTimeInMs": 1781676044071
+        },
+        {
+            "IntegrationIdentifier": "SOCRadar",
+            "PropertyName": "Verify SSL",
+            "PropertyDescription": "Enable SSL certificate verification for API requests.",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": false,
+            "Value": "true",
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1781676044071,
+            "ModificationTimeUnixTimeInMs": 1781676044071
+        },
+        {
+            "IntegrationIdentifier": "SOCRadar",
+            "PropertyName": "IOC Enrichment API Key",
+            "PropertyDescription": "Separate API key for SOCRadar IOC Enrichment (credit-based add-on). Leave empty to skip enrichment actions.",
+            "PropertyDisplayName": "IOC Enrichment API Key",
+            "PropertyType": 3,
+            "IsMandatory": false,
+            "Value": null,
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1781676044071,
+            "ModificationTimeUnixTimeInMs": 1781676044071
+        },
+        {
+            "IntegrationIdentifier": "SOCRadar",
+            "PropertyName": "Rapid Reputation API Key",
+            "PropertyDescription": "Separate API key for SOCRadar Rapid Reputation (add-on). Provides quick reputation lookups for IPs, domains, URLs, and hashes. Leave empty to skip.",
+            "PropertyDisplayName": "Rapid Reputation API Key",
+            "PropertyType": 3,
+            "IsMandatory": false,
+            "Value": null,
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1781676044071,
+            "ModificationTimeUnixTimeInMs": 1781676044071
+        }
+    ],
+    "IntegrationSupportedActions": [
+        {
+            "Name": "Change Severity",
+            "Description": "Change the severity of a SOCRadar alarm (LOW, MEDIUM, HIGH, CRITICAL).",
+            "Id": 83,
+            "CreationTimeUnixTimeInMs": 1781676044082,
+            "ModificationTimeUnixTimeInMs": 1781676044082
+        },
+        {
+            "Name": "Add Tag",
+            "Description": "Add a tag to a SOCRadar alarm.",
+            "Id": 84,
+            "CreationTimeUnixTimeInMs": 1781676044082,
+            "ModificationTimeUnixTimeInMs": 1781676044082
+        },
+        {
+            "Name": "Ask Analyst",
+            "Description": "Request assistance from a SOCRadar analyst for an alarm.",
+            "Id": 85,
+            "CreationTimeUnixTimeInMs": 1781676044082,
+            "ModificationTimeUnixTimeInMs": 1781676044082
+        },
+        {
+            "Name": "Change Alarm Status",
+            "Description": "Change the status of a SOCRadar alarm. Valid statuses: OPEN (0), INVESTIGATING (1), RESOLVED (2), PENDING_INFO (4), LEGAL_REVIEW (5), VENDOR_ASSESSMENT (6), FALSE_POSITIVE (9), DUPLICATE (10), PROCESSED_INTERNALLY (11), MITIGATED (12), NOT_APPLICABLE (13).",
+            "Id": 86,
+            "CreationTimeUnixTimeInMs": 1781676044082,
+            "ModificationTimeUnixTimeInMs": 1781676044082
+        },
+        {
+            "Name": "Add Comment",
+            "Description": "Add a comment to a SOCRadar alarm.",
+            "Id": 87,
+            "CreationTimeUnixTimeInMs": 1781676044082,
+            "ModificationTimeUnixTimeInMs": 1781676044082
+        },
+        {
+            "Name": "Enrich Indicator STIX",
+            "Description": "Enrich an indicator and return results in STIX 2.1 bundle format. Requires the IOC Enrichment API Key.",
+            "Id": 88,
+            "CreationTimeUnixTimeInMs": 1781676044082,
+            "ModificationTimeUnixTimeInMs": 1781676044082
+        },
+        {
+            "Name": "Remove Tag",
+            "Description": "Remove a tag from a SOCRadar alarm (toggle-based API).",
+            "Id": 89,
+            "CreationTimeUnixTimeInMs": 1781676044082,
+            "ModificationTimeUnixTimeInMs": 1781676044082
+        },
+        {
+            "Name": "Get Threat Feed",
+            "Description": "Fetch IOCs from one or more SOCRadar Threat Feed collections by UUID. Returns IOC values with type, confidence score, seen count, and first/last seen dates.",
+            "Id": 90,
+            "CreationTimeUnixTimeInMs": 1781676044082,
+            "ModificationTimeUnixTimeInMs": 1781676044082
+        },
+        {
+            "Name": "Ping",
+            "Description": "Test connectivity to the SOCRadar API.",
+            "Id": 91,
+            "CreationTimeUnixTimeInMs": 1781676044082,
+            "ModificationTimeUnixTimeInMs": 1781676044082
+        },
+        {
+            "Name": "Change Assignee",
+            "Description": "Assign user(s) to a SOCRadar alarm by email or user ID.",
+            "Id": 92,
+            "CreationTimeUnixTimeInMs": 1781676044082,
+            "ModificationTimeUnixTimeInMs": 1781676044082
+        },
+        {
+            "Name": "Get Assignee Options",
+            "Description": "List all users available for alarm assignment in the SOCRadar company.",
+            "Id": 93,
+            "CreationTimeUnixTimeInMs": 1781676044082,
+            "ModificationTimeUnixTimeInMs": 1781676044082
+        },
+        {
+            "Name": "Get Assignee",
+            "Description": "Get the current assignee(s) of a SOCRadar alarm.",
+            "Id": 94,
+            "CreationTimeUnixTimeInMs": 1781676044082,
+            "ModificationTimeUnixTimeInMs": 1781676044082
+        },
+        {
+            "Name": "Get Alarm Details",
+            "Description": "Fetch full details of a single SOCRadar alarm by ID.",
+            "Id": 95,
+            "CreationTimeUnixTimeInMs": 1781676044082,
+            "ModificationTimeUnixTimeInMs": 1781676044082
+        },
+        {
+            "Name": "Rapid Reputation",
+            "Description": "Quick reputation lookup for an entity (IP, hostname, URL, or hash) using the SOCRadar Rapid Reputation API. Returns score, severity, whitelisting status, and threat intelligence sources. Requires the Rapid Reputation API Key.",
+            "Id": 96,
+            "CreationTimeUnixTimeInMs": 1781676044082,
+            "ModificationTimeUnixTimeInMs": 1781676044082
+        },
+        {
+            "Name": "Enrich Indicator",
+            "Description": "Enrich an indicator (IP, domain, hash, URL) using the SOCRadar IOC Enrichment API. Returns threat score, severity, categorization, classifications, history, and optionally AI insights. Requires the IOC Enrichment API Key.",
+            "Id": 97,
+            "CreationTimeUnixTimeInMs": 1781676044082,
+            "ModificationTimeUnixTimeInMs": 1781676044082
+        }
+    ],
+    "Categories": [
+        "Threat Intelligence",
+        "Incident Management"
+    ],
+    "HasConnectors": false,
+    "DocumentationLink": "https://socradar.io/docs",
+    "IsCertified": false,
+    "UploaderFullName": null,
+    "PublishComment": null,
+    "UploaderEmail": null,
+    "UploaderImageBase64": null,
+    "UploaderProfileLink": null,
+    "MinimumSystemVersion": 0.0,
+    "ProductionIntegrationIdentifier": null,
+    "Type": 0,
+    "Internal": false,
+    "GoogleSecOpsProduct": false,
+    "Id": 0,
+    "CreationTimeUnixTimeInMs": 1781676044071,
+    "ModificationTimeUnixTimeInMs": 1781676044071,
+    "Custom": false
+}

@@ -48,7 +48,7 @@ Python Version - 3
 |markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl|
 |google_api_python_client-2.188.0-py3-none-any.whl|
 |pycryptodome-3.23.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl|
-|TIPCommon-2.3.9-py3-none-any.whl|
+|TIPCommon-2.4.2-py3-none-any.whl|
 |google_api_core-2.30.3-py3-none-any.whl|
 |dulwich-0.24.1-py3-none-any.whl|
 |pycparser-3.0-py3-none-any.whl|
@@ -83,8 +83,51 @@ Timeout - 600 Seconds
 
 ## Jobs
 
-#### Push Mappings
-Exports mappings  to the repo.
+#### Push Integration
+Push an integration to repo. This action will overwrite the entire folder.
+
+|Name|IsMandatory|Type|DefaultValue|
+|----|-----------|----|------------|
+|Commit|True|String||
+|Push Whitelist|True|String||
+|Repo URL|False|String||
+|Branch|False|String||
+|Git Server Fingerprint|False|String||
+|Commit Author|False|String||
+|Readme Addon|False|String||
+
+#### Pull Jobs
+Imports a job from the repo.
+
+|Name|IsMandatory|Type|DefaultValue|
+|----|-----------|----|------------|
+|Job Whitelist|True|String||
+|Repo URL|False|String||
+|Branch|False|String||
+|Git Server Fingerprint|False|String||
+
+#### Pull Integration
+Install an integration or update an installed one.
+
+|Name|IsMandatory|Type|DefaultValue|
+|----|-----------|----|------------|
+|Install Whitelist|True|String||
+|Repo URL|False|String||
+|Branch|False|String||
+|Git Server Fingerprint|False|String||
+
+#### Pull Simulated Cases
+Imports simulated cases from the repo.
+
+|Name|IsMandatory|Type|DefaultValue|
+|----|-----------|----|------------|
+|Simulated Cases|True|String||
+|Repo URL|False|String||
+|Branch|False|String||
+|Git Server Fingerprint|False|String||
+
+#### Push Job
+Export a job to the repo
 
 |Name|IsMandatory|Type|DefaultValue|
 |----|-----------|----|------------|
@@ -93,23 +136,18 @@ Exports mappings  to the repo.
 |Branch|False|String||
 |Git Server Fingerprint|False|String||
 |Commit Author|False|String||
-|Source|True|String||
+|Job Whitelist|True|String||
 |Readme Addon|False|String||
 
-#### Push Playbook
-Exports playbooks or blocks to the repo
+#### Pull Custom Family
+Imports a custom family from the repo.
 
 |Name|IsMandatory|Type|DefaultValue|
 |----|-----------|----|------------|
-|Branch|False|String||
-|Commit|True|String||
 |Repo URL|False|String||
+|Branch|False|String||
 |Git Server Fingerprint|False|String||
-|Commit Author|False|String||
-|Folders Whitelist|False|String||
-|Playbook Whitelist|False|String||
-|Readme Addon|False|String||
-|Include Playbook Blocks|False|Boolean|true|
+|Family Name|True|String||
 
 #### Push Simulated Cases
 Export simulate cases to the repo
@@ -122,6 +160,17 @@ Export simulate cases to the repo
 |Git Server Fingerprint|False|String||
 |Commit Author|False|String||
 |Simulated Cases|True|String||
+
+#### Pull Playbook
+Pulls and Installs a playbook or block from the repo. NOTE: Please verify you're not overwriting existing playbooks
+
+|Name|IsMandatory|Type|DefaultValue|
+|----|-----------|----|------------|
+|Repo URL|False|String||
+|Branch|False|String||
+|Git Server Fingerprint|False|String||
+|Playbook Whitelist|True|String||
+|Include Playbook Blocks|False|Boolean|true|
 
 #### Pull Content
 Installs content from the repo.
@@ -152,17 +201,6 @@ Installs content from the repo.
 |Blacklists|False|Boolean|true|
 |SLA Records|False|Boolean|true|
 |Simulated Cases|False|Boolean|true|
-
-#### Pull Playbook
-Pulls and Installs a playbook or block from the repo. NOTE: Please verify you're not overwriting existing playbooks
-
-|Name|IsMandatory|Type|DefaultValue|
-|----|-----------|----|------------|
-|Repo URL|False|String||
-|Branch|False|String||
-|Git Server Fingerprint|False|String||
-|Playbook Whitelist|True|String||
-|Include Playbook Blocks|False|Boolean|true|
 
 #### Push Content
 Push all content of this platform to git
@@ -197,6 +235,34 @@ Push all content of this platform to git
 |SLA Records|False|Boolean|true|
 |Simulated Cases|False|Boolean|true|
 
+#### Push Playbook
+Exports playbooks or blocks to the repo
+
+|Name|IsMandatory|Type|DefaultValue|
+|----|-----------|----|------------|
+|Branch|False|String||
+|Commit|True|String||
+|Repo URL|False|String||
+|Git Server Fingerprint|False|String||
+|Commit Author|False|String||
+|Folders Whitelist|False|String||
+|Playbook Whitelist|False|String||
+|Readme Addon|False|String||
+|Include Playbook Blocks|False|Boolean|true|
+
+#### Push Mappings
+Exports mappings  to the repo.
+
+|Name|IsMandatory|Type|DefaultValue|
+|----|-----------|----|------------|
+|Commit|True|String||
+|Repo URL|False|String||
+|Branch|False|String||
+|Git Server Fingerprint|False|String||
+|Commit Author|False|String||
+|Source|True|String||
+|Readme Addon|False|String||
+
 #### Push Connectors
 Exports a connector to the repo.
 
@@ -225,82 +291,6 @@ Exports a custom family to the repo.
 |Family Name|True|String||
 |Readme Addon|False|String||
 
-#### Pull Jobs
-Imports a job from the repo.
-
-|Name|IsMandatory|Type|DefaultValue|
-|----|-----------|----|------------|
-|Job Whitelist|True|String||
-|Repo URL|False|String||
-|Branch|False|String||
-|Git Server Fingerprint|False|String||
-
-#### newCopy of Push Content
-Push all content of this platform to git
-
-|Name|IsMandatory|Type|DefaultValue|
-|----|-----------|----|------------|
-|Commit|True|String|test|
-|Repo URL|False|String||
-|Branch|False|String||
-|Git Server Fingerprint|False|String||
-|Commit Author|False|String||
-|Commit Passwords|False|Boolean|false|
-|Integrations|False|Boolean|true|
-|Playbooks|False|Boolean|true|
-|Jobs|False|Boolean|true|
-|Connectors|False|Boolean|true|
-|Integration Instances|False|Boolean|true|
-|Visual Families|False|Boolean|true|
-|Mappings|False|Boolean|true|
-|Environments|False|Boolean|true|
-|Dynamic Parameters|False|Boolean|true|
-|Logo|False|Boolean|true|
-|Case Tags|False|Boolean|true|
-|Case Stages|False|Boolean|true|
-|Case Title Settings|False|Boolean|true|
-|Case Close Reasons|False|Boolean|true|
-|Networks|False|Boolean|true|
-|Domains|False|Boolean|true|
-|Custom Lists|False|Boolean|true|
-|Email Templates|False|Boolean|true|
-|Blacklists|False|Boolean|true|
-|SLA Records|False|Boolean|true|
-|Simulated Cases|False|Boolean|true|
-
-#### 1Copy of Push Content
-Push all content of this platform to git
-
-|Name|IsMandatory|Type|DefaultValue|
-|----|-----------|----|------------|
-|Commit|True|String|test|
-|Repo URL|False|String||
-|Branch|False|String||
-|Git Server Fingerprint|False|String||
-|Commit Author|False|String||
-|Commit Passwords|False|Boolean|false|
-|Integrations|False|Boolean|true|
-|Playbooks|False|Boolean|true|
-|Jobs|False|Boolean|true|
-|Connectors|False|Boolean|true|
-|Integration Instances|False|Boolean|true|
-|Visual Families|False|Boolean|true|
-|Mappings|False|Boolean|true|
-|Environments|False|Boolean|true|
-|Dynamic Parameters|False|Boolean|true|
-|Logo|False|Boolean|true|
-|Case Tags|False|Boolean|true|
-|Case Stages|False|Boolean|true|
-|Case Title Settings|False|Boolean|true|
-|Case Close Reasons|False|Boolean|true|
-|Networks|False|Boolean|true|
-|Domains|False|Boolean|true|
-|Custom Lists|False|Boolean|true|
-|Email Templates|False|Boolean|true|
-|Blacklists|False|Boolean|true|
-|SLA Records|False|Boolean|true|
-|Simulated Cases|False|Boolean|true|
-
 #### Pull Connector
 Imports a connector from the repo.
 
@@ -313,26 +303,6 @@ Imports a connector from the repo.
 |Include Visual Families|False|Boolean|false|
 |Include Mappings|False|Boolean|false|
 
-#### Pull Custom Family
-Imports a custom family from the repo.
-
-|Name|IsMandatory|Type|DefaultValue|
-|----|-----------|----|------------|
-|Repo URL|False|String||
-|Branch|False|String||
-|Git Server Fingerprint|False|String||
-|Family Name|True|String||
-
-#### Pull Integration
-Install an integration or update an installed one.
-
-|Name|IsMandatory|Type|DefaultValue|
-|----|-----------|----|------------|
-|Install Whitelist|True|String||
-|Repo URL|False|String||
-|Branch|False|String||
-|Git Server Fingerprint|False|String||
-
 #### Pull Mappings
 Imports mappings from the repo.
 
@@ -343,43 +313,5 @@ Imports mappings from the repo.
 |Git Server Fingerprint|False|String||
 |Source|True|String||
 
-#### Pull Simulated Cases
-Imports simulated cases from the repo.
-
-|Name|IsMandatory|Type|DefaultValue|
-|----|-----------|----|------------|
-|Simulated Cases|True|String||
-|Repo URL|False|String||
-|Branch|False|String||
-|Git Server Fingerprint|False|String||
-
-#### Push Integration
-Push an integration to repo. This action will overwrite the entire folder.
-
-|Name|IsMandatory|Type|DefaultValue|
-|----|-----------|----|------------|
-|Commit|True|String||
-|Push Whitelist|True|String||
-|Repo URL|False|String||
-|Branch|False|String||
-|Git Server Fingerprint|False|String||
-|Commit Author|False|String||
-|Readme Addon|False|String||
-
-#### Push Job
-Export a job to the repo
-
-|Name|IsMandatory|Type|DefaultValue|
-|----|-----------|----|------------|
-|Commit|True|String||
-|Repo URL|False|String||
-|Branch|False|String||
-|Git Server Fingerprint|False|String||
-|Commit Author|False|String||
-|Job Whitelist|True|String||
-|Readme Addon|False|String||
 
 
-
-
-ReadmeAddon

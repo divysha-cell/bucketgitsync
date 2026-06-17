@@ -118,6 +118,7 @@
 |RSA Archer|The RSA Archer Platform provides a centralized, flexible foundation that you can use to automate, integrate, manage and report on your organization's risk.|
 |Reversinglabs Titanium|Reversinglabs Titanium - Malware Analysis Solution.|
 |SCC Enterprise|SCC Enterprise integration to set up the SCC Enterprise env|
+|SOCRadar|Bidirectional integration between SOCRadar Extended Threat Intelligence (XTI) and Google SecOps SOAR. Ingests SOCRadar alarms as cases, provides IOC enrichment, threat feed collection, rapid reputation lookups, and full alarm lifecycle management. Support: integration@socradar.io|
 |ServiceDesk PlusV3|ServiceDesk Plus is a game changer in turning IT teams from daily fire-fighting to delivering awesome customer service.|
 |ServiceNow|An incident ticketing integration exchanges ticket data between your ServiceNow instance and Google SecOps system.|
 |Silverfort Identity Security|Silverfort identity security platform integration for Google SecOps.In case of any queries, please reach out to support@silverfort.com.|

@@ -2,7 +2,7 @@
     "IsAvailableForCommunity": false,
     "Identifier": "GitSync",
     "ShouldInstalledInSystem": false,
-    "Version": 48.1,
+    "Version": 49.7,
     "DisplayName": "GitSync",
     "Description": "Sync Google SecOps integrations, playbooks, and settings with a GitHub, BitBucket or GitLab instance",
     "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAADAAAABACAYAAABcIPRGAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAzlJREFUaIHtmT1rFFEUhh+jJpuPNcZgITY2goUmxkIQK7+qGBPRxlKws/MH+Assgokkgo2VP8BGDEoQO7GSuJsUKhYWomCjJDFmLM4umb33zr1zZ2bnbmAfOMUuZ2bed/d+nDkXunTpojIBLAJrwEYjVoEFYDygLif9wBMgssQ2Yq4SSGMi/cAb7OLjsUyHmXD98qZYCKLUwAS6uBowDVQbMQPU0YdTR8yJRXTxw4a8g8hkjuc+KkmjlTVaRU1bcq+jmw3OBq2iqpbcqpK73nZ1DnqAPR75am5UoJZM9ABflO8uWfKvKJ8/F6omIwu0Dos6MmFVRtDny2xJGq2MIUtiXNgqMmGrwAHgBrr4LeBEAL1G5vHfyB4EUZpAL/CS9OKfA/uCKLXQi4zpNAZuB9KYijQG3gdTl4K0w+hqKIEu0hqoAfsDabTisxLdD6TRio+Bv8C5MDKT8d0PvgFHgyhNwNdABKwAoyHEmshiIAI+AEcC6NXIaiACvgJnypfcSh4DEfKScw8p1bNwmp2+1CYZ+lJ5DTTjHXDeQ3ilIVKtjOORqi/lEvbb08gSMAXstTyzD3jlcc9lmwnXxRcymIiAH8BT4A5wFjiMFJAADzPcL7Ev5boQZPP6meGhpthCHzYrwCQwAAwi/2BNyUnsS6UxAHAcvdlVRKwgb4EqwwYTxr5UWgMgr5zPCjYwaRLV4JqSa+xL+Rhocgv4XpCBAYuBISXX2JfKYgDgEDIZN3MaGAxloMkxZIX4k9HAlOXeM0rux3YYaDIC3AXeAv88DCQ1l0fQm8tz7TQQZxS4ibRiXiBlwi/kfWITfRmtIRN2qBEzBvHbwKmyDLhI2w2Jx3zSzUIY8O1LvUbKj44xAGJiDvt82UZ++UTxWC5ut4EmJxGRdWSZXEdWmzkMY950NuAS6XOe0HbiLx19yEbkYpadKrJjqOBXjy/RYSbUk8pcy1jZTJC9Hh8LoFfjMbr4XPV42ahHRz71eL3t6lKglr+56/Ey6UFf9ztqnXdhOie+aMm/rHz+VKiajKjnxLnr8bIZp+B6PAS7eiMDKSWWKageD0UF+SdczVVnPR6acWSHrZGiHu/SpUtY/gPyEh70ZBj4xQAAAABJRU5ErkJggg==",
@@ -19,8 +19,8 @@
             "IsMandatory": true,
             "Value": "",
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779388293275,
-            "ModificationTimeUnixTimeInMs": 1779388293275
+            "CreationTimeUnixTimeInMs": 1781674810863,
+            "ModificationTimeUnixTimeInMs": 1781674810863
         },
         {
             "IntegrationIdentifier": "GitSync",
@@ -31,8 +31,8 @@
             "IsMandatory": true,
             "Value": "",
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779388293275,
-            "ModificationTimeUnixTimeInMs": 1779388293275
+            "CreationTimeUnixTimeInMs": 1781674810863,
+            "ModificationTimeUnixTimeInMs": 1781674810863
         },
         {
             "IntegrationIdentifier": "GitSync",
@@ -43,8 +43,8 @@
             "IsMandatory": false,
             "Value": "",
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779388293275,
-            "ModificationTimeUnixTimeInMs": 1779388293275
+            "CreationTimeUnixTimeInMs": 1781674810863,
+            "ModificationTimeUnixTimeInMs": 1781674810863
         },
         {
             "IntegrationIdentifier": "GitSync",
@@ -55,8 +55,8 @@
             "IsMandatory": true,
             "Value": null,
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779388293275,
-            "ModificationTimeUnixTimeInMs": 1779388293275
+            "CreationTimeUnixTimeInMs": 1781674810863,
+            "ModificationTimeUnixTimeInMs": 1781674810863
         },
         {
             "IntegrationIdentifier": "GitSync",
@@ -67,8 +67,8 @@
             "IsMandatory": false,
             "Value": "",
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779388293275,
-            "ModificationTimeUnixTimeInMs": 1779388293275
+            "CreationTimeUnixTimeInMs": 1781674810863,
+            "ModificationTimeUnixTimeInMs": 1781674810863
         },
         {
             "IntegrationIdentifier": "GitSync",
@@ -79,8 +79,8 @@
             "IsMandatory": false,
             "Value": "",
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779388293275,
-            "ModificationTimeUnixTimeInMs": 1779388293275
+            "CreationTimeUnixTimeInMs": 1781674810863,
+            "ModificationTimeUnixTimeInMs": 1781674810863
         },
         {
             "IntegrationIdentifier": "GitSync",
@@ -91,8 +91,8 @@
             "IsMandatory": false,
             "Value": "true",
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779388293275,
-            "ModificationTimeUnixTimeInMs": 1779388293275
+            "CreationTimeUnixTimeInMs": 1781674810863,
+            "ModificationTimeUnixTimeInMs": 1781674810863
         },
         {
             "IntegrationIdentifier": "GitSync",
@@ -103,8 +103,8 @@
             "IsMandatory": false,
             "Value": "true",
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779388293275,
-            "ModificationTimeUnixTimeInMs": 1779388293275
+            "CreationTimeUnixTimeInMs": 1781674810863,
+            "ModificationTimeUnixTimeInMs": 1781674810863
         },
         {
             "IntegrationIdentifier": "GitSync",
@@ -115,8 +115,8 @@
             "IsMandatory": false,
             "Value": null,
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779388293275,
-            "ModificationTimeUnixTimeInMs": 1779388293275
+            "CreationTimeUnixTimeInMs": 1781674810863,
+            "ModificationTimeUnixTimeInMs": 1781674810863
         },
         {
             "IntegrationIdentifier": "GitSync",
@@ -127,17 +127,17 @@
             "IsMandatory": false,
             "Value": null,
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779388293275,
-            "ModificationTimeUnixTimeInMs": 1779388293275
+            "CreationTimeUnixTimeInMs": 1781674810863,
+            "ModificationTimeUnixTimeInMs": 1781674810863
         }
     ],
     "IntegrationSupportedActions": [
         {
             "Name": "Ping",
             "Description": "Test connectivity to GitSync",
-            "Id": 1932,
-            "CreationTimeUnixTimeInMs": 1779388293289,
-            "ModificationTimeUnixTimeInMs": 1779388293289
+            "Id": 82,
+            "CreationTimeUnixTimeInMs": 1781674810882,
+            "ModificationTimeUnixTimeInMs": 1781674810882
         }
     ],
     "Categories": [],
@@ -155,7 +155,7 @@
     "Internal": false,
     "GoogleSecOpsProduct": false,
     "Id": 0,
-    "CreationTimeUnixTimeInMs": 1779388293275,
-    "ModificationTimeUnixTimeInMs": 1779388293275,
+    "CreationTimeUnixTimeInMs": 1781674810863,
+    "ModificationTimeUnixTimeInMs": 1781674810863,
     "Custom": false
 }

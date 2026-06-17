@@ -1,5 +1,3 @@
-<p align="center"><img src="./Resources/CrowdStrikeFalcon.svg" 
-     alt="CrowdStrikeFalcon" width="200"/></p>
 
 # CrowdStrikeFalcon
 
@@ -60,15 +58,103 @@ Python Version - 3
 
 
 ## Actions
-#### Add Alert Comment
-Add a comment to alert in Crowdstrike. 
+#### Delete IOC
+Delete custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
+Timeout - 600 Seconds
+
+
+
+#### Add Incident Comment
+Deprecated. Add comment to incident in Crowdstrike.
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert ID|Specify the ID of the alert that needs to be updated.|True|String||
-|Comment|Specify the comment for the alert.|True|String||
+|Incident ID|Specify the ID of the incident that needs to be updated.|True|String||
+|Comment|Specify the comment for the incident.|True|String||
+
+
+
+##### JSON Results
+```json
+[{"incident_id": "inc:466a00b13a5e4a9a9x.ac1a5e:x.x.x.", "incident_type": 1, "cid": "27fe4e476ca3490b6b2b6650e5a74", "host_ids": ["466a00b13a5e4a9a93ce2aca5eac1a5e"], "hosts": [{"device_id": "466a00b13a5e4a9a93ce2aca5eac1a5e", "cid": "27fe4e476ca34dd90b8476b2b6650e5a74", "agent_load_flags": "0", "agent_local_time": "2023-09-25T15:41:40.130Z", "agent_version": "7.01.17312.0", "bios_manufacturer": "VMware, Inc.", "bios_version": "VMW71.00V.17369862.B64.2012240522", "config_id_base": "65994753", "config_id_build": "17312", "config_id_platform": "3", "external_ip": "35.246.203.0", "hostname": "EX16-AD01", "first_seen": "2023-01-20T00:40:31Z", "last_seen": "2023-10-06T07:19:50Z", "local_ip": "172.30.3.162", "mac_address": "00-50-56-a2-94-8d", "machine_domain": "exlab.local", "major_version": "10", "minor_version": "0", "os_version": "Windows Server 2016", "ou": ["Domain Controllers"], "platform_id": "0", "platform_name": "Windows", "product_type": "2", "product_type_desc": "Domain Controller", "site_name": "Default-First-Site-Name", "status": "contained", "system_manufacturer": "VMware, Inc.", "system_product_name": "VMware7,1", "groups": ["9489d65c343244169627dcbc"], "modified_timestamp": "2023-10-06T07:19:58Z"}], "created": "2023-10-06T07:20:51Z", "start": "2023-10-06T07:19:21Z", "end": "2023-10-06T07:30:27Z", "state": "closed", "assigned_to": "67494-b86d-4a55-9e52-7492449400a1", "assigned_to_name": "Yuriy Landovskyy", "status": 30, "tactics": ["Persistence", "Defense Evasion", "Command and Control", "Credential Access", "Malware", "Privilege Escalation"], "techniques": ["Create Account", "Masquerading", "Ingress Tool Transfer", "OS Credential Dumping", "Malicious File", "Image File Execution Options Injection", "Bypass User Account Control", "Accessibility Features", "Registry Run Keys / Startup Folder"], "objectives": ["Keep Access", "Contact Controlled Systems", "Gain Access", "Falcon Detection Method"], "modified_timestamp": "2023-10-20T08:34:07.078440797Z", "users": ["EX16-AD01$", "administrator"], "fine_score": 100}]
+```
+
+
+
+#### Add Comment to Detection
+Deprecated. Add a comment to the detection in Crowdstrike Falcon.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Detection ID|Specify the id of the detection to which you want to add a comment.|True|String||
+|Comment|Specify the comment that needs to be added to the detection.|True|String||
+
+
+
+#### Close Detection
+Deprecated. Close a Crowdstrike Falcon detection. Note: Action "Update Detection" is the best practice for this use case.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Detection ID|Specify the id of the detection that needs to be closed.|True|String||
+|Hide Detection|If enabled, action will hide the detection in the UI.|False|Boolean|true|
+
+
+
+#### Contain Endpoint
+Contain endpoint in Crowdstrike Falcon. Supported entities: Hostname and IP address.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
+|Fail If Timeout|If enabled, action will be failed, if not all of the endpoints were contained.|False|Boolean|true|
+
+
+
+##### JSON Results
+```json
+{"Entity":"XXX.XXX.XXX","EntityResult":{"device_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","cid":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","agent_load_flags":"1","agent_local_time":"2021-05-26T11:54:38.105Z","agent_version":"X.XXX.XXX.0","bios_manufacturer":"Phoenix Technologies LTD","bios_version":"6.00","build_number":"XXXX","config_id_base":"XXXX","config_id_build":"XXXX","config_id_platform":"3","cpu_signature":"XXXXX","external_ip":"XXX.XXX.XXX.XXX","mac_address":"XX-XX-XX-XX-XX-XX","hostname":"XXXXXXXXXXXX","first_seen":"2021-01-12T16:01:43Z","last_seen":"2021-05-26T12:46:53Z","local_ip":"XXX.XXX.X.XX","major_version":"10","minor_version":"0","os_version":"Windows 10","platform_id":"0","platform_name":"Windows","policies":[{"policy_type":"prevention","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"71932dc2","assigned_date":"2021-02-05T10:17:18.181166503Z","applied_date":"2021-02-05T10:17:29.147610493Z","rule_groups":[]}],"reduced_functionality_mode":"no","device_policies":{"prevention":{"policy_type":"prevention","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"71932dc2","assigned_date":"2021-02-05T10:17:18.181166503Z","applied_date":"2021-02-05T10:17:29.147610493Z","rule_groups":[]},"sensor_update":{"policy_type":"sensor-update","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"tagged|1;101","assigned_date":"2021-05-20T13:21:15.793890625Z","applied_date":"2021-05-20T13:23:10.339303233Z","uninstall_protection":"ENABLED"},"device_control":{"policy_type":"device-control","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"assigned_date":"2021-01-12T16:05:30.418267934Z","applied_date":"2021-01-12T16:07:29.124988572Z"},"global_config":{"policy_type":"globalconfig","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"f61a5761","assigned_date":"2021-05-26T08:56:57.749380428Z","applied_date":"2021-05-26T08:57:09.08333925Z"},"remote_response":{"policy_type":"remote-response","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"XXXXXXX","assigned_date":"2021-01-12T16:05:30.418259588Z","applied_date":"2021-01-12T16:05:41.768614744Z"},"firewall":{"policy_type":"firewall","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"assigned_date":"2021-01-12T16:05:30.41820681Z","applied_date":"2021-01-12T16:07:35.656641903Z","rule_set_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"}},"groups":[],"group_hash":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","product_type":"1","product_type_desc":"Workstation","provision_status":"Provisioned","serial_number":"VMware-XX XX XX XX XX XX XX XX-XX XX XX XX XX XX XX XX","service_pack_major":"0","service_pack_minor":"0","pointer_size":"8","status":"contained","system_manufacturer":"VMware, Inc.","system_product_name":"VMware Virtual Platform","tags":[],"modified_timestamp":"2021-05-26T12:46:59Z","slow_changing_modified_timestamp":"2021-05-26T08:54:51Z","meta":{"version":"XXXXX"}}}
+```
+
+
+
+#### Add Identity Protection Detection Comment
+Add a comment to identity protection detection in Crowdstrike.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Detection ID|Specify the ID of the detection that needs to be updated.|True|String||
+|Comment|Specify the comment for the detection.|True|String||
+
+
+
+#### Download File
+Download files from the hosts in Crowdstrike Falcon. Supported entities: File Name, IP Address and Hostname. Note: action requires both File Name and IP Address/Hostname entity to be in the scope of the Siemplify alert. The downloaded file will be in password-protected zip. Password is "infected".
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
+|Download Folder Path|Specify the path to the folder, where you want to store the threat file.|True|String||
+|Overwrite|If enabled, action will overwrite the file with the same name.|False|Boolean|false|
+
+
+
+##### JSON Results
+```json
+{"absolute_paths":["/opt/file_1","opt_file_2"]}
+```
 
 
 
@@ -94,131 +180,6 @@ Timeout - 600 Seconds
 
 
 
-#### Add Incident Comment
-Deprecated. Add comment to incident in Crowdstrike.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Incident ID|Specify the ID of the incident that needs to be updated.|True|String||
-|Comment|Specify the comment for the incident.|True|String||
-
-
-
-##### JSON Results
-```json
-[{"incident_id": "inc:466a00b13a5e4a9a9x.ac1a5e:x.x.x.", "incident_type": 1, "cid": "27fe4e476ca3490b6b2b6650e5a74", "host_ids": ["466a00b13a5e4a9a93ce2aca5eac1a5e"], "hosts": [{"device_id": "466a00b13a5e4a9a93ce2aca5eac1a5e", "cid": "27fe4e476ca34dd90b8476b2b6650e5a74", "agent_load_flags": "0", "agent_local_time": "2023-09-25T15:41:40.130Z", "agent_version": "7.01.17312.0", "bios_manufacturer": "VMware, Inc.", "bios_version": "VMW71.00V.17369862.B64.2012240522", "config_id_base": "65994753", "config_id_build": "17312", "config_id_platform": "3", "external_ip": "35.246.203.0", "hostname": "EX16-AD01", "first_seen": "2023-01-20T00:40:31Z", "last_seen": "2023-10-06T07:19:50Z", "local_ip": "172.30.3.162", "mac_address": "00-50-56-a2-94-8d", "machine_domain": "exlab.local", "major_version": "10", "minor_version": "0", "os_version": "Windows Server 2016", "ou": ["Domain Controllers"], "platform_id": "0", "platform_name": "Windows", "product_type": "2", "product_type_desc": "Domain Controller", "site_name": "Default-First-Site-Name", "status": "contained", "system_manufacturer": "VMware, Inc.", "system_product_name": "VMware7,1", "groups": ["9489d65c343244169627dcbc"], "modified_timestamp": "2023-10-06T07:19:58Z"}], "created": "2023-10-06T07:20:51Z", "start": "2023-10-06T07:19:21Z", "end": "2023-10-06T07:30:27Z", "state": "closed", "assigned_to": "67494-b86d-4a55-9e52-7492449400a1", "assigned_to_name": "Yuriy Landovskyy", "status": 30, "tactics": ["Persistence", "Defense Evasion", "Command and Control", "Credential Access", "Malware", "Privilege Escalation"], "techniques": ["Create Account", "Masquerading", "Ingress Tool Transfer", "OS Credential Dumping", "Malicious File", "Image File Execution Options Injection", "Bypass User Account Control", "Accessibility Features", "Registry Run Keys / Startup Folder"], "objectives": ["Keep Access", "Contact Controlled Systems", "Gain Access", "Falcon Detection Method"], "modified_timestamp": "2023-10-20T08:34:07.078440797Z", "users": ["EX16-AD01$", "administrator"], "fine_score": 100}]
-```
-
-
-
-#### Run Script
-Execute a powershell script on the endpoints in Crowdstrike. Supported entities: IP Address, Hostname. Note: Action is running as async, please adjust script timeout value in Google SecOps IDE for the action, as needed.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
-|Script Name|The name of the script file that needs to be executed. Note: either “Script Name” or “Raw Script” should be provided. If both “Script Name” and “Raw Script” are provided, then “Raw Script” will have the priority.|False|String||
-|Raw Script|Raw powershell script payload that needs to be executed on the endpoints. Note: either “Script Name” or “Raw Script” should be provided. If both “Script Name” and “Raw Script” are provided, then “Raw Script” will have the priority.|False|String||
-|Hostname|Comma-separated list of hostnames on which you want to execute the action. Note: action will run the action on both entities + this parameter values.|False|String||
-|Queue Offline|If enabled, commands targeting offline hosts are queued and executed once the host reconnects to the network.|False|Boolean|false|
-
-
-
-##### JSON Results
-```json
-{"Entity":"XXX.XXX.XXX","EntityResult":{"session_id":"2a066818-XXXX-XXXX-XXXX-c295ed7295b3","task_id":"84846f59-XXXX-XXXX-XXXX-12af4af88a8b","complete":true,"stdout":"","stderr":"","base_command":"get"}}
-```
-
-
-
-#### Submit File
-Submit files to a sandbox in Crowdstrike. Note: This action requires a Falcon Sandbox license. For the list of supported file formats, refer to the documentation portal.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|File Paths|Specify the file paths to the files that need to be submitted. Refer to the documentation portal for a list of the supported file formats.|True|String||
-|Sandbox Environment|Specify the sandbox environment for the analysis.|False|List|Windows 10, 64-bit|
-|Network Environment|Specify the network environment for the analysis.|False|List|Default|
-|Archive Password|Specify the password that would need to be used, when working with archive files.|False|Password|*****|
-|Document Password|Specify the password that would need to be used, when working with Adobe or Office files. Maximum: 32 characters.|False|Password|*****|
-|Check Duplicate|If enabled, the action checks if the file was already submitted previously and returns the available report. Note: during the validation “Network Environment” and “Sandbox Environment” are not taken into consideration.|False|Boolean|true|
-|Comment|Specify the comment for the submission.|False|String||
-|Confidential Submission|If enabled, the file is only shown to users within your customer account.|False|Boolean|false|
-
-
-
-##### JSON Results
-```json
-[{"Entity": "/test1.pdf", "EntityResult": [{"id": "27fe4e476ca3490b8476b2b6650e5a74_8b43a4c9d5ea4306af4e827b6901cd60", "cid": "27fe4e476ca3490b8476b2b6650e5a74", "created_timestamp": "2023-04-28T14:00:00Z", "origin": "apigateway", "sandbox": [{"sha256": "8decc8571946d4cd70a024949e033a2a2a54377fe9f1c1b944c20f9ee11a9e51", "environment_id": 160, "environment_description": "Windows 10 64 bit", "submit_name": "test1.pdf", "submission_type": "file", "verdict": "no specific threat", "file_type": "PDF document, version 1.3", "sample_flags": ["Extracted Files"], "network_settings": "default"}], "verdict": "whitelisted", "ioc_report_strict_csv_artifact_id": "ded2c6801f51b43ba4b6de371188960239e84d227a16f065b6b96404854f27d4", "ioc_report_broad_csv_artifact_id": "ded2c6801f51b43ba4b6de371188960239e84d227a16f065b6b96404854f27d4", "ioc_report_strict_json_artifact_id": "9a659092e0dc2ea6b57254eed04af5012267fb2c8990b277492fe172dfa86bf2", "ioc_report_broad_json_artifact_id": "9a659092e0dc2ea6b57254eed04af5012267fb2c8990b277492fe172dfa86bf2", "ioc_report_strict_stix_artifact_id": "fa98bc61b6e62837dbff2a7c34e0e3cee3e90ff277bed059b634d806bcdad726", "ioc_report_broad_stix_artifact_id": "fa98bc61b6e62837dbff2a7c34e0e3cee3e90ff277bed059b634d806bcdad726", "ioc_report_strict_maec_artifact_id": "cf12de7c8249dd80dc9e9591d964b13aa18b9b4a292a4ec3c9f58e7b1ff1d50d", "ioc_report_broad_maec_artifact_id": "cf12de7c8249dd80dc9e9591d964b13aa18b9b4a292a4ec3c9f58e7b1ff1d50d"}]}]
-```
-
-
-
-#### Delete IOC
-Delete custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
-Timeout - 600 Seconds
-
-
-
-#### Download File
-Download files from the hosts in Crowdstrike Falcon. Supported entities: File Name, IP Address and Hostname. Note: action requires both File Name and IP Address/Hostname entity to be in the scope of the Siemplify alert. The downloaded file will be in password-protected zip. Password is "infected".
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
-|Download Folder Path|Specify the path to the folder, where you want to store the threat file.|True|String||
-|Overwrite|If enabled, action will overwrite the file with the same name.|False|Boolean|false|
-
-
-
-##### JSON Results
-```json
-{"absolute_paths":["/opt/file_1","opt_file_2"]}
-```
-
-
-
-#### Close Detection
-Deprecated. Close a Crowdstrike Falcon detection. Note: Action "Update Detection" is the best practice for this use case.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Detection ID|Specify the id of the detection that needs to be closed.|True|String||
-|Hide Detection|If enabled, action will hide the detection in the UI.|False|Boolean|true|
-
-
-
-#### Update Incident
-Deprecated. Update incident in Crowdstrike.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
-|Incident ID|Specify the ID of the incident that needs to be updated.|True|String||
-|Status|Specify the status for the incident.|False|List|Select One|
-|Assign to|Specify the name or email of the analyst to whom the incident needs to be assigned. If "Unassign" is provided, action will remove assignment from the incident. Note: for name you need to provide first and last name of the analyst in the following format "{first name} {last name}"|False|String||
-
-
-
-##### JSON Results
-```json
-[{"incident_id": "inc:466a00b13a5e4a9a9x.ac1a5e:x.x.x.", "incident_type": 1, "cid": "27fe4e476ca3490b6b2b6650e5a74", "host_ids": ["466a00b13a5e4a9a93ce2aca5eac1a5e"], "hosts": [{"device_id": "466a00b13a5e4a9a93ce2aca5eac1a5e", "cid": "27fe4e476ca34dd90b8476b2b6650e5a74", "agent_load_flags": "0", "agent_local_time": "2023-09-25T15:41:40.130Z", "agent_version": "7.01.17312.0", "bios_manufacturer": "VMware, Inc.", "bios_version": "VMW71.00V.17369862.B64.2012240522", "config_id_base": "65994753", "config_id_build": "17312", "config_id_platform": "3", "external_ip": "35.246.203.0", "hostname": "EX16-AD01", "first_seen": "2023-01-20T00:40:31Z", "last_seen": "2023-10-06T07:19:50Z", "local_ip": "172.30.3.162", "mac_address": "00-50-56-a2-94-8d", "machine_domain": "exlab.local", "major_version": "10", "minor_version": "0", "os_version": "Windows Server 2016", "ou": ["Domain Controllers"], "platform_id": "0", "platform_name": "Windows", "product_type": "2", "product_type_desc": "Domain Controller", "site_name": "Default-First-Site-Name", "status": "contained", "system_manufacturer": "VMware, Inc.", "system_product_name": "VMware7,1", "groups": ["9489d65c343244169627dcbc"], "modified_timestamp": "2023-10-06T07:19:58Z"}], "created": "2023-10-06T07:20:51Z", "start": "2023-10-06T07:19:21Z", "end": "2023-10-06T07:30:27Z", "state": "closed", "assigned_to": "67494-b86d-4a55-9e52-7492449400a1", "assigned_to_name": "Yuriy Landovskyy", "status": 30, "tactics": ["Persistence", "Defense Evasion", "Command and Control", "Credential Access", "Malware", "Privilege Escalation"], "techniques": ["Create Account", "Masquerading", "Ingress Tool Transfer", "OS Credential Dumping", "Malicious File", "Image File Execution Options Injection", "Bypass User Account Control", "Accessibility Features", "Registry Run Keys / Startup Folder"], "objectives": ["Keep Access", "Contact Controlled Systems", "Gain Access", "Falcon Detection Method"], "modified_timestamp": "2023-10-20T08:34:07.078440797Z", "users": ["EX16-AD01$", "administrator"], "fine_score": 100}]
-```
-
-
-
 #### Get Alert Details
 Get details of an alert in Crowdstrike.
 Timeout - 600 Seconds
@@ -237,34 +198,6 @@ Timeout - 600 Seconds
 
 
 
-#### Upload IOCs
-Add custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Platform|Specify a comma-separated list of the platforms related to the IOC. Possible values: Windows, Linux, Mac.|True|String|Windows,Linux,Mac|
-|Severity|Specify the severity for the IOC.|True|List|Medium|
-|Comment|Specify a comment with more context related to IOC.|False|String||
-|Host Group Name|Specify the name of the host group.|False|String||
-|Action|Specify the action for the uploaded IOCs. Note: "Block" action can only be applied to hashes. Action will always apply "Detect" policy to all other IOC types.|False|List|Detect|
-|Days To Expire|The number of days before the IOC expires.|False|String||
-
-
-
-#### Add Identity Protection Detection Comment
-Add a comment to identity protection detection in Crowdstrike.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Detection ID|Specify the ID of the detection that needs to be updated.|True|String||
-|Comment|Specify the comment for the detection.|True|String||
-
-
-
 #### Get Process Name By IOC
 DEPRECATED. Retrieve processes related to the IOCs and provided devices in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported. IP address entities are treated as IOCs.
 Timeout - 600 Seconds
@@ -279,38 +212,6 @@ Timeout - 600 Seconds
 ##### JSON Results
 ```json
 {"EntityResult": [{"device_id":"74089e3XXXXa4271ab14abXXXXXd18eb","command_line":"\\C:\\\\TMP\\\\mim.exe\\","process_id":"74089e3XXXXa4271ab14abXXXXXd18eb:400084000045","process_id_local":"400084000045","file_name":"\\\\Device\\\\HarddiskVolume2\\\\TMP\\\\mim.exe","start_timestamp":"2021-05-21T06:05:10Z","start_timestamp_raw":"132660507103371800","stop_timestamp":"2021-05-21T06:05:26Z","stop_timestamp_raw":"132660507260335807"},{"device_id":"74089e3XXXXa4271ab14abXXXXXd18eb","command_line":"C:\\\\TMP\\\\mim.exe\\","process_id":"74089e3XXXXa4271ab14abXXXXXd18eb:000029753080","process_id_local":"000029753080","file_name":"\\\\Device\\\\HarddiskVolume2\\\\TMP\\\\mim.exe","start_timestamp":"2021-05-21T06:07:15Z","start_timestamp_raw":"132660508352040249","stop_timestamp":"2021-05-21T06:07:21Z","stop_timestamp_raw":"132660508418773254"},{"device_id":"74089e3XXXXa4271ab14abXXXXXd18eb","command_line":"\\C:\\\\TMP\\\\mim.exe\\","process_id":"74089e3XXXXa4271ab14abXXXXXd18eb:000021388856","process_id_local":"000021388856","file_name":"\\\\Device\\\\HarddiskVolume2\\\\TMP\\\\mim.exe","start_timestamp":"2021-05-21T05:53:03Z","start_timestamp_raw":"132660499835265266","stop_timestamp":"2021-05-21T05:53:25Z","stop_timestamp_raw":"132660500056273239"},{"device_id":"74089e3XXXXa4271ab14abXXXXXd18eb","command_line":"\\C:\\\\TMP\\\\mim.exe\\","process_id":"74089e3XXXXa4271ab14abXXXXXd18eb:0000310768731","process_id_local":"000010768731","file_name":"\\\\Device\\\\HarddiskVolume2\\\\TMP\\\\mim.exe","start_timestamp":"2021-05-21T05:47:59Z","start_timestamp_raw":"132660496793281001","stop_timestamp":"2021-05-21T05:48:00Z","stop_timestamp_raw":"132660496807679553"}], "Entity": "f8f1c210a8c863efc0f6b8ac3553030a14a702ce8cf573cb5e9cd58f70c7c622"}
-```
-
-
-
-#### Get Hosts by IOC
-DEPRECATED. List hosts related to the IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
-Timeout - 600 Seconds
-
-
-
-##### JSON Results
-```json
-{"hash": [{"modified_timestamp": "2019-01-17T13: 44: 57Z", "major_version": "10", "site_name": "Default-First-Site-Name", "platform_id": "0", "config_id_platform": "3", "system_manufacturer": "DellInc.", "meta": {"version": "49622"}, "first_seen": "2018-04-22T13: 06: 53Z", "service_pack_minor": "0", "product_type_desc": "Workstation", "build_number": "14393", "hostname": "name", "config_id_build": "8104", "minor_version": "0", "os_version": "Windows10", "provision_status": "Provisioned", "mac_address": "64-00-6a-2a-43-3f", "bios_version": "1.2.1", "agent_load_flags": "1", "status": "normal", "bios_manufacturer": "DellInc.", "machine_domain": "domain name", "device_policies": {"sensor_update": {"applied": true, "applied_date": "2018-12-11T23: 09: 18.071417837Z", "settings_hash": "65994753|3|2|automatic", "policy_type": "sensor-update", "assigned_date": "2018-12-11T23: 08: 38.16990705Z", "policy_id": "gdfgdghdhdhf53535"}}, "agent_local_time": "2019-01-14T19: 41: 09.738Z", "slow_changing_modified_timestamp": "2019-01-14T17: 44: 40Z", "service_pack_major": "0", "device_id": "2653595a063e4566519ef4fc813fcc56", "system_product_name": "OptiPlex7040", "product_type": "1", "local_ip": "1.1.1.1", "external_ip": "1.1.1.1", "cid": "27fe4e476ca3490b8476b2b6650e5a74", "platform_name": "Windows", "config_id_base": "65994753", "policies": [{"applied": true, "applied_date": "2019-01-02T22: 45: 21.315392338Z", "settings_hash": "18db1203", "policy_type": "prevention", "assigned_date": "2019-01-02T22: 45: 11.214774996Z", "policy_id": "7efdf97d7805402186b61151e8abd745"}], "last_seen": "2019-01-17T13: 44: 46Z", "pointer_size": "8", "agent_version": "4.18.8104.0"}]}
-```
-
-
-
-#### Lift Contained Endpoint
-Lift endpoint containment in Crowdstrike Falcon. Supported entities: Hostname and IP address.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
-|Fail If Timeout|If enabled, action will be failed, if containment was not lifted on all endpoints.|False|Boolean|true|
-
-
-
-##### JSON Results
-```json
-{"Entity":"XXX.XXX.XXX","EntityResult":{"device_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","cid":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","agent_load_flags":"1","agent_local_time":"2021-05-26T11:54:38.105Z","agent_version":"X.XXX.XXX.0","bios_manufacturer":"Phoenix Technologies LTD","bios_version":"6.00","build_number":"XXXX","config_id_base":"XXXX","config_id_build":"XXXX","config_id_platform":"3","cpu_signature":"XXXXX","external_ip":"XXX.XXX.XXX.XXX","mac_address":"XX-XX-XX-XX-XX-XX","hostname":"XXXXXXXXXXXX","first_seen":"2021-01-12T16:01:43Z","last_seen":"2021-05-26T12:46:53Z","local_ip":"XXX.XXX.X.XX","major_version":"10","minor_version":"0","os_version":"Windows 10","platform_id":"0","platform_name":"Windows","policies":[{"policy_type":"prevention","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"71932dc2","assigned_date":"2021-02-05T10:17:18.181166503Z","applied_date":"2021-02-05T10:17:29.147610493Z","rule_groups":[]}],"reduced_functionality_mode":"no","device_policies":{"prevention":{"policy_type":"prevention","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"71932dc2","assigned_date":"2021-02-05T10:17:18.181166503Z","applied_date":"2021-02-05T10:17:29.147610493Z","rule_groups":[]},"sensor_update":{"policy_type":"sensor-update","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"tagged|1;101","assigned_date":"2021-05-20T13:21:15.793890625Z","applied_date":"2021-05-20T13:23:10.339303233Z","uninstall_protection":"ENABLED"},"device_control":{"policy_type":"device-control","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"assigned_date":"2021-01-12T16:05:30.418267934Z","applied_date":"2021-01-12T16:07:29.124988572Z"},"global_config":{"policy_type":"globalconfig","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"f61a5761","assigned_date":"2021-05-26T08:56:57.749380428Z","applied_date":"2021-05-26T08:57:09.08333925Z"},"remote_response":{"policy_type":"remote-response","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"XXXXXXX","assigned_date":"2021-01-12T16:05:30.418259588Z","applied_date":"2021-01-12T16:05:41.768614744Z"},"firewall":{"policy_type":"firewall","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"assigned_date":"2021-01-12T16:05:30.41820681Z","applied_date":"2021-01-12T16:07:35.656641903Z","rule_set_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"}},"groups":[],"group_hash":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","product_type":"1","product_type_desc":"Workstation","provision_status":"Provisioned","serial_number":"VMware-XX XX XX XX XX XX XX XX-XX XX XX XX XX XX XX XX","service_pack_major":"0","service_pack_minor":"0","pointer_size":"8","status":"normal","system_manufacturer":"VMware, Inc.","system_product_name":"VMware Virtual Platform","tags":[],"modified_timestamp":"2021-05-26T12:46:59Z","slow_changing_modified_timestamp":"2021-05-26T08:54:51Z","meta":{"version":"XXXXX"}}}
 ```
 
 
@@ -355,29 +256,83 @@ Timeout - 600 Seconds
 
 
 
-#### Ping
-Test Connectivity
-Timeout - 600 Seconds
-
-
-
-#### List Uploaded IOCs
-List available custom IOCs in CrowdStrike Falcon.
+#### Update Alert
+Update an alert in Crowdstrike.
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|IOC Type Filter|Specify a comma-separated list of IOC types that should be returned. If nothing is provided, action will return IOCs from all types. Possible values: ipv4,ipv6,md5,sha256,domain.|False|String|ipv4,ipv6,md5,sha256,domain|
-|Value Filter Logic|Specify the value filter logic. If "Equal" is selected, action will try to find the exact match among IOCs and if "Contains" is selected, action will try to find IOCs that contain that substring.|False|List|Equal|
-|Value Filter String|Specify the string that should be searched among IOCs.|False|String||
-|Max IOCs To Return|Specify how many IOCs to return. Default: 50. Maximum: 500.|False|String|50|
+|Alert ID|Specify the ID of the alert that needs to be updated.|True|String||
+|Status|Specify the status for the alert.|False|List|Select One|
+|Verdict|Specify the verdict for the alert.|False|List|Select One|
+|Assign To|Specify the name of the analyst to whom the alert needs to be assigned. If "Unassign" is provided, action will remove assignment from the alert. Note: API will accept any value that is provided, even if the underlying user doesn’t exist.|False|String||
 
 
 
 ##### JSON Results
 ```json
-[{"id":"6b2987ace3c0f5dbfa5414fa13e7302bc61cca5a5db6cde8e1d135xxxxxxxxxx","type":"sha256","value":"908b64b1971a979c7e3e8ce4621945cba84854cb98d76367b791a6xxxxxxxxxx","source":"testSource","action":"detect","severity":"medium","description":"test description update","metadata":{"company_name":"Microsoft Corporation","original_filename":"PowerShell.EXE","file_version":"10.0.18362.1 (WinBuild.160101.0800)","file_description":"Windows PowerShell","product_name":"Microsoft® Windows® Operating System","product_version":"10.0.18362.1","signed":false,"av_hits":0},"platforms":["windows","mac","linux"],"tags":["f09f1a25-e6d0-4709-a105-05xxxxxxxxxx"],"expiration":"2022-05-01T12:00:00Z","expired":false,"deleted":false,"applied_globally":true,"from_parent":false,"created_on":"2021-02-15T11:36:58Z","created_by":"","modified_on":"2021-10-13T09:42:13.466234223Z","modified_by":"7fff03c3227242a0bae84bxxxxxxxxxx"},{"id":"fbe8c2739f3c6df95e62e0ae54569974437b2d9306eaf6740134ccxxxxxxxxxx","type":"sha256","value":"8a86c4eecf12446ff273afc03e1b3a09a911d0b7981db1af58cb45xxxxxxxxxx","action":"no_action","severity":"","metadata":{"signed":false,"av_hits":-1},"platforms":["windows"],"tags":["Hashes 22.Nov.20 15:29 (Windows)"],"expired":false,"deleted":false,"applied_globally":true,"from_parent":false,"created_on":"2021-04-22T03:54:09.235120463Z","created_by":"internal@crowdstrike.com","modified_on":"2021-04-22T03:54:09.235120463Z","modified_by":"internal@crowdstrike.com"}]
+[{"agent_id":"abcd","aggregate_id":"abcd","assigned_to_name":"anurags","cid":"xyz1234","cloud_indicator":"false","cmdline":"bashcrowdstrike_test_high","composite_id":":abcd","confidence":100,"context_timestamp":"2024-07-30T07:35:01.531Z","control_graph_id":"ctg:abcd","crawled_timestamp":"2024-07-30T07:40:06.744441898Z","created_timestamp":"2024-07-30T07:36:04.72770105Z","data_domains":["Endpoint"],"description":"Ahighleveldetectionwastriggeredonthisprocessfortestingpurposes.","device":{"agent_load_flags":"0","agent_local_time":"2024-01-04T23:40:57.736Z","agent_version":"7.06.16108.0","bios_manufacturer":"PhoenixTechnologiesLTD","bios_version":"6.00","cid":"abcd123","config_id_base":"65994753","config_id_build":"16108","config_id_platform":"8","device_id":"xyz","external_ip":"0.0.0.0","first_seen":"2023-06-14T10:50:40Z","groups":["9876"],"hostname":"abcd-sysops","last_seen":"2024-07-30T07:34:13Z","local_ip":"0.0.0.0","mac_address":"00-00-00-x0-00-00","major_version":"3","minor_version":"10","modified_timestamp":"2024-07-30T07:34:18Z","os_version":"CentOS7.9","ou":null,"platform_id":"3","platform_name":"Linux","pod_labels":null,"product_type_desc":"Server","status":"normal","system_manufacturer":"VMware,Inc.","system_product_name":"VMwareVirtualPlatform"},"display_name":"TestTriggerHigh","email_sent":true,"falcon_host_link":"https://falcon.crowdstrike.com/activity-v2/detections/27fe4e476ca3490b8476b2b6650e5a74:ind:2a1c5ef609ac479ba77f8ca5879c82fc:312465436839417-10304-1406208272?_cid=g03000sdn2nuopjvhx5iffjmntogcedi","filename":"bash","filepath":"/usr/bin/bash","global_prevalence":"common","grandparent_details":{"cmdline":"/usr/sbin/crond-n","filename":"crond","filepath":"/usr/sbin/crond","local_process_id":"17602","md5":"123lmnpo","process_graph_id":"pid:abcd","process_id":"00000000","sha256":"aabbccdd1234","timestamp":"2024-01-04T23:40:57.178Z","user_graph_id":"uid:00000000:abcd","user_name":"root"},"id":"abcd1234","indicator_id":"ind:00000abcd","ioc_context":[],"ioc_values":[],"local_prevalence":"unique","local_process_id":"9606","md5":"xyz0987","name":"DemoHighPattern","objective":"FalconDetectionMethod","parent_details":{"cmdline":"/bin/sh-c./alert.sh","filename":"bash","filepath":"/usr/bin/bash","local_process_id":"9604","md5":"xyz1234","process_graph_id":"pid:2a1c5ef609ac479ba77f8ca5879c82fc:312465432584345","process_id":"312465432584345","sha256":"00f8cbc5b3a6640af5ac18d01bc5a666f6f583b1379b9491e0bcc28ba78c92e9","timestamp":"2024-07-30T07:35:17Z","user_graph_id":"uid:2a1c5ef609ac479ba77f8ca5879c82fc:0","user_name":"root"},"parent_process_id":"000000","pattern_disposition":0,"pattern_disposition_description":"Detection,standarddetection.","pattern_disposition_details":{"blocking_unsupported_or_disabled":false,"bootup_safeguard_enabled":false,"containment_file_system":false,"critical_process_disabled":false,"detect":false,"fs_operation_blocked":false,"handle_operation_downgraded":false,"inddet_mask":false,"indicator":false,"kill_action_failed":false,"kill_parent":false,"kill_process":false,"kill_subprocess":false,"mfa_required":false,"operation_blocked":false,"policy_disabled":false,"prevention_provisioning_enabled":false,"process_blocked":false,"quarantine_file":false,"quarantine_machine":false,"registry_operation_blocked":false,"response_action_already_applied":false,"response_action_failed":false,"response_action_triggered":false,"rooting":false,"sensor_only":false,"suspend_parent":false,"suspend_process":false},"pattern_id":00000,"platform":"Linux","poly_id":"abcd==","process_end_time":"1722324901","process_id":"0000000","process_start_time":"1722324901","product":"epp","scenario":"suspicious_activity","seconds_to_resolved":168,"seconds_to_triaged":0,"severity":70,"severity_name":"High","sha1":"0000000000000000000000000000000000000000","sha256":"000000000000000","show_in_ui":true,"source_products":["FalconInsight"],"source_vendors":["CrowdStrike"],"status":"new","tactic":"FalconOverwatch","tactic_id":"CSTA0006","tags":["true_positive"],"technique":"MaliciousActivity","technique_id":"CST0002","template_instance_id":"1359","timestamp":"2024-07-30T07:35:02.101Z","tree_id":"2965447926650","tree_root":"312465436839417","triggering_process_graph_id":"pid:2a1c5ef609ac479ba77f8ca5879c82fc:312465436839417","type":"ldt","updated_timestamp":"2024-07-30T08:27:57.39990427Z","user_name":"root"}]
+```
+
+
+
+#### Update Identity Protection Detection
+Update an identity protection detection in Crowdstrike. Note: this action requires an Identity Protection license.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Detection ID|Specify the ID of the detection that needs to be updated.|True|String||
+|Status|Specify the status for the detection.|False|List|Select One|
+|Assign To|Specify the name of the analyst to whom the detection needs to be assigned. If "Unassign" is provided, action will remove assignment from the detection. Note: API will accept any value that is provided, even if the underlying user doesn't exist.|False|String||
+
+
+
+##### JSON Results
+```json
+{"added_privileges":["DomainAdminsRole"],"aggregate_id":"aggind:27fe4e476ca3490b8476b2xxxxx:xxxxxxxx-xxxx-xxxx-xxxx-4ED8DB047549","cid":"27fxxxxxxxxxxxxxxxxxxxxxa74","composite_id":"27fe4e4xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-4ED8DB047549","confidence":20,"context_timestamp":"2022-11-15T12:58:15.629Z","crawl_edge_ids":{"Sensor":["N6KIxxxxxxxxxCA4lr/"]},"crawl_vertex_ids":{"Sensor":["ind:27fe4e47xxxxxxxxxxxxxxxxxxxxxxxxxxxx4ED8DB047549"]},"crawled_timestamp":"2022-11-15T13:58:17.251061883Z","created_timestamp":"2022-11-15T12:59:17.239585706Z","description":"A user received new privileges","display_name":"Privilege escalation (user)","end_time":"2022-11-15T12:58:15.629Z","falcon_host_link":"https://falcon.crowdstrike.com/identity-protection/detections/nd:27fe4e476caxxxxxxxxxxxxxxxxxxxxxxxxxxxxED8DB047549","id":"ind:27fe4e476caxxxxxxxxxxxxxxxxxxxxxxxxxxxxED8DB047549","name":"IdpEntityPrivilegeEscalationUser","objective":"Gain Access","pattern_id":51113,"previous_privileges":"0","privileges":"8321","product":"idp","scenario":"privilege_escalation","severity":2,"show_in_ui":true,"source_account_domain":"test","source_account_name":"Mailbox438","source_account_object_sid":"S-1-5-21-3479765008-4256118348-3151044947-3595","start_time":"2022-11-15T12:58:15.629Z","status":"new","tactic":"Privilege Escalation","tactic_id":"TA0xxx","tags":["red_team"],"technique":"Valid Accounts","technique_id":"Txxx8","timestamp":"2022-11-15T12:58:17.239Z","type":"idp-user-endpoint-app-info","updated_timestamp":"2023-03-03T10:24:48.744735285Z"}
+```
+
+
+
+#### Lift Contained Endpoint
+Lift endpoint containment in Crowdstrike Falcon. Supported entities: Hostname and IP address.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
+|Fail If Timeout|If enabled, action will be failed, if containment was not lifted on all endpoints.|False|Boolean|true|
+
+
+
+##### JSON Results
+```json
+{"Entity":"XXX.XXX.XXX","EntityResult":{"device_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","cid":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","agent_load_flags":"1","agent_local_time":"2021-05-26T11:54:38.105Z","agent_version":"X.XXX.XXX.0","bios_manufacturer":"Phoenix Technologies LTD","bios_version":"6.00","build_number":"XXXX","config_id_base":"XXXX","config_id_build":"XXXX","config_id_platform":"3","cpu_signature":"XXXXX","external_ip":"XXX.XXX.XXX.XXX","mac_address":"XX-XX-XX-XX-XX-XX","hostname":"XXXXXXXXXXXX","first_seen":"2021-01-12T16:01:43Z","last_seen":"2021-05-26T12:46:53Z","local_ip":"XXX.XXX.X.XX","major_version":"10","minor_version":"0","os_version":"Windows 10","platform_id":"0","platform_name":"Windows","policies":[{"policy_type":"prevention","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"71932dc2","assigned_date":"2021-02-05T10:17:18.181166503Z","applied_date":"2021-02-05T10:17:29.147610493Z","rule_groups":[]}],"reduced_functionality_mode":"no","device_policies":{"prevention":{"policy_type":"prevention","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"71932dc2","assigned_date":"2021-02-05T10:17:18.181166503Z","applied_date":"2021-02-05T10:17:29.147610493Z","rule_groups":[]},"sensor_update":{"policy_type":"sensor-update","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"tagged|1;101","assigned_date":"2021-05-20T13:21:15.793890625Z","applied_date":"2021-05-20T13:23:10.339303233Z","uninstall_protection":"ENABLED"},"device_control":{"policy_type":"device-control","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"assigned_date":"2021-01-12T16:05:30.418267934Z","applied_date":"2021-01-12T16:07:29.124988572Z"},"global_config":{"policy_type":"globalconfig","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"f61a5761","assigned_date":"2021-05-26T08:56:57.749380428Z","applied_date":"2021-05-26T08:57:09.08333925Z"},"remote_response":{"policy_type":"remote-response","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"XXXXXXX","assigned_date":"2021-01-12T16:05:30.418259588Z","applied_date":"2021-01-12T16:05:41.768614744Z"},"firewall":{"policy_type":"firewall","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"assigned_date":"2021-01-12T16:05:30.41820681Z","applied_date":"2021-01-12T16:07:35.656641903Z","rule_set_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"}},"groups":[],"group_hash":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","product_type":"1","product_type_desc":"Workstation","provision_status":"Provisioned","serial_number":"VMware-XX XX XX XX XX XX XX XX-XX XX XX XX XX XX XX XX","service_pack_major":"0","service_pack_minor":"0","pointer_size":"8","status":"normal","system_manufacturer":"VMware, Inc.","system_product_name":"VMware Virtual Platform","tags":[],"modified_timestamp":"2021-05-26T12:46:59Z","slow_changing_modified_timestamp":"2021-05-26T08:54:51Z","meta":{"version":"XXXXX"}}}
+```
+
+
+
+#### List Host Vulnerabilities
+List vulnerabilities found on the host in Crowdstrike Falcon. Supported entities: IP Address and Hostname. Note: requires Falcon Spotlight license and permissions. 
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
+|Severity Filter|Specify the comma-separated list of severities for vulnerabilities.If nothing is provided, action will ingest all related vulnerabilities. Possible values: Critical, High, Medium, Low, Unknown.|False|String||
+|Create Insight|If enabled, action will create an insight per entity containing statistical information about related vulnerabilities.|False|Boolean|true|
+|Max Vulnerabilities To Return|Specify how many vulnerabilities to return per host. If nothing is provided action will process all of the related vulnerabilities.|False|String|100|
+
+
+
+##### JSON Results
+```json
+{"Entity":"XXX.XXX.XXX","EntityResult": {"statistics":{"total":123,"severity":{"critical":1,"high":1,"medium":1,"low":1,"unknown":1},"status":{"open":1,"reopened":1},"total_available_remediations":1},"details":[{"id":"74089e36ac3XXXXXab14abc076ed18eb_fff6dXXXXXX7352babdf7c7d240749e7","cid":"27fe4e476cXXXXXX8476b2b6650e5a74","aid":"74089e36acXXXXXXab14abc076ed18eb","created_timestamp":"2021-05-12T22:45:47Z","updated_timestamp":"2021-05-12T22:45:47Z","status":"open","cve":{"id":"CVE-2021-28476","base_score":9.9,"severity":"CRITICAL","exploit_status":0},"app":{"product_name_version":"Windows Windows 10"},"apps":[{"product_name_version":"Windows Windows 10","sub_status":"open","remediation":{"ids":["acc34cd461023ffXXXXX420fa8839365"]}}],"host_info":{"hostname":"CROWDSTRIKE-H01","local_ip":"172.30.202.33","machine_domain":"","os_version":"Windows 10","ou":"","site_name":"","system_manufacturer":"VMware, Inc.","groups":[],"tags":[],"platform":"Windows"},"remediation":[{"id":"acc34cd461023ffXXXXX420fa8839365","reference":"KB5003169","title":"Update Microsoft Windows 10 1909","action":"Install patch for Microsoft Windows 10 1909 x64 (Workstation): Security Update KB5003169","link":"https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5003169"}]}]}}
 ```
 
 
@@ -413,6 +368,25 @@ Timeout - 600 Seconds
 
 
 
+#### Get Host Information
+Retrieve information about the hostname from Crowdstrike Falcon. Supported entities: Hostname, IP Address.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
+|Create Insight|If enabled, action will create insights containing information regarding entities.|False|Boolean|true|
+
+
+
+##### JSON Results
+```json
+[{"EntityResult":[{"modified_timestamp":"2019-01-17T13: 44: 57Z","major_version":"10","site_name":"Default-First-Site-Name","platform_id":"0","config_id_platform":"3","system_manufacturer":"DellInc.","meta":{"version":"1111"},"first_seen":"2018-04-22T13: 06: 53Z","service_pack_minor":"0","product_type_desc":"Workstation","build_number":"111","hostname":"name","config_id_build":"8104","minor_version":"0","os_version":"Windows10","provision_status":"Provisioned","mac_address":"64-00-6a-2a-43-3f","bios_version":"1.2.1","agent_load_flags":"1","status":"normal","bios_manufacturer":"DellInc.","machine_domain":"Domain name","agent_local_time":"2019-01-14T19: 41: 09.738Z","slow_changing_modified_timestamp":"2019-01-14T17: 44: 40Z","service_pack_major":"0","device_id":"2653595a063e4566519ef4fc813xxxx","system_product_name":"OptiPlex7040","product_type":"1","local_ip":"1.1.x.x","external_ip":"1.1.x.x","cid":"27fe4e476ca3490b8476b2b66xxxx","platform_name":"Windows","config_id_base":"65994753","last_seen":"2019-01-17T13: 44: 46Z","pointer_size":"8","agent_version":"4.18.8104.0","recent_logins":[{"user_name":"test","login_time":"2022-08-10T07:36:38Z"},{"user_name":"test","login_time":"2022-08-10T07:36:35Z"}],"online_status":"offline"}],"Entity":"1.1.x.x"}]
+```
+
+
+
 #### Search Events
 Search events in Crowdstrike. Note: Action is running as async, please adjust script timeout value in Google SecOps IDE for action, as needed.
 Timeout - 600 Seconds
@@ -436,40 +410,6 @@ Timeout - 600 Seconds
 
 
 
-#### Update Detection
-Deprecated. Update detection in Crowdstrike Falcon.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Detection ID|Specify the ID of the detection that needs to be updated.|True|String||
-|Status|Specify the new status for the detection.|True|List|Select One|
-|Assign Detection to|Specify the email address of the Crowdstrike Falcon user, who needs to be assigned to this detection|False|String||
-
-
-
-#### Update IOC Information
-Update information about custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Description|Specify a new description for custom IOCs.|False|Content||
-|Source|Specify the source for custom IOCs.|False|Content||
-|Expiration days|Specify the amount of days till expiration.|False|String||
-|Detect policy|If enabled, IOCs that have been identifed, will send a notification. In other case, no action will be taken|False|Boolean|true|
-
-
-
-##### JSON Results
-```json
-[{"Entity":"69630e4574ec6798239b09xxxxxxxxxx","EntityResult":{"id":"1cbca683ca9575609567419287aa92fba40f3ffee8badf6738f2c1xxxxxxxxxx","type":"md5","value":"69630e4574ec6798239b09xxxxxxxxxx","source":"test","action":"no_action","severity":"","description":"test","platforms":["windows","mac","linux"],"tags":["a7829d13-1d10-4126-9970-60xxxxxxxxxx"],"expiration":"2021-10-19T13:04:22Z","expired":false,"deleted":false,"applied_globally":true,"from_parent":false,"created_on":"2019-04-29T07:15:48Z","created_by":"","modified_on":"2021-10-14T13:04:23.666091115Z","modified_by":"7fff03c3227242a0bae84bxxxxxxxxxx"}},{"Entity":"908b64b1971a979c7e3e8ce4621945cba84854cb98d76367b791a6xxxxxxxxxx","EntityResult":{"id":"6b2987ace3c0f5dbfa5414fa13e7302bc61cca5a5db6cde8e1d135xxxxxxxxxx","type":"sha256","value":"908b64b1971a979c7e3e8ce4621945cba84854cb98d76367b791a6xxxxxxxxxx","source":"test","action":"detect","severity":"medium","description":"test","metadata":{"company_name":"Microsoft Corporation","original_filename":"PowerShell.EXE","file_version":"10.0.18362.1 (WinBuild.160101.0800)","file_description":"Windows PowerShell","product_name":"Microsoft® Windows® Operating System","product_version":"10.0.18362.1","signed":false,"av_hits":0},"platforms":["windows","mac","linux"],"tags":["f09f1a25-e6d0-4709-a105-05xxxxxxxxxx"],"expiration":"2021-10-19T13:04:26Z","expired":false,"deleted":false,"applied_globally":true,"from_parent":false,"created_on":"2021-02-15T11:36:58Z","created_by":"","modified_on":"2021-10-14T13:04:28.074605009Z","modified_by":"7fff03c3227242a0bae84bxxxxxxxxxx"}}]
-```
-
-
-
 #### Get Event Offset
 Action will retrieve the event offset that is used by the Event Streaming Connector. Note: action starts processing events from 30 days ago.
 Timeout - 600 Seconds
@@ -488,54 +428,105 @@ Timeout - 600 Seconds
 
 
 
-#### Update Identity Protection Detection
-Update an identity protection detection in Crowdstrike. Note: this action requires an Identity Protection license.
+#### Update Detection
+Deprecated. Update detection in Crowdstrike Falcon.
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
 |Detection ID|Specify the ID of the detection that needs to be updated.|True|String||
-|Status|Specify the status for the detection.|False|List|Select One|
-|Assign To|Specify the name of the analyst to whom the detection needs to be assigned. If "Unassign" is provided, action will remove assignment from the detection. Note: API will accept any value that is provided, even if the underlying user doesn't exist.|False|String||
+|Status|Specify the new status for the detection.|True|List|Select One|
+|Assign Detection to|Specify the email address of the Crowdstrike Falcon user, who needs to be assigned to this detection|False|String||
 
 
 
-##### JSON Results
-```json
-{"added_privileges":["DomainAdminsRole"],"aggregate_id":"aggind:27fe4e476ca3490b8476b2xxxxx:xxxxxxxx-xxxx-xxxx-xxxx-4ED8DB047549","cid":"27fxxxxxxxxxxxxxxxxxxxxxa74","composite_id":"27fe4e4xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-4ED8DB047549","confidence":20,"context_timestamp":"2022-11-15T12:58:15.629Z","crawl_edge_ids":{"Sensor":["N6KIxxxxxxxxxCA4lr/"]},"crawl_vertex_ids":{"Sensor":["ind:27fe4e47xxxxxxxxxxxxxxxxxxxxxxxxxxxx4ED8DB047549"]},"crawled_timestamp":"2022-11-15T13:58:17.251061883Z","created_timestamp":"2022-11-15T12:59:17.239585706Z","description":"A user received new privileges","display_name":"Privilege escalation (user)","end_time":"2022-11-15T12:58:15.629Z","falcon_host_link":"https://falcon.crowdstrike.com/identity-protection/detections/nd:27fe4e476caxxxxxxxxxxxxxxxxxxxxxxxxxxxxED8DB047549","id":"ind:27fe4e476caxxxxxxxxxxxxxxxxxxxxxxxxxxxxED8DB047549","name":"IdpEntityPrivilegeEscalationUser","objective":"Gain Access","pattern_id":51113,"previous_privileges":"0","privileges":"8321","product":"idp","scenario":"privilege_escalation","severity":2,"show_in_ui":true,"source_account_domain":"test","source_account_name":"Mailbox438","source_account_object_sid":"S-1-5-21-3479765008-4256118348-3151044947-3595","start_time":"2022-11-15T12:58:15.629Z","status":"new","tactic":"Privilege Escalation","tactic_id":"TA0xxx","tags":["red_team"],"technique":"Valid Accounts","technique_id":"Txxx8","timestamp":"2022-11-15T12:58:17.239Z","type":"idp-user-endpoint-app-info","updated_timestamp":"2023-03-03T10:24:48.744735285Z"}
-```
-
-
-
-#### Get Host Information
-Retrieve information about the hostname from Crowdstrike Falcon. Supported entities: Hostname, IP Address.
+#### Update Incident
+Deprecated. Update incident in Crowdstrike.
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
 |Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
-|Create Insight|If enabled, action will create insights containing information regarding entities.|False|Boolean|true|
+|Incident ID|Specify the ID of the incident that needs to be updated.|True|String||
+|Status|Specify the status for the incident.|False|List|Select One|
+|Assign to|Specify the name or email of the analyst to whom the incident needs to be assigned. If "Unassign" is provided, action will remove assignment from the incident. Note: for name you need to provide first and last name of the analyst in the following format "{first name} {last name}"|False|String||
 
 
 
 ##### JSON Results
 ```json
-[{"EntityResult":[{"modified_timestamp":"2019-01-17T13: 44: 57Z","major_version":"10","site_name":"Default-First-Site-Name","platform_id":"0","config_id_platform":"3","system_manufacturer":"DellInc.","meta":{"version":"1111"},"first_seen":"2018-04-22T13: 06: 53Z","service_pack_minor":"0","product_type_desc":"Workstation","build_number":"111","hostname":"name","config_id_build":"8104","minor_version":"0","os_version":"Windows10","provision_status":"Provisioned","mac_address":"64-00-6a-2a-43-3f","bios_version":"1.2.1","agent_load_flags":"1","status":"normal","bios_manufacturer":"DellInc.","machine_domain":"Domain name","agent_local_time":"2019-01-14T19: 41: 09.738Z","slow_changing_modified_timestamp":"2019-01-14T17: 44: 40Z","service_pack_major":"0","device_id":"2653595a063e4566519ef4fc813xxxx","system_product_name":"OptiPlex7040","product_type":"1","local_ip":"1.1.x.x","external_ip":"1.1.x.x","cid":"27fe4e476ca3490b8476b2b66xxxx","platform_name":"Windows","config_id_base":"65994753","last_seen":"2019-01-17T13: 44: 46Z","pointer_size":"8","agent_version":"4.18.8104.0","recent_logins":[{"user_name":"test","login_time":"2022-08-10T07:36:38Z"},{"user_name":"test","login_time":"2022-08-10T07:36:35Z"}],"online_status":"offline"}],"Entity":"1.1.x.x"}]
+[{"incident_id": "inc:466a00b13a5e4a9a9x.ac1a5e:x.x.x.", "incident_type": 1, "cid": "27fe4e476ca3490b6b2b6650e5a74", "host_ids": ["466a00b13a5e4a9a93ce2aca5eac1a5e"], "hosts": [{"device_id": "466a00b13a5e4a9a93ce2aca5eac1a5e", "cid": "27fe4e476ca34dd90b8476b2b6650e5a74", "agent_load_flags": "0", "agent_local_time": "2023-09-25T15:41:40.130Z", "agent_version": "7.01.17312.0", "bios_manufacturer": "VMware, Inc.", "bios_version": "VMW71.00V.17369862.B64.2012240522", "config_id_base": "65994753", "config_id_build": "17312", "config_id_platform": "3", "external_ip": "35.246.203.0", "hostname": "EX16-AD01", "first_seen": "2023-01-20T00:40:31Z", "last_seen": "2023-10-06T07:19:50Z", "local_ip": "172.30.3.162", "mac_address": "00-50-56-a2-94-8d", "machine_domain": "exlab.local", "major_version": "10", "minor_version": "0", "os_version": "Windows Server 2016", "ou": ["Domain Controllers"], "platform_id": "0", "platform_name": "Windows", "product_type": "2", "product_type_desc": "Domain Controller", "site_name": "Default-First-Site-Name", "status": "contained", "system_manufacturer": "VMware, Inc.", "system_product_name": "VMware7,1", "groups": ["9489d65c343244169627dcbc"], "modified_timestamp": "2023-10-06T07:19:58Z"}], "created": "2023-10-06T07:20:51Z", "start": "2023-10-06T07:19:21Z", "end": "2023-10-06T07:30:27Z", "state": "closed", "assigned_to": "67494-b86d-4a55-9e52-7492449400a1", "assigned_to_name": "Yuriy Landovskyy", "status": 30, "tactics": ["Persistence", "Defense Evasion", "Command and Control", "Credential Access", "Malware", "Privilege Escalation"], "techniques": ["Create Account", "Masquerading", "Ingress Tool Transfer", "OS Credential Dumping", "Malicious File", "Image File Execution Options Injection", "Bypass User Account Control", "Accessibility Features", "Registry Run Keys / Startup Folder"], "objectives": ["Keep Access", "Contact Controlled Systems", "Gain Access", "Falcon Detection Method"], "modified_timestamp": "2023-10-20T08:34:07.078440797Z", "users": ["EX16-AD01$", "administrator"], "fine_score": 100}]
 ```
 
 
 
-#### Add Comment to Detection
-Deprecated. Add a comment to the detection in Crowdstrike Falcon.
+#### List Uploaded IOCs
+List available custom IOCs in CrowdStrike Falcon.
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Detection ID|Specify the id of the detection to which you want to add a comment.|True|String||
-|Comment|Specify the comment that needs to be added to the detection.|True|String||
+|IOC Type Filter|Specify a comma-separated list of IOC types that should be returned. If nothing is provided, action will return IOCs from all types. Possible values: ipv4,ipv6,md5,sha256,domain.|False|String|ipv4,ipv6,md5,sha256,domain|
+|Value Filter Logic|Specify the value filter logic. If "Equal" is selected, action will try to find the exact match among IOCs and if "Contains" is selected, action will try to find IOCs that contain that substring.|False|List|Equal|
+|Value Filter String|Specify the string that should be searched among IOCs.|False|String||
+|Max IOCs To Return|Specify how many IOCs to return. Default: 50. Maximum: 500.|False|String|50|
+
+
+
+##### JSON Results
+```json
+[{"id":"6b2987ace3c0f5dbfa5414fa13e7302bc61cca5a5db6cde8e1d135xxxxxxxxxx","type":"sha256","value":"908b64b1971a979c7e3e8ce4621945cba84854cb98d76367b791a6xxxxxxxxxx","source":"testSource","action":"detect","severity":"medium","description":"test description update","metadata":{"company_name":"Microsoft Corporation","original_filename":"PowerShell.EXE","file_version":"10.0.18362.1 (WinBuild.160101.0800)","file_description":"Windows PowerShell","product_name":"Microsoft® Windows® Operating System","product_version":"10.0.18362.1","signed":false,"av_hits":0},"platforms":["windows","mac","linux"],"tags":["f09f1a25-e6d0-4709-a105-05xxxxxxxxxx"],"expiration":"2022-05-01T12:00:00Z","expired":false,"deleted":false,"applied_globally":true,"from_parent":false,"created_on":"2021-02-15T11:36:58Z","created_by":"","modified_on":"2021-10-13T09:42:13.466234223Z","modified_by":"7fff03c3227242a0bae84bxxxxxxxxxx"},{"id":"fbe8c2739f3c6df95e62e0ae54569974437b2d9306eaf6740134ccxxxxxxxxxx","type":"sha256","value":"8a86c4eecf12446ff273afc03e1b3a09a911d0b7981db1af58cb45xxxxxxxxxx","action":"no_action","severity":"","metadata":{"signed":false,"av_hits":-1},"platforms":["windows"],"tags":["Hashes 22.Nov.20 15:29 (Windows)"],"expired":false,"deleted":false,"applied_globally":true,"from_parent":false,"created_on":"2021-04-22T03:54:09.235120463Z","created_by":"internal@crowdstrike.com","modified_on":"2021-04-22T03:54:09.235120463Z","modified_by":"internal@crowdstrike.com"}]
+```
+
+
+
+#### Submit File
+Submit files to a sandbox in Crowdstrike. Note: This action requires a Falcon Sandbox license. For the list of supported file formats, refer to the documentation portal.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|File Paths|Specify the file paths to the files that need to be submitted. Refer to the documentation portal for a list of the supported file formats.|True|String||
+|Sandbox Environment|Specify the sandbox environment for the analysis.|False|List|Windows 10, 64-bit|
+|Network Environment|Specify the network environment for the analysis.|False|List|Default|
+|Archive Password|Specify the password that would need to be used, when working with archive files.|False|Password|*****|
+|Document Password|Specify the password that would need to be used, when working with Adobe or Office files. Maximum: 32 characters.|False|Password|*****|
+|Check Duplicate|If enabled, the action checks if the file was already submitted previously and returns the available report. Note: during the validation “Network Environment” and “Sandbox Environment” are not taken into consideration.|False|Boolean|true|
+|Comment|Specify the comment for the submission.|False|String||
+|Confidential Submission|If enabled, the file is only shown to users within your customer account.|False|Boolean|false|
+
+
+
+##### JSON Results
+```json
+[{"Entity": "/test1.pdf", "EntityResult": [{"id": "27fe4e476ca3490b8476b2b6650e5a74_8b43a4c9d5ea4306af4e827b6901cd60", "cid": "27fe4e476ca3490b8476b2b6650e5a74", "created_timestamp": "2023-04-28T14:00:00Z", "origin": "apigateway", "sandbox": [{"sha256": "8decc8571946d4cd70a024949e033a2a2a54377fe9f1c1b944c20f9ee11a9e51", "environment_id": 160, "environment_description": "Windows 10 64 bit", "submit_name": "test1.pdf", "submission_type": "file", "verdict": "no specific threat", "file_type": "PDF document, version 1.3", "sample_flags": ["Extracted Files"], "network_settings": "default"}], "verdict": "whitelisted", "ioc_report_strict_csv_artifact_id": "ded2c6801f51b43ba4b6de371188960239e84d227a16f065b6b96404854f27d4", "ioc_report_broad_csv_artifact_id": "ded2c6801f51b43ba4b6de371188960239e84d227a16f065b6b96404854f27d4", "ioc_report_strict_json_artifact_id": "9a659092e0dc2ea6b57254eed04af5012267fb2c8990b277492fe172dfa86bf2", "ioc_report_broad_json_artifact_id": "9a659092e0dc2ea6b57254eed04af5012267fb2c8990b277492fe172dfa86bf2", "ioc_report_strict_stix_artifact_id": "fa98bc61b6e62837dbff2a7c34e0e3cee3e90ff277bed059b634d806bcdad726", "ioc_report_broad_stix_artifact_id": "fa98bc61b6e62837dbff2a7c34e0e3cee3e90ff277bed059b634d806bcdad726", "ioc_report_strict_maec_artifact_id": "cf12de7c8249dd80dc9e9591d964b13aa18b9b4a292a4ec3c9f58e7b1ff1d50d", "ioc_report_broad_maec_artifact_id": "cf12de7c8249dd80dc9e9591d964b13aa18b9b4a292a4ec3c9f58e7b1ff1d50d"}]}]
+```
+
+
+
+#### Upload IOCs
+Add custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Platform|Specify a comma-separated list of the platforms related to the IOC. Possible values: Windows, Linux, Mac.|True|String|Windows,Linux,Mac|
+|Severity|Specify the severity for the IOC.|True|List|Medium|
+|Comment|Specify a comment with more context related to IOC.|False|String||
+|Host Group Name|Specify the name of the host group.|False|String||
+|Action|Specify the action for the uploaded IOCs. Note: "Block" action can only be applied to hashes. Action will always apply "Detect" policy to all other IOC types.|False|List|Detect|
+|Days To Expire|The number of days before the IOC expires.|False|String||
+
+
+
+#### Ping
+Test Connectivity
+Timeout - 600 Seconds
 
 
 
@@ -560,63 +551,70 @@ Timeout - 600 Seconds
 
 
 
-#### Contain Endpoint
-Contain endpoint in Crowdstrike Falcon. Supported entities: Hostname and IP address.
+#### Update IOC Information
+Update information about custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
-|Fail If Timeout|If enabled, action will be failed, if not all of the endpoints were contained.|False|Boolean|true|
+|Description|Specify a new description for custom IOCs.|False|Content||
+|Source|Specify the source for custom IOCs.|False|Content||
+|Expiration days|Specify the amount of days till expiration.|False|String||
+|Detect policy|If enabled, IOCs that have been identifed, will send a notification. In other case, no action will be taken|False|Boolean|true|
 
 
 
 ##### JSON Results
 ```json
-{"Entity":"XXX.XXX.XXX","EntityResult":{"device_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","cid":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","agent_load_flags":"1","agent_local_time":"2021-05-26T11:54:38.105Z","agent_version":"X.XXX.XXX.0","bios_manufacturer":"Phoenix Technologies LTD","bios_version":"6.00","build_number":"XXXX","config_id_base":"XXXX","config_id_build":"XXXX","config_id_platform":"3","cpu_signature":"XXXXX","external_ip":"XXX.XXX.XXX.XXX","mac_address":"XX-XX-XX-XX-XX-XX","hostname":"XXXXXXXXXXXX","first_seen":"2021-01-12T16:01:43Z","last_seen":"2021-05-26T12:46:53Z","local_ip":"XXX.XXX.X.XX","major_version":"10","minor_version":"0","os_version":"Windows 10","platform_id":"0","platform_name":"Windows","policies":[{"policy_type":"prevention","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"71932dc2","assigned_date":"2021-02-05T10:17:18.181166503Z","applied_date":"2021-02-05T10:17:29.147610493Z","rule_groups":[]}],"reduced_functionality_mode":"no","device_policies":{"prevention":{"policy_type":"prevention","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"71932dc2","assigned_date":"2021-02-05T10:17:18.181166503Z","applied_date":"2021-02-05T10:17:29.147610493Z","rule_groups":[]},"sensor_update":{"policy_type":"sensor-update","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"tagged|1;101","assigned_date":"2021-05-20T13:21:15.793890625Z","applied_date":"2021-05-20T13:23:10.339303233Z","uninstall_protection":"ENABLED"},"device_control":{"policy_type":"device-control","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"assigned_date":"2021-01-12T16:05:30.418267934Z","applied_date":"2021-01-12T16:07:29.124988572Z"},"global_config":{"policy_type":"globalconfig","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"f61a5761","assigned_date":"2021-05-26T08:56:57.749380428Z","applied_date":"2021-05-26T08:57:09.08333925Z"},"remote_response":{"policy_type":"remote-response","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"settings_hash":"XXXXXXX","assigned_date":"2021-01-12T16:05:30.418259588Z","applied_date":"2021-01-12T16:05:41.768614744Z"},"firewall":{"policy_type":"firewall","policy_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","applied":true,"assigned_date":"2021-01-12T16:05:30.41820681Z","applied_date":"2021-01-12T16:07:35.656641903Z","rule_set_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"}},"groups":[],"group_hash":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","product_type":"1","product_type_desc":"Workstation","provision_status":"Provisioned","serial_number":"VMware-XX XX XX XX XX XX XX XX-XX XX XX XX XX XX XX XX","service_pack_major":"0","service_pack_minor":"0","pointer_size":"8","status":"contained","system_manufacturer":"VMware, Inc.","system_product_name":"VMware Virtual Platform","tags":[],"modified_timestamp":"2021-05-26T12:46:59Z","slow_changing_modified_timestamp":"2021-05-26T08:54:51Z","meta":{"version":"XXXXX"}}}
+[{"Entity":"69630e4574ec6798239b09xxxxxxxxxx","EntityResult":{"id":"1cbca683ca9575609567419287aa92fba40f3ffee8badf6738f2c1xxxxxxxxxx","type":"md5","value":"69630e4574ec6798239b09xxxxxxxxxx","source":"test","action":"no_action","severity":"","description":"test","platforms":["windows","mac","linux"],"tags":["a7829d13-1d10-4126-9970-60xxxxxxxxxx"],"expiration":"2021-10-19T13:04:22Z","expired":false,"deleted":false,"applied_globally":true,"from_parent":false,"created_on":"2019-04-29T07:15:48Z","created_by":"","modified_on":"2021-10-14T13:04:23.666091115Z","modified_by":"7fff03c3227242a0bae84bxxxxxxxxxx"}},{"Entity":"908b64b1971a979c7e3e8ce4621945cba84854cb98d76367b791a6xxxxxxxxxx","EntityResult":{"id":"6b2987ace3c0f5dbfa5414fa13e7302bc61cca5a5db6cde8e1d135xxxxxxxxxx","type":"sha256","value":"908b64b1971a979c7e3e8ce4621945cba84854cb98d76367b791a6xxxxxxxxxx","source":"test","action":"detect","severity":"medium","description":"test","metadata":{"company_name":"Microsoft Corporation","original_filename":"PowerShell.EXE","file_version":"10.0.18362.1 (WinBuild.160101.0800)","file_description":"Windows PowerShell","product_name":"Microsoft® Windows® Operating System","product_version":"10.0.18362.1","signed":false,"av_hits":0},"platforms":["windows","mac","linux"],"tags":["f09f1a25-e6d0-4709-a105-05xxxxxxxxxx"],"expiration":"2021-10-19T13:04:26Z","expired":false,"deleted":false,"applied_globally":true,"from_parent":false,"created_on":"2021-02-15T11:36:58Z","created_by":"","modified_on":"2021-10-14T13:04:28.074605009Z","modified_by":"7fff03c3227242a0bae84bxxxxxxxxxx"}}]
 ```
 
 
 
-#### List Host Vulnerabilities
-List vulnerabilities found on the host in Crowdstrike Falcon. Supported entities: IP Address and Hostname. Note: requires Falcon Spotlight license and permissions. 
+#### Get Hosts by IOC
+DEPRECATED. List hosts related to the IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
 Timeout - 600 Seconds
 
 
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
-|Severity Filter|Specify the comma-separated list of severities for vulnerabilities.If nothing is provided, action will ingest all related vulnerabilities. Possible values: Critical, High, Medium, Low, Unknown.|False|String||
-|Create Insight|If enabled, action will create an insight per entity containing statistical information about related vulnerabilities.|False|Boolean|true|
-|Max Vulnerabilities To Return|Specify how many vulnerabilities to return per host. If nothing is provided action will process all of the related vulnerabilities.|False|String|100|
-
-
 
 ##### JSON Results
 ```json
-{"Entity":"XXX.XXX.XXX","EntityResult": {"statistics":{"total":123,"severity":{"critical":1,"high":1,"medium":1,"low":1,"unknown":1},"status":{"open":1,"reopened":1},"total_available_remediations":1},"details":[{"id":"74089e36ac3XXXXXab14abc076ed18eb_fff6dXXXXXX7352babdf7c7d240749e7","cid":"27fe4e476cXXXXXX8476b2b6650e5a74","aid":"74089e36acXXXXXXab14abc076ed18eb","created_timestamp":"2021-05-12T22:45:47Z","updated_timestamp":"2021-05-12T22:45:47Z","status":"open","cve":{"id":"CVE-2021-28476","base_score":9.9,"severity":"CRITICAL","exploit_status":0},"app":{"product_name_version":"Windows Windows 10"},"apps":[{"product_name_version":"Windows Windows 10","sub_status":"open","remediation":{"ids":["acc34cd461023ffXXXXX420fa8839365"]}}],"host_info":{"hostname":"CROWDSTRIKE-H01","local_ip":"172.30.202.33","machine_domain":"","os_version":"Windows 10","ou":"","site_name":"","system_manufacturer":"VMware, Inc.","groups":[],"tags":[],"platform":"Windows"},"remediation":[{"id":"acc34cd461023ffXXXXX420fa8839365","reference":"KB5003169","title":"Update Microsoft Windows 10 1909","action":"Install patch for Microsoft Windows 10 1909 x64 (Workstation): Security Update KB5003169","link":"https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5003169"}]}]}}
+{"hash": [{"modified_timestamp": "2019-01-17T13: 44: 57Z", "major_version": "10", "site_name": "Default-First-Site-Name", "platform_id": "0", "config_id_platform": "3", "system_manufacturer": "DellInc.", "meta": {"version": "49622"}, "first_seen": "2018-04-22T13: 06: 53Z", "service_pack_minor": "0", "product_type_desc": "Workstation", "build_number": "14393", "hostname": "name", "config_id_build": "8104", "minor_version": "0", "os_version": "Windows10", "provision_status": "Provisioned", "mac_address": "64-00-6a-2a-43-3f", "bios_version": "1.2.1", "agent_load_flags": "1", "status": "normal", "bios_manufacturer": "DellInc.", "machine_domain": "domain name", "device_policies": {"sensor_update": {"applied": true, "applied_date": "2018-12-11T23: 09: 18.071417837Z", "settings_hash": "65994753|3|2|automatic", "policy_type": "sensor-update", "assigned_date": "2018-12-11T23: 08: 38.16990705Z", "policy_id": "gdfgdghdhdhf53535"}}, "agent_local_time": "2019-01-14T19: 41: 09.738Z", "slow_changing_modified_timestamp": "2019-01-14T17: 44: 40Z", "service_pack_major": "0", "device_id": "2653595a063e4566519ef4fc813fcc56", "system_product_name": "OptiPlex7040", "product_type": "1", "local_ip": "1.1.1.1", "external_ip": "1.1.1.1", "cid": "27fe4e476ca3490b8476b2b6650e5a74", "platform_name": "Windows", "config_id_base": "65994753", "policies": [{"applied": true, "applied_date": "2019-01-02T22: 45: 21.315392338Z", "settings_hash": "18db1203", "policy_type": "prevention", "assigned_date": "2019-01-02T22: 45: 11.214774996Z", "policy_id": "7efdf97d7805402186b61151e8abd745"}], "last_seen": "2019-01-17T13: 44: 46Z", "pointer_size": "8", "agent_version": "4.18.8104.0"}]}
 ```
 
 
 
-#### Update Alert
-Update an alert in Crowdstrike.
+#### Add Alert Comment
+Add a comment to alert in Crowdstrike. 
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
 |Alert ID|Specify the ID of the alert that needs to be updated.|True|String||
-|Status|Specify the status for the alert.|False|List|Select One|
-|Verdict|Specify the verdict for the alert.|False|List|Select One|
-|Assign To|Specify the name of the analyst to whom the alert needs to be assigned. If "Unassign" is provided, action will remove assignment from the alert. Note: API will accept any value that is provided, even if the underlying user doesn’t exist.|False|String||
+|Comment|Specify the comment for the alert.|True|String||
+
+
+
+#### Run Script
+Execute a powershell script on the endpoints in Crowdstrike. Supported entities: IP Address, Hostname. Note: Action is running as async, please adjust script timeout value in Google SecOps IDE for the action, as needed.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
+|Script Name|The name of the script file that needs to be executed. Note: either “Script Name” or “Raw Script” should be provided. If both “Script Name” and “Raw Script” are provided, then “Raw Script” will have the priority.|False|String||
+|Raw Script|Raw powershell script payload that needs to be executed on the endpoints. Note: either “Script Name” or “Raw Script” should be provided. If both “Script Name” and “Raw Script” are provided, then “Raw Script” will have the priority.|False|String||
+|Hostname|Comma-separated list of hostnames on which you want to execute the action. Note: action will run the action on both entities + this parameter values.|False|String||
+|Queue Offline|If enabled, commands targeting offline hosts are queued and executed once the host reconnects to the network.|False|Boolean|false|
 
 
 
 ##### JSON Results
 ```json
-[{"agent_id":"abcd","aggregate_id":"abcd","assigned_to_name":"anurags","cid":"xyz1234","cloud_indicator":"false","cmdline":"bashcrowdstrike_test_high","composite_id":":abcd","confidence":100,"context_timestamp":"2024-07-30T07:35:01.531Z","control_graph_id":"ctg:abcd","crawled_timestamp":"2024-07-30T07:40:06.744441898Z","created_timestamp":"2024-07-30T07:36:04.72770105Z","data_domains":["Endpoint"],"description":"Ahighleveldetectionwastriggeredonthisprocessfortestingpurposes.","device":{"agent_load_flags":"0","agent_local_time":"2024-01-04T23:40:57.736Z","agent_version":"7.06.16108.0","bios_manufacturer":"PhoenixTechnologiesLTD","bios_version":"6.00","cid":"abcd123","config_id_base":"65994753","config_id_build":"16108","config_id_platform":"8","device_id":"xyz","external_ip":"0.0.0.0","first_seen":"2023-06-14T10:50:40Z","groups":["9876"],"hostname":"abcd-sysops","last_seen":"2024-07-30T07:34:13Z","local_ip":"0.0.0.0","mac_address":"00-00-00-x0-00-00","major_version":"3","minor_version":"10","modified_timestamp":"2024-07-30T07:34:18Z","os_version":"CentOS7.9","ou":null,"platform_id":"3","platform_name":"Linux","pod_labels":null,"product_type_desc":"Server","status":"normal","system_manufacturer":"VMware,Inc.","system_product_name":"VMwareVirtualPlatform"},"display_name":"TestTriggerHigh","email_sent":true,"falcon_host_link":"https://falcon.crowdstrike.com/activity-v2/detections/27fe4e476ca3490b8476b2b6650e5a74:ind:2a1c5ef609ac479ba77f8ca5879c82fc:312465436839417-10304-1406208272?_cid=g03000sdn2nuopjvhx5iffjmntogcedi","filename":"bash","filepath":"/usr/bin/bash","global_prevalence":"common","grandparent_details":{"cmdline":"/usr/sbin/crond-n","filename":"crond","filepath":"/usr/sbin/crond","local_process_id":"17602","md5":"123lmnpo","process_graph_id":"pid:abcd","process_id":"00000000","sha256":"aabbccdd1234","timestamp":"2024-01-04T23:40:57.178Z","user_graph_id":"uid:00000000:abcd","user_name":"root"},"id":"abcd1234","indicator_id":"ind:00000abcd","ioc_context":[],"ioc_values":[],"local_prevalence":"unique","local_process_id":"9606","md5":"xyz0987","name":"DemoHighPattern","objective":"FalconDetectionMethod","parent_details":{"cmdline":"/bin/sh-c./alert.sh","filename":"bash","filepath":"/usr/bin/bash","local_process_id":"9604","md5":"xyz1234","process_graph_id":"pid:2a1c5ef609ac479ba77f8ca5879c82fc:312465432584345","process_id":"312465432584345","sha256":"00f8cbc5b3a6640af5ac18d01bc5a666f6f583b1379b9491e0bcc28ba78c92e9","timestamp":"2024-07-30T07:35:17Z","user_graph_id":"uid:2a1c5ef609ac479ba77f8ca5879c82fc:0","user_name":"root"},"parent_process_id":"000000","pattern_disposition":0,"pattern_disposition_description":"Detection,standarddetection.","pattern_disposition_details":{"blocking_unsupported_or_disabled":false,"bootup_safeguard_enabled":false,"containment_file_system":false,"critical_process_disabled":false,"detect":false,"fs_operation_blocked":false,"handle_operation_downgraded":false,"inddet_mask":false,"indicator":false,"kill_action_failed":false,"kill_parent":false,"kill_process":false,"kill_subprocess":false,"mfa_required":false,"operation_blocked":false,"policy_disabled":false,"prevention_provisioning_enabled":false,"process_blocked":false,"quarantine_file":false,"quarantine_machine":false,"registry_operation_blocked":false,"response_action_already_applied":false,"response_action_failed":false,"response_action_triggered":false,"rooting":false,"sensor_only":false,"suspend_parent":false,"suspend_process":false},"pattern_id":00000,"platform":"Linux","poly_id":"abcd==","process_end_time":"1722324901","process_id":"0000000","process_start_time":"1722324901","product":"epp","scenario":"suspicious_activity","seconds_to_resolved":168,"seconds_to_triaged":0,"severity":70,"severity_name":"High","sha1":"0000000000000000000000000000000000000000","sha256":"000000000000000","show_in_ui":true,"source_products":["FalconInsight"],"source_vendors":["CrowdStrike"],"status":"new","tactic":"FalconOverwatch","tactic_id":"CSTA0006","tags":["true_positive"],"technique":"MaliciousActivity","technique_id":"CST0002","template_instance_id":"1359","timestamp":"2024-07-30T07:35:02.101Z","tree_id":"2965447926650","tree_root":"312465436839417","triggering_process_graph_id":"pid:2a1c5ef609ac479ba77f8ca5879c82fc:312465436839417","type":"ldt","updated_timestamp":"2024-07-30T08:27:57.39990427Z","user_name":"root"}]
+{"Entity":"XXX.XXX.XXX","EntityResult":{"session_id":"2a066818-XXXX-XXXX-XXXX-c295ed7295b3","task_id":"84846f59-XXXX-XXXX-XXXX-12af4af88a8b","complete":true,"stdout":"","stderr":"","base_command":"get"}}
 ```
 
 
@@ -641,35 +639,6 @@ This job will synchronize Google SecOps Alerts and Crowdstrike alerts. The job s
 
 
 ## Connectors
-#### Crowdstrike - Alerts Connector
-Pull alerts from Crowdstrike. Dynamic List works with the "display_name" parameter. Note: To fetch identity protection detections use "Identity Protection Detections Connector".
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|DeviceProductField|Enter the source field name in order to retrieve the Product Field name.|True|String|Product Name|
-|EventClassId|Enter the source field name in order to retrieve the Event Field name.|True|String|type|
-|Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|String||
-|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field through regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|String|.*|
-|PythonProcessTimeout|Timeout limit for the python process running the current script.|True|Integer|180|
-|API Root|API root of the Crowdstrike instance.|True|String|https://api.crowdstrike.com|
-|Client ID|Client ID  of the Crowdstrike account.|True|String||
-|Client Secret|Client Secret of the Crowdstrike account.|True|Password|*****|
-|Lowest Severity Score To Fetch|Lowest severity score of the identity protection detections to fetch. If nothing is provided, the connector will ingest detections with all severities. Maximum is 100. Note: action also supports the following values: Informational, Low, Medium, High, Critical.|False|String||
-|Max Hours Backwards|Number of hours before the first connector iteration to retrieve alerts from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|Integer|1|
-|Max Alerts To Fetch|How many alerts to process per one connector iteration. Default: 10.|True|Integer|10|
-|Include Hidden Alerts|If enabled, connector will also fetch alerts that are labeled as "hidden" by Crowdstrike.|False|Boolean|true|
-|Fallback Severity|Fallback severity for the SecOps alert that should be applied to the Crowdstrike alerts, which are missing severity information. Possible values: Informational, Low, Medium, High, Critical. If nothing is provided, connector will use "Informational" severity.|False|String|Informational|
-|Use dynamic list as a blocklist|If enabled, the dynamic list will be used as a blocklist.|False|Boolean|false|
-|Verify SSL|If enabled, verify the SSL certificate for the connection to the Crowdstrike server is valid.|False|Boolean|false|
-|Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|Boolean|false|
-|Proxy Server Address|The address of the proxy server to use.|False|String||
-|Proxy Username|The proxy username to authenticate with.|False|String||
-|Proxy Password|The proxy password to authenticate with.|False|Password|*****|
-|Case Name Template|When provided, connector will add a new key called "custom_case_name" to the Google Secops Event. It can used to have a customer case name. Please refer to the documentation portal for more details. You can provide placeholders in the following format: [name of the field]. Example: Phishing - [event_mailbox]. Note: connector will use first Google Secops Event for placeholders. Only keys that have string value will be handled.|False|String||
-|Alert Name Template|If provided, connector will use this value for Google Secops Alert Name. Please refer to the documentation portal for more details. You can provide placeholders in the following format: [name of the field]. Example: Phishing - [event_mailbox]. Note: connector will use first Google Secops Event for placeholders. Only keys that have string value will be handled. If nothing is provided or user provides an invalid template, connector will use the default alert name.|False|String||
-|Customer ID|The customer ID of the tenant in which to execute the integration. For use in multi-tenant (MSSP) environments.|False|String||
-
-
 #### Crowdstrike - Detections Connector
 Deprecated. Pull detections from Crowdstrike. Whitelist works with filters that are supported by the API of Crowdstrike. For the details, please refer to the documentation portal.
 
@@ -688,6 +657,33 @@ Deprecated. Pull detections from Crowdstrike. Whitelist works with filters that 
 |Max Hours Backwards|Number of hours before the first connector iteration to retrieve detections from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|Integer|1|
 |Max Detections To Fetch|How many detections to process per one connector iteration. Default: 10.|False|Integer|10|
 |Padding Period|The number of hours that connector will use for padding. Maximum: 6.|False|Integer|1|
+|Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|Boolean|false|
+|Verify SSL|If enabled, verify the SSL certificate for the connection to the Crowdstrike server is valid.|False|Boolean|false|
+|Proxy Server Address|The address of the proxy server to use.|False|String||
+|Proxy Username|The proxy username to authenticate with.|False|String||
+|Proxy Password|The proxy password to authenticate with.|False|Password|*****|
+|Case Name Template|When provided, connector will add a new key called "custom_case_name" to the Google Secops Event. It can used to have a customer case name. Please refer to the documentation portal for more details. You can provide placeholders in the following format: [name of the field]. Example: Phishing - [event_mailbox]. Note: connector will use first Google Secops Event for placeholders. Only keys that have string value will be handled.|False|String||
+|Alert Name Template|If provided, connector will use this value for Google Secops Alert Name. Please refer to the documentation portal for more details. You can provide placeholders in the following format: [name of the field]. Example: Phishing - [event_mailbox]. Note: connector will use first Google Secops Event for placeholders. Only keys that have string value will be handled. If nothing is provided or user provides an invalid template, connector will use the default alert name.|False|String||
+|Customer ID|The customer ID of the tenant in which to execute the integration. For use in multi-tenant (MSSP) environments.|False|String||
+
+
+#### Crowdstrike - Identity Protection Detections Connector
+Pull Identity Protection detections from Crowdstrike. Note: this connector requires an Identity Protection license. Dynamic List works with the “display_name” parameter.
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|DeviceProductField|Enter the source field name in order to retrieve the Product Field name.|True|String|Product Name|
+|EventClassId|Enter the source field name in order to retrieve the Event Field name.|True|String|type|
+|Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|String||
+|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field through regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|String|.*|
+|PythonProcessTimeout|Timeout limit for the python process running the current script.|True|Integer|180|
+|API Root|API root of the Crowdstrike instance.|True|String|https://api.crowdstrike.com|
+|Client ID|Client ID  of the Crowdstrike account.|True|String||
+|Client Secret|Client Secret of the Crowdstrike account.|True|Password|*****|
+|Lowest Severity Score To Fetch|Lowest severity score of the identity protection detections to fetch. If nothing is provided, the connector will ingest detections with all severities. Maximum is 100. Note: action also supports the following values: Informational, Low, Medium, High, Critical.|False|String||
+|Max Hours Backwards|Number of hours before the first connector iteration to retrieve detections from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|Integer|1|
+|Max Detections To Fetch|How many identity protection detections to process per one connector iteration. Default: 10.|False|Integer|10|
+|Use dynamic list as a blocklist|If enabled, the dynamic list will be used as a blocklist.|False|Boolean|true|
 |Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|Boolean|false|
 |Verify SSL|If enabled, verify the SSL certificate for the connection to the Crowdstrike server is valid.|False|Boolean|false|
 |Proxy Server Address|The address of the proxy server to use.|False|String||
@@ -725,6 +721,35 @@ Crowdstrike Falcon Streaming Events Connector
 |Customer ID|The customer ID of the tenant in which to execute the integration. For use in multi-tenant (MSSP) environments.|False|String||
 
 
+#### Crowdstrike - Alerts Connector
+Pull alerts from Crowdstrike. Dynamic List works with the "display_name" parameter. Note: To fetch identity protection detections use "Identity Protection Detections Connector".
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|DeviceProductField|Enter the source field name in order to retrieve the Product Field name.|True|String|Product Name|
+|EventClassId|Enter the source field name in order to retrieve the Event Field name.|True|String|type|
+|Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|String||
+|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field through regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|String|.*|
+|PythonProcessTimeout|Timeout limit for the python process running the current script.|True|Integer|180|
+|API Root|API root of the Crowdstrike instance.|True|String|https://api.crowdstrike.com|
+|Client ID|Client ID  of the Crowdstrike account.|True|String||
+|Client Secret|Client Secret of the Crowdstrike account.|True|Password|*****|
+|Lowest Severity Score To Fetch|Lowest severity score of the identity protection detections to fetch. If nothing is provided, the connector will ingest detections with all severities. Maximum is 100. Note: action also supports the following values: Informational, Low, Medium, High, Critical.|False|String||
+|Max Hours Backwards|Number of hours before the first connector iteration to retrieve alerts from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|Integer|1|
+|Max Alerts To Fetch|How many alerts to process per one connector iteration. Default: 10.|True|Integer|10|
+|Include Hidden Alerts|If enabled, connector will also fetch alerts that are labeled as "hidden" by Crowdstrike.|False|Boolean|true|
+|Fallback Severity|Fallback severity for the SecOps alert that should be applied to the Crowdstrike alerts, which are missing severity information. Possible values: Informational, Low, Medium, High, Critical. If nothing is provided, connector will use "Informational" severity.|False|String|Informational|
+|Use dynamic list as a blocklist|If enabled, the dynamic list will be used as a blocklist.|False|Boolean|false|
+|Verify SSL|If enabled, verify the SSL certificate for the connection to the Crowdstrike server is valid.|False|Boolean|false|
+|Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|Boolean|false|
+|Proxy Server Address|The address of the proxy server to use.|False|String||
+|Proxy Username|The proxy username to authenticate with.|False|String||
+|Proxy Password|The proxy password to authenticate with.|False|Password|*****|
+|Case Name Template|When provided, connector will add a new key called "custom_case_name" to the Google Secops Event. It can used to have a customer case name. Please refer to the documentation portal for more details. You can provide placeholders in the following format: [name of the field]. Example: Phishing - [event_mailbox]. Note: connector will use first Google Secops Event for placeholders. Only keys that have string value will be handled.|False|String||
+|Alert Name Template|If provided, connector will use this value for Google Secops Alert Name. Please refer to the documentation portal for more details. You can provide placeholders in the following format: [name of the field]. Example: Phishing - [event_mailbox]. Note: connector will use first Google Secops Event for placeholders. Only keys that have string value will be handled. If nothing is provided or user provides an invalid template, connector will use the default alert name.|False|String||
+|Customer ID|The customer ID of the tenant in which to execute the integration. For use in multi-tenant (MSSP) environments.|False|String||
+
+
 #### Crowdstrike - Incidents Connector
 Deprecated. Pull incident and related behaviors from Crowdstrike. Dynamic List works with the “incident_type” parameter.
 
@@ -750,34 +775,5 @@ Deprecated. Pull incident and related behaviors from Crowdstrike. Dynamic List w
 |Customer ID|The customer ID of the tenant in which to execute the integration. For use in multi-tenant (MSSP) environments.|False|String||
 
 
-#### Crowdstrike - Identity Protection Detections Connector
-Pull Identity Protection detections from Crowdstrike. Note: this connector requires an Identity Protection license. Dynamic List works with the “display_name” parameter.
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|DeviceProductField|Enter the source field name in order to retrieve the Product Field name.|True|String|Product Name|
-|EventClassId|Enter the source field name in order to retrieve the Event Field name.|True|String|type|
-|Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|String||
-|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field through regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|String|.*|
-|PythonProcessTimeout|Timeout limit for the python process running the current script.|True|Integer|180|
-|API Root|API root of the Crowdstrike instance.|True|String|https://api.crowdstrike.com|
-|Client ID|Client ID  of the Crowdstrike account.|True|String||
-|Client Secret|Client Secret of the Crowdstrike account.|True|Password|*****|
-|Lowest Severity Score To Fetch|Lowest severity score of the identity protection detections to fetch. If nothing is provided, the connector will ingest detections with all severities. Maximum is 100. Note: action also supports the following values: Informational, Low, Medium, High, Critical.|False|String||
-|Max Hours Backwards|Number of hours before the first connector iteration to retrieve detections from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|Integer|1|
-|Max Detections To Fetch|How many identity protection detections to process per one connector iteration. Default: 10.|False|Integer|10|
-|Use dynamic list as a blocklist|If enabled, the dynamic list will be used as a blocklist.|False|Boolean|true|
-|Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|Boolean|false|
-|Verify SSL|If enabled, verify the SSL certificate for the connection to the Crowdstrike server is valid.|False|Boolean|false|
-|Proxy Server Address|The address of the proxy server to use.|False|String||
-|Proxy Username|The proxy username to authenticate with.|False|String||
-|Proxy Password|The proxy password to authenticate with.|False|Password|*****|
-|Case Name Template|When provided, connector will add a new key called "custom_case_name" to the Google Secops Event. It can used to have a customer case name. Please refer to the documentation portal for more details. You can provide placeholders in the following format: [name of the field]. Example: Phishing - [event_mailbox]. Note: connector will use first Google Secops Event for placeholders. Only keys that have string value will be handled.|False|String||
-|Alert Name Template|If provided, connector will use this value for Google Secops Alert Name. Please refer to the documentation portal for more details. You can provide placeholders in the following format: [name of the field]. Example: Phishing - [event_mailbox]. Note: connector will use first Google Secops Event for placeholders. Only keys that have string value will be handled. If nothing is provided or user provides an invalid template, connector will use the default alert name.|False|String||
-|Customer ID|The customer ID of the tenant in which to execute the integration. For use in multi-tenant (MSSP) environments.|False|String||
 
 
-
-
-
-AddonReadme

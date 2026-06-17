@@ -19,8 +19,8 @@
             "IsMandatory": true,
             "Value": "https://api-{fqdn}",
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779352583359,
-            "ModificationTimeUnixTimeInMs": 1779352583359
+            "CreationTimeUnixTimeInMs": 1781676061751,
+            "ModificationTimeUnixTimeInMs": 1781676061751
         },
         {
             "IntegrationIdentifier": "PaloAltoCortexXDR",
@@ -31,8 +31,8 @@
             "IsMandatory": true,
             "Value": null,
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779352583359,
-            "ModificationTimeUnixTimeInMs": 1779352583359
+            "CreationTimeUnixTimeInMs": 1781676061751,
+            "ModificationTimeUnixTimeInMs": 1781676061751
         },
         {
             "IntegrationIdentifier": "PaloAltoCortexXDR",
@@ -43,8 +43,8 @@
             "IsMandatory": true,
             "Value": "3",
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779352583359,
-            "ModificationTimeUnixTimeInMs": 1779352583359
+            "CreationTimeUnixTimeInMs": 1781676061751,
+            "ModificationTimeUnixTimeInMs": 1781676061751
         },
         {
             "IntegrationIdentifier": "PaloAltoCortexXDR",
@@ -55,101 +55,101 @@
             "IsMandatory": false,
             "Value": "",
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779352583359,
-            "ModificationTimeUnixTimeInMs": 1779352583359
+            "CreationTimeUnixTimeInMs": 1781676061751,
+            "ModificationTimeUnixTimeInMs": 1781676061751
         }
     ],
     "IntegrationSupportedActions": [
         {
-            "Name": "Get Endpoint Agent Report",
-            "Description": "Get the agent report for an endpoint.",
-            "Id": 1881,
-            "CreationTimeUnixTimeInMs": 1779352583374,
-            "ModificationTimeUnixTimeInMs": 1779352583374
-        },
-        {
-            "Name": "Get Incident Details",
-            "Description": "Use \u201cGet Incident Details\u201d action to fetch information about the incident in Palo Alto XDR.",
-            "Id": 1882,
-            "CreationTimeUnixTimeInMs": 1779352583374,
-            "ModificationTimeUnixTimeInMs": 1779352583374
-        },
-        {
-            "Name": "Unisolate Endpoint",
-            "Description": "Unisolate an endpoint.",
-            "Id": 1883,
-            "CreationTimeUnixTimeInMs": 1779352583374,
-            "ModificationTimeUnixTimeInMs": 1779352583374
-        },
-        {
             "Name": "Scan Endpoint",
             "Description": "Use the \"Scan Endpoint\" action to scan endpoints in Palo Alto XDR. Supported Entities: IP Address, Hostname. Note: This action executes asynchronously, requiring you to adjust the script timeout value in the Google SecOps IDE.",
-            "Id": 1884,
-            "CreationTimeUnixTimeInMs": 1779352583374,
-            "ModificationTimeUnixTimeInMs": 1779352583374
-        },
-        {
-            "Name": "Resolve an Incident",
-            "Description": "The ability to close XDR incidents with a close reason.",
-            "Id": 1885,
-            "CreationTimeUnixTimeInMs": 1779352583374,
-            "ModificationTimeUnixTimeInMs": 1779352583374
-        },
-        {
-            "Name": "Query",
-            "Description": "Get data of a specific incident including alerts and key artifacts.",
-            "Id": 1886,
-            "CreationTimeUnixTimeInMs": 1779352583374,
-            "ModificationTimeUnixTimeInMs": 1779352583374
-        },
-        {
-            "Name": "Isolate Endpoint",
-            "Description": "Isolate an endpoint.",
-            "Id": 1887,
-            "CreationTimeUnixTimeInMs": 1779352583374,
-            "ModificationTimeUnixTimeInMs": 1779352583374
-        },
-        {
-            "Name": "Enrich Entities",
-            "Description": "Enrich Siemplify Host and IP entities based on the information from the Palo Alto Cortex XDR.",
-            "Id": 1888,
-            "CreationTimeUnixTimeInMs": 1779352583374,
-            "ModificationTimeUnixTimeInMs": 1779352583374
+            "Id": 104,
+            "CreationTimeUnixTimeInMs": 1781676061766,
+            "ModificationTimeUnixTimeInMs": 1781676061766
         },
         {
             "Name": "Update an Incident",
             "Description": "The ability to set a specific XDR incident as under investigation, assign to named users, etc.",
-            "Id": 1889,
-            "CreationTimeUnixTimeInMs": 1779352583374,
-            "ModificationTimeUnixTimeInMs": 1779352583374
+            "Id": 98,
+            "CreationTimeUnixTimeInMs": 1781676061766,
+            "ModificationTimeUnixTimeInMs": 1781676061766
         },
         {
-            "Name": "Add Comment To Incident",
-            "Description": "Add a comment to an incident in Palo Alto Cortex XDR.",
-            "Id": 1890,
-            "CreationTimeUnixTimeInMs": 1779352583374,
-            "ModificationTimeUnixTimeInMs": 1779352583374
+            "Name": "Unisolate Endpoint",
+            "Description": "Unisolate an endpoint.",
+            "Id": 99,
+            "CreationTimeUnixTimeInMs": 1781676061766,
+            "ModificationTimeUnixTimeInMs": 1781676061766
+        },
+        {
+            "Name": "Get Incident Details",
+            "Description": "Use \u201cGet Incident Details\u201d action to fetch information about the incident in Palo Alto XDR.",
+            "Id": 100,
+            "CreationTimeUnixTimeInMs": 1781676061766,
+            "ModificationTimeUnixTimeInMs": 1781676061766
+        },
+        {
+            "Name": "Resolve an Incident",
+            "Description": "The ability to close XDR incidents with a close reason.",
+            "Id": 101,
+            "CreationTimeUnixTimeInMs": 1781676061766,
+            "ModificationTimeUnixTimeInMs": 1781676061766
         },
         {
             "Name": "Ping",
             "Description": "Test connectivity to Palo Alto Cortex XDR",
-            "Id": 1891,
-            "CreationTimeUnixTimeInMs": 1779352583374,
-            "ModificationTimeUnixTimeInMs": 1779352583374
+            "Id": 102,
+            "CreationTimeUnixTimeInMs": 1781676061766,
+            "ModificationTimeUnixTimeInMs": 1781676061766
         },
         {
-            "Name": "Add Hashes to Block List",
-            "Description": "The action will add files which do not exist in the allow or block lists to a block list. Note - only SH256 format  for file hashes is supported.",
-            "Id": 1892,
-            "CreationTimeUnixTimeInMs": 1779352583374,
-            "ModificationTimeUnixTimeInMs": 1779352583374
+            "Name": "Query",
+            "Description": "Get data of a specific incident including alerts and key artifacts.",
+            "Id": 103,
+            "CreationTimeUnixTimeInMs": 1781676061766,
+            "ModificationTimeUnixTimeInMs": 1781676061766
+        },
+        {
+            "Name": "Isolate Endpoint",
+            "Description": "Isolate an endpoint.",
+            "Id": 105,
+            "CreationTimeUnixTimeInMs": 1781676061766,
+            "ModificationTimeUnixTimeInMs": 1781676061766
         },
         {
             "Name": "Execute XQL Search",
             "Description": "Use \u201cExecute XQL Search\u201d action to fetch information using XQL in Palo Alto XDR. Note: Action is running as async, please adjust script timeout value in Google SecOps IDE for action, as needed.",
-            "Id": 1893,
-            "CreationTimeUnixTimeInMs": 1779352583374,
-            "ModificationTimeUnixTimeInMs": 1779352583374
+            "Id": 106,
+            "CreationTimeUnixTimeInMs": 1781676061766,
+            "ModificationTimeUnixTimeInMs": 1781676061766
+        },
+        {
+            "Name": "Get Endpoint Agent Report",
+            "Description": "Get the agent report for an endpoint.",
+            "Id": 107,
+            "CreationTimeUnixTimeInMs": 1781676061766,
+            "ModificationTimeUnixTimeInMs": 1781676061766
+        },
+        {
+            "Name": "Add Hashes to Block List",
+            "Description": "The action will add files which do not exist in the allow or block lists to a block list. Note - only SH256 format  for file hashes is supported.",
+            "Id": 108,
+            "CreationTimeUnixTimeInMs": 1781676061766,
+            "ModificationTimeUnixTimeInMs": 1781676061766
+        },
+        {
+            "Name": "Add Comment To Incident",
+            "Description": "Add a comment to an incident in Palo Alto Cortex XDR.",
+            "Id": 109,
+            "CreationTimeUnixTimeInMs": 1781676061766,
+            "ModificationTimeUnixTimeInMs": 1781676061766
+        },
+        {
+            "Name": "Enrich Entities",
+            "Description": "Enrich Siemplify Host and IP entities based on the information from the Palo Alto Cortex XDR.",
+            "Id": 110,
+            "CreationTimeUnixTimeInMs": 1781676061766,
+            "ModificationTimeUnixTimeInMs": 1781676061766
         }
     ],
     "Categories": [
@@ -171,7 +171,7 @@
     "Internal": false,
     "GoogleSecOpsProduct": false,
     "Id": 0,
-    "CreationTimeUnixTimeInMs": 1779352583359,
-    "ModificationTimeUnixTimeInMs": 1779352583359,
+    "CreationTimeUnixTimeInMs": 1781676061751,
+    "ModificationTimeUnixTimeInMs": 1781676061751,
     "Custom": false
 }
