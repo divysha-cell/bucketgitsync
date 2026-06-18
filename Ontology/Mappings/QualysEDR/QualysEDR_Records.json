@@ -1,0 +1,13 @@
+[
+    {
+        "id": 0,
+        "source": "QualysEDR",
+        "familyName": "Default",
+        "familyId": 0,
+        "product": "Qualys EDR",
+        "eventName": null,
+        "mappingStatus": null,
+        "changeSource": 0,
+        "exampleEventFields": []
+    }
+]

@@ -1,0 +1,127 @@
+{
+    "IsAvailableForCommunity": false,
+    "Identifier": "XForce",
+    "ShouldInstalledInSystem": false,
+    "Version": 20.0,
+    "DisplayName": "XForce",
+    "Description": "X-Force - Deep security research expertise and global threat intelligence for enhanced security solutions",
+    "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAALYAAABjCAMAAAAB3QqqAAAA6lBMVEX///8AAAAAxusu0OaqqqoAxesy0eZCQkJra2snz+Uoz+e4uLhD1OgAwuomJiYMyewv0OYAxOoAwOnd3d2cnJz09PQq0OaNjY0jzuXp6enR0dEy0O5YWFi88PcczeQHyOKt7PlV1+oAvegfzeUTy+T9/v8Au+gXzOTFxcX5/v71/f7X9foey+19fX3r+v3g9/y/8PiC4vFo3O8NyuOU5vU60+fm+fym6vRQ1/Fe2uxI1uvx+/7Q8/vH8vm57vm47/ed6PWP5fRx3fKK4/N83/I90vAmze0Wyu2z7fir6vZd2PEAxuIEx+EAw+HskwMYAAAEM0lEQVR42u2Z6XLaMBCAF2Mb3GBqjG2OgmnBXCHcN7nTHD3f/3UqCwl54tjE7XSqdPT9CN5ZDXyWVysFQCAQCAQCgUAgEAgEAoFAIOCO09XF9c109+Hu5upi1Qfe6Y8Gk/Xt/XbplFtuuVXQTb0gne1m05vJYNQGHrleTGe5tNZyW62W5jjptPpOUiRJUgo6Auk/bu5ugTucrtsqI10C1aYoWB+4I6cR3ZA24z1wh9COQWj/B9qG4wS1FSKucK7t5O6Wy90up25VX/vp4cznw+a9wrf2bg2YteZrn13i4PQz59qG49X34RxpS517HNyZCt9FgrwbA0Cs5to7ydT7gPjc4X1JIu/W/BwQ9cY7vTkGxKSjhLWHqVTGJtdyKpWvAOMkdSADfxfWAFVPbeM5/t65AsSoqUth7Uo+lZKDl/9Om3o3ZuDjbQDR1s0X+7aMpCp04rPw77XT6cZX3D9wYW+aEdtNltj2qD/Tjtb9m9qG1hgDYdGJ2iUrSPcEADJ+ifCgnTbc7jlgLpqFKG28Em3/bw2Oacs1v2Bkmz4nlO7VyO3aOJmXi7CPMiganiTQZqhzp02XY6Q2oI+z/DkvHtGu5lN78lVaXiD7sRxM1iAYZe3f0DYaU/DpP5ox2kX09r46RGnTYYwi0bZw1AsmZTLUQi9oxDCZNusl2Fs3o7XBIs0iXjtLnGQ6OJtClGyaxPfds2wckcJBk15Nqq16qEQIq6YerQ3+I62+pE05ASjiF9pzquw+fIrkkkU2nRArad92Pbwgpx8BcdlRIrSJ3zBeG69cthhkrE2fBk2yqHZ4i2wSbdz+Btj3Z3NFWmCEtp0nFYohoiFtixmUUG2Q2gYMTbKI8lrt5WG2vS+AGM/L5CT1jZU3UOj2OJTp2YRqh2q79JK2HEriKLn25Lq+53qCt8huy5Gaj4Bof6R8gSA9fILKIJVYbStGmyXZTfwJbdVbovN28xtEYu+3x2p4VQa1I2pbDidp9CdsGyr+F7izgCgssn5KuEyitSu0WbBOwrRZm2F9JRHt4PWiYaSxttK8gjD0I4r03Gol7NtMLkM3S7lEhpYqOHzltE9znw7kummiLRXMD4wHYGSoLNapxmhX8uFdUmYLhFJ6NhRexW1DKx9A1uwb1wOK/uwcxUo2E6MNxUzoTCKzwUwbD02oPXadI1/voBAgVJMksBKdAIMVXJHzwaQ8xN2PhMfJucYRbXMG/HHpHZntgjkCDtnO1VjtDoc/Juw3RiNG2zwDPhn80IxIbd08BU6pzzUjQrtgjoFb1l7ZeFFbNyfAMZOuaxhhbVMaANcMcl3NYNqkQDZctr4g/bXmOkZAWzGfruANMJq6qFKotl5YcNtCnjHYdssG1tb1GccdJER92U07qH88XMCb4vRG88ynr/DmGM/uz0EgEAgEAoFAIBAIBAKBQMAhvwA7jl7mKZlWVQAAAABJRU5ErkJggg==",
+    "SvgImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 25 25\" style=\"enable-background:new 0 0 25 25;\" xml:space=\"preserve\">\n<line x1=\"57.8\" y1=\"-4\" x2=\"76.5\" y2=\"-6.6\"/>\n<g>\n\t<g>\n\t\t<path d=\"M12.5,12.3l-2.7,3.1H5.1v1.1c0,0,1.5,3.7,7.4,6.2h0.1c5.9-2.6,7.4-6.2,7.4-6.2v-1.1h-4.7L12.5,12.3z M12.6,2.3h-0.3\n\t\t\tl-7.3,1v10.3h4l2.3-2.7L8.3,7.4l1.3-1.1l3,3.4l3-3.4l1.3,1.1L13.6,11l2.3,2.7h4V3.4L12.6,2.3z\"/>\n\t</g>\n</g>\n</svg>\n",
+    "IsCustom": false,
+    "PythonVersion": 3,
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "XForce",
+            "PropertyName": "Address",
+            "PropertyDescription": "",
+            "PropertyDisplayName": "Address",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "",
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1781778691394,
+            "ModificationTimeUnixTimeInMs": 1781778691394
+        },
+        {
+            "IntegrationIdentifier": "XForce",
+            "PropertyName": "Api Key",
+            "PropertyDescription": "",
+            "PropertyDisplayName": "Api Key",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "",
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1781778691394,
+            "ModificationTimeUnixTimeInMs": 1781778691394
+        },
+        {
+            "IntegrationIdentifier": "XForce",
+            "PropertyName": "Api Password",
+            "PropertyDescription": "",
+            "PropertyDisplayName": "Api Password",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": null,
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1781778691394,
+            "ModificationTimeUnixTimeInMs": 1781778691394
+        },
+        {
+            "IntegrationIdentifier": "XForce",
+            "PropertyName": "Verify SSL",
+            "PropertyDescription": "",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": false,
+            "Value": "",
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1781778691394,
+            "ModificationTimeUnixTimeInMs": 1781778691394
+        }
+    ],
+    "IntegrationSupportedActions": [
+        {
+            "Name": "Get IP Malware",
+            "Description": "Query XForce for the malware associated with an IP address",
+            "Id": 382,
+            "CreationTimeUnixTimeInMs": 1781778691406,
+            "ModificationTimeUnixTimeInMs": 1781778691406
+        },
+        {
+            "Name": "Get IP Info",
+            "Description": "Query XForce for IP information",
+            "Id": 383,
+            "CreationTimeUnixTimeInMs": 1781778691406,
+            "ModificationTimeUnixTimeInMs": 1781778691406
+        },
+        {
+            "Name": "Get Hash Info",
+            "Description": "Query XForce for hash information",
+            "Id": 384,
+            "CreationTimeUnixTimeInMs": 1781778691406,
+            "ModificationTimeUnixTimeInMs": 1781778691406
+        },
+        {
+            "Name": "Get IP By Category",
+            "Description": "",
+            "Id": 385,
+            "CreationTimeUnixTimeInMs": 1781778691406,
+            "ModificationTimeUnixTimeInMs": 1781778691406
+        },
+        {
+            "Name": "Ping",
+            "Description": "Test Connectivity to XForce",
+            "Id": 386,
+            "CreationTimeUnixTimeInMs": 1781778691406,
+            "ModificationTimeUnixTimeInMs": 1781778691406
+        },
+        {
+            "Name": "Get Url Info",
+            "Description": "Query XForce for URL information",
+            "Id": 387,
+            "CreationTimeUnixTimeInMs": 1781778691406,
+            "ModificationTimeUnixTimeInMs": 1781778691406
+        }
+    ],
+    "Categories": [
+        "Threat Intelligence",
+        "Security"
+    ],
+    "HasConnectors": false,
+    "DocumentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/xforce",
+    "IsCertified": false,
+    "UploaderFullName": null,
+    "PublishComment": null,
+    "UploaderEmail": null,
+    "UploaderImageBase64": null,
+    "UploaderProfileLink": null,
+    "MinimumSystemVersion": 0.0,
+    "ProductionIntegrationIdentifier": null,
+    "Type": 0,
+    "Internal": false,
+    "GoogleSecOpsProduct": false,
+    "Id": 0,
+    "CreationTimeUnixTimeInMs": 1781778691394,
+    "ModificationTimeUnixTimeInMs": 1781778691394,
+    "Custom": false
+}

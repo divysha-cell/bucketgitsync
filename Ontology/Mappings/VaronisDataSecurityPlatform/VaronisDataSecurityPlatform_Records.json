@@ -1,0 +1,13 @@
+[
+    {
+        "id": 0,
+        "source": "VaronisDataSecurityPlatform",
+        "familyName": "Default",
+        "familyId": 0,
+        "product": "Data Security Platform",
+        "eventName": null,
+        "mappingStatus": null,
+        "changeSource": 0,
+        "exampleEventFields": []
+    }
+]

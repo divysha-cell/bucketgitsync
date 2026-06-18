@@ -1,0 +1,563 @@
+[
+    {
+        "address": "10.100.0.0/24",
+        "name": "Net_Test",
+        "priority": 3,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 1,
+        "creationTimeUnixTimeInMs": 1781784135338,
+        "modificationTimeUnixTimeInMs": 1781784135338
+    },
+    {
+        "address": "172.20.1.0/24",
+        "name": "Network_CIDR_1",
+        "priority": 1,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 4,
+        "creationTimeUnixTimeInMs": 1781784189899,
+        "modificationTimeUnixTimeInMs": 1781784189899
+    },
+    {
+        "address": "172.20.10.0/24",
+        "name": "Network_CIDR_10",
+        "priority": 2,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 8,
+        "creationTimeUnixTimeInMs": 1781784190040,
+        "modificationTimeUnixTimeInMs": 1781784190040
+    },
+    {
+        "address": "172.20.11.0/24",
+        "name": "Network_CIDR_11",
+        "priority": 3,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 12,
+        "creationTimeUnixTimeInMs": 1781784190134,
+        "modificationTimeUnixTimeInMs": 1781784190134
+    },
+    {
+        "address": "172.20.12.0/24",
+        "name": "Network_CIDR_12",
+        "priority": 2,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 15,
+        "creationTimeUnixTimeInMs": 1781784190142,
+        "modificationTimeUnixTimeInMs": 1781784190142
+    },
+    {
+        "address": "172.20.13.0/24",
+        "name": "Network_CIDR_13",
+        "priority": 4,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 14,
+        "creationTimeUnixTimeInMs": 1781784190141,
+        "modificationTimeUnixTimeInMs": 1781784190141
+    },
+    {
+        "address": "172.20.14.0/24",
+        "name": "Network_CIDR_14",
+        "priority": 3,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 13,
+        "creationTimeUnixTimeInMs": 1781784190141,
+        "modificationTimeUnixTimeInMs": 1781784190141
+    },
+    {
+        "address": "172.20.15.0/24",
+        "name": "Network_CIDR_15",
+        "priority": 3,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 16,
+        "creationTimeUnixTimeInMs": 1781784190142,
+        "modificationTimeUnixTimeInMs": 1781784190142
+    },
+    {
+        "address": "172.20.16.0/24",
+        "name": "Network_CIDR_16",
+        "priority": 3,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 20,
+        "creationTimeUnixTimeInMs": 1781784190241,
+        "modificationTimeUnixTimeInMs": 1781784190241
+    },
+    {
+        "address": "172.20.17.0/24",
+        "name": "Network_CIDR_17",
+        "priority": 3,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 18,
+        "creationTimeUnixTimeInMs": 1781784190240,
+        "modificationTimeUnixTimeInMs": 1781784190240
+    },
+    {
+        "address": "172.20.18.0/24",
+        "name": "Network_CIDR_18",
+        "priority": 3,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 19,
+        "creationTimeUnixTimeInMs": 1781784190241,
+        "modificationTimeUnixTimeInMs": 1781784190241
+    },
+    {
+        "address": "172.20.19.0/24",
+        "name": "Network_CIDR_19",
+        "priority": 5,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 21,
+        "creationTimeUnixTimeInMs": 1781784190241,
+        "modificationTimeUnixTimeInMs": 1781784190241
+    },
+    {
+        "address": "172.20.2.0/24",
+        "name": "Network_CIDR_2",
+        "priority": 4,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 3,
+        "creationTimeUnixTimeInMs": 1781784189899,
+        "modificationTimeUnixTimeInMs": 1781784189899
+    },
+    {
+        "address": "172.20.20.0/24",
+        "name": "Network_CIDR_20",
+        "priority": 2,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 17,
+        "creationTimeUnixTimeInMs": 1781784190239,
+        "modificationTimeUnixTimeInMs": 1781784190239
+    },
+    {
+        "address": "172.20.21.0/24",
+        "name": "Network_CIDR_21",
+        "priority": 4,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 23,
+        "creationTimeUnixTimeInMs": 1781784190345,
+        "modificationTimeUnixTimeInMs": 1781784190345
+    },
+    {
+        "address": "172.20.22.0/24",
+        "name": "Network_CIDR_22",
+        "priority": 4,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 22,
+        "creationTimeUnixTimeInMs": 1781784190334,
+        "modificationTimeUnixTimeInMs": 1781784190334
+    },
+    {
+        "address": "172.20.23.0/24",
+        "name": "Network_CIDR_23",
+        "priority": 5,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 25,
+        "creationTimeUnixTimeInMs": 1781784190346,
+        "modificationTimeUnixTimeInMs": 1781784190346
+    },
+    {
+        "address": "172.20.24.0/24",
+        "name": "Network_CIDR_24",
+        "priority": 3,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 26,
+        "creationTimeUnixTimeInMs": 1781784190346,
+        "modificationTimeUnixTimeInMs": 1781784190346
+    },
+    {
+        "address": "172.20.25.0/24",
+        "name": "Network_CIDR_25",
+        "priority": 2,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 24,
+        "creationTimeUnixTimeInMs": 1781784190345,
+        "modificationTimeUnixTimeInMs": 1781784190345
+    },
+    {
+        "address": "172.20.26.0/24",
+        "name": "Network_CIDR_26",
+        "priority": 3,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 27,
+        "creationTimeUnixTimeInMs": 1781784190421,
+        "modificationTimeUnixTimeInMs": 1781784190421
+    },
+    {
+        "address": "172.20.27.0/24",
+        "name": "Network_CIDR_27",
+        "priority": 1,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 28,
+        "creationTimeUnixTimeInMs": 1781784190425,
+        "modificationTimeUnixTimeInMs": 1781784190425
+    },
+    {
+        "address": "172.20.28.0/24",
+        "name": "Network_CIDR_28",
+        "priority": 5,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 29,
+        "creationTimeUnixTimeInMs": 1781784190439,
+        "modificationTimeUnixTimeInMs": 1781784190439
+    },
+    {
+        "address": "172.20.29.0/24",
+        "name": "Network_CIDR_29",
+        "priority": 5,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 31,
+        "creationTimeUnixTimeInMs": 1781784190439,
+        "modificationTimeUnixTimeInMs": 1781784190439
+    },
+    {
+        "address": "172.20.3.0/24",
+        "name": "Network_CIDR_3",
+        "priority": 1,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 2,
+        "creationTimeUnixTimeInMs": 1781784189899,
+        "modificationTimeUnixTimeInMs": 1781784189899
+    },
+    {
+        "address": "172.20.30.0/24",
+        "name": "Network_CIDR_30",
+        "priority": 1,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 30,
+        "creationTimeUnixTimeInMs": 1781784190439,
+        "modificationTimeUnixTimeInMs": 1781784190439
+    },
+    {
+        "address": "172.20.31.0/24",
+        "name": "Network_CIDR_31",
+        "priority": 2,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 32,
+        "creationTimeUnixTimeInMs": 1781784190523,
+        "modificationTimeUnixTimeInMs": 1781784190523
+    },
+    {
+        "address": "172.20.32.0/24",
+        "name": "Network_CIDR_32",
+        "priority": 5,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 33,
+        "creationTimeUnixTimeInMs": 1781784190523,
+        "modificationTimeUnixTimeInMs": 1781784190523
+    },
+    {
+        "address": "172.20.33.0/24",
+        "name": "Network_CIDR_33",
+        "priority": 3,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 36,
+        "creationTimeUnixTimeInMs": 1781784190531,
+        "modificationTimeUnixTimeInMs": 1781784190531
+    },
+    {
+        "address": "172.20.34.0/24",
+        "name": "Network_CIDR_34",
+        "priority": 4,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 34,
+        "creationTimeUnixTimeInMs": 1781784190527,
+        "modificationTimeUnixTimeInMs": 1781784190527
+    },
+    {
+        "address": "172.20.35.0/24",
+        "name": "Network_CIDR_35",
+        "priority": 1,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 35,
+        "creationTimeUnixTimeInMs": 1781784190528,
+        "modificationTimeUnixTimeInMs": 1781784190528
+    },
+    {
+        "address": "172.20.36.0/24",
+        "name": "Network_CIDR_36",
+        "priority": 5,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 37,
+        "creationTimeUnixTimeInMs": 1781784190632,
+        "modificationTimeUnixTimeInMs": 1781784190632
+    },
+    {
+        "address": "172.20.37.0/24",
+        "name": "Network_CIDR_37",
+        "priority": 5,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 40,
+        "creationTimeUnixTimeInMs": 1781784190634,
+        "modificationTimeUnixTimeInMs": 1781784190634
+    },
+    {
+        "address": "172.20.38.0/24",
+        "name": "Network_CIDR_38",
+        "priority": 2,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 39,
+        "creationTimeUnixTimeInMs": 1781784190633,
+        "modificationTimeUnixTimeInMs": 1781784190633
+    },
+    {
+        "address": "172.20.39.0/24",
+        "name": "Network_CIDR_39",
+        "priority": 2,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 41,
+        "creationTimeUnixTimeInMs": 1781784190636,
+        "modificationTimeUnixTimeInMs": 1781784190636
+    },
+    {
+        "address": "172.20.4.0/24",
+        "name": "Network_CIDR_4",
+        "priority": 5,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 5,
+        "creationTimeUnixTimeInMs": 1781784189899,
+        "modificationTimeUnixTimeInMs": 1781784189899
+    },
+    {
+        "address": "172.20.40.0/24",
+        "name": "Network_CIDR_40",
+        "priority": 2,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 38,
+        "creationTimeUnixTimeInMs": 1781784190632,
+        "modificationTimeUnixTimeInMs": 1781784190632
+    },
+    {
+        "address": "172.20.41.0/24",
+        "name": "Network_CIDR_41",
+        "priority": 4,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 46,
+        "creationTimeUnixTimeInMs": 1781784190744,
+        "modificationTimeUnixTimeInMs": 1781784190744
+    },
+    {
+        "address": "172.20.42.0/24",
+        "name": "Network_CIDR_42",
+        "priority": 4,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 45,
+        "creationTimeUnixTimeInMs": 1781784190739,
+        "modificationTimeUnixTimeInMs": 1781784190739
+    },
+    {
+        "address": "172.20.43.0/24",
+        "name": "Network_CIDR_43",
+        "priority": 3,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 44,
+        "creationTimeUnixTimeInMs": 1781784190737,
+        "modificationTimeUnixTimeInMs": 1781784190737
+    },
+    {
+        "address": "172.20.44.0/24",
+        "name": "Network_CIDR_44",
+        "priority": 1,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 42,
+        "creationTimeUnixTimeInMs": 1781784190735,
+        "modificationTimeUnixTimeInMs": 1781784190735
+    },
+    {
+        "address": "172.20.45.0/24",
+        "name": "Network_CIDR_45",
+        "priority": 3,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 43,
+        "creationTimeUnixTimeInMs": 1781784190737,
+        "modificationTimeUnixTimeInMs": 1781784190737
+    },
+    {
+        "address": "172.20.46.0/24",
+        "name": "Network_CIDR_46",
+        "priority": 2,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 49,
+        "creationTimeUnixTimeInMs": 1781784190844,
+        "modificationTimeUnixTimeInMs": 1781784190844
+    },
+    {
+        "address": "172.20.47.0/24",
+        "name": "Network_CIDR_47",
+        "priority": 5,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 48,
+        "creationTimeUnixTimeInMs": 1781784190843,
+        "modificationTimeUnixTimeInMs": 1781784190843
+    },
+    {
+        "address": "172.20.48.0/24",
+        "name": "Network_CIDR_48",
+        "priority": 1,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 51,
+        "creationTimeUnixTimeInMs": 1781784190846,
+        "modificationTimeUnixTimeInMs": 1781784190846
+    },
+    {
+        "address": "172.20.49.0/24",
+        "name": "Network_CIDR_49",
+        "priority": 1,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 50,
+        "creationTimeUnixTimeInMs": 1781784190846,
+        "modificationTimeUnixTimeInMs": 1781784190846
+    },
+    {
+        "address": "172.20.5.0/24",
+        "name": "Network_CIDR_5",
+        "priority": 5,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 6,
+        "creationTimeUnixTimeInMs": 1781784189909,
+        "modificationTimeUnixTimeInMs": 1781784189909
+    },
+    {
+        "address": "172.20.50.0/24",
+        "name": "Network_CIDR_50",
+        "priority": 3,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 47,
+        "creationTimeUnixTimeInMs": 1781784190843,
+        "modificationTimeUnixTimeInMs": 1781784190843
+    },
+    {
+        "address": "172.20.6.0/24",
+        "name": "Network_CIDR_6",
+        "priority": 2,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 9,
+        "creationTimeUnixTimeInMs": 1781784190041,
+        "modificationTimeUnixTimeInMs": 1781784190041
+    },
+    {
+        "address": "172.20.7.0/24",
+        "name": "Network_CIDR_7",
+        "priority": 1,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 7,
+        "creationTimeUnixTimeInMs": 1781784190021,
+        "modificationTimeUnixTimeInMs": 1781784190021
+    },
+    {
+        "address": "172.20.8.0/24",
+        "name": "Network_CIDR_8",
+        "priority": 5,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 10,
+        "creationTimeUnixTimeInMs": 1781784190043,
+        "modificationTimeUnixTimeInMs": 1781784190043
+    },
+    {
+        "address": "172.20.9.0/24",
+        "name": "Network_CIDR_9",
+        "priority": 4,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 11,
+        "creationTimeUnixTimeInMs": 1781784190046,
+        "modificationTimeUnixTimeInMs": 1781784190046
+    }
+]

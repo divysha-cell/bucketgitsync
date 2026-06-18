@@ -1,0 +1,67 @@
+[
+    {
+        "value": "12345",
+        "name": "Tag1",
+        "propertyName": "Entity.Alert_Id",
+        "priority": 1,
+        "isPotentialCaseName": false,
+        "environments": [],
+        "type": 3,
+        "compareType": 2,
+        "id": 6,
+        "creationTimeUnixTimeInMs": 1781785745816,
+        "modificationTimeUnixTimeInMs": 1781785745816
+    },
+    {
+        "value": "DLP_Product",
+        "name": "tag2",
+        "propertyName": "",
+        "priority": 2,
+        "isPotentialCaseName": false,
+        "environments": [],
+        "type": 1,
+        "compareType": 2,
+        "id": 7,
+        "creationTimeUnixTimeInMs": 1781785764947,
+        "modificationTimeUnixTimeInMs": 1781785764947
+    },
+    {
+        "value": "Data Exfiltration",
+        "name": "tag3",
+        "propertyName": "",
+        "priority": 4,
+        "isPotentialCaseName": false,
+        "environments": [],
+        "type": 2,
+        "compareType": 2,
+        "id": 8,
+        "creationTimeUnixTimeInMs": 1781785780432,
+        "modificationTimeUnixTimeInMs": 1781785780432
+    },
+    {
+        "value": "DLP_Product",
+        "name": "tag4",
+        "propertyName": "",
+        "priority": 4,
+        "isPotentialCaseName": false,
+        "environments": [],
+        "type": 0,
+        "compareType": 2,
+        "id": 9,
+        "creationTimeUnixTimeInMs": 1781785794420,
+        "modificationTimeUnixTimeInMs": 1781785794420
+    },
+    {
+        "value": "12",
+        "name": "tag6",
+        "propertyName": "",
+        "priority": 5,
+        "isPotentialCaseName": false,
+        "environments": [],
+        "type": 2,
+        "compareType": 2,
+        "id": 10,
+        "creationTimeUnixTimeInMs": 1781785889412,
+        "modificationTimeUnixTimeInMs": 1781785889412
+    }
+]
