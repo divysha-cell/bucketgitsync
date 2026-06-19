@@ -1,0 +1,410 @@
+[
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/51",
+        "id": 51,
+        "domain": "SOARDomain_50",
+        "environments": "[\"Network_50\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/50",
+        "id": 50,
+        "domain": "SOARDomain_49",
+        "environments": "[\"Network_49\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/49",
+        "id": 49,
+        "domain": "SOARDomain_48",
+        "environments": "[\"Network_48\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/48",
+        "id": 48,
+        "domain": "SOARDomain_44",
+        "environments": "[\"Network_44\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/47",
+        "id": 47,
+        "domain": "SOARDomain_47",
+        "environments": "[\"Network_47\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/46",
+        "id": 46,
+        "domain": "SOARDomain_45",
+        "environments": "[\"Network_45\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/45",
+        "id": 45,
+        "domain": "SOARDomain_46",
+        "environments": "[\"Network_46\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/44",
+        "id": 44,
+        "domain": "SOARDomain_43",
+        "environments": "[\"Network_43\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/43",
+        "id": 43,
+        "domain": "SOARDomain_42",
+        "environments": "[\"Network_42\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/42",
+        "id": 42,
+        "domain": "SOARDomain_37",
+        "environments": "[\"Network_37\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/41",
+        "id": 41,
+        "domain": "SOARDomain_36",
+        "environments": "[\"Network_36\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/40",
+        "id": 40,
+        "domain": "SOARDomain_38",
+        "environments": "[\"Network_38\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/39",
+        "id": 39,
+        "domain": "SOARDomain_39",
+        "environments": "[\"Network_39\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/38",
+        "id": 38,
+        "domain": "SOARDomain_40",
+        "environments": "[\"Network_40\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/37",
+        "id": 37,
+        "domain": "SOARDomain_35",
+        "environments": "[\"Network_35\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/36",
+        "id": 36,
+        "domain": "SOARDomain_41",
+        "environments": "[\"Network_41\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/35",
+        "id": 35,
+        "domain": "SOARDomain_34",
+        "environments": "[\"Network_34\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/34",
+        "id": 34,
+        "domain": "SOARDomain_33",
+        "environments": "[\"Network_33\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/33",
+        "id": 33,
+        "domain": "SOARDomain_32",
+        "environments": "[\"Network_32\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/32",
+        "id": 32,
+        "domain": "SOARDomain_31",
+        "environments": "[\"Network_31\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/31",
+        "id": 31,
+        "domain": "SOARDomain_30",
+        "environments": "[\"Network_30\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/30",
+        "id": 30,
+        "domain": "SOARDomain_26",
+        "environments": "[\"Network_26\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/29",
+        "id": 29,
+        "domain": "SOARDomain_24",
+        "environments": "[\"Network_24\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/28",
+        "id": 28,
+        "domain": "SOARDomain_29",
+        "environments": "[\"Network_29\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/27",
+        "id": 27,
+        "domain": "SOARDomain_28",
+        "environments": "[\"Network_28\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/26",
+        "id": 26,
+        "domain": "SOARDomain_27",
+        "environments": "[\"Network_27\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/25",
+        "id": 25,
+        "domain": "SOARDomain_22",
+        "environments": "[\"Network_22\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/24",
+        "id": 24,
+        "domain": "SOARDomain_23",
+        "environments": "[\"Network_23\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/23",
+        "id": 23,
+        "domain": "SOARDomain_25",
+        "environments": "[\"Network_25\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/22",
+        "id": 22,
+        "domain": "SOARDomain_21",
+        "environments": "[\"Network_21\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/21",
+        "id": 21,
+        "domain": "SOARDomain_17",
+        "environments": "[\"Network_17\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/20",
+        "id": 20,
+        "domain": "SOARDomain_19",
+        "environments": "[\"Network_19\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/19",
+        "id": 19,
+        "domain": "SOARDomain_16",
+        "environments": "[\"Network_16\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/18",
+        "id": 18,
+        "domain": "SOARDomain_20",
+        "environments": "[\"Network_20\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/17",
+        "id": 17,
+        "domain": "SOARDomain_18",
+        "environments": "[\"Network_18\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/16",
+        "id": 16,
+        "domain": "SOARDomain_15",
+        "environments": "[\"Network_15\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/15",
+        "id": 15,
+        "domain": "SOARDomain_11",
+        "environments": "[\"Network_11\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/14",
+        "id": 14,
+        "domain": "SOARDomain_14",
+        "environments": "[\"Network_14\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/13",
+        "id": 13,
+        "domain": "SOARDomain_12",
+        "environments": "[\"Network_12\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/12",
+        "id": 12,
+        "domain": "SOARDomain_13",
+        "environments": "[\"Network_13\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/11",
+        "id": 11,
+        "domain": "SOARDomain_6",
+        "environments": "[\"Network_6\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/10",
+        "id": 10,
+        "domain": "SOARDomain_7",
+        "environments": "[\"Network_7\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/9",
+        "id": 9,
+        "domain": "SOARDomain_5",
+        "environments": "[\"Network_5\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/8",
+        "id": 8,
+        "domain": "SOARDomain_1",
+        "environments": "[\"Network_1\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/7",
+        "id": 7,
+        "domain": "SOARDomain_10",
+        "environments": "[\"Network_10\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/6",
+        "id": 6,
+        "domain": "SOARDomain_3",
+        "environments": "[\"Network_3\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/5",
+        "id": 5,
+        "domain": "SOARDomain_8",
+        "environments": "[\"Network_8\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/4",
+        "id": 4,
+        "domain": "SOARDomain_2",
+        "environments": "[\"Network_2\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/3",
+        "id": 3,
+        "domain": "SOARDomain_4",
+        "environments": "[\"Network_4\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/2",
+        "id": 2,
+        "domain": "SOARDomain_9",
+        "environments": "[\"Network_9\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    },
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/1",
+        "id": 1,
+        "domain": "Test_SOARDomain_1",
+        "environments": "[\"Test_Network_1\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    }
+]

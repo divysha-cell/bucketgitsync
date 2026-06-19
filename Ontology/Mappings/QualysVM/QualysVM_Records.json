@@ -1,0 +1,13 @@
+[
+    {
+        "id": 0,
+        "source": "QualysVM",
+        "familyName": "Default",
+        "familyId": 0,
+        "product": "Qualys VM",
+        "eventName": null,
+        "mappingStatus": null,
+        "changeSource": "ChangeSourceUnspecified",
+        "exampleEventFields": []
+    }
+]

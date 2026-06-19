@@ -1,0 +1,730 @@
+[
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/52",
+        "id": 52,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "AllAlerts",
+        "slaTypeValue": "",
+        "slaPeriod": 6.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 1.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "*"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/51",
+        "id": 51,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_47\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_47"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/50",
+        "id": 50,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_45\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_45"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/49",
+        "id": 49,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_49\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_49"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/48",
+        "id": 48,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_50\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_50"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/47",
+        "id": 47,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_48\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_48"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/46",
+        "id": 46,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_46\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_46"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/45",
+        "id": 45,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_44\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_44"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/44",
+        "id": 44,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_43\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_43"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/43",
+        "id": 43,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_38\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_38"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/42",
+        "id": 42,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_40\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_40"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/41",
+        "id": 41,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_37\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_37"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/40",
+        "id": 40,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_34\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_34"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/39",
+        "id": 39,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_36\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_36"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/38",
+        "id": 38,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_42\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_42"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/37",
+        "id": 37,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_35\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_35"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/36",
+        "id": 36,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_41\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_41"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/35",
+        "id": 35,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_39\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_39"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/34",
+        "id": 34,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_33\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_33"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/33",
+        "id": 33,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_32\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_32"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/32",
+        "id": 32,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_28\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_28"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/31",
+        "id": 31,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_31\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_31"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/30",
+        "id": 30,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_29\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_29"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/29",
+        "id": 29,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_30\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_30"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/28",
+        "id": 28,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_25\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_25"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/27",
+        "id": 27,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_24\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_24"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/26",
+        "id": 26,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_27\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_27"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/25",
+        "id": 25,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_26\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_26"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/24",
+        "id": 24,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_23\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_23"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/23",
+        "id": 23,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_22\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_22"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/22",
+        "id": 22,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_21\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_21"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/21",
+        "id": 21,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_15\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_15"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/20",
+        "id": 20,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_18\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_18"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/19",
+        "id": 19,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_12\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_12"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/18",
+        "id": 18,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_17\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_17"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/17",
+        "id": 17,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_19\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_19"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/16",
+        "id": 16,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_14\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_14"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/15",
+        "id": 15,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_20\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_20"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/14",
+        "id": 14,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_16\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_16"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/13",
+        "id": 13,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_13\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_13"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/12",
+        "id": 12,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_11\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_11"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/11",
+        "id": 11,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_7\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_7"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/10",
+        "id": 10,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_1\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_1"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/9",
+        "id": 9,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_5\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_5"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/8",
+        "id": 8,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_6\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_6"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/7",
+        "id": 7,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_9\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_9"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/6",
+        "id": 6,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_2\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_2"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/5",
+        "id": 5,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_8\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_8"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/4",
+        "id": 4,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_3\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_3"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/3",
+        "id": 3,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_4\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_4"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/2",
+        "id": 2,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"SLA_AlertRule_10\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Network_10"
+        ]
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/slaDefinitions/1",
+        "id": 1,
+        "slaType": "AlertRuleGenerator",
+        "alertType": "SpecificAlerts",
+        "slaTypeValue": "[\"Test_SLA_Rule_1\"]",
+        "slaPeriod": 20.0,
+        "slaPeriodTimeUnit": "Minutes",
+        "criticalSlaPeriod": 15.0,
+        "criticalSlaPeriodTimeUnit": "Minutes",
+        "environments": [
+            "Test_Network_1"
+        ]
+    }
+]

@@ -1,0 +1,442 @@
+[
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/56",
+        "id": 56,
+        "displayName": "CIDR_Net_54",
+        "address": "10.200.54.0/24",
+        "environmentsJson": "[\"Network_4\"]",
+        "priority": 4
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/55",
+        "id": 55,
+        "displayName": "CIDR_Net_52",
+        "address": "10.200.52.0/24",
+        "environmentsJson": "[\"Network_2\"]",
+        "priority": 2
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/54",
+        "id": 54,
+        "displayName": "CIDR_Net_53",
+        "address": "10.200.53.0/24",
+        "environmentsJson": "[\"Network_3\"]",
+        "priority": 3
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/53",
+        "id": 53,
+        "displayName": "CIDR_Net_55",
+        "address": "10.200.55.0/24",
+        "environmentsJson": "[\"Network_5\"]",
+        "priority": 5
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/52",
+        "id": 52,
+        "displayName": "CIDR_Net_45",
+        "address": "10.200.45.0/24",
+        "environmentsJson": "[\"Network_45\"]",
+        "priority": 5
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/51",
+        "id": 51,
+        "displayName": "CIDR_Net_50",
+        "address": "10.200.50.0/24",
+        "environmentsJson": "[\"Network_50\"]",
+        "priority": 5
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/50",
+        "id": 50,
+        "displayName": "CIDR_Net_48",
+        "address": "10.200.48.0/24",
+        "environmentsJson": "[\"Network_48\"]",
+        "priority": 3
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/49",
+        "id": 49,
+        "displayName": "CIDR_Net_46",
+        "address": "10.200.46.0/24",
+        "environmentsJson": "[\"Network_46\"]",
+        "priority": 1
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/48",
+        "id": 48,
+        "displayName": "CIDR_Net_44",
+        "address": "10.200.44.0/24",
+        "environmentsJson": "[\"Network_44\"]",
+        "priority": 4
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/47",
+        "id": 47,
+        "displayName": "CIDR_Net_42",
+        "address": "10.200.42.0/24",
+        "environmentsJson": "[\"Network_42\"]",
+        "priority": 2
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/46",
+        "id": 46,
+        "displayName": "CIDR_Net_51",
+        "address": "10.200.51.0/24",
+        "environmentsJson": "[\"Network_1\"]",
+        "priority": 1
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/45",
+        "id": 45,
+        "displayName": "CIDR_Net_47",
+        "address": "10.200.47.0/24",
+        "environmentsJson": "[\"Network_47\"]",
+        "priority": 2
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/44",
+        "id": 44,
+        "displayName": "CIDR_Net_49",
+        "address": "10.200.49.0/24",
+        "environmentsJson": "[\"Network_49\"]",
+        "priority": 4
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/43",
+        "id": 43,
+        "displayName": "CIDR_Net_43",
+        "address": "10.200.43.0/24",
+        "environmentsJson": "[\"Network_43\"]",
+        "priority": 3
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/42",
+        "id": 42,
+        "displayName": "CIDR_Net_34",
+        "address": "10.200.34.0/24",
+        "environmentsJson": "[\"Network_34\"]",
+        "priority": 4
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/41",
+        "id": 41,
+        "displayName": "CIDR_Net_37",
+        "address": "10.200.37.0/24",
+        "environmentsJson": "[\"Network_37\"]",
+        "priority": 2
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/40",
+        "id": 40,
+        "displayName": "CIDR_Net_38",
+        "address": "10.200.38.0/24",
+        "environmentsJson": "[\"Network_38\"]",
+        "priority": 3
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/39",
+        "id": 39,
+        "displayName": "CIDR_Net_33",
+        "address": "10.200.33.0/24",
+        "environmentsJson": "[\"Network_33\"]",
+        "priority": 3
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/38",
+        "id": 38,
+        "displayName": "CIDR_Net_39",
+        "address": "10.200.39.0/24",
+        "environmentsJson": "[\"Network_39\"]",
+        "priority": 4
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/37",
+        "id": 37,
+        "displayName": "CIDR_Net_41",
+        "address": "10.200.41.0/24",
+        "environmentsJson": "[\"Network_41\"]",
+        "priority": 1
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/36",
+        "id": 36,
+        "displayName": "CIDR_Net_36",
+        "address": "10.200.36.0/24",
+        "environmentsJson": "[\"Network_36\"]",
+        "priority": 1
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/35",
+        "id": 35,
+        "displayName": "CIDR_Net_40",
+        "address": "10.200.40.0/24",
+        "environmentsJson": "[\"Network_40\"]",
+        "priority": 5
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/34",
+        "id": 34,
+        "displayName": "CIDR_Net_32",
+        "address": "10.200.32.0/24",
+        "environmentsJson": "[\"Network_32\"]",
+        "priority": 2
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/33",
+        "id": 33,
+        "displayName": "CIDR_Net_35",
+        "address": "10.200.35.0/24",
+        "environmentsJson": "[\"Network_35\"]",
+        "priority": 5
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/32",
+        "id": 32,
+        "displayName": "CIDR_Net_27",
+        "address": "10.200.27.0/24",
+        "environmentsJson": "[\"Network_27\"]",
+        "priority": 2
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/31",
+        "id": 31,
+        "displayName": "CIDR_Net_29",
+        "address": "10.200.29.0/24",
+        "environmentsJson": "[\"Network_29\"]",
+        "priority": 4
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/30",
+        "id": 30,
+        "displayName": "CIDR_Net_25",
+        "address": "10.200.25.0/24",
+        "environmentsJson": "[\"Network_25\"]",
+        "priority": 5
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/29",
+        "id": 29,
+        "displayName": "CIDR_Net_26",
+        "address": "10.200.26.0/24",
+        "environmentsJson": "[\"Network_26\"]",
+        "priority": 1
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/28",
+        "id": 28,
+        "displayName": "CIDR_Net_30",
+        "address": "10.200.30.0/24",
+        "environmentsJson": "[\"Network_30\"]",
+        "priority": 5
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/27",
+        "id": 27,
+        "displayName": "CIDR_Net_28",
+        "address": "10.200.28.0/24",
+        "environmentsJson": "[\"Network_28\"]",
+        "priority": 3
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/26",
+        "id": 26,
+        "displayName": "CIDR_Net_24",
+        "address": "10.200.24.0/24",
+        "environmentsJson": "[\"Network_24\"]",
+        "priority": 4
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/25",
+        "id": 25,
+        "displayName": "CIDR_Net_23",
+        "address": "10.200.23.0/24",
+        "environmentsJson": "[\"Network_23\"]",
+        "priority": 3
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/24",
+        "id": 24,
+        "displayName": "CIDR_Net_22",
+        "address": "10.200.22.0/24",
+        "environmentsJson": "[\"Network_22\"]",
+        "priority": 2
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/23",
+        "id": 23,
+        "displayName": "CIDR_Net_31",
+        "address": "10.200.31.0/24",
+        "environmentsJson": "[\"Network_31\"]",
+        "priority": 1
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/22",
+        "id": 22,
+        "displayName": "CIDR_Net_21",
+        "address": "10.200.21.0/24",
+        "environmentsJson": "[\"Network_21\"]",
+        "priority": 1
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/21",
+        "id": 21,
+        "displayName": "CIDR_Net_17",
+        "address": "10.200.17.0/24",
+        "environmentsJson": "[\"Network_17\"]",
+        "priority": 2
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/20",
+        "id": 20,
+        "displayName": "CIDR_Net_18",
+        "address": "10.200.18.0/24",
+        "environmentsJson": "[\"Network_18\"]",
+        "priority": 3
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/19",
+        "id": 19,
+        "displayName": "CIDR_Net_20",
+        "address": "10.200.20.0/24",
+        "environmentsJson": "[\"Network_20\"]",
+        "priority": 5
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/18",
+        "id": 18,
+        "displayName": "CIDR_Net_15",
+        "address": "10.200.15.0/24",
+        "environmentsJson": "[\"Network_15\"]",
+        "priority": 5
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/17",
+        "id": 17,
+        "displayName": "CIDR_Net_12",
+        "address": "10.200.12.0/24",
+        "environmentsJson": "[\"Network_12\"]",
+        "priority": 2
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/16",
+        "id": 16,
+        "displayName": "CIDR_Net_14",
+        "address": "10.200.14.0/24",
+        "environmentsJson": "[\"Network_14\"]",
+        "priority": 4
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/15",
+        "id": 15,
+        "displayName": "CIDR_Net_16",
+        "address": "10.200.16.0/24",
+        "environmentsJson": "[\"Network_16\"]",
+        "priority": 1
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/14",
+        "id": 14,
+        "displayName": "CIDR_Net_13",
+        "address": "10.200.13.0/24",
+        "environmentsJson": "[\"Network_13\"]",
+        "priority": 3
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/13",
+        "id": 13,
+        "displayName": "CIDR_Net_11",
+        "address": "10.200.11.0/24",
+        "environmentsJson": "[\"Network_11\"]",
+        "priority": 1
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/12",
+        "id": 12,
+        "displayName": "CIDR_Net_19",
+        "address": "10.200.19.0/24",
+        "environmentsJson": "[\"Network_19\"]",
+        "priority": 4
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/11",
+        "id": 11,
+        "displayName": "CIDR_Net_4",
+        "address": "10.200.4.0/24",
+        "environmentsJson": "[\"Network_4\"]",
+        "priority": 4
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/10",
+        "id": 10,
+        "displayName": "CIDR_Net_2",
+        "address": "10.200.2.0/24",
+        "environmentsJson": "[\"Network_2\"]",
+        "priority": 2
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/9",
+        "id": 9,
+        "displayName": "CIDR_Net_3",
+        "address": "10.200.3.0/24",
+        "environmentsJson": "[\"Network_3\"]",
+        "priority": 3
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/8",
+        "id": 8,
+        "displayName": "CIDR_Net_6",
+        "address": "10.200.6.0/24",
+        "environmentsJson": "[\"Network_6\"]",
+        "priority": 1
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/7",
+        "id": 7,
+        "displayName": "CIDR_Net_5",
+        "address": "10.200.5.0/24",
+        "environmentsJson": "[\"Network_5\"]",
+        "priority": 5
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/6",
+        "id": 6,
+        "displayName": "CIDR_Net_7",
+        "address": "10.200.7.0/24",
+        "environmentsJson": "[\"Network_7\"]",
+        "priority": 2
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/5",
+        "id": 5,
+        "displayName": "CIDR_Net_1",
+        "address": "10.200.1.0/24",
+        "environmentsJson": "[\"Network_1\"]",
+        "priority": 1
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/4",
+        "id": 4,
+        "displayName": "CIDR_Net_9",
+        "address": "10.200.9.0/24",
+        "environmentsJson": "[\"Network_9\"]",
+        "priority": 4
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/3",
+        "id": 3,
+        "displayName": "CIDR_Net_8",
+        "address": "10.200.8.0/24",
+        "environmentsJson": "[\"Network_8\"]",
+        "priority": 3
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/soarNetworks/2",
+        "id": 2,
+        "displayName": "CIDR_Net_10",
+        "address": "10.200.10.0/24",
+        "environmentsJson": "[\"Network_10\"]",
+        "priority": 5
+    }
+]

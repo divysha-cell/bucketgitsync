@@ -1,0 +1,2763 @@
+[
+    {
+        "environment": "Network_50",
+        "integrationIdentifier": "SysdigSecure",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "SysdigSecure_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 260,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "The API root of the Sysdig Secure instance.",
+                    "integrationIdentifier": "SysdigSecure",
+                    "integrationInstance": "74a1e0b6-7045-4b27-9d27-8ae481607d90"
+                },
+                {
+                    "propertyName": "API Token",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 261,
+                    "propertyDisplayName": "API Token",
+                    "propertyDescription": "The Sysdig Secure API token.",
+                    "integrationIdentifier": "SysdigSecure",
+                    "integrationInstance": "74a1e0b6-7045-4b27-9d27-8ae481607d90"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 262,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If selected, the integration validates the SSL certificate when connecting to Sysdig Secure. Selected by default.",
+                    "integrationIdentifier": "SysdigSecure",
+                    "integrationInstance": "74a1e0b6-7045-4b27-9d27-8ae481607d90"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_48",
+        "integrationIdentifier": "SumoLogicCloudSIEM",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "SumoLogicCloudSIEM_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://{instance}",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 264,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "API root of the Sumo Logic Cloud SIEM instance.",
+                    "integrationIdentifier": "SumoLogicCloudSIEM",
+                    "integrationInstance": "d6390bf3-1e18-42fb-88aa-962e046b74c9"
+                },
+                {
+                    "propertyName": "API Key",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 265,
+                    "propertyDisplayName": "API Key",
+                    "propertyDescription": "API Key of the Sumo Logic Cloud SIEM account. Note: API key has priority over other authentication method.",
+                    "integrationIdentifier": "SumoLogicCloudSIEM",
+                    "integrationInstance": "d6390bf3-1e18-42fb-88aa-962e046b74c9"
+                },
+                {
+                    "propertyName": "Access ID",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": false,
+                    "id": 266,
+                    "propertyDisplayName": "Access ID",
+                    "propertyDescription": "Access ID of the Sumo Logic Cloud SIEM account. Note: both Access ID and Access Key are required for this type of authentication.",
+                    "integrationIdentifier": "SumoLogicCloudSIEM",
+                    "integrationInstance": "d6390bf3-1e18-42fb-88aa-962e046b74c9"
+                },
+                {
+                    "propertyName": "Access Key",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 267,
+                    "propertyDisplayName": "Access Key",
+                    "propertyDescription": "Access Key of the Sumo Logic Cloud SIEM account. Note: both Access ID and Access Key are required for this type of authentication.",
+                    "integrationIdentifier": "SumoLogicCloudSIEM",
+                    "integrationInstance": "d6390bf3-1e18-42fb-88aa-962e046b74c9"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 268,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verify the SSL certificate for the connection to the Sumo Logic Cloud SIEM server is valid.",
+                    "integrationIdentifier": "SumoLogicCloudSIEM",
+                    "integrationInstance": "d6390bf3-1e18-42fb-88aa-962e046b74c9"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_47",
+        "integrationIdentifier": "SymantecATP",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "SymantecATP_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://x.x.x.x/",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "URL",
+                    "isMandatory": true,
+                    "id": 246,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecATP",
+                    "integrationInstance": "da84a642-9846-47b0-8a5a-d78832facf89"
+                },
+                {
+                    "propertyName": "Client ID",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 247,
+                    "propertyDisplayName": "Client ID",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecATP",
+                    "integrationInstance": "da84a642-9846-47b0-8a5a-d78832facf89"
+                },
+                {
+                    "propertyName": "Client Secret",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 248,
+                    "propertyDisplayName": "Client Secret",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecATP",
+                    "integrationInstance": "da84a642-9846-47b0-8a5a-d78832facf89"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 249,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecATP",
+                    "integrationInstance": "da84a642-9846-47b0-8a5a-d78832facf89"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_49",
+        "integrationIdentifier": "Sumologic",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "Sumologic_1",
+            "settings": [
+                {
+                    "propertyName": "Api Root",
+                    "value": "https://{IP}",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 255,
+                    "propertyDisplayName": "Api Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Sumologic",
+                    "integrationInstance": "1885fa72-69fa-41ea-ba5f-c72a5adfaa4a"
+                },
+                {
+                    "propertyName": "Access ID",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 256,
+                    "propertyDisplayName": "Access ID",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Sumologic",
+                    "integrationInstance": "1885fa72-69fa-41ea-ba5f-c72a5adfaa4a"
+                },
+                {
+                    "propertyName": "Access Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 257,
+                    "propertyDisplayName": "Access Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Sumologic",
+                    "integrationInstance": "1885fa72-69fa-41ea-ba5f-c72a5adfaa4a"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 258,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Sumologic",
+                    "integrationInstance": "1885fa72-69fa-41ea-ba5f-c72a5adfaa4a"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_45",
+        "integrationIdentifier": "SymantecESCC",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "SymantecESCC_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://api.sep.securitycloud.symantec.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "URL",
+                    "isMandatory": true,
+                    "id": 241,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecESCC",
+                    "integrationInstance": "10ecde76-4b40-46a5-86d4-9697c0b3a30e"
+                },
+                {
+                    "propertyName": "Client ID",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 242,
+                    "propertyDisplayName": "Client ID",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecESCC",
+                    "integrationInstance": "10ecde76-4b40-46a5-86d4-9697c0b3a30e"
+                },
+                {
+                    "propertyName": "Client Secret",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 243,
+                    "propertyDisplayName": "Client Secret",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecESCC",
+                    "integrationInstance": "10ecde76-4b40-46a5-86d4-9697c0b3a30e"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 244,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecESCC",
+                    "integrationInstance": "10ecde76-4b40-46a5-86d4-9697c0b3a30e"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_46",
+        "integrationIdentifier": "SymantecBlueCoatProxySG",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "SymantecBlueCoatProxySG_1",
+            "settings": [
+                {
+                    "propertyName": "SSH Root",
+                    "value": "{ip address}:22",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 251,
+                    "propertyDisplayName": "SSH Root",
+                    "propertyDescription": "SSH root of the Blue Coat ProxySG instance.",
+                    "integrationIdentifier": "SymantecBlueCoatProxySG",
+                    "integrationInstance": "f440745f-fd8f-4f54-a1ee-74e44b253afc"
+                },
+                {
+                    "propertyName": "Username",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 252,
+                    "propertyDisplayName": "Username",
+                    "propertyDescription": "Username of the Blue Coat ProxySG SSH account.",
+                    "integrationIdentifier": "SymantecBlueCoatProxySG",
+                    "integrationInstance": "f440745f-fd8f-4f54-a1ee-74e44b253afc"
+                },
+                {
+                    "propertyName": "Password",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 253,
+                    "propertyDisplayName": "Password",
+                    "propertyDescription": "Password of the Blue Coat ProxySG account.",
+                    "integrationIdentifier": "SymantecBlueCoatProxySG",
+                    "integrationInstance": "f440745f-fd8f-4f54-a1ee-74e44b253afc"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_42",
+        "integrationIdentifier": "SymantecICDX",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "SymantecICDX_1",
+            "settings": [
+                {
+                    "propertyName": "Api Root",
+                    "value": "https://{IP}:{PORT}",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 223,
+                    "propertyDisplayName": "Api Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecICDX",
+                    "integrationInstance": "dcbd2414-cd38-46d1-8af2-e061646e3095"
+                },
+                {
+                    "propertyName": "Api Token",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 224,
+                    "propertyDisplayName": "Api Token",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecICDX",
+                    "integrationInstance": "dcbd2414-cd38-46d1-8af2-e061646e3095"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 225,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecICDX",
+                    "integrationInstance": "dcbd2414-cd38-46d1-8af2-e061646e3095"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_44",
+        "integrationIdentifier": "SymantecEmailSecurityCloud",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "SymantecEmailSecurityCloud_1",
+            "settings": [
+                {
+                    "propertyName": "IOC API Root",
+                    "value": "https://iocapi.emailsecurity.symantec.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 236,
+                    "propertyDisplayName": "IOC API Root",
+                    "propertyDescription": "IOC API root of the Symantec Email Security.Cloud instance.",
+                    "integrationIdentifier": "SymantecEmailSecurityCloud",
+                    "integrationInstance": "f8fe4594-3329-42cc-92b3-3207b260be9b"
+                },
+                {
+                    "propertyName": "Username",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 237,
+                    "propertyDisplayName": "Username",
+                    "propertyDescription": "Username of the Symantec Email Security.Cloud instance.",
+                    "integrationIdentifier": "SymantecEmailSecurityCloud",
+                    "integrationInstance": "f8fe4594-3329-42cc-92b3-3207b260be9b"
+                },
+                {
+                    "propertyName": "Password",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 238,
+                    "propertyDisplayName": "Password",
+                    "propertyDescription": "Password of the Symantec Email Security.Cloud instance.",
+                    "integrationIdentifier": "SymantecEmailSecurityCloud",
+                    "integrationInstance": "f8fe4594-3329-42cc-92b3-3207b260be9b"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 239,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verify the SSL certificate for the connection to the Symantec Email Security.Cloud server is valid.",
+                    "integrationIdentifier": "SymantecEmailSecurityCloud",
+                    "integrationInstance": "f8fe4594-3329-42cc-92b3-3207b260be9b"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_43",
+        "integrationIdentifier": "SymantecContentAnalysis",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "SymantecContentAnalysis_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://x.x.x.x:8082/",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "URL",
+                    "isMandatory": true,
+                    "id": 227,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecContentAnalysis",
+                    "integrationInstance": "a20e7f6d-cd0f-44be-b3ea-9ae3cc64f570"
+                },
+                {
+                    "propertyName": "API Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 228,
+                    "propertyDisplayName": "API Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecContentAnalysis",
+                    "integrationInstance": "a20e7f6d-cd0f-44be-b3ea-9ae3cc64f570"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 229,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecContentAnalysis",
+                    "integrationInstance": "a20e7f6d-cd0f-44be-b3ea-9ae3cc64f570"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_41",
+        "integrationIdentifier": "SysAid",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "SysAid_1",
+            "settings": [
+                {
+                    "propertyName": "Api Root",
+                    "value": "https://{account}.sysaidit.com/api/v1",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 231,
+                    "propertyDisplayName": "Api Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SysAid",
+                    "integrationInstance": "e660f483-0945-48fd-8efe-af2a2b2eb3e9"
+                },
+                {
+                    "propertyName": "Username",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 232,
+                    "propertyDisplayName": "Username",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SysAid",
+                    "integrationInstance": "e660f483-0945-48fd-8efe-af2a2b2eb3e9"
+                },
+                {
+                    "propertyName": "Password",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 233,
+                    "propertyDisplayName": "Password",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SysAid",
+                    "integrationInstance": "e660f483-0945-48fd-8efe-af2a2b2eb3e9"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 234,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SysAid",
+                    "integrationInstance": "e660f483-0945-48fd-8efe-af2a2b2eb3e9"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_40",
+        "integrationIdentifier": "Talos",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "Talos_1",
+            "settings": [
+                {
+                    "propertyName": "Use SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 221,
+                    "propertyDisplayName": "Use SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Talos",
+                    "integrationInstance": "3e9159a7-eeef-41f1-88e7-6f016bb5a509"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_38",
+        "integrationIdentifier": "ThreatConnect",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "ThreatConnect_1",
+            "settings": [
+                {
+                    "propertyName": "ApiAccessId",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 198,
+                    "propertyDisplayName": "Api Access Id",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ThreatConnect",
+                    "integrationInstance": "f0dfe0a6-5043-448a-ac98-01651bf4a63e"
+                },
+                {
+                    "propertyName": "ApiSecretKey",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 199,
+                    "propertyDisplayName": "Api Secret Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ThreatConnect",
+                    "integrationInstance": "f0dfe0a6-5043-448a-ac98-01651bf4a63e"
+                },
+                {
+                    "propertyName": "ApiDefaultOrg",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 200,
+                    "propertyDisplayName": "Api Default Org",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ThreatConnect",
+                    "integrationInstance": "f0dfe0a6-5043-448a-ac98-01651bf4a63e"
+                },
+                {
+                    "propertyName": "ApiBaseUrl",
+                    "value": "https://sandbox.threatconnect.com/api",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 201,
+                    "propertyDisplayName": "Api Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ThreatConnect",
+                    "integrationInstance": "f0dfe0a6-5043-448a-ac98-01651bf4a63e"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_39",
+        "integrationIdentifier": "Tanium",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "Tanium_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 205,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Tanium",
+                    "integrationInstance": "9d60caa0-aa74-44ac-9021-723824c30b61"
+                },
+                {
+                    "propertyName": "API Token",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 206,
+                    "propertyDisplayName": "API Token",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Tanium",
+                    "integrationInstance": "9d60caa0-aa74-44ac-9021-723824c30b61"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 207,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Tanium",
+                    "integrationInstance": "9d60caa0-aa74-44ac-9021-723824c30b61"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_37",
+        "integrationIdentifier": "TenableSecurityCenter",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "TenableSecurityCenter_1",
+            "settings": [
+                {
+                    "propertyName": "Server Address",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "IP",
+                    "isMandatory": true,
+                    "id": 209,
+                    "propertyDisplayName": "Server Address",
+                    "propertyDescription": "The server Address of the Tenable Security Center.",
+                    "integrationIdentifier": "TenableSecurityCenter",
+                    "integrationInstance": "00f117ec-801d-499a-a42c-2a7c9028f3ca"
+                },
+                {
+                    "propertyName": "Username",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": false,
+                    "id": 210,
+                    "propertyDisplayName": "Username",
+                    "propertyDescription": "The username of the Tenable Security Center account. Note: Both \u201cUsername\u201d and \u201cPassword\u201d must be provided.",
+                    "integrationIdentifier": "TenableSecurityCenter",
+                    "integrationInstance": "00f117ec-801d-499a-a42c-2a7c9028f3ca"
+                },
+                {
+                    "propertyName": "Password",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 211,
+                    "propertyDisplayName": "Password",
+                    "propertyDescription": "The password of the Tenable Security Center account. Note: Both \u201cUsername\u201d and \u201cPassword\u201d must be provided.",
+                    "integrationIdentifier": "TenableSecurityCenter",
+                    "integrationInstance": "00f117ec-801d-499a-a42c-2a7c9028f3ca"
+                },
+                {
+                    "propertyName": "Access Key",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 212,
+                    "propertyDisplayName": "Access Key",
+                    "propertyDescription": "The Access Key of the Tenable Security Center account. Note: Both \u201cAccess Key\u201d and \u201cSecret Key\u201d must be provided.",
+                    "integrationIdentifier": "TenableSecurityCenter",
+                    "integrationInstance": "00f117ec-801d-499a-a42c-2a7c9028f3ca"
+                },
+                {
+                    "propertyName": "Secret Key",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 213,
+                    "propertyDisplayName": "Secret Key",
+                    "propertyDescription": "The Secret Key of the Tenable Security Center account. Note: Both \u201cAccess Key\u201d and \u201cSecret Key\u201d must be provided.",
+                    "integrationIdentifier": "TenableSecurityCenter",
+                    "integrationInstance": "00f117ec-801d-499a-a42c-2a7c9028f3ca"
+                },
+                {
+                    "propertyName": "Use SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 214,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If selected, the integration validates the SSL certificate when connecting to the Tenable Security Center server. Enabled by default.",
+                    "integrationIdentifier": "TenableSecurityCenter",
+                    "integrationInstance": "00f117ec-801d-499a-a42c-2a7c9028f3ca"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_35",
+        "integrationIdentifier": "ThreatCrowd",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "ThreatCrowd_1",
+            "settings": [
+                {
+                    "propertyName": "Use SSL",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 203,
+                    "propertyDisplayName": "Use SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ThreatCrowd",
+                    "integrationInstance": "cb75a1f0-417c-40a8-8e68-4c426daa6ba2"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_36",
+        "integrationIdentifier": "TenableIO",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "TenableIO_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://cloud.tenable.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 216,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TenableIO",
+                    "integrationInstance": "b30b67a6-1c39-47c1-8583-ff7fe204a2f8"
+                },
+                {
+                    "propertyName": "Secret Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 217,
+                    "propertyDisplayName": "Secret Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TenableIO",
+                    "integrationInstance": "b30b67a6-1c39-47c1-8583-ff7fe204a2f8"
+                },
+                {
+                    "propertyName": "Access Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 218,
+                    "propertyDisplayName": "Access Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TenableIO",
+                    "integrationInstance": "b30b67a6-1c39-47c1-8583-ff7fe204a2f8"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 219,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TenableIO",
+                    "integrationInstance": "b30b67a6-1c39-47c1-8583-ff7fe204a2f8"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_34",
+        "integrationIdentifier": "ThreatQ",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "ThreatQ_1",
+            "settings": [
+                {
+                    "propertyName": "ServerAddress",
+                    "value": "xx.xx.xx.xx",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "IP",
+                    "isMandatory": true,
+                    "id": 193,
+                    "propertyDisplayName": "ServerAddress",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ThreatQ",
+                    "integrationInstance": "6d98ab10-3522-438d-b093-3d164bc15f23"
+                },
+                {
+                    "propertyName": "ClientId",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 194,
+                    "propertyDisplayName": "ClientId",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ThreatQ",
+                    "integrationInstance": "6d98ab10-3522-438d-b093-3d164bc15f23"
+                },
+                {
+                    "propertyName": "Username",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 195,
+                    "propertyDisplayName": "Username",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ThreatQ",
+                    "integrationInstance": "6d98ab10-3522-438d-b093-3d164bc15f23"
+                },
+                {
+                    "propertyName": "Password",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 196,
+                    "propertyDisplayName": "Password",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ThreatQ",
+                    "integrationInstance": "6d98ab10-3522-438d-b093-3d164bc15f23"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_32",
+        "integrationIdentifier": "Twilio",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "Twilio_1",
+            "settings": [
+                {
+                    "propertyName": "AccountSid",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 178,
+                    "propertyDisplayName": "Account sid",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Twilio",
+                    "integrationInstance": "7e79a9a0-ed65-4228-910e-1719d1e1fcaa"
+                },
+                {
+                    "propertyName": "AuthenticationToken",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 179,
+                    "propertyDisplayName": "Authentication token",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Twilio",
+                    "integrationInstance": "7e79a9a0-ed65-4228-910e-1719d1e1fcaa"
+                },
+                {
+                    "propertyName": "SmsPhoneNumber",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 180,
+                    "propertyDisplayName": "Sms phone number",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Twilio",
+                    "integrationInstance": "7e79a9a0-ed65-4228-910e-1719d1e1fcaa"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_31",
+        "integrationIdentifier": "TrendMicroApexCentral",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "TrendMicroApexCentral_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://pbxpp4.manage.trendmicro.com/",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 188,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TrendMicroApexCentral",
+                    "integrationInstance": "9b14bd64-1a3c-4681-9eae-3b6439f04acc"
+                },
+                {
+                    "propertyName": "Application ID",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 189,
+                    "propertyDisplayName": "Application ID",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TrendMicroApexCentral",
+                    "integrationInstance": "9b14bd64-1a3c-4681-9eae-3b6439f04acc"
+                },
+                {
+                    "propertyName": "API Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 190,
+                    "propertyDisplayName": "API Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TrendMicroApexCentral",
+                    "integrationInstance": "9b14bd64-1a3c-4681-9eae-3b6439f04acc"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 191,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TrendMicroApexCentral",
+                    "integrationInstance": "9b14bd64-1a3c-4681-9eae-3b6439f04acc"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_33",
+        "integrationIdentifier": "ThreatExchange",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "ThreatExchange_1",
+            "settings": [
+                {
+                    "propertyName": "Api Root",
+                    "value": "https://x.x.x.x",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "IP_OR_HOST",
+                    "isMandatory": true,
+                    "id": 182,
+                    "propertyDisplayName": "Api Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ThreatExchange",
+                    "integrationInstance": "1f2b7f07-d175-4375-964f-1d76d642a312"
+                },
+                {
+                    "propertyName": "App ID",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 183,
+                    "propertyDisplayName": "App ID",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ThreatExchange",
+                    "integrationInstance": "1f2b7f07-d175-4375-964f-1d76d642a312"
+                },
+                {
+                    "propertyName": "App Secret",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 184,
+                    "propertyDisplayName": "App Secret",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ThreatExchange",
+                    "integrationInstance": "1f2b7f07-d175-4375-964f-1d76d642a312"
+                },
+                {
+                    "propertyName": "API Version",
+                    "value": "v3.0",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": false,
+                    "id": 185,
+                    "propertyDisplayName": "API Version",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ThreatExchange",
+                    "integrationInstance": "1f2b7f07-d175-4375-964f-1d76d642a312"
+                },
+                {
+                    "propertyName": "Use SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 186,
+                    "propertyDisplayName": "Use SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ThreatExchange",
+                    "integrationInstance": "1f2b7f07-d175-4375-964f-1d76d642a312"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_29",
+        "integrationIdentifier": "TrendMicroCloudAppSecurity",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "TrendMicroCloudAppSecurity_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://api-eu.tmcas.trendmicro.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 159,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TrendMicroCloudAppSecurity",
+                    "integrationInstance": "bcc2491c-bde2-495a-841b-08b36f25697c"
+                },
+                {
+                    "propertyName": "API Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 160,
+                    "propertyDisplayName": "API Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TrendMicroCloudAppSecurity",
+                    "integrationInstance": "bcc2491c-bde2-495a-841b-08b36f25697c"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 161,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TrendMicroCloudAppSecurity",
+                    "integrationInstance": "bcc2491c-bde2-495a-841b-08b36f25697c"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_27",
+        "integrationIdentifier": "TrendMicroDeepSecurity",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "TrendMicroDeepSecurity_1",
+            "settings": [
+                {
+                    "propertyName": "Api Root",
+                    "value": "https://<host or IP>:<port>",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 142,
+                    "propertyDisplayName": "Api Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TrendMicroDeepSecurity",
+                    "integrationInstance": "613cae53-f508-4f7a-9ccd-fcc518a1e63d"
+                },
+                {
+                    "propertyName": "Api Secret Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 143,
+                    "propertyDisplayName": "Api Secret Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TrendMicroDeepSecurity",
+                    "integrationInstance": "613cae53-f508-4f7a-9ccd-fcc518a1e63d"
+                },
+                {
+                    "propertyName": "Api Version",
+                    "value": "v1",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 144,
+                    "propertyDisplayName": "Api Version",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TrendMicroDeepSecurity",
+                    "integrationInstance": "613cae53-f508-4f7a-9ccd-fcc518a1e63d"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 145,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TrendMicroDeepSecurity",
+                    "integrationInstance": "613cae53-f508-4f7a-9ccd-fcc518a1e63d"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_30",
+        "integrationIdentifier": "Tor",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "Tor_1",
+            "settings": [
+                {
+                    "propertyName": "Use SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 176,
+                    "propertyDisplayName": "Use SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Tor",
+                    "integrationInstance": "c3580be2-e29a-4306-8633-2c34c1e28564"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_28",
+        "integrationIdentifier": "TrendMicroDDAN",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "TrendMicroDDAN_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://{ip address}",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 155,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "API root of the Trend Micro DDAN instance.",
+                    "integrationIdentifier": "TrendMicroDDAN",
+                    "integrationInstance": "2f9fc792-50b6-4035-a9ce-aa382cfba50c"
+                },
+                {
+                    "propertyName": "API Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 156,
+                    "propertyDisplayName": "API Key",
+                    "propertyDescription": "API key of the Trend Micro DDAN instance.",
+                    "integrationIdentifier": "TrendMicroDDAN",
+                    "integrationInstance": "2f9fc792-50b6-4035-a9ce-aa382cfba50c"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 157,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verifies that the SSL certificate for the connection to the Trend Micro DDAN is valid.",
+                    "integrationIdentifier": "TrendMicroDDAN",
+                    "integrationInstance": "2f9fc792-50b6-4035-a9ce-aa382cfba50c"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_25",
+        "integrationIdentifier": "VertexAI",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "VertexAI_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://{location}-aiplatform.googleapis.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 163,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "API Root of the Vertex AI integration.",
+                    "integrationIdentifier": "VertexAI",
+                    "integrationInstance": "9f3a3a6f-7498-404e-921e-f0168afcae25"
+                },
+                {
+                    "propertyName": "Workload Identity Email",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": false,
+                    "id": 164,
+                    "propertyDisplayName": "Workload Identity Email",
+                    "propertyDescription": "The client email address of your workload identity. You can configure either this parameter or the Service Account Json File Content parameter. To impersonate service accounts with the workload identity email address, grant the Service Account Token Creator role to your service account.",
+                    "integrationIdentifier": "VertexAI",
+                    "integrationInstance": "9f3a3a6f-7498-404e-921e-f0168afcae25"
+                },
+                {
+                    "propertyName": "Service Account Json File Content",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 165,
+                    "propertyDisplayName": "Service Account Json File Content",
+                    "propertyDescription": "The content of the service account key JSON file. You can configure either this parameter or the Workload Identity Email parameter. To configure this parameter, provide the full content of the service account key JSON file that you downloaded when creating a service account.",
+                    "integrationIdentifier": "VertexAI",
+                    "integrationInstance": "9f3a3a6f-7498-404e-921e-f0168afcae25"
+                },
+                {
+                    "propertyName": "Project ID",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": false,
+                    "id": 166,
+                    "propertyDisplayName": "Project ID",
+                    "propertyDescription": "The project ID to use in the integration. If you don't set a value for this parameter, the integration retrieves the project ID from your Google Cloud service account.",
+                    "integrationIdentifier": "VertexAI",
+                    "integrationInstance": "9f3a3a6f-7498-404e-921e-f0168afcae25"
+                },
+                {
+                    "propertyName": "Location ID",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": false,
+                    "id": 167,
+                    "propertyDisplayName": "Location ID",
+                    "propertyDescription": "The location ID to use in generative API calls.",
+                    "integrationIdentifier": "VertexAI",
+                    "integrationInstance": "9f3a3a6f-7498-404e-921e-f0168afcae25"
+                },
+                {
+                    "propertyName": "Default Model",
+                    "value": "gemini-2.0-flash-lite",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 168,
+                    "propertyDisplayName": "Default Model",
+                    "propertyDescription": "The name of the default model to use in the integration.",
+                    "integrationIdentifier": "VertexAI",
+                    "integrationInstance": "9f3a3a6f-7498-404e-921e-f0168afcae25"
+                },
+                {
+                    "propertyName": "Publisher Name",
+                    "value": "google",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 169,
+                    "propertyDisplayName": "Publisher Name",
+                    "propertyDescription": "The name of the default publisher for the model.",
+                    "integrationIdentifier": "VertexAI",
+                    "integrationInstance": "9f3a3a6f-7498-404e-921e-f0168afcae25"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 170,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If selected, the integration verifies that the SSL certificate for connecting to Vertex AI is valid. Selected by default.",
+                    "integrationIdentifier": "VertexAI",
+                    "integrationInstance": "9f3a3a6f-7498-404e-921e-f0168afcae25"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_26",
+        "integrationIdentifier": "TrendVisionOne",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "TrendVisionOne_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://{instance}",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 172,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "API root of the Trend Vision One instance.",
+                    "integrationIdentifier": "TrendVisionOne",
+                    "integrationInstance": "edec3bb3-3fe0-47b4-8cc5-cc7b594bd007"
+                },
+                {
+                    "propertyName": "API Token",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 173,
+                    "propertyDisplayName": "API Token",
+                    "propertyDescription": "API Token of the Trend Vision One account.",
+                    "integrationIdentifier": "TrendVisionOne",
+                    "integrationInstance": "edec3bb3-3fe0-47b4-8cc5-cc7b594bd007"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 174,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verify the SSL certificate for the connection to the Trend Vision One server is valid.",
+                    "integrationIdentifier": "TrendVisionOne",
+                    "integrationInstance": "edec3bb3-3fe0-47b4-8cc5-cc7b594bd007"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_24",
+        "integrationIdentifier": "TruSTAR",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "TruSTAR_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://api.trustar.co",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 150,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TruSTAR",
+                    "integrationInstance": "ae297696-4f8d-4a22-81bf-7a8f69d1463e"
+                },
+                {
+                    "propertyName": "API Key",
+                    "value": "dummy_secret_password",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 151,
+                    "propertyDisplayName": "API Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TruSTAR",
+                    "integrationInstance": "ae297696-4f8d-4a22-81bf-7a8f69d1463e"
+                },
+                {
+                    "propertyName": "API Secret",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 152,
+                    "propertyDisplayName": "API Secret",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TruSTAR",
+                    "integrationInstance": "ae297696-4f8d-4a22-81bf-7a8f69d1463e"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 153,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "TruSTAR",
+                    "integrationInstance": "ae297696-4f8d-4a22-81bf-7a8f69d1463e"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_23",
+        "integrationIdentifier": "UnshortenMe",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "UnshortenMe_1",
+            "settings": [
+                {
+                    "propertyName": "Use SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 140,
+                    "propertyDisplayName": "Use SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "UnshortenMe",
+                    "integrationInstance": "86d61e9d-fc55-457c-8a40-f76d9b80199e"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_21",
+        "integrationIdentifier": "WebRisk",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "WebRisk_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://webrisk.googleapis.com/v1",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 133,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "API Root of the Web Risk integration.",
+                    "integrationIdentifier": "WebRisk",
+                    "integrationInstance": "55b01a81-09ef-4926-9b60-ac1abe9b0f9c"
+                },
+                {
+                    "propertyName": "Workload Identity Email",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": false,
+                    "id": 134,
+                    "propertyDisplayName": "Workload Identity Email",
+                    "propertyDescription": "The client email address of your workload identity. You can configure either this parameter or the Service Account Json File Content parameter. To impersonate service accounts with the workload identity email address, grant the Service Account Token Creator role to your service account.",
+                    "integrationIdentifier": "WebRisk",
+                    "integrationInstance": "55b01a81-09ef-4926-9b60-ac1abe9b0f9c"
+                },
+                {
+                    "propertyName": "Service Account Json File Content",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 135,
+                    "propertyDisplayName": "Service Account Json File Content",
+                    "propertyDescription": "The content of the service account key JSON file. You can configure either this parameter or the Workload Identity Email parameter. To configure this parameter, provide the full content of the service account key JSON file that you downloaded when creating a service account.",
+                    "integrationIdentifier": "WebRisk",
+                    "integrationInstance": "55b01a81-09ef-4926-9b60-ac1abe9b0f9c"
+                },
+                {
+                    "propertyName": "Quota Project ID",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": false,
+                    "id": 136,
+                    "propertyDisplayName": "Quota Project ID",
+                    "propertyDescription": "The Google Cloud project ID which you use for Google Cloud APIs and billing. This parameter requires you to grant the Service Usage Consumer role to your service account.\nThe integration attaches this parameter value to all API requests. If you don't set a value for this parameter, the integration retrieves the quota project ID from your Google Cloud service account.",
+                    "integrationIdentifier": "WebRisk",
+                    "integrationInstance": "55b01a81-09ef-4926-9b60-ac1abe9b0f9c"
+                },
+                {
+                    "propertyName": "Project ID",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": false,
+                    "id": 137,
+                    "propertyDisplayName": "Project ID",
+                    "propertyDescription": "The project ID to use in the integration. If you don't set a value for this parameter, the integration retrieves the project ID from your Google Cloud service account.",
+                    "integrationIdentifier": "WebRisk",
+                    "integrationInstance": "55b01a81-09ef-4926-9b60-ac1abe9b0f9c"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 138,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If selected, the integration verifies that the SSL certificate for connecting to Vertex AI is valid. Selected by default.",
+                    "integrationIdentifier": "WebRisk",
+                    "integrationInstance": "55b01a81-09ef-4926-9b60-ac1abe9b0f9c"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_22",
+        "integrationIdentifier": "UrlScanIo",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "UrlScanIo_1",
+            "settings": [
+                {
+                    "propertyName": "Api Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 147,
+                    "propertyDisplayName": "Api Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "UrlScanIo",
+                    "integrationInstance": "6c6c7135-8d4c-4409-b89b-5ecc777a25ca"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 148,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "UrlScanIo",
+                    "integrationInstance": "6c6c7135-8d4c-4409-b89b-5ecc777a25ca"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_19",
+        "integrationIdentifier": "URLVoid",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "URLVoid_1",
+            "settings": [
+                {
+                    "propertyName": "ApiUrl",
+                    "value": "https://endpoint.apivoid.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 111,
+                    "propertyDisplayName": "Api Url",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "URLVoid",
+                    "integrationInstance": "5653e59f-becc-42f3-9515-19798c0dad5b"
+                },
+                {
+                    "propertyName": "ApiKey",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 112,
+                    "propertyDisplayName": "Api Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "URLVoid",
+                    "integrationInstance": "5653e59f-becc-42f3-9515-19798c0dad5b"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 113,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "URLVoid",
+                    "integrationInstance": "5653e59f-becc-42f3-9515-19798c0dad5b"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_20",
+        "integrationIdentifier": "VaronisDataSecurityPlatform",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "VaronisDataSecurityPlatform_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://{ip address}:{port}",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 106,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VaronisDataSecurityPlatform",
+                    "integrationInstance": "d3f96d40-3066-42d9-af52-b3df95fe5ccf"
+                },
+                {
+                    "propertyName": "Username",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 107,
+                    "propertyDisplayName": "Username",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VaronisDataSecurityPlatform",
+                    "integrationInstance": "d3f96d40-3066-42d9-af52-b3df95fe5ccf"
+                },
+                {
+                    "propertyName": "Password",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 108,
+                    "propertyDisplayName": "Password",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VaronisDataSecurityPlatform",
+                    "integrationInstance": "d3f96d40-3066-42d9-af52-b3df95fe5ccf"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 109,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VaronisDataSecurityPlatform",
+                    "integrationInstance": "d3f96d40-3066-42d9-af52-b3df95fe5ccf"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_15",
+        "integrationIdentifier": "Zscaler",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "Zscaler_1",
+            "settings": [
+                {
+                    "propertyName": "Api Root",
+                    "value": "https://admin.zscalertwo.net",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 124,
+                    "propertyDisplayName": "Api Root",
+                    "propertyDescription": "The base URL of the Zscaler instance.",
+                    "integrationIdentifier": "Zscaler",
+                    "integrationInstance": "1e6b0dfc-404f-4085-80bd-721a15369624"
+                },
+                {
+                    "propertyName": "Login ID",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": false,
+                    "id": 125,
+                    "propertyDisplayName": "Login ID",
+                    "propertyDescription": "The username or email address associated with the Zscaler administrator account used for authentication. This parameter is mandatory for legacy authentication. If both legacy and OAuth 2.0 credentials are provided, OAuth 2.0 takes precedence.",
+                    "integrationIdentifier": "Zscaler",
+                    "integrationInstance": "1e6b0dfc-404f-4085-80bd-721a15369624"
+                },
+                {
+                    "propertyName": "Api Key",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 126,
+                    "propertyDisplayName": "Api Key",
+                    "propertyDescription": "The unique API key generated in the Zscaler portal to authorize API requests. This parameter is mandatory for legacy authentication. If both legacy and OAuth 2.0 credentials are provided, OAuth 2.0 takes precedence.",
+                    "integrationIdentifier": "Zscaler",
+                    "integrationInstance": "1e6b0dfc-404f-4085-80bd-721a15369624"
+                },
+                {
+                    "propertyName": "Password",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 127,
+                    "propertyDisplayName": "Password",
+                    "propertyDescription": "The password associated with the Zscaler administrator account used for authentication. This parameter is mandatory for legacy authentication. If both legacy and OAuth 2.0 credentials are provided, OAuth 2.0 takes precedence.",
+                    "integrationIdentifier": "Zscaler",
+                    "integrationInstance": "1e6b0dfc-404f-4085-80bd-721a15369624"
+                },
+                {
+                    "propertyName": "Client ID",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": false,
+                    "id": 128,
+                    "propertyDisplayName": "Client ID",
+                    "propertyDescription": "The unique identifier for the OAuth 2.0 client used for authentication using the ZSLogin service. This parameter is mandatory for OAuth 2.0 configuration and takes precedence over legacy authentication.",
+                    "integrationIdentifier": "Zscaler",
+                    "integrationInstance": "1e6b0dfc-404f-4085-80bd-721a15369624"
+                },
+                {
+                    "propertyName": "Client Secret",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 129,
+                    "propertyDisplayName": "Client Secret",
+                    "propertyDescription": "The secret key associated with the client ID used to authenticate the OAuth 2.0 client. This parameter is mandatory for OAuth 2.0 configuration and takes precedence over legacy authentication.",
+                    "integrationIdentifier": "Zscaler",
+                    "integrationInstance": "1e6b0dfc-404f-4085-80bd-721a15369624"
+                },
+                {
+                    "propertyName": "Login API Root",
+                    "value": "https://siempify.zslogin.net",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": false,
+                    "id": 130,
+                    "propertyDisplayName": "Login API Root",
+                    "propertyDescription": "The base URL for the ZSLogin service used for centralized identity and access management. This parameter is mandatory for OAuth 2.0 configuration and takes precedence over legacy authentication.",
+                    "integrationIdentifier": "Zscaler",
+                    "integrationInstance": "1e6b0dfc-404f-4085-80bd-721a15369624"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 131,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If selected, the integration validates the SSL certificate when connecting to the Zscaler server.",
+                    "integrationIdentifier": "Zscaler",
+                    "integrationInstance": "1e6b0dfc-404f-4085-80bd-721a15369624"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_14",
+        "integrationIdentifier": "VSphere",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "VSphere_1",
+            "settings": [
+                {
+                    "propertyName": "Server Address",
+                    "value": "x.x.x.x",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "IP_OR_HOST",
+                    "isMandatory": true,
+                    "id": 119,
+                    "propertyDisplayName": "Server Address",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VSphere",
+                    "integrationInstance": "a9de43b0-df74-4a58-a2c8-4908e2750151"
+                },
+                {
+                    "propertyName": "Username",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 120,
+                    "propertyDisplayName": "Username",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VSphere",
+                    "integrationInstance": "a9de43b0-df74-4a58-a2c8-4908e2750151"
+                },
+                {
+                    "propertyName": "Password",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 121,
+                    "propertyDisplayName": "Password",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VSphere",
+                    "integrationInstance": "a9de43b0-df74-4a58-a2c8-4908e2750151"
+                },
+                {
+                    "propertyName": "Port",
+                    "value": "443",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Int",
+                    "isMandatory": true,
+                    "id": 122,
+                    "propertyDisplayName": "Port",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VSphere",
+                    "integrationInstance": "a9de43b0-df74-4a58-a2c8-4908e2750151"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_18",
+        "integrationIdentifier": "Vectra",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "Vectra_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://<address>:<port>",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "URL",
+                    "isMandatory": true,
+                    "id": 115,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Vectra",
+                    "integrationInstance": "6a01b61c-7689-4fcf-b81b-f2ce146765c9"
+                },
+                {
+                    "propertyName": "API Token",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 116,
+                    "propertyDisplayName": "API Token",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Vectra",
+                    "integrationInstance": "6a01b61c-7689-4fcf-b81b-f2ce146765c9"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 117,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Vectra",
+                    "integrationInstance": "6a01b61c-7689-4fcf-b81b-f2ce146765c9"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_12",
+        "integrationIdentifier": "Zerofox",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "Zerofox_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 93,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "The API root of the Zerofox instance.",
+                    "integrationIdentifier": "Zerofox",
+                    "integrationInstance": "73458b0c-b710-4b80-ae6f-093dff4a08fe"
+                },
+                {
+                    "propertyName": "API Token",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 94,
+                    "propertyDisplayName": "API Token",
+                    "propertyDescription": "The Zerofox API token.",
+                    "integrationIdentifier": "Zerofox",
+                    "integrationInstance": "73458b0c-b710-4b80-ae6f-093dff4a08fe"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 95,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If selected, the integration validates the SSL certificate when connecting to Zerofox. Selected by default.",
+                    "integrationIdentifier": "Zerofox",
+                    "integrationInstance": "73458b0c-b710-4b80-ae6f-093dff4a08fe"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_16",
+        "integrationIdentifier": "VMRay",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "VMRay_1",
+            "settings": [
+                {
+                    "propertyName": "Api Root",
+                    "value": "https://cloud.vmray.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 102,
+                    "propertyDisplayName": "Api Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VMRay",
+                    "integrationInstance": "dd9408d3-4b8c-4287-941b-c09959adff34"
+                },
+                {
+                    "propertyName": "Api Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 103,
+                    "propertyDisplayName": "Api Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VMRay",
+                    "integrationInstance": "dd9408d3-4b8c-4287-941b-c09959adff34"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 104,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VMRay",
+                    "integrationInstance": "dd9408d3-4b8c-4287-941b-c09959adff34"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_13",
+        "integrationIdentifier": "ZohoDesk",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "ZohoDesk_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://desk.zoho.{region}",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 92,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "API root of the Zoho Desk instance.",
+                    "integrationIdentifier": "ZohoDesk",
+                    "integrationInstance": "ee643c2d-9b58-450f-9d2a-b60015ee315a"
+                },
+                {
+                    "propertyName": "Client ID",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 96,
+                    "propertyDisplayName": "Client ID",
+                    "propertyDescription": "Client ID of the Zoho Desk account.",
+                    "integrationIdentifier": "ZohoDesk",
+                    "integrationInstance": "ee643c2d-9b58-450f-9d2a-b60015ee315a"
+                },
+                {
+                    "propertyName": "Client Secret",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 98,
+                    "propertyDisplayName": "Client Secret",
+                    "propertyDescription": "Client Secret of the Zoho Desk account.",
+                    "integrationIdentifier": "ZohoDesk",
+                    "integrationInstance": "ee643c2d-9b58-450f-9d2a-b60015ee315a"
+                },
+                {
+                    "propertyName": "Refresh Token",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 99,
+                    "propertyDisplayName": "Refresh Token",
+                    "propertyDescription": "Refresh Token of the Zoho Desk account. You need to run the action \"Get Refresh Token\" to generate it.",
+                    "integrationIdentifier": "ZohoDesk",
+                    "integrationInstance": "ee643c2d-9b58-450f-9d2a-b60015ee315a"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 100,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verify the SSL certificate for the connection to the Zoho Desk server is valid.",
+                    "integrationIdentifier": "ZohoDesk",
+                    "integrationInstance": "ee643c2d-9b58-450f-9d2a-b60015ee315a"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_17",
+        "integrationIdentifier": "VirusTotal",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "VirusTotal_1",
+            "settings": [
+                {
+                    "propertyName": "Api Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 89,
+                    "propertyDisplayName": "Api key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VirusTotal",
+                    "integrationInstance": "e046bcfa-3a31-459d-abe5-f183d9176f33"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 90,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VirusTotal",
+                    "integrationInstance": "e046bcfa-3a31-459d-abe5-f183d9176f33"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_11",
+        "integrationIdentifier": "Websense",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "Websense_1",
+            "settings": [
+                {
+                    "propertyName": "ApiRoot",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 83,
+                    "propertyDisplayName": "Api root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Websense",
+                    "integrationInstance": "335068b3-ebc4-412e-b19a-dab35610f786"
+                },
+                {
+                    "propertyName": "GatewayHost",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 84,
+                    "propertyDisplayName": "Gateway host",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Websense",
+                    "integrationInstance": "335068b3-ebc4-412e-b19a-dab35610f786"
+                },
+                {
+                    "propertyName": "GatewayUser",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 85,
+                    "propertyDisplayName": "Gateway user",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Websense",
+                    "integrationInstance": "335068b3-ebc4-412e-b19a-dab35610f786"
+                },
+                {
+                    "propertyName": "GatewayPassword",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 86,
+                    "propertyDisplayName": "Gateway password",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Websense",
+                    "integrationInstance": "335068b3-ebc4-412e-b19a-dab35610f786"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 87,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Websense",
+                    "integrationInstance": "335068b3-ebc4-412e-b19a-dab35610f786"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_9",
+        "integrationIdentifier": "WMI",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "WMI_1",
+            "settings": []
+        }
+    },
+    {
+        "environment": "Network_8",
+        "integrationIdentifier": "Zabbix",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "Zabbix_1",
+            "settings": [
+                {
+                    "propertyName": "Api Root",
+                    "value": "http://{IP}/zabbix",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "IP_OR_HOST",
+                    "isMandatory": true,
+                    "id": 67,
+                    "propertyDisplayName": "Api Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Zabbix",
+                    "integrationInstance": "780ffb35-8000-4828-bef3-a9670c1d04e5"
+                },
+                {
+                    "propertyName": "Username",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 68,
+                    "propertyDisplayName": "User name",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Zabbix",
+                    "integrationInstance": "780ffb35-8000-4828-bef3-a9670c1d04e5"
+                },
+                {
+                    "propertyName": "Password",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 69,
+                    "propertyDisplayName": "Password",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Zabbix",
+                    "integrationInstance": "780ffb35-8000-4828-bef3-a9670c1d04e5"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 70,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Zabbix",
+                    "integrationInstance": "780ffb35-8000-4828-bef3-a9670c1d04e5"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_5",
+        "integrationIdentifier": "VirusTotalV3",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "VirusTotalV3_1",
+            "settings": [
+                {
+                    "propertyName": "API Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 55,
+                    "propertyDisplayName": "API Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VirusTotalV3",
+                    "integrationInstance": "43ae94cd-5648-420a-8bea-e1e67bb17f3a"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 56,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VirusTotalV3",
+                    "integrationInstance": "43ae94cd-5648-420a-8bea-e1e67bb17f3a"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_10",
+        "integrationIdentifier": "Wildfire",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "Wildfire_1",
+            "settings": [
+                {
+                    "propertyName": "Api Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 44,
+                    "propertyDisplayName": "Api Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Wildfire",
+                    "integrationInstance": "c143cfe5-cca7-4aaa-8192-944616591acf"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_1",
+        "integrationIdentifier": "GoogleChronicle",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "GoogleChronicle_1",
+            "settings": [
+                {
+                    "propertyName": "UI Root",
+                    "value": "https://{instance}.chronicle.security",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 57,
+                    "propertyDisplayName": "UI Root",
+                    "propertyDescription": "UI root of the Chronicle instance. It will be used to create a link that points back to Chronicle across multiple actions.",
+                    "integrationIdentifier": "GoogleChronicle",
+                    "integrationInstance": "f7899e34-e527-4b30-91b8-37a198f7e347"
+                },
+                {
+                    "propertyName": "API Root",
+                    "value": "https://backstory.googleapis.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 60,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "API root of the Chronicle instance.",
+                    "integrationIdentifier": "GoogleChronicle",
+                    "integrationInstance": "f7899e34-e527-4b30-91b8-37a198f7e347"
+                },
+                {
+                    "propertyName": "User's Service Account",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 63,
+                    "propertyDisplayName": "User's Service Account",
+                    "propertyDescription": "Service Account that is used for authentication. You can configure either this parameter or the Workload Identity Email parameter. If both this and Workload Identity Email not provided, the default Service Account of the SecOps Instance will be used to authenticate.",
+                    "integrationIdentifier": "GoogleChronicle",
+                    "integrationInstance": "f7899e34-e527-4b30-91b8-37a198f7e347"
+                },
+                {
+                    "propertyName": "Workload Identity Email",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 64,
+                    "propertyDisplayName": "Workload Identity Email",
+                    "propertyDescription": "The client email address of your workload identity. You can configure either this parameter or the User's Service Account parameter. To impersonate service accounts with the workload identity email address, grant the Service Account Token Creator role to your service account. If both this and User's Service Account not provided, the default Service Account of the SecOps Instance will be used to authenticate.",
+                    "integrationIdentifier": "GoogleChronicle",
+                    "integrationInstance": "f7899e34-e527-4b30-91b8-37a198f7e347"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 65,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verify the SSL certificate for the connection to the Google Chronicle server is valid.",
+                    "integrationIdentifier": "GoogleChronicle",
+                    "integrationInstance": "f7899e34-e527-4b30-91b8-37a198f7e347"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_7",
+        "integrationIdentifier": "XForce",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "XForce_1",
+            "settings": [
+                {
+                    "propertyName": "Address",
+                    "value": "dummy_valid_val",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 45,
+                    "propertyDisplayName": "Address",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "XForce",
+                    "integrationInstance": "aad440f8-5305-4908-9eb7-20ea5c744bc1"
+                },
+                {
+                    "propertyName": "Api Key",
+                    "value": "dummy_secret_password",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 48,
+                    "propertyDisplayName": "Api Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "XForce",
+                    "integrationInstance": "aad440f8-5305-4908-9eb7-20ea5c744bc1"
+                },
+                {
+                    "propertyName": "Api Password",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 50,
+                    "propertyDisplayName": "Api Password",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "XForce",
+                    "integrationInstance": "aad440f8-5305-4908-9eb7-20ea5c744bc1"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 52,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "XForce",
+                    "integrationInstance": "aad440f8-5305-4908-9eb7-20ea5c744bc1"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Network_6",
+        "integrationIdentifier": "Zendesk",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "Zendesk_1",
+            "settings": [
+                {
+                    "propertyName": "Server Address",
+                    "value": "https://{username}.zendesk.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 47,
+                    "propertyDisplayName": "Server Address",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Zendesk",
+                    "integrationInstance": "b23c0054-b3b1-453c-a904-03a32dd73e5d"
+                },
+                {
+                    "propertyName": "User Email Address",
+                    "value": "admin@enterprise.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 49,
+                    "propertyDisplayName": "User Email Address",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Zendesk",
+                    "integrationInstance": "b23c0054-b3b1-453c-a904-03a32dd73e5d"
+                },
+                {
+                    "propertyName": "Api Token",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 51,
+                    "propertyDisplayName": "Api Token",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Zendesk",
+                    "integrationInstance": "b23c0054-b3b1-453c-a904-03a32dd73e5d"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Test_Network_1",
+        "integrationIdentifier": "VirusTotalV3",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "VirusTotalV3_1",
+            "settings": [
+                {
+                    "propertyName": "API Key",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 41,
+                    "propertyDisplayName": "API Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VirusTotalV3",
+                    "integrationInstance": "5ee3986d-3623-44c3-9166-10681b173ffb"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 42,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VirusTotalV3",
+                    "integrationInstance": "5ee3986d-3623-44c3-9166-10681b173ffb"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "GoogleChronicle",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "GoogleChronicle_1",
+            "settings": [
+                {
+                    "propertyName": "UI Root",
+                    "value": "https://{instance}.chronicle.security",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 0,
+                    "propertyDisplayName": "UI Root",
+                    "propertyDescription": "UI root of the Chronicle instance. It will be used to create a link that points back to Chronicle across multiple actions.",
+                    "integrationIdentifier": "GoogleChronicle",
+                    "integrationInstance": "cc3b7474-c052-476d-bb99-841476ee515f"
+                },
+                {
+                    "propertyName": "API Root",
+                    "value": "https://backstory.googleapis.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 0,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "API root of the Chronicle instance.",
+                    "integrationIdentifier": "GoogleChronicle",
+                    "integrationInstance": "cc3b7474-c052-476d-bb99-841476ee515f"
+                },
+                {
+                    "propertyName": "User's Service Account",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 0,
+                    "propertyDisplayName": "User's Service Account",
+                    "propertyDescription": "Service Account that is used for authentication. You can configure either this parameter or the Workload Identity Email parameter. If both this and Workload Identity Email not provided, the default Service Account of the SecOps Instance will be used to authenticate.",
+                    "integrationIdentifier": "GoogleChronicle",
+                    "integrationInstance": "cc3b7474-c052-476d-bb99-841476ee515f"
+                },
+                {
+                    "propertyName": "Workload Identity Email",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 0,
+                    "propertyDisplayName": "Workload Identity Email",
+                    "propertyDescription": "The client email address of your workload identity. You can configure either this parameter or the User's Service Account parameter. To impersonate service accounts with the workload identity email address, grant the Service Account Token Creator role to your service account. If both this and User's Service Account not provided, the default Service Account of the SecOps Instance will be used to authenticate.",
+                    "integrationIdentifier": "GoogleChronicle",
+                    "integrationInstance": "cc3b7474-c052-476d-bb99-841476ee515f"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "true",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 0,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verify the SSL certificate for the connection to the Google Chronicle server is valid.",
+                    "integrationIdentifier": "GoogleChronicle",
+                    "integrationInstance": "cc3b7474-c052-476d-bb99-841476ee515f"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "GoogleSecOpsAiAgents",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "System All Environments Default Instance",
+            "settings": [
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 15,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verify the SSL certificate for the connection.",
+                    "integrationIdentifier": "GoogleSecOpsAiAgents",
+                    "integrationInstance": "3714ce3f-67ee-4d0c-b8ee-c35b386d0f4d"
+                }
+            ]
+        }
+    }
+]

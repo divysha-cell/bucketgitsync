@@ -1,0 +1,13 @@
+[
+    {
+        "id": 0,
+        "source": "StellarCyberStarlight",
+        "familyName": "Default",
+        "familyId": 0,
+        "product": "Starlight",
+        "eventName": null,
+        "mappingStatus": null,
+        "changeSource": "ChangeSourceUnspecified",
+        "exampleEventFields": []
+    }
+]

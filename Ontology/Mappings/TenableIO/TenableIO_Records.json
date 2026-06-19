@@ -1,0 +1,13 @@
+[
+    {
+        "id": 0,
+        "source": "TenableIO",
+        "familyName": "Default",
+        "familyId": 0,
+        "product": "Tenable.io",
+        "eventName": null,
+        "mappingStatus": null,
+        "changeSource": "ChangeSourceUnspecified",
+        "exampleEventFields": []
+    }
+]

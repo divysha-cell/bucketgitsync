@@ -1,0 +1,410 @@
+[
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/51",
+        "id": 51,
+        "entityIdentifier": "blocked_entity_50",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_50\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/50",
+        "id": 50,
+        "entityIdentifier": "blocked_entity_49",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_49\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/49",
+        "id": 49,
+        "entityIdentifier": "blocked_entity_47",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_47\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/48",
+        "id": 48,
+        "entityIdentifier": "blocked_entity_48",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_48\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/47",
+        "id": 47,
+        "entityIdentifier": "blocked_entity_46",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_46\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/46",
+        "id": 46,
+        "entityIdentifier": "blocked_entity_44",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_44\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/45",
+        "id": 45,
+        "entityIdentifier": "blocked_entity_42",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_42\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/44",
+        "id": 44,
+        "entityIdentifier": "blocked_entity_43",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_43\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/43",
+        "id": 43,
+        "entityIdentifier": "blocked_entity_45",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_45\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/42",
+        "id": 42,
+        "entityIdentifier": "blocked_entity_41",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_41\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/41",
+        "id": 41,
+        "entityIdentifier": "blocked_entity_34",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_34\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/40",
+        "id": 40,
+        "entityIdentifier": "blocked_entity_33",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_33\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/39",
+        "id": 39,
+        "entityIdentifier": "blocked_entity_40",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_40\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/38",
+        "id": 38,
+        "entityIdentifier": "blocked_entity_35",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_35\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/37",
+        "id": 37,
+        "entityIdentifier": "blocked_entity_38",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_38\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/36",
+        "id": 36,
+        "entityIdentifier": "blocked_entity_37",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_37\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/35",
+        "id": 35,
+        "entityIdentifier": "blocked_entity_32",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_32\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/34",
+        "id": 34,
+        "entityIdentifier": "blocked_entity_39",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_39\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/33",
+        "id": 33,
+        "entityIdentifier": "blocked_entity_36",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_36\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/32",
+        "id": 32,
+        "entityIdentifier": "blocked_entity_31",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_31\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/31",
+        "id": 31,
+        "entityIdentifier": "blocked_entity_21",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_21\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/30",
+        "id": 30,
+        "entityIdentifier": "blocked_entity_25",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_25\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/29",
+        "id": 29,
+        "entityIdentifier": "blocked_entity_28",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_28\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/28",
+        "id": 28,
+        "entityIdentifier": "blocked_entity_27",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_27\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/27",
+        "id": 27,
+        "entityIdentifier": "blocked_entity_24",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_24\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/26",
+        "id": 26,
+        "entityIdentifier": "blocked_entity_22",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_22\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/25",
+        "id": 25,
+        "entityIdentifier": "blocked_entity_29",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_29\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/24",
+        "id": 24,
+        "entityIdentifier": "blocked_entity_23",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_23\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/23",
+        "id": 23,
+        "entityIdentifier": "blocked_entity_26",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_26\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/22",
+        "id": 22,
+        "entityIdentifier": "blocked_entity_30",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_30\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/21",
+        "id": 21,
+        "entityIdentifier": "blocked_entity_15",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_15\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/20",
+        "id": 20,
+        "entityIdentifier": "blocked_entity_12",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_12\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/19",
+        "id": 19,
+        "entityIdentifier": "blocked_entity_20",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_20\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/18",
+        "id": 18,
+        "entityIdentifier": "blocked_entity_19",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_19\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/17",
+        "id": 17,
+        "entityIdentifier": "blocked_entity_14",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_14\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/16",
+        "id": 16,
+        "entityIdentifier": "blocked_entity_18",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_18\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/15",
+        "id": 15,
+        "entityIdentifier": "blocked_entity_17",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_17\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/14",
+        "id": 14,
+        "entityIdentifier": "blocked_entity_16",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_16\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/13",
+        "id": 13,
+        "entityIdentifier": "blocked_entity_13",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_13\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/12",
+        "id": 12,
+        "entityIdentifier": "blocked_entity_11",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_11\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/11",
+        "id": 11,
+        "entityIdentifier": "blocked_entity_9",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_9\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/10",
+        "id": 10,
+        "entityIdentifier": "blocked_entity_5",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_5\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/9",
+        "id": 9,
+        "entityIdentifier": "blocked_entity_7",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_7\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/8",
+        "id": 8,
+        "entityIdentifier": "blocked_entity_1",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_1\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/7",
+        "id": 7,
+        "entityIdentifier": "blocked_entity_2",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_2\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/6",
+        "id": 6,
+        "entityIdentifier": "blocked_entity_4",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_4\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/5",
+        "id": 5,
+        "entityIdentifier": "blocked_entity_6",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_6\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/4",
+        "id": 4,
+        "entityIdentifier": "blocked_entity_3",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_3\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/3",
+        "id": 3,
+        "entityIdentifier": "blocked_entity_8",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_8\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/2",
+        "id": 2,
+        "entityIdentifier": "blocked_entity_10",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Network_10\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/1",
+        "id": 1,
+        "entityIdentifier": "blocked_entity_test_1",
+        "entityType": "USERUNIQNAME",
+        "action": "DoNotCreateEntity",
+        "environmentsJson": "[\"Test_Network_1\"]"
+    }
+]

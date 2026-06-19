@@ -1,0 +1,13 @@
+[
+    {
+        "id": 0,
+        "source": "ProofpointCloudThreatResponse",
+        "familyName": "Default",
+        "familyId": 0,
+        "product": "Incident",
+        "eventName": null,
+        "mappingStatus": null,
+        "changeSource": "ChangeSourceUnspecified",
+        "exampleEventFields": []
+    }
+]
