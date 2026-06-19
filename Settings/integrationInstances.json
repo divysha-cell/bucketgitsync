@@ -1,0 +1,1202 @@
+[
+    {
+        "environment": "Default Environment",
+        "integrationIdentifier": "SymantecICDX",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "SymantecICDX_1",
+            "settings": [
+                {
+                    "propertyName": "Api Root",
+                    "value": "https://{IP}:{PORT}",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 163,
+                    "propertyDisplayName": "Api Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecICDX",
+                    "integrationInstance": "e38c1aa2-c74c-4cdd-9982-f7456f7fd94e"
+                },
+                {
+                    "propertyName": "Api Token",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": true,
+                    "id": 164,
+                    "propertyDisplayName": "Api Token",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecICDX",
+                    "integrationInstance": "e38c1aa2-c74c-4cdd-9982-f7456f7fd94e"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 165,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SymantecICDX",
+                    "integrationInstance": "e38c1aa2-c74c-4cdd-9982-f7456f7fd94e"
+                },
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 167,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "SymantecICDX",
+                    "integrationInstance": "e38c1aa2-c74c-4cdd-9982-f7456f7fd94e"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Default Environment",
+        "integrationIdentifier": "DigitalShadows",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "DigitalShadows_1",
+            "settings": [
+                {
+                    "propertyName": "Api Key",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 0,
+                    "propertyDisplayName": "Api Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "DigitalShadows",
+                    "integrationInstance": "669589aa-4982-4614-97c5-c3f80a96f9df"
+                },
+                {
+                    "propertyName": "Api Secret",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": true,
+                    "id": 0,
+                    "propertyDisplayName": "Api Secret",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "DigitalShadows",
+                    "integrationInstance": "669589aa-4982-4614-97c5-c3f80a96f9df"
+                },
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 0,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "DigitalShadows",
+                    "integrationInstance": "669589aa-4982-4614-97c5-c3f80a96f9df"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Default Environment",
+        "integrationIdentifier": "AzureSecurityCenter",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "AzureSecurityCenter_1",
+            "settings": [
+                {
+                    "propertyName": "Client ID",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 168,
+                    "propertyDisplayName": "Client ID",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "AzureSecurityCenter",
+                    "integrationInstance": "2872817c-c6a3-4d5a-b0dc-eda4edca43de"
+                },
+                {
+                    "propertyName": "Client Secret",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": true,
+                    "id": 169,
+                    "propertyDisplayName": "Client Secret",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "AzureSecurityCenter",
+                    "integrationInstance": "2872817c-c6a3-4d5a-b0dc-eda4edca43de"
+                },
+                {
+                    "propertyName": "Username",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": false,
+                    "id": 170,
+                    "propertyDisplayName": "Username",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "AzureSecurityCenter",
+                    "integrationInstance": "2872817c-c6a3-4d5a-b0dc-eda4edca43de"
+                },
+                {
+                    "propertyName": "Password",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": false,
+                    "id": 171,
+                    "propertyDisplayName": "Password",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "AzureSecurityCenter",
+                    "integrationInstance": "2872817c-c6a3-4d5a-b0dc-eda4edca43de"
+                },
+                {
+                    "propertyName": "Subscription ID",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": false,
+                    "id": 172,
+                    "propertyDisplayName": "Subscription ID",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "AzureSecurityCenter",
+                    "integrationInstance": "2872817c-c6a3-4d5a-b0dc-eda4edca43de"
+                },
+                {
+                    "propertyName": "Tenant ID",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 173,
+                    "propertyDisplayName": "Tenant ID",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "AzureSecurityCenter",
+                    "integrationInstance": "2872817c-c6a3-4d5a-b0dc-eda4edca43de"
+                },
+                {
+                    "propertyName": "Refresh Token",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": false,
+                    "id": 174,
+                    "propertyDisplayName": "Refresh Token",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "AzureSecurityCenter",
+                    "integrationInstance": "2872817c-c6a3-4d5a-b0dc-eda4edca43de"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 175,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "AzureSecurityCenter",
+                    "integrationInstance": "2872817c-c6a3-4d5a-b0dc-eda4edca43de"
+                },
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 177,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "AzureSecurityCenter",
+                    "integrationInstance": "2872817c-c6a3-4d5a-b0dc-eda4edca43de"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Default Environment",
+        "integrationIdentifier": "AnomaliStaxx",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "AnomaliStaxx_1",
+            "settings": [
+                {
+                    "propertyName": "Server Address",
+                    "value": "https://<ip>:<port>",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 178,
+                    "propertyDisplayName": "Server Address",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "AnomaliStaxx",
+                    "integrationInstance": "5d55f985-f66f-435b-9ab6-1e9812b2418f"
+                },
+                {
+                    "propertyName": "Username",
+                    "value": "q",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 179,
+                    "propertyDisplayName": "Username",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "AnomaliStaxx",
+                    "integrationInstance": "5d55f985-f66f-435b-9ab6-1e9812b2418f"
+                },
+                {
+                    "propertyName": "Password",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": true,
+                    "id": 180,
+                    "propertyDisplayName": "Password",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "AnomaliStaxx",
+                    "integrationInstance": "5d55f985-f66f-435b-9ab6-1e9812b2418f"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 181,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "AnomaliStaxx",
+                    "integrationInstance": "5d55f985-f66f-435b-9ab6-1e9812b2418f"
+                },
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 183,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "AnomaliStaxx",
+                    "integrationInstance": "5d55f985-f66f-435b-9ab6-1e9812b2418f"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "ServiceNow",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "ServiceNow_1",
+            "settings": [
+                {
+                    "propertyName": "Api Root",
+                    "value": "https://{dev-instance}.service-now.com/api/now/v1/",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 184,
+                    "propertyDisplayName": "Api Root",
+                    "propertyDescription": "API root of the ServiceNow instance.",
+                    "integrationIdentifier": "ServiceNow",
+                    "integrationInstance": "982da786-ac3a-4cff-a234-081ddce24958"
+                },
+                {
+                    "propertyName": "Username",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": false,
+                    "id": 185,
+                    "propertyDisplayName": "Username",
+                    "propertyDescription": "Username of the ServiceNow account. Note: \"Username\" and \"Password\" need to be provided together to authenticate to API via \"password\" flow.",
+                    "integrationIdentifier": "ServiceNow",
+                    "integrationInstance": "982da786-ac3a-4cff-a234-081ddce24958"
+                },
+                {
+                    "propertyName": "Password",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": false,
+                    "id": 186,
+                    "propertyDisplayName": "Password",
+                    "propertyDescription": "Password of the ServiceNow account. Note: \"Username\" and \"Password\" need to be provided together to authenticate to API via \"password\" flow.",
+                    "integrationIdentifier": "ServiceNow",
+                    "integrationInstance": "982da786-ac3a-4cff-a234-081ddce24958"
+                },
+                {
+                    "propertyName": "Incident Table",
+                    "value": "incident",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": false,
+                    "id": 187,
+                    "propertyDisplayName": "Incident Table",
+                    "propertyDescription": "Default table that should be used across actions that work with incidents.",
+                    "integrationIdentifier": "ServiceNow",
+                    "integrationInstance": "982da786-ac3a-4cff-a234-081ddce24958"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 188,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verify the SSL certificate for the connection to the ServiceNow server is valid.",
+                    "integrationIdentifier": "ServiceNow",
+                    "integrationInstance": "982da786-ac3a-4cff-a234-081ddce24958"
+                },
+                {
+                    "propertyName": "Client ID",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": false,
+                    "id": 189,
+                    "propertyDisplayName": "Client ID",
+                    "propertyDescription": "Client ID of the ServiceNow account. Note: \"Client ID\" and \"Client Secret\" need to be provided together to authenticate to API via \"client_credentials\" flow. If \"Refresh Token\" is provided, then integration will use \"refresh_token\" flow.",
+                    "integrationIdentifier": "ServiceNow",
+                    "integrationInstance": "982da786-ac3a-4cff-a234-081ddce24958"
+                },
+                {
+                    "propertyName": "Client Secret",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": false,
+                    "id": 190,
+                    "propertyDisplayName": "Client Secret",
+                    "propertyDescription": "Client Secret of the ServiceNow account. Note: \"Client ID\" and \"Client Secret\" need to be provided together to authenticate to API via \"client_credentials\" flow. If \"Refresh Token\" is provided, then integration will use \"refresh_token\" flow.",
+                    "integrationIdentifier": "ServiceNow",
+                    "integrationInstance": "982da786-ac3a-4cff-a234-081ddce24958"
+                },
+                {
+                    "propertyName": "Refresh Token",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": false,
+                    "id": 191,
+                    "propertyDisplayName": "Refresh Token",
+                    "propertyDescription": "Refresh Token for the \"refresh_token\" flow. Note: \"Client ID\" and \"Client Secret\" need to be provided.",
+                    "integrationIdentifier": "ServiceNow",
+                    "integrationInstance": "982da786-ac3a-4cff-a234-081ddce24958"
+                },
+                {
+                    "propertyName": "Use Oauth Authentication",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 192,
+                    "propertyDisplayName": "Use Oauth Authentication",
+                    "propertyDescription": "If enabled, integration will try to use \"client_credentials\" or \"refresh_token\" flow.",
+                    "integrationIdentifier": "ServiceNow",
+                    "integrationInstance": "982da786-ac3a-4cff-a234-081ddce24958"
+                },
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 194,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "ServiceNow",
+                    "integrationInstance": "982da786-ac3a-4cff-a234-081ddce24958"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "Shodan",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "Shodan_1",
+            "settings": [
+                {
+                    "propertyName": "API key",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": true,
+                    "id": 195,
+                    "propertyDisplayName": "API key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Shodan",
+                    "integrationInstance": "be1aed4c-ae6c-44e3-99d5-89796582d7f4"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 196,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "Shodan",
+                    "integrationInstance": "be1aed4c-ae6c-44e3-99d5-89796582d7f4"
+                },
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 198,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "Shodan",
+                    "integrationInstance": "be1aed4c-ae6c-44e3-99d5-89796582d7f4"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "RecordedFuture",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "RecordedFuture_1",
+            "settings": [
+                {
+                    "propertyName": "ApiUrl",
+                    "value": "https://api.recordedfuture.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 199,
+                    "propertyDisplayName": "Api Url",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "RecordedFuture",
+                    "integrationInstance": "98dbc90a-733e-4eb3-85c7-7c6cfe4b6dcd"
+                },
+                {
+                    "propertyName": "ApiKey",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": true,
+                    "id": 200,
+                    "propertyDisplayName": "Api Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "RecordedFuture",
+                    "integrationInstance": "98dbc90a-733e-4eb3-85c7-7c6cfe4b6dcd"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 201,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "RecordedFuture",
+                    "integrationInstance": "98dbc90a-733e-4eb3-85c7-7c6cfe4b6dcd"
+                },
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 203,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "RecordedFuture",
+                    "integrationInstance": "98dbc90a-733e-4eb3-85c7-7c6cfe4b6dcd"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "SentinelOneV2",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "SentinelOneV2_1",
+            "settings": [
+                {
+                    "propertyName": "Api Root",
+                    "value": "https://{server}.SentinelOne.net/",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 204,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "SentinelOneV2",
+                    "integrationInstance": "c071450c-9433-400b-a292-69fcc2f76219"
+                },
+                {
+                    "propertyName": "API Token",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": true,
+                    "id": 205,
+                    "propertyDisplayName": "API Token",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "SentinelOneV2",
+                    "integrationInstance": "c071450c-9433-400b-a292-69fcc2f76219"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 206,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "SentinelOneV2",
+                    "integrationInstance": "c071450c-9433-400b-a292-69fcc2f76219"
+                },
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 208,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "SentinelOneV2",
+                    "integrationInstance": "c071450c-9433-400b-a292-69fcc2f76219"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "AzureADIdentityProtection",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "AzureADIdentityProtection_1",
+            "settings": [
+                {
+                    "propertyName": "Login API Root",
+                    "value": "https://login.microsoftonline.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": false,
+                    "id": 209,
+                    "propertyDisplayName": "Login API Root",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "AzureADIdentityProtection",
+                    "integrationInstance": "cf0f19b5-ce6a-454b-bb1b-61a11a9b3924"
+                },
+                {
+                    "propertyName": "API Root",
+                    "value": "https://graph.microsoft.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 210,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "AzureADIdentityProtection",
+                    "integrationInstance": "cf0f19b5-ce6a-454b-bb1b-61a11a9b3924"
+                },
+                {
+                    "propertyName": "Tenant ID",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 211,
+                    "propertyDisplayName": "Tenant ID",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "AzureADIdentityProtection",
+                    "integrationInstance": "cf0f19b5-ce6a-454b-bb1b-61a11a9b3924"
+                },
+                {
+                    "propertyName": "Client ID",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 212,
+                    "propertyDisplayName": "Client ID",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "AzureADIdentityProtection",
+                    "integrationInstance": "cf0f19b5-ce6a-454b-bb1b-61a11a9b3924"
+                },
+                {
+                    "propertyName": "Client Secret",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": true,
+                    "id": 213,
+                    "propertyDisplayName": "Client Secret",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "AzureADIdentityProtection",
+                    "integrationInstance": "cf0f19b5-ce6a-454b-bb1b-61a11a9b3924"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 214,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "AzureADIdentityProtection",
+                    "integrationInstance": "cf0f19b5-ce6a-454b-bb1b-61a11a9b3924"
+                },
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 216,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "AzureADIdentityProtection",
+                    "integrationInstance": "cf0f19b5-ce6a-454b-bb1b-61a11a9b3924"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "PaloAltoPanorama",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "PaloAltoPanorama_1",
+            "settings": [
+                {
+                    "propertyName": "Api Root",
+                    "value": "https://x.x.x.x/api",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 217,
+                    "propertyDisplayName": "Api Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "PaloAltoPanorama",
+                    "integrationInstance": "73318ac1-4de4-4957-8cd3-b02c12125d38"
+                },
+                {
+                    "propertyName": "Username",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 218,
+                    "propertyDisplayName": "Username",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "PaloAltoPanorama",
+                    "integrationInstance": "73318ac1-4de4-4957-8cd3-b02c12125d38"
+                },
+                {
+                    "propertyName": "Password",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": true,
+                    "id": 219,
+                    "propertyDisplayName": "Password",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "PaloAltoPanorama",
+                    "integrationInstance": "73318ac1-4de4-4957-8cd3-b02c12125d38"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 220,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "PaloAltoPanorama",
+                    "integrationInstance": "73318ac1-4de4-4957-8cd3-b02c12125d38"
+                },
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 222,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "PaloAltoPanorama",
+                    "integrationInstance": "73318ac1-4de4-4957-8cd3-b02c12125d38"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "SCCEnterprise",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "SCCEnterprise_1",
+            "settings": [
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 224,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "SCCEnterprise",
+                    "integrationInstance": "161db0c2-c1ed-4b0c-a652-9d59b95ae8f0"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "SSLLabs",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "SSLLabs_1",
+            "settings": [
+                {
+                    "propertyName": "Warning Threshold",
+                    "value": "C",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 225,
+                    "propertyDisplayName": "Warning Threshold",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SSLLabs",
+                    "integrationInstance": "cedd10c7-7fec-45df-ae03-bae6a6855608"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 226,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "SSLLabs",
+                    "integrationInstance": "cedd10c7-7fec-45df-ae03-bae6a6855608"
+                },
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 228,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "SSLLabs",
+                    "integrationInstance": "cedd10c7-7fec-45df-ae03-bae6a6855608"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "McAfeeESM",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "McAfeeESM_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://{ip}/rs/",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 229,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "API root for the instance.",
+                    "integrationIdentifier": "McAfeeESM",
+                    "integrationInstance": "818ef8e9-e8f4-468e-845b-e2063112e8ec"
+                },
+                {
+                    "propertyName": "Username",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 230,
+                    "propertyDisplayName": "Username",
+                    "propertyDescription": "Username for the instance.",
+                    "integrationIdentifier": "McAfeeESM",
+                    "integrationInstance": "818ef8e9-e8f4-468e-845b-e2063112e8ec"
+                },
+                {
+                    "propertyName": "Password",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": true,
+                    "id": 231,
+                    "propertyDisplayName": "Password",
+                    "propertyDescription": "Password for the instance.",
+                    "integrationIdentifier": "McAfeeESM",
+                    "integrationInstance": "818ef8e9-e8f4-468e-845b-e2063112e8ec"
+                },
+                {
+                    "propertyName": "Product Version",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 232,
+                    "propertyDisplayName": "Product Version",
+                    "propertyDescription": "Product version. Possible values: 11.1-11.5",
+                    "integrationIdentifier": "McAfeeESM",
+                    "integrationInstance": "818ef8e9-e8f4-468e-845b-e2063112e8ec"
+                },
+                {
+                    "propertyName": "Use AES Encryption",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 233,
+                    "propertyDisplayName": "Use AES Encryption",
+                    "propertyDescription": "If enabled, integration will authenticate using AES Encryption and will not do Base64 inside the code. Note: you need to provide Login and Password already as Base64 encoded strings.",
+                    "integrationIdentifier": "McAfeeESM",
+                    "integrationInstance": "818ef8e9-e8f4-468e-845b-e2063112e8ec"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 234,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verifies that the SSL certificate for the connection to the McAfee ESM server is valid.",
+                    "integrationIdentifier": "McAfeeESM",
+                    "integrationInstance": "818ef8e9-e8f4-468e-845b-e2063112e8ec"
+                },
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 236,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "McAfeeESM",
+                    "integrationInstance": "818ef8e9-e8f4-468e-845b-e2063112e8ec"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "McAfeeMvisionEPOV2",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "McAfeeMvisionEPOV2_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://api.mvision.mcafee.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 6,
+                    "isMandatory": true,
+                    "id": 237,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "McAfeeMvisionEPOV2",
+                    "integrationInstance": "5f3b3a86-8ff3-43b3-83b6-39a8623bb1ac"
+                },
+                {
+                    "propertyName": "Client ID",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 238,
+                    "propertyDisplayName": "Client ID",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "McAfeeMvisionEPOV2",
+                    "integrationInstance": "5f3b3a86-8ff3-43b3-83b6-39a8623bb1ac"
+                },
+                {
+                    "propertyName": "Client Secret",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": true,
+                    "id": 239,
+                    "propertyDisplayName": "Client Secret",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "McAfeeMvisionEPOV2",
+                    "integrationInstance": "5f3b3a86-8ff3-43b3-83b6-39a8623bb1ac"
+                },
+                {
+                    "propertyName": "API Key",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": true,
+                    "id": 240,
+                    "propertyDisplayName": "API Key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "McAfeeMvisionEPOV2",
+                    "integrationInstance": "5f3b3a86-8ff3-43b3-83b6-39a8623bb1ac"
+                },
+                {
+                    "propertyName": "Scopes",
+                    "value": "epo.device.r epo.device.w epo.evt.r epo.taggroup.r epo.taggroup.w epo.tags.r epo.tags.w mi.user.investigate soc.inv.ade",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 241,
+                    "propertyDisplayName": "Scopes",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "McAfeeMvisionEPOV2",
+                    "integrationInstance": "5f3b3a86-8ff3-43b3-83b6-39a8623bb1ac"
+                },
+                {
+                    "propertyName": "IAM Root",
+                    "value": "https://iam.mcafee-cloud.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 6,
+                    "isMandatory": false,
+                    "id": 242,
+                    "propertyDisplayName": "IAM Root",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "McAfeeMvisionEPOV2",
+                    "integrationInstance": "5f3b3a86-8ff3-43b3-83b6-39a8623bb1ac"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 243,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "McAfeeMvisionEPOV2",
+                    "integrationInstance": "5f3b3a86-8ff3-43b3-83b6-39a8623bb1ac"
+                },
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 245,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "McAfeeMvisionEPOV2",
+                    "integrationInstance": "5f3b3a86-8ff3-43b3-83b6-39a8623bb1ac"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "GoogleSecOpsAiAgents",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "System All Environments Default Instance",
+            "settings": [
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 246,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verify the SSL certificate for the connection.",
+                    "integrationIdentifier": "GoogleSecOpsAiAgents",
+                    "integrationInstance": "21d47e65-2d2f-47d1-91f8-678a446be5c1"
+                },
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 248,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "GoogleSecOpsAiAgents",
+                    "integrationInstance": "21d47e65-2d2f-47d1-91f8-678a446be5c1"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "PaloAltoPrismaCloud",
+        "settings": {
+            "instanceDescription": null,
+            "instanceName": "PaloAltoPrismaCloud_1",
+            "settings": [
+                {
+                    "propertyName": "API Root",
+                    "value": "https://api3.prismacloud.io",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 249,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "API root of the Palo Alto Prisma Cloud instance.",
+                    "integrationIdentifier": "PaloAltoPrismaCloud",
+                    "integrationInstance": "ffbc4811-b32d-430a-97eb-24d989b88b27"
+                },
+                {
+                    "propertyName": "Access Key ID",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 2,
+                    "isMandatory": true,
+                    "id": 250,
+                    "propertyDisplayName": "Access Key ID",
+                    "propertyDescription": "Access Key ID of the Palo Alto Prisma Cloud account.",
+                    "integrationIdentifier": "PaloAltoPrismaCloud",
+                    "integrationInstance": "ffbc4811-b32d-430a-97eb-24d989b88b27"
+                },
+                {
+                    "propertyName": "Secret Access Key",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 3,
+                    "isMandatory": true,
+                    "id": 251,
+                    "propertyDisplayName": "Secret Access Key",
+                    "propertyDescription": "Secret Access Key of the Palo Alto Prisma Cloud account.",
+                    "integrationIdentifier": "PaloAltoPrismaCloud",
+                    "integrationInstance": "ffbc4811-b32d-430a-97eb-24d989b88b27"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 0,
+                    "isMandatory": false,
+                    "id": 252,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If checked, verifies that the SSL certificate for the connection to the Palo Alto Prisma Cloud server is valid.",
+                    "integrationIdentifier": "PaloAltoPrismaCloud",
+                    "integrationInstance": "ffbc4811-b32d-430a-97eb-24d989b88b27"
+                },
+                {
+                    "propertyName": "AgentIdentifier",
+                    "value": null,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": 9,
+                    "isMandatory": false,
+                    "id": 254,
+                    "propertyDisplayName": "Agent",
+                    "propertyDescription": null,
+                    "integrationIdentifier": "PaloAltoPrismaCloud",
+                    "integrationInstance": "ffbc4811-b32d-430a-97eb-24d989b88b27"
+                }
+            ]
+        }
+    }
+]
