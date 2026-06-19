@@ -1,0 +1,229 @@
+{
+    "name": "projects/project/locations/location/instances/instance/integrations/SymantecICDX/connectors/9/connectorInstances/16",
+    "id": 16,
+    "custom": false,
+    "identifier": "SymantecICDX query Connector_3b2775f6-223d-476d-bd32-9f201a2e36cd",
+    "connectorDefinitionName": "SymantecICDX query Connector",
+    "integration": "SymantecICDX",
+    "remote": false,
+    "loggingEnabledUntilUnixMs": 0,
+    "connectorId": 9,
+    "integrationVersion": "10",
+    "statistics": {
+        "pastDayAlertsCount": 0,
+        "avgAlertsPerDay": 0
+    },
+    "parameters": [
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Api Root",
+            "displayName": "Api Root",
+            "value": "https://127.0.0.1",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Api Token",
+            "displayName": "Api Token",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "Whether to use ssl on connection or not",
+            "displayName": "Verify SSL",
+            "value": "FALSE",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Search Query",
+            "displayName": "Search Query",
+            "value": "dummy_valid_string",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Max count of events to pull in one cycle. e.g. 20",
+            "displayName": "Events Limit",
+            "value": "10",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Max number of days to fetch events since. e.g. 3",
+            "displayName": "Max Days Backwards",
+            "value": "1",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The address of the proxy server to use.",
+            "displayName": "Proxy Server Address",
+            "value": "https://127.0.0.1",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The proxy username to authenticate with.",
+            "displayName": "Proxy Username",
+            "value": "dummy_valid_string",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "The proxy password to authenticate with.",
+            "displayName": "Proxy Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "status": 1,
+    "updateAvailable": false,
+    "enabled": true,
+    "environment": "Environment_9",
+    "displayName": "Connector_9_SymantecICDX",
+    "description": "Fetching events from SymantecICDX server using a query",
+    "intervalSeconds": 60,
+    "version": 1,
+    "productFieldName": "device_product",
+    "eventFieldName": "name",
+    "timeoutSeconds": 60,
+    "params": [
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Api Root",
+            "displayName": "Api Root",
+            "value": "https://127.0.0.1",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Api Token",
+            "displayName": "Api Token",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "Whether to use ssl on connection or not",
+            "displayName": "Verify SSL",
+            "value": "FALSE",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Search Query",
+            "displayName": "Search Query",
+            "value": "dummy_valid_string",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Max count of events to pull in one cycle. e.g. 20",
+            "displayName": "Events Limit",
+            "value": "10",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Max number of days to fetch events since. e.g. 3",
+            "displayName": "Max Days Backwards",
+            "value": "1",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The address of the proxy server to use.",
+            "displayName": "Proxy Server Address",
+            "value": "https://127.0.0.1",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The proxy username to authenticate with.",
+            "displayName": "Proxy Username",
+            "value": "dummy_valid_string",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "The proxy password to authenticate with.",
+            "displayName": "Proxy Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ]
+}
