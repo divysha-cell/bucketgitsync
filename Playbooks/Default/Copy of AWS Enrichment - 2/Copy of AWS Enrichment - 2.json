@@ -1,6 +1,6 @@
 {
     "id": 0,
-    "identifier": "f900f671-3634-4b48-8156-9fce46df7f57",
+    "identifier": "6f98ddff-452d-4922-993d-4a64188bc2c8",
     "version": "0",
     "isEnabled": true,
     "isDebugMode": false,
@@ -15,12 +15,12 @@
     ],
     "categoryName": "Default",
     "categoryId": 1,
-    "originalPlaybookIdentifier": "f900f671-3634-4b48-8156-9fce46df7f57",
+    "originalPlaybookIdentifier": "6f98ddff-452d-4922-993d-4a64188bc2c8",
     "creationTimeUnixTimeInMs": 1781690275107,
-    "modificationTimeUnixTimeInMs": 1781773355494,
+    "modificationTimeUnixTimeInMs": 1781863419657,
     "trigger": {
         "id": 0,
-        "identifier": "9fe8e3e1-fac3-42bf-9943-e76df49525b8",
+        "identifier": "4417e764-0975-4082-8543-380cbf7c2976",
         "type": 11,
         "logicalOperator": 0,
         "conditions": [],
@@ -59,13 +59,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "f900f671-3634-4b48-8156-9fce46df7f57",
+            "workflowIdentifier": "6f98ddff-452d-4922-993d-4a64188bc2c8",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781773354484,
-            "modificationTimeUnixTimeInMs": 1781773355494,
+            "creationTimeUnixTimeInMs": 1781863418856,
+            "modificationTimeUnixTimeInMs": 1781863419657,
             "additionalProperties": {}
         },
         {
@@ -168,8 +168,7 @@
                     "id": 0,
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
-                    "additionalProperties": {},
-                    "InstanceDisplayName": "System Default Instance"
+                    "additionalProperties": {}
                 },
                 {
                     "name": "MessageToAssignee",
@@ -231,13 +230,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "f900f671-3634-4b48-8156-9fce46df7f57",
+            "workflowIdentifier": "6f98ddff-452d-4922-993d-4a64188bc2c8",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781773354484,
-            "modificationTimeUnixTimeInMs": 1781773355494,
+            "creationTimeUnixTimeInMs": 1781863418856,
+            "modificationTimeUnixTimeInMs": 1781863419657,
             "additionalProperties": {}
         },
         {
@@ -358,13 +357,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "f900f671-3634-4b48-8156-9fce46df7f57",
+            "workflowIdentifier": "6f98ddff-452d-4922-993d-4a64188bc2c8",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781773354484,
-            "modificationTimeUnixTimeInMs": 1781773355494,
+            "creationTimeUnixTimeInMs": 1781863418856,
+            "modificationTimeUnixTimeInMs": 1781863419657,
             "additionalProperties": {}
         },
         {
@@ -540,13 +539,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "f900f671-3634-4b48-8156-9fce46df7f57",
+            "workflowIdentifier": "6f98ddff-452d-4922-993d-4a64188bc2c8",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781773354484,
-            "modificationTimeUnixTimeInMs": 1781773355494,
+            "creationTimeUnixTimeInMs": 1781863418856,
+            "modificationTimeUnixTimeInMs": 1781863419657,
             "additionalProperties": {}
         }
     ],

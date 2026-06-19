@@ -229,27 +229,59 @@
 ## Jobs
 |Name|Description|
 |----|-----------|
-|Job_1|Automated test job 1|
-|Job_2|Automated test job 2|
-|Job_26|Automated test job 26|
-|Job_27|Automated test job 27|
-|Job_28|Automated test job 28|
-|Job_29|Automated test job 29|
-|Job_3|Automated test job 3|
-|Job_30|Automated test job 30|
-|Job_31|Automated test job 31|
-|Job_32|Automated test job 32|
-|Job_33|Automated test job 33|
-|Job_34|Automated test job 34|
-|Job_4|Automated test job 4|
-|Job_5|Automated test job 5|
+|Job_1|Automated marketplace job 1 for QRadar|
+|Job_10|Automated marketplace job 10 for ServiceNow|
+|Job_11|Automated marketplace job 11 for Splunk|
+|Job_12|Automated marketplace job 12 for Splunk|
+|Job_13|Automated marketplace job 13 for QRadar|
+|Job_14|Automated marketplace job 14 for SCCEnterprise|
+|Job_15|Automated marketplace job 15 for SCCEnterprise|
+|Job_16|Automated marketplace job 16 for SCCEnterprise|
+|Job_17|Automated marketplace job 17 for SentinelOneV2|
+|Job_18|Automated marketplace job 18 for SentinelOneV2|
+|Job_19|Automated marketplace job 19 for ServiceNow|
+|Job_2|Automated marketplace job 2 for SCCEnterprise|
+|Job_20|Automated marketplace job 20 for ServiceNow|
+|Job_21|Automated marketplace job 21 for ServiceNow|
+|Job_22|Automated marketplace job 22 for ServiceNow|
+|Job_23|Automated marketplace job 23 for Splunk|
+|Job_24|Automated marketplace job 24 for Splunk|
+|Job_25|Automated marketplace job 25 for QRadar|
+|Job_26|Automated marketplace job 26 for SCCEnterprise|
+|Job_27|Automated marketplace job 27 for SCCEnterprise|
+|Job_28|Automated marketplace job 28 for SCCEnterprise|
+|Job_29|Automated marketplace job 29 for SentinelOneV2|
+|Job_3|Automated marketplace job 3 for SCCEnterprise|
+|Job_30|Automated marketplace job 30 for SentinelOneV2|
+|Job_31|Automated marketplace job 31 for ServiceNow|
+|Job_32|Automated marketplace job 32 for ServiceNow|
+|Job_33|Automated marketplace job 33 for ServiceNow|
+|Job_34|Automated marketplace job 34 for ServiceNow|
+|Job_35|Automated marketplace job 35 for Splunk|
+|Job_36|Automated marketplace job 36 for Splunk|
+|Job_37|Automated marketplace job 37 for QRadar|
+|Job_38|Automated marketplace job 38 for SCCEnterprise|
+|Job_39|Automated marketplace job 39 for SCCEnterprise|
+|Job_4|Automated marketplace job 4 for SCCEnterprise|
+|Job_40|Automated marketplace job 40 for SCCEnterprise|
+|Job_41|Automated marketplace job 41 for SentinelOneV2|
+|Job_42|Automated marketplace job 42 for SentinelOneV2|
+|Job_43|Automated marketplace job 43 for ServiceNow|
+|Job_44|Automated marketplace job 44 for ServiceNow|
+|Job_45|Automated marketplace job 45 for ServiceNow|
+|Job_46|Automated marketplace job 46 for ServiceNow|
+|Job_47|Automated marketplace job 47 for Splunk|
+|Job_48|Automated marketplace job 48 for Splunk|
+|Job_49|Automated marketplace job 49 for QRadar|
+|Job_5|Automated marketplace job 5 for SentinelOneV2|
+|Job_50|Automated marketplace job 50 for SCCEnterprise|
 |Job_51|Automated test job 51|
 |Job_52|Automated test job 52|
 |Job_53|Automated test job 53|
 |Job_54|Automated test job 54|
 |Job_55|Automated test job 55|
-|Job_6|Automated test job 6|
-|Job_7|Automated test job 7|
-|Job_8|Automated test job 8|
-|Job_9|Automated test job 9|
+|Job_6|Automated marketplace job 6 for SentinelOneV2|
+|Job_7|Automated marketplace job 7 for ServiceNow|
+|Job_8|Automated marketplace job 8 for ServiceNow|
+|Job_9|Automated marketplace job 9 for ServiceNow|
 

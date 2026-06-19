@@ -1,56 +1,50 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/GoogleChronicle/jobs/1/jobInstances/3",
+    "name": "projects/project/locations/location/instances/instance/integrations/QRadar/jobs/27/jobInstances/62",
     "id": 0,
-    "job": "Google Chronicle Alerts Creator Job",
-    "integration": "GoogleChronicle",
-    "createTime": 1781862803844,
-    "updateTime": 1781862820686,
+    "job": "SyncCloseOffenses",
+    "integration": "QRadar",
+    "createTime": 1781863367959,
+    "updateTime": 1781863468348,
     "custom": false,
-    "script": "from SiemplifyJob import SiemplifyJob\nfrom SiemplifyUtils import output_handler\n\nfrom TIPCommon.extraction import extract_action_param\n\nfrom consts import (\n    ALERTS_CREATOR_BATCH_SIZE,\n    ALERTS_CREATOR_MAX_API_RETRIES,\n    ALERTS_CREATOR_MAX_ITERATIONS,\n    ALERTS_CREATOR_RETRY_TIME_DELTA_MS,\n    ALERTS_CREATOR_SCRIPT_NAME,\n)\nfrom utils import retry_decorator, validate_alerts_creator_support\nfrom GoogleChronicleManagerV2 import GoogleChronicleManagerV2\n\n\n\nclass JobParametersParser:\n    \"\"\"This class parses the input parameters of the job.\"\"\"\n\n    def __init__(self, siemplify_):\n        self.environment = JobParametersParser.parse_environment(siemplify_)\n        self.api_root = JobParametersParser.parse_api_root(siemplify_)\n        self.creds = JobParametersParser.parse_creds(siemplify_)\n        self.verify_ssl = JobParametersParser.parse_verify_ssl(siemplify_)\n        self.workload_identity_email = (\n            JobParametersParser.parse_workload_identity_email(siemplify_)\n        )\n\n    @staticmethod\n    def parse_environment(siemplify):\n        return extract_action_param(\n            siemplify=siemplify,\n            param_name=\"Environment\",\n            is_mandatory=True,\n            print_value=True,\n            default_value=\"Default Environment\",\n        )\n\n    @staticmethod\n    def parse_api_root(siemplify):\n        return extract_action_param(\n            siemplify=siemplify,\n            param_name=\"API Root\",\n            is_mandatory=True,\n            print_value=True,\n        )\n\n    @staticmethod\n    def parse_creds(siemplify):\n        return extract_action_param(\n            siemplify=siemplify,\n            param_name=\"User's Service Account\",\n            is_mandatory=False,\n            print_value=False,\n        )\n\n    @staticmethod\n    def parse_verify_ssl(siemplify):\n        return extract_action_param(\n            siemplify=siemplify,\n            param_name=\"Verify SSL\",\n            default_value=True,\n            input_type=bool,\n            print_value=True,\n        )\n\n    @staticmethod\n    def parse_workload_identity_email(siemplify):\n        return extract_action_param(\n            siemplify=siemplify,\n            param_name=\"Workload Identity Email\",\n            print_value=False,\n        )\n\n\ndef log_fetched_alerts(siemplify, fetched_alerts):\n    \"\"\"Log fetched SOAR alerts group identifiers\"\"\"\n    ids = [alert.get(\"alert_group_identifier\") for alert in fetched_alerts]\n    siemplify.LOGGER.info(f\"Fetched the following SOAR alerts: {ids}\")\n\n\ndef verify_soar_sync_results(siemplify, sync_results):\n    \"\"\"Count failed SOAR sync status updates and warn about them.\"\"\"\n    failed = 0\n    for sync_result in sync_results:\n        if not sync_result.updated_in_soar:\n            siemplify.LOGGER.warn(\n                \"SOAR has failed updating the status of alert\"\n                f\" {sync_result.alert_group_identifier}\"\n            )\n        if not sync_result.created_in_siem or (\n            sync_result.created_in_siem and not sync_result.updated_in_soar\n        ):\n            failed += 1\n\n    return failed\n\n\n@output_handler\ndef main():\n    siemplify = SiemplifyJob()\n    siemplify.script_name = ALERTS_CREATOR_SCRIPT_NAME\n    siemplify.LOGGER.info(\"--------------- JOB STARTED ---------------\")\n    job_parameters_parser = JobParametersParser(siemplify)\n    environments = (\n        [job_parameters_parser.environment]\n        if job_parameters_parser.environment\n        else None\n    )\n    batch_size = ALERTS_CREATOR_BATCH_SIZE\n    max_iterations = ALERTS_CREATOR_MAX_ITERATIONS\n    siemplify.LOGGER.info(\"----------------- Main - Started -----------------\")\n\n    @retry_decorator(\n        ALERTS_CREATOR_MAX_API_RETRIES,\n        ALERTS_CREATOR_RETRY_TIME_DELTA_MS,\n        siemplify.LOGGER\n    )\n    def fetch_new_alerts_to_sync(batch_size, environments):\n        return siemplify.fetch_new_alerts_to_sync(batch_size, environments)\n\n    @retry_decorator(\n        ALERTS_CREATOR_MAX_API_RETRIES,\n        ALERTS_CREATOR_RETRY_TIME_DELTA_MS,\n        siemplify.LOGGER\n    )\n    def update_new_alerts_sync_status(request_sync_results, environments):\n        return siemplify.update_new_alerts_sync_status(\n            request_sync_results,\n            environments\n        )\n\n    try:\n        validate_alerts_creator_support(siemplify)\n        manager = GoogleChronicleManagerV2.create_manager_instance(\n            user_service_account=job_parameters_parser.creds,\n            workload_identity_email=job_parameters_parser.workload_identity_email,\n            chronicle_soar=siemplify,\n            api_root=job_parameters_parser.api_root,\n            verify_ssl=job_parameters_parser.verify_ssl,\n        )\n        manager.test_connectivity()\n\n        total_synced = 0\n\n        for i in range(max_iterations):\n            siemplify.LOGGER.info(f\"Starting {i + 1}/{max_iterations} fetch attempt\")\n            siemplify.LOGGER.info(\n                f\"Fetching up to {batch_size} new alerts from the SOAR\"\n            )\n            new_alerts = fetch_new_alerts_to_sync(batch_size, environments)\n\n            new_alerts_count = len(new_alerts)\n            siemplify.LOGGER.info(f\"{new_alerts_count} SOAR alerts were fetched\")\n            if not new_alerts_count:\n                siemplify.LOGGER.info(\"No new SOAR alerts were found. Stopping...\")\n                break\n            log_fetched_alerts(siemplify, new_alerts)\n\n            siemplify.LOGGER.info(\"Dispatching SOAR alerts to SIEM\")\n            request_soar_alerts = manager.convert_new_alerts_to_siem_alerts(new_alerts)\n            response_soar_alerts = manager.batch_create_alerts_in_siem(\n                request_soar_alerts\n            )\n\n            siemplify.LOGGER.info(\"Updating SOAR with SIEM response\")\n            request_sync_results = manager.convert_siem_alerts_to_sync_results(\n                response_soar_alerts\n            )\n            response_sync_results = update_new_alerts_sync_status(\n                request_sync_results, environments\n            )\n            sync_results = manager.build_new_alert_sync_results_from_response(\n                response_sync_results\n            )\n            soar_failed_count = verify_soar_sync_results(siemplify, sync_results)\n            total_synced += new_alerts_count - soar_failed_count\n\n        siemplify.LOGGER.info(f\"Total of {total_synced} alerts were synced in this run\")\n        siemplify.LOGGER.info(\"--------------- JOB FINISHED ---------------\")\n\n    except Exception as error:\n        siemplify.LOGGER.error(f\"Got exception on main handler. Error: {error}\")\n        siemplify.LOGGER.exception(error)\n        raise\n\n\nif __name__ == \"__main__\":\n    main()\n",
-    "author": "Admin",
+    "script": "import datetime\nfrom QRadarManager import QRadarManager\nfrom SiemplifyJob import SiemplifyJob\nfrom SiemplifyUtils import convert_datetime_to_unix_time, utc_now\nfrom SiemplifyUtils import output_handler\nfrom constants import (\n    SYNC_CLOSURE_JOB_SCRIPT_NAME,\n    SIEMPLIFY_CLOSE_REASON,\n    DEFAULT_DAYS_BACKWARDS,\n)\n\nCLOSE_CASE_STATUS = \"CLOSE\"\nCLOSE_CASES_MAX_RESULTS = 10000\n\n\ndef validate_timestamp(last_run_timestamp, offset):\n    \"\"\"\n    Validate timestamp in range\n    :param last_run_timestamp: {datetime} last run timestamp\n    :param offset: {datetime} last run timestamp\n    :return: {datetime} if first run, return current time minus offset time, else return timestamp from file\n    \"\"\"\n    current_time = utc_now()\n    # Check if first run\n    if current_time - last_run_timestamp > datetime.timedelta(days=offset):\n        return current_time - datetime.timedelta(days=offset)\n    else:\n        return last_run_timestamp\n\n\ndef validate_close_reason_id(qradar_manager):\n    \"\"\"\n    You must provide a valid closing_reason_id when you close an offense.\n    :param qradar_manager: instance to qradar manager\n    :return: {int} close reason id\n    \"\"\"\n    reasons = qradar_manager.get_all_closing_reasons()\n    for reason in reasons:\n        # Return existing id of close reason\n        if reason.text == SIEMPLIFY_CLOSE_REASON:\n            return reason.id\n    # Otherwise Siemplify custom reason not exist. Create one and return its id.\n    return qradar_manager.create_close_reason().id\n\n\ndef get_case_and_offense_ids(case):\n    \"\"\"\n    Extract incident case offense ids\n    :param case: cases object\n    :return: {dict} Dict of {case id, offense id, is test case}\n    \"\"\"\n    case_alert_ids = {}\n    for alert in case.get(\"cyber_alerts\", []):\n        case_id = case.get(\"identifier\")\n        ticket_id = alert.get(\"additional_properties\", {}).get(\"TicketId\")\n        offense_id = alert.get(\"additional_properties\", {}).get(\n            \"offense_id\"\n        ) or alert.get(\"additional_properties\", {}).get(\"OFFENSE_ID\")\n        is_test_case = alert.get(\"additional_properties\", {}).get(\"IsTestCase\")\n\n        if not offense_id:\n            continue\n\n        case_alert_ids = {\n            \"case_id\": case_id,\n            \"offense_id\": offense_id,\n            \"ticket_id\": ticket_id,\n            \"is_test_case\": is_test_case,\n        }\n    return case_alert_ids\n\n\n@output_handler\ndef main():\n    siemplify = SiemplifyJob()\n\n    try:\n        siemplify.script_name = SYNC_CLOSURE_JOB_SCRIPT_NAME\n\n        api_root = siemplify.extract_job_param(param_name=\"API Root\", is_mandatory=True)\n        api_token = siemplify.extract_job_param(\n            param_name=\"API Token\", is_mandatory=True\n        )\n        api_version = siemplify.extract_job_param(param_name=\"API Version\")\n        days_backwards = siemplify.extract_job_param(\n            param_name=\"Days Backwards\",\n            input_type=int,\n            default_value=DEFAULT_DAYS_BACKWARDS,\n        )\n\n        siemplify.LOGGER.info(\"--------------- JOB STARTED ---------------\")\n\n        manager = QRadarManager(api_root, api_token, api_version)\n        # Validate that simeplify close reason exists in qradar instance\n        close_reason_id = validate_close_reason_id(manager)\n\n        # Get last Successful execution time.\n        last_successful_execution_time = siemplify.fetch_timestamp(datetime_format=True)\n        last_successful_execution_time = validate_timestamp(\n            last_successful_execution_time, days_backwards\n        )\n        unix_last_successful_execution = convert_datetime_to_unix_time(\n            last_successful_execution_time\n        )\n        siemplify.LOGGER.info(\n            f\"Last successful execution run: {str(last_successful_execution_time)}\"\n        )\n\n        siemplify.LOGGER.info(\"--- Start Closing Offenses in Qradar ---\")\n\n        # Get all closed case ids\n        closed_cases_ids = siemplify.get_cases_ids_by_filter(\n            status=CLOSE_CASE_STATUS,\n            close_time_from_unix_time_in_ms=unix_last_successful_execution,\n            max_results=CLOSE_CASES_MAX_RESULTS,\n        )\n\n        # Get all closed cases and their relevant details\n        closed_cases = [\n            siemplify._get_case_by_id(case_id) for case_id in closed_cases_ids\n        ]\n        cases_and_offenses = [get_case_and_offense_ids(item) for item in closed_cases]\n\n        # Get all scope alerts.\n        closed_cases_alerts_ids = (\n            siemplify.get_alerts_ticket_ids_from_cases_closed_since_timestamp(\n                unix_last_successful_execution, None\n            )\n        )\n\n        # Filter out test cases\n        non_test_cases = [\n            item for item in cases_and_offenses if item.get(\"is_test_case\") == \"False\"\n        ]\n        closed_cases_alerts_ids = [\n            item.get(\"offense_id\")\n            for item in non_test_cases\n            if item.get(\"ticket_id\") in closed_cases_alerts_ids\n        ]\n\n        # Save current time at timestamp to make sure all alerts are taken.\n        new_timestamp = utc_now()\n\n        siemplify.LOGGER.info(f\"Found {len(closed_cases_alerts_ids)} closed alerts\")\n\n        # In Qradar alerts ticket ids are the related offenses ids\n        qradar_offenses = closed_cases_alerts_ids\n\n        for offense_id in qradar_offenses:\n            try:\n                manager.close_offense(offense_id, close_reason_id)\n                siemplify.LOGGER.info(f\"Qradar offense - {offense_id} was closed\")\n\n            except Exception as e:\n                siemplify.LOGGER.error(\n                    f\"Failed to close offense {offense_id}. Error: {str(e)}.\"\n                )\n\n        siemplify.LOGGER.info(\n            \" --- Finish synchronize closure from Siemplify to Qradar offenses --- \"\n        )\n\n        # Update last successful run time with new_timestamp\n        siemplify.save_timestamp(new_timestamp)\n        siemplify.LOGGER.info(\"Update Job last execution timestamp\")\n        siemplify.LOGGER.info(\"--------------- JOB FINISHED ---------------\")\n\n    except Exception as err:\n        siemplify.LOGGER.exception(f\"Got exception on main handler.Error: {err}\")\n        raise\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "author": "admin",
     "lastRunStatus": "Error",
-    "lastRunTime": 1781862820675,
-    "uniqueIdentifier": "058f86f1-912b-4210-b05e-01b106117248",
+    "lastRunTime": 1781863468335,
+    "uniqueIdentifier": "56f29ad9-729c-499e-8661-63e7c71591e1",
     "enabled": true,
     "displayName": "Job_1",
-    "description": "Automated test job 1",
+    "description": "Automated marketplace job 1 for QRadar",
     "intervalSeconds": 60,
     "advanced": false,
+    "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/qradar#synccloseoffenses",
     "parameters": [
         {
-            "id": 6,
-            "mandatory": true,
-            "type": "String",
-            "displayName": "Environment",
-            "value": "Default Environment"
-        },
-        {
-            "id": 7,
+            "id": 373,
             "mandatory": true,
             "type": "String",
             "displayName": "API Root",
-            "value": "https://backstory.googleapis.com"
+            "value": "https://x.x.x.x"
         },
         {
-            "id": 8,
-            "mandatory": false,
+            "id": 377,
+            "mandatory": true,
             "type": "Password",
-            "displayName": "User's Service Account",
+            "displayName": "API Token",
             "value": "***************"
         },
         {
-            "id": 9,
+            "id": 378,
             "mandatory": false,
-            "type": "Password",
-            "displayName": "Workload Identity Email",
-            "value": "***************"
+            "type": "String",
+            "displayName": "API Version",
+            "value": ""
         },
         {
-            "id": 10,
+            "id": 380,
             "mandatory": false,
-            "type": "Boolean",
-            "displayName": "Verify SSL",
-            "value": "true"
+            "type": "Int",
+            "displayName": "Days Backwards",
+            "value": "1"
         }
     ]
 }

@@ -7,7 +7,7 @@
         "product": "SentinelOneV2",
         "eventName": null,
         "mappingStatus": null,
-        "changeSource": 0,
+        "changeSource": "ChangeSourceUnspecified",
         "exampleEventFields": []
     },
     {
@@ -18,7 +18,7 @@
         "product": "SentinelOne Event",
         "eventName": null,
         "mappingStatus": null,
-        "changeSource": 0,
+        "changeSource": "ChangeSourceUnspecified",
         "exampleEventFields": []
     },
     {
@@ -29,7 +29,7 @@
         "product": "Alerts",
         "eventName": null,
         "mappingStatus": null,
-        "changeSource": 0,
+        "changeSource": "ChangeSourceUnspecified",
         "exampleEventFields": []
     }
 ]

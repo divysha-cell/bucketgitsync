@@ -1,0 +1,70 @@
+{
+    "name": "projects/project/locations/location/instances/instance/integrations/SCCEnterprise/jobs/29/jobInstances/92",
+    "id": 0,
+    "job": "Sync SCC-ServiceNow Tickets",
+    "integration": "SCCEnterprise",
+    "createTime": 1781863368376,
+    "updateTime": 1781863486252,
+    "custom": false,
+    "script": "\"\"\"BiDi Sync job SOAR <-> ServiceNow\"\"\"\n\nfrom __future__ import annotations\n\nimport dataclasses\nfrom collections import defaultdict\nfrom datetime import datetime\nfrom typing import Iterable, Mapping, Sequence\n\nfrom SiemplifyJob import SiemplifyJob\nfrom TIPCommon import extraction\nfrom TIPCommon import validation\nfrom TIPCommon.consts import SOAR_COMMENT_PREFIX\nfrom TIPCommon.smp_time import change_timezone\n\nfrom BaseSoarItsmJob import SyncSoarITSM\nfrom SCCEnterpriseConsts import SYNC_SCC_SNOW_TICKETS_SCRIPT_NAME\nfrom SCCEnterpriseConsts import CLOSED_BY_SCCE_COMMENT\nfrom SCCEnterpriseDatamodels import FindingContext, ITSMTicketDetailsForSCC\nfrom SCCEnterpriseUtils import create_html_table, update_html_desc_table\nfrom ServiceNowConsts import DATETIME_FORMAT, UTC_TZ\nfrom ServiceNowConsts import INTEGRATION_NAME\nfrom ServiceNowDatamodels import Incident\nfrom ServiceNowExceptions import SNowRecordNotFoundException\nfrom ServiceNowManager import ServiceNowManager\nfrom ServiceNowUtils import convert_sn_time_to_unix_utc_timestamp\n\n\nTICKETS_LIMIT_IN_REQUEST = 100\nCOMMENT_LIMIT_TO_FETCH = 100\n\n\n@dataclasses.dataclass\nclass ServiceNowAuthParams:\n    api_root: str\n    username: str\n    password: str\n    verify_ssl: bool\n\n    @classmethod\n    def build_from_job(cls, chronicle_soar: SiemplifyJob) -> ServiceNowAuthParams:\n        \"\"\"Build integration auth params from SOAR job object.\"\"\"\n        return cls(\n            api_root=extraction.extract_job_param(\n                chronicle_soar, param_name=\"API Root\", is_mandatory=True\n            ),\n            username=extraction.extract_job_param(\n                chronicle_soar, param_name=\"Username\", is_mandatory=True\n            ),\n            password=extraction.extract_job_param(\n                chronicle_soar, param_name=\"Password\", is_mandatory=True\n            ),\n            verify_ssl=extraction.extract_job_param(\n                chronicle_soar,\n                param_name=\"Verify SSL\",\n                is_mandatory=True,\n                input_type=bool,\n            ),\n        )\n\n\nclass SyncSCCServiceNowTicketsJob(SyncSoarITSM[Incident, ServiceNowManager]):\n    \"\"\"Implementation of SyncSoarITSM using ServiceNow\"\"\"\n\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self._timezone_mapping = {}\n\n    def get_timezone_by_user(self, user_name: str) -> str:\n        if user_name not in self._timezone_mapping:\n            self._timezone_mapping[user_name] = (\n                self.api_client.get_system_timezone_by_user_name(user_name)\n            )\n\n        return self._timezone_mapping[user_name]\n\n    def _validate_params(self) -> None:\n        validator = validation.ParameterValidator(self.soar_job)\n        self.params.max_hours_backwards = validator.validate_non_negative(\n            param_name=\"Max Hours Backwards\", value=self.params.max_hours_backwards\n        )\n\n    def _init_api_clients(self) -> ServiceNowManager:\n        \"\"\"Initialize the ServiceNow manager.\"\"\"\n        service_now_auth_params = ServiceNowAuthParams.build_from_job(self.soar_job)\n        return ServiceNowManager(\n            api_root=service_now_auth_params.api_root,\n            username=service_now_auth_params.username,\n            password=service_now_auth_params.password,\n            verify_ssl=service_now_auth_params.verify_ssl,\n            siemplify_logger=self.soar_job.LOGGER,\n        )\n\n    def _get_environment_for_case_filter(self) -> str:\n        return self.params.environment\n\n    def _get_max_hours_backwards(self) -> int:\n        return self.params.max_hours_backwards\n\n    def _get_bulk_ticket_id_to_details_map(\n        self,\n        ticket_ids: Sequence[str] | None = None,\n        last_run_timestamp: int | None = None,\n    ) -> Mapping[str, Incident]:\n        ticket_ids = ticket_ids or []\n        read_mask = [\n            \"sys_id\",\n            \"sys_created_by\",\n            \"sys_updated_on\",\n            \"u_overview\",\n            \"u_status\",\n            \"u_priority\",\n            \"u_severity\",\n            \"u_assigned_to\",\n            \"u_source_link\",\n        ]\n\n        if last_run_timestamp:\n            tickets = self.api_client.get_incidents_with_pagination(\n                updated_after=last_run_timestamp,\n                fields=read_mask,\n                page_size=TICKETS_LIMIT_IN_REQUEST,\n            )\n\n        else:\n            tickets = self.api_client.get_incidents_by_sys_ids(\n                numbers=ticket_ids, fields=read_mask, page_size=TICKETS_LIMIT_IN_REQUEST\n            )\n\n        return {str(ticket.sys_id): ticket for ticket in tickets}\n\n    def _get_ticket_id_to_details_map(self, ticket_id: str) -> Mapping[str, Incident]:\n        return self._get_bulk_ticket_id_to_details_map([ticket_id])\n\n    def _get_bulk_ticket_id_to_comments_map(\n        self, tickets: Iterable[Incident]\n    ) -> Mapping[str, list[str]]:\n        # API does not support filtering with (for creation time) with > or >=\n        ticket_ids = [ticket.sys_id for ticket in tickets]\n        ticket_id_to_ticket_comments = defaultdict(list)\n\n        for index in range(0, len(ticket_ids), TICKETS_LIMIT_IN_REQUEST):\n            try:\n                itsm_comments = self.api_client.get_ticket_comments(\n                    ticket_sys_ids=ticket_ids[index : index + TICKETS_LIMIT_IN_REQUEST],\n                    page_size=COMMENT_LIMIT_TO_FETCH,\n                    fields=[\"value\", \"sys_created_on\", \"element_id\"],\n                    order_by=\"sys_created_on\",\n                )\n                for comment in itsm_comments:\n                    ticket_sys_id = comment.element_id\n                    (\n                        ticket_id_to_ticket_comments[str(ticket_sys_id)].append(\n                            comment.value\n                        )\n                    )\n\n            except SNowRecordNotFoundException:\n                self.logger.warn(\n                    \"Received status code 404 - no comments found, assuming tickets \"\n                    \"have no comments.\"\n                )\n\n        return ticket_id_to_ticket_comments\n\n    def _get_ticket_id_to_comments_map(\n        self, ticket: Incident\n    ) -> Mapping[str, list[str]]:\n        return self._get_bulk_ticket_id_to_comments_map([ticket])\n\n    def _add_comment_to_ticket(self, comment: str, ticket_id: str) -> None:\n        self.api_client.add_comment_to_incident(ticket_id, comment, is_ticket_id=True)\n\n    def _close_ticket(self, ticket_id: str) -> None:\n        self.api_client.close_incident(\n            ticket_number=ticket_id,\n            close_reason=CLOSED_BY_SCCE_COMMENT,\n            is_ticket_id=True,\n        )\n\n    def _get_ticket_case_uri(self, ticket: Incident) -> str:\n        return ticket.case_uri\n\n    def _get_ticket_status(self, ticket: Incident) -> str:\n        return ticket.status\n\n    def _set_ticket_status(self, ticket: Incident, new_status: str) -> None:\n        ticket.status = new_status\n\n    def _set_ticket_update_time(self, ticket: Incident, update_time: datetime) -> None:\n        sn_tz = self.get_timezone_by_user(ticket.sys_created_by)\n        ticket.raw_data[\"sys_updated_on\"] = change_timezone(\n            update_time, UTC_TZ, sn_tz\n        ).strftime(DATETIME_FORMAT)\n\n    def _update_ticket_description(self, ticket_id: str, description: str) -> None:\n        self.api_client.update_incident(\n            ticket_number=ticket_id,\n            custom_fields={\"u_overview\": description},\n            is_ticket_id=True,\n        )\n\n    def _update_ticket_severity(self, ticket_id: str, severity: str) -> None:\n        self.api_client.update_incident(\n            ticket_number=ticket_id,\n            custom_fields={\n                \"u_severity\": severity,\n                \"u_additional_comments\": f\"{SOAR_COMMENT_PREFIX}Synced severity\",\n            },\n            is_ticket_id=True,\n        )\n\n    def _create_description_table(self, findings: list[FindingContext]) -> str:\n        return create_html_table(findings, self._soar_job.platform_url)\n\n    def _update_description_table(self, table: str, description: str) -> str:\n        return update_html_desc_table(table, description)\n\n    def _parse_ticket_details_for_scc(\n        self, ticket: Incident, **additional_keys\n    ) -> ITSMTicketDetailsForSCC:\n        update_time_str = ticket.raw_data[\"sys_updated_on\"]\n        sn_tz = self.get_timezone_by_user(ticket.sys_created_by)\n        update_time_ts = convert_sn_time_to_unix_utc_timestamp(\n            sn_tz=sn_tz,\n            ticket_time_field=update_time_str,\n            ticket_time_format=self.params.time_format,\n        )\n\n        ticket_details = ITSMTicketDetailsForSCC(\n            id_=ticket.sys_id,\n            assignee=ticket.assignee,\n            description=ticket.overview,\n            uri=None,\n            status=ticket.status,\n            update_time=update_time_ts,\n            **additional_keys,\n        )\n\n        # Updating the attr if exists or creating it if not\n        ticket_details.additional_keys[\"priority\"] = ticket.priority\n\n        return ticket_details\n\n\ndef main() -> None:\n    sync_job = SyncSCCServiceNowTicketsJob(\n        script_name=SYNC_SCC_SNOW_TICKETS_SCRIPT_NAME, integration_name=INTEGRATION_NAME\n    )\n    sync_job.start()\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "author": "Admin",
+    "lastRunStatus": "Error",
+    "lastRunTime": 1781863486239,
+    "uniqueIdentifier": "3d8fd837-d55d-4c43-875e-de431e13e7bb",
+    "enabled": true,
+    "displayName": "Job_39",
+    "description": "Automated marketplace job 39 for SCCEnterprise",
+    "intervalSeconds": 60,
+    "advanced": false,
+    "parameters": [
+        {
+            "id": 577,
+            "mandatory": true,
+            "type": "String",
+            "displayName": "Environment",
+            "value": "Default Environment"
+        },
+        {
+            "id": 578,
+            "mandatory": true,
+            "type": "String",
+            "displayName": "Time Format",
+            "value": "%Y-%m-%d %H:%M:%S"
+        },
+        {
+            "id": 579,
+            "mandatory": true,
+            "type": "String",
+            "displayName": "API Root",
+            "value": "https://{dev-instance}.service-now.com/api/now/v1/"
+        },
+        {
+            "id": 580,
+            "mandatory": true,
+            "type": "String",
+            "displayName": "Username",
+            "value": "dummy_val"
+        },
+        {
+            "id": 581,
+            "mandatory": true,
+            "type": "Password",
+            "displayName": "Password",
+            "value": "***************"
+        },
+        {
+            "id": 582,
+            "mandatory": true,
+            "type": "String",
+            "displayName": "Max Hours Backwards",
+            "value": "24"
+        },
+        {
+            "id": 583,
+            "mandatory": false,
+            "type": "Boolean",
+            "displayName": "Verify SSL",
+            "value": "true"
+        }
+    ]
+}

@@ -7,7 +7,7 @@
         "product": "Service Now",
         "eventName": null,
         "mappingStatus": null,
-        "changeSource": 0,
+        "changeSource": "ChangeSourceUnspecified",
         "exampleEventFields": []
     },
     {
@@ -18,7 +18,7 @@
         "product": "Service Now",
         "eventName": "change_request",
         "mappingStatus": null,
-        "changeSource": 0,
+        "changeSource": "ChangeSourceUnspecified",
         "exampleEventFields": []
     }
 ]
