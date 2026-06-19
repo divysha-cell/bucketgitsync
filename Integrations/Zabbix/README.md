@@ -4,12 +4,12 @@
 Zabbix is an enterprise open source monitoring software for networks and applications.
 It is designed to monitor and track the status of various network services, servers, and other network hardware.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Api Root||True|None|http://{IP}/zabbix|
-|User name||True|String||
+|Api Root||True|IP_OR_HOST|http://{IP}/zabbix|
+|Username||True|String|None|
 |Password||True|Password|*****|
 |Verify SSL||False|Boolean|False|
 
@@ -34,6 +34,12 @@ Python Version - 3
 
 
 ## Actions
+#### Ping
+Test Connectivity
+Timeout - 600 Seconds
+
+
+
 #### Execute Script
 Execute a script on hosts by IP.
 Timeout - 600 Seconds
@@ -52,12 +58,6 @@ Timeout - 600 Seconds
 
 
 
-#### Ping
-Test Connectivity
-Timeout - 600 Seconds
-
-
-
 
 
 
@@ -70,14 +70,11 @@ Zabbix connector - fetches events from Zabbix.
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|DeviceProductField|The field name used to determine the device product|True|String|Product Field Name|
-|EventClassId|The field name used to determine the event name (sub-type)|False|String|Event Field Name|
-|PythonProcessTimeout|The timeout limit (in seconds) for the python process running current script|True|String|300|
 |Api Root|Api Root|True|String||
 |Username|Username|True|String||
 |Password|Password|True|Password|*****|
 |Only Problematic Triggers|If enabled, only problematic triggers will be considered.|False|Boolean|False|
-|Fetch Max Hours Backwards|Number of hours before the first connector iteration to retrieve alerts from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|Integer|24|
+|Fetch Max Hours Backwards|Number of hours before the first connector iteration to retrieve alerts from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|Int|24|
 |Proxy Server Address|The address of the proxy server to use.|False|String||
 |Proxy Username|The proxy username to authenticate with.|False|String||
 |Proxy Password|The proxy password to authenticate with.|False|Password|*****|

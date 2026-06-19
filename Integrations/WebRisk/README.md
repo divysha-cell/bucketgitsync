@@ -3,7 +3,7 @@
 
 Web Risk is a powerful Google Cloud service that leverages AI and ML to proactively protect your users and your platform from unsafe websites.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|

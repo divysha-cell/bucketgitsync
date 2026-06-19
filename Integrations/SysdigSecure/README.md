@@ -3,7 +3,7 @@
 
 Sysdig Secure is a comprehensive security platform that provides continuous security and compliance monitoring for cloud-native environments.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
@@ -65,9 +65,6 @@ Use the Sysdig Secure - Events Connector to pull events from Sysdig Secure. The 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|DeviceProductField|The name of the field where the product name is stored. The default value is "Product Name". The product name primarily impacts mapping. To streamline and improve the mapping process for the connector, the default value "Product Name" resolves to a fallback value that is referenced from the code. Any invalid input for this parameter resolves to a fallback value by default.|True|String|Product Name|
-|EventClassId|The name of the field to determine the event name.|True|String|content_ruleName|
-|PythonProcessTimeout|The timeout limit in seconds for the Python process running the current script.|True|Integer|180|
 |Environment Field Name|The name of the field where the environment name is stored. If the environment field isn't found, the environment is set to the default environment.|False|String||
 |Environment Regex Pattern|A regular expression pattern to run on the value found in the Environment Field Name field. This parameter lets you manipulate the environment field using the regular expression logic. Use the default value .* to retrieve the required raw Environment Field Name value. If the regular expression pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|String|.*|
 |API Root|The API root of the Sysdig Secure instance.|True|String||
@@ -75,8 +72,8 @@ Use the Sysdig Secure - Events Connector to pull events from Sysdig Secure. The 
 |Verify SSL|If selected, the integration validates the SSL certificate when connecting to Sysdig Secure|False|Boolean|false|
 |Lowest Severity To Fetch|The lowest severity of the events to fetch. If you don't set a value, the connector ingests events with all severities. The possible values are as follows: Informational, Low, Medium, High.|False|String||
 |Custom Filter Query|A query to filter, scope, or group events during ingestion. This parameter has priority over the "Lowest Severity To Fetch" parameter and values that you provide in the dynamic list. For more information about how to filter events, see Filter Secure Events (https://docs.sysdig.com/en/docs/sysdig-secure/threats/activity/events-feed/#filter-secure-events). Example: host.hostName = "instance-1"|False|String||
-|Max Hours Backwards|A number of hours before the first connector iteration to retrieve the events from. This parameter can apply to the initial connector iteration after you enable the connector for the first time or the fallback value for an expired connector timestamp.|True|Integer|1|
-|Max Events To Fetch|The maximum number of events to process for every connector iteration. The maximum value is 200.|True|Integer|100|
+|Max Hours Backwards|A number of hours before the first connector iteration to retrieve the events from. This parameter can apply to the initial connector iteration after you enable the connector for the first time or the fallback value for an expired connector timestamp.|True|Int|1|
+|Max Events To Fetch|The maximum number of events to process for every connector iteration. The maximum value is 200.|True|Int|100|
 |Use dynamic list as a blocklist|If enabled, the dynamic list will be used as a blocklist.|False|Boolean|false|
 |Disable Overflow|If selected, the connector ignores the Google SecOps overflow mechanism during alert creation.|False|Boolean|false|
 |Proxy Server Address|The address of the proxy server to use.|False|String||

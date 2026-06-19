@@ -3,14 +3,14 @@
 
 Websense identifies and classifies known and emerging internet security threats to provide protection with software that allows organizations to manage internet access, block malicious code and unwanted applications, and prevent the loss of confidential information.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Api root||True|String||
-|Gateway host||True|String||
-|Gateway user||True|String||
-|Gateway password||True|Password|*****|
+|ApiRoot||True|String|None|
+|GatewayHost||True|String|None|
+|GatewayUser||True|String|None|
+|GatewayPassword||True|Password|*****|
 |Verify SSL||False|Boolean|false|
 
 
@@ -27,6 +27,18 @@ Python Version - 3
 
 
 ## Actions
+#### Unblock Url API
+Unblock URL in WebSense API category
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|CategoryName|The API manage category name.|True|String||
+|URL|The url to block.|False|String||
+
+
+
 #### Block Url API
 Block a URL in WebSense API category
 Timeout - 600 Seconds
@@ -39,6 +51,12 @@ Timeout - 600 Seconds
 
 
 
+#### Ping
+Test connectivity to WebSense
+Timeout - 600 Seconds
+
+
+
 #### Get Category Urls API
 Get a list off all category's URLs
 Timeout - 600 Seconds
@@ -47,24 +65,6 @@ Timeout - 600 Seconds
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
 |CategoryName|The API manage category name|True|String||
-
-
-
-#### Ping
-Test connectivity to WebSense
-Timeout - 600 Seconds
-
-
-
-#### Unblock Url API
-Unblock URL in WebSense API category
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|CategoryName|The API manage category name.|True|String||
-|URL|The url to block.|False|String||
 
 
 

@@ -1,0 +1,42 @@
+{
+    "name": "projects/project/locations/location/instances/instance/integrations/Siemplify/jobs/4/jobInstances/54",
+    "id": 0,
+    "job": "Measurement Monitor",
+    "integration": "Siemplify",
+    "createTime": 1781862804420,
+    "updateTime": 1781862884533,
+    "custom": false,
+    "script": "import os\nfrom datetime import datetime\n\nimport SiemplifyUtils\nfrom SiemplifyJob import SiemplifyJob\nfrom SiemplifyUtils import dict_to_flat, flat_dict_to_csv, output_handler\n\n\n# Providers and strings.\nMONITORING_PROVIDER = \"Siemplify\"\nFILE_TIME_FORMAT = \"%Y-%m-%d_%H-%M-%S\"\nMAX_CSV_DEFAULT_COUNT = 100\nFILE_NAME = \"Measurement Monitor_{0}.csv\"\nMAIL_DEFAULT_NAME = \"MeasurementReport.csv\"\nWIN_FILE_DEFAULT_PATH = r\"C:\\Siemplify_Server\\Metrics\"\nLINUX_FILE_DEFAULT_PATH = r\"/opt/siemplify/siemplify_server/Metrics\"\nWINDOWS_STRING = \"win\"\nOS_FIELD_SYSTEM_INFO = \"OS\"\n\n# Messages.\nMAIL_SUBJECT_PATTERN = \"Measurement Monitor Job's Report\"\n\n\ndef build_email_message(start_time_unix, end_time_unix):\n    starttime_dt = SiemplifyUtils.convert_unixtime_to_datetime(start_time_unix)\n    endtime_dt = SiemplifyUtils.convert_unixtime_to_datetime(end_time_unix)\n\n    message = (\n        \"\\nHi,\"\n        \" \\n this is an automated message from Siemplify's Measurement Monitor Job.\\r\"\n        f\" Attached a csv measurement report from {starttime_dt} to {endtime_dt}\"\n    )\n\n    return message\n\n\ndef retention_files(siemplify, folder_path):\n    try:\n        max_files_count = int(\n            siemplify.parameters.get(\n                \"Max CSV Files Count Retention\", MAX_CSV_DEFAULT_COUNT\n            )\n        )\n        # scan the folder\n        path, dirs, files = next(os.walk(folder_path))\n        file_count = len(files)\n        # check if there are more then X files\n        if file_count > max_files_count:\n            # first the oldest\n            sorted_files = sorted(\n                files, key=lambda name: os.path.getmtime(os.path.join(path, name))\n            )\n            # filter files by extension\n            sorted_files = [f for f in sorted_files if os.path.splitext(f)[1] == \".csv\"]\n\n            # delete the oldest ones (only csv files of his own instance)\n            delete_count = file_count - max_files_count\n            siemplify.LOGGER.info(\n                f\"There are more then {max_files_count} files in {folder_path} folder. Delete the {delete_count} oldest ones\"\n            )\n            for metrics_file_name in sorted_files[:delete_count]:\n                siemplify.LOGGER.info(f\"Deleting {metrics_file_name} file.\")\n                os.remove(os.path.join(folder_path, metrics_file_name))\n                siemplify.LOGGER.info(f\"{metrics_file_name} Deleted\")\n    except Exception as e:\n        siemplify.LOGGER.error(\"Files Retention Fail\")\n        siemplify.LOGGER.exception(e)\n\n\ndef save_metrics_to_local_file(siemplify, measurement_csv, folder_path):\n    try:\n        # check if exists\n        if not os.path.exists(folder_path):\n            os.makedirs(folder_path)\n\n        file_name = FILE_NAME.format(datetime.now().strftime(FILE_TIME_FORMAT))\n        file_full_path = os.path.join(folder_path, file_name)\n        with open(file_full_path, \"w\") as f:\n            f.write(measurement_csv)\n        siemplify.LOGGER.info(f\"Successfully write metrics to {file_full_path}\")\n\n    except Exception as e:\n        siemplify.LOGGER.error(f\"Failed to write metrics to {folder_path}\")\n        siemplify.LOGGER.exception(e)\n\n\ndef send_mail(siemplify, mail_message, measurement_csv):\n    try:\n        if not (measurement_csv):\n            attachment_string = \"\"\n        else:\n            attachment_string = measurement_csv\n\n        recipients = (\n            siemplify.get_configuration(MONITORING_PROVIDER)\n            .get(\"Recipients\")\n            .split(\",\")\n        )\n        siemplify.send_mail(\n            MAIL_SUBJECT_PATTERN,\n            mail_message,\n            recipients,\n            MAIL_DEFAULT_NAME,\n            str(attachment_string),\n        )\n\n    except Exception as e:\n        siemplify.LOGGER.warn(e)\n\n\ndef dict_to_csv_string(target_dict):\n    \"\"\"\n    Convert dict to CSV string.\n    :param target_dict: {dict} Target dict.\n    :return: {str} String CSV.\n    \"\"\"\n    output_str = \"\"\n    flat_dict = dict_to_flat(target_dict)\n    csv_list = flat_dict_to_csv(flat_dict)\n    for line in csv_list[1:]:\n        output_str = output_str + f\" \\n {line}\"\n    return output_str\n\n\n@output_handler\ndef main():\n    siemplify = SiemplifyJob()\n\n    siemplify.script_name = \"Measurement_Monitor\"\n    siemplify.LOGGER.info(\"--- Measurement Monitor started ---\")\n\n    # fix_paths\n    if WINDOWS_STRING in os.environ.get(OS_FIELD_SYSTEM_INFO, \"\").lower():\n        folder_path = (\n            siemplify.parameters.get(\"Metrics Output Folder\")\n            if siemplify.parameters.get(\"Metrics Output Folder\")\n            else WIN_FILE_DEFAULT_PATH\n        )\n    else:\n        folder_path = (\n            siemplify.parameters.get(\"Metrics Output Folder\")\n            if siemplify.parameters.get(\"Metrics Output Folder\")\n            else LINUX_FILE_DEFAULT_PATH\n        )\n\n    try:\n        # Get Time Range.\n        unix_ms_last_run_time = siemplify.fetch_timestamp()\n        unix_ms_now = SiemplifyUtils.unix_now()\n\n        measurement_json = siemplify.get_system_info(unix_ms_last_run_time)\n        measurement_csv = dict_to_csv_string(measurement_json)\n\n        save_metrics_to_local_file(siemplify, measurement_csv, folder_path)\n        retention_files(siemplify, folder_path)\n\n        email_msg = build_email_message(unix_ms_last_run_time, unix_ms_now)\n        email_msg = email_msg.replace(\"\\n\", \"<br>\")\n        send_mail(siemplify, email_msg, measurement_csv)\n\n        siemplify.save_timestamp(new_timestamp=unix_ms_now)\n        siemplify.LOGGER.info(\"Saved last_run_time:\" + str(unix_ms_now))\n\n        siemplify.LOGGER.info(\"--- Measurement Monitor started ---\")\n\n    except Exception as e:\n        siemplify.LOGGER.error(f\"Measurement Monitor Failed. Details: {e}\")\n        siemplify.LOGGER.info(\n            \"===========================================================================\"\n        )\n        siemplify.LOGGER.exception(e)\n        raise e\n\n    if hasattr(siemplify.LOGGER, \"error_logged\") and siemplify.LOGGER.error_logged:\n        raise Exception(\"Error was logged during execution, check the logs\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "author": "Siemplify System",
+    "lastRunStatus": "Error",
+    "lastRunTime": 1781862884523,
+    "uniqueIdentifier": "20264212-2581-4d4a-853c-064fc9f24d85",
+    "enabled": true,
+    "displayName": "Job_54",
+    "description": "Automated test job 54",
+    "intervalSeconds": 60,
+    "advanced": false,
+    "parameters": [
+        {
+            "id": 333,
+            "mandatory": false,
+            "type": "Int",
+            "displayName": "Additional Email Recipients",
+            "value": "Insights@siemplify.co"
+        },
+        {
+            "id": 334,
+            "mandatory": false,
+            "type": "Int",
+            "displayName": "Metrics Output Folder",
+            "value": ""
+        },
+        {
+            "id": 335,
+            "mandatory": false,
+            "type": "Int",
+            "displayName": "Max CSV Files Count Retention",
+            "value": "100"
+        }
+    ]
+}

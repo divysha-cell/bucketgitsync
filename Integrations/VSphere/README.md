@@ -3,14 +3,14 @@
 
 VMware vSphere is a VMware cloud computing platform for virtualization.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Server Address||True|None|x.x.x.x|
+|Server Address||True|IP_OR_HOST|x.x.x.x|
 |Username||True|String||
 |Password||True|Password|*****|
-|Port||True|Integer|443|
+|Port||True|Int|443|
 
 
 #### Dependencies
@@ -33,6 +33,24 @@ Timeout - 600 Seconds
 
 
 
+#### Get System Info
+Get information about a VM
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Vm Name|Target VM name.|True|String||
+
+
+
+##### JSON Results
+```json
+{"Guest": "Microsoft Windows 7 (64-bit)", "Bios UUID": "423503ea-af3c-58a8-188c-f6285cec98e5", "VMware Tools": "toolsNotInstalled", "Ip Address": "1.1.1.1", "State": "poweredOn", "Template": false, "Path": "[DataStore] vm/vn.vmx", "Name": "vm", "Instance UUID": "50359be7-424b-e53d-5133-3f98f0e705ef"}
+```
+
+
+
 #### Ping
 Test Connectivity
 Timeout - 600 Seconds
@@ -47,6 +65,28 @@ Timeout - 600 Seconds
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
 |Vm Name|Target VM name.|True|String||
+
+
+
+#### Power On
+Power on a VM
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Vm Name|Vm Name|True|String|Target VM name.|
+
+
+
+#### Reset
+Hard reset a VM
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Vm Name|The name of the target VM.|True|String||
 
 
 
@@ -74,18 +114,6 @@ Timeout - 600 Seconds
 
 
 
-#### Revert To Snapshot
-Revert to a specific snapshot
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Vm Name|The name of the target VM.|True|String||
-|Snapshot Name|The name of the target snapshot.|True|String||
-
-
-
 #### Take Snapshot
 Take a snapshot of a VM
 Timeout - 600 Seconds
@@ -99,43 +127,15 @@ Timeout - 600 Seconds
 
 
 
-#### Get System Info
-Get information about a VM
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Vm Name|Target VM name.|True|String||
-
-
-
-##### JSON Results
-```json
-{"Guest": "Microsoft Windows 7 (64-bit)", "Bios UUID": "423503ea-af3c-58a8-188c-f6285cec98e5", "VMware Tools": "toolsNotInstalled", "Ip Address": "1.1.1.1", "State": "poweredOn", "Template": false, "Path": "[DataStore] vm/vn.vmx", "Name": "vm", "Instance UUID": "50359be7-424b-e53d-5133-3f98f0e705ef"}
-```
-
-
-
-#### Power On
-Power on a VM
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Vm Name|Vm Name|True|String|Target VM name.|
-
-
-
-#### Reset
-Hard reset a VM
+#### Revert To Snapshot
+Revert to a specific snapshot
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
 |Vm Name|The name of the target VM.|True|String||
+|Snapshot Name|The name of the target snapshot.|True|String||
 
 
 

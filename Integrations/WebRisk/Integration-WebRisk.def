@@ -1,111 +1,76 @@
 {
-    "IsAvailableForCommunity": false,
+    "Name": null,
+    "UpdateAvailable": null,
+    "LatestVersion": null,
+    "Id": 0,
     "Identifier": "WebRisk",
-    "ShouldInstalledInSystem": false,
-    "Version": 4.0,
+    "Custom": false,
+    "Parameters": [
+        {
+            "Id": 0,
+            "Mandatory": true,
+            "DefaultValue": "https://webrisk.googleapis.com/v1",
+            "Description": "API Root of the Web Risk integration.",
+            "DisplayName": "API Root",
+            "PropertyName": "API Root",
+            "Type": "String"
+        },
+        {
+            "Id": 0,
+            "Mandatory": false,
+            "DefaultValue": "",
+            "Description": "The client email address of your workload identity. You can configure either this parameter or the Service Account Json File Content parameter. To impersonate service accounts with the workload identity email address, grant the Service Account Token Creator role to your service account.",
+            "DisplayName": "Workload Identity Email",
+            "PropertyName": "Workload Identity Email",
+            "Type": "String"
+        },
+        {
+            "Id": 0,
+            "Mandatory": false,
+            "DefaultValue": null,
+            "Description": "The content of the service account key JSON file. You can configure either this parameter or the Workload Identity Email parameter. To configure this parameter, provide the full content of the service account key JSON file that you downloaded when creating a service account.",
+            "DisplayName": "Service Account Json File Content",
+            "PropertyName": "Service Account Json File Content",
+            "Type": "Password"
+        },
+        {
+            "Id": 0,
+            "Mandatory": false,
+            "DefaultValue": "",
+            "Description": "The Google Cloud project ID which you use for Google Cloud APIs and billing. This parameter requires you to grant the Service Usage Consumer role to your service account.\nThe integration attaches this parameter value to all API requests. If you don't set a value for this parameter, the integration retrieves the quota project ID from your Google Cloud service account.",
+            "DisplayName": "Quota Project ID",
+            "PropertyName": "Quota Project ID",
+            "Type": "String"
+        },
+        {
+            "Id": 0,
+            "Mandatory": false,
+            "DefaultValue": "",
+            "Description": "The project ID to use in the integration. If you don't set a value for this parameter, the integration retrieves the project ID from your Google Cloud service account.",
+            "DisplayName": "Project ID",
+            "PropertyName": "Project ID",
+            "Type": "String"
+        },
+        {
+            "Id": 0,
+            "Mandatory": false,
+            "DefaultValue": "true",
+            "Description": "If selected, the integration verifies that the SSL certificate for connecting to Vertex AI is valid. Selected by default.",
+            "DisplayName": "Verify SSL",
+            "PropertyName": "Verify SSL",
+            "Type": "Boolean"
+        }
+    ],
+    "Certified": false,
+    "ProductionIdentifier": null,
+    "Type": "Response",
+    "Internal": false,
+    "Version": "4",
     "DisplayName": "Web Risk",
     "Description": "Web Risk is a powerful Google Cloud service that leverages AI and ML to proactively protect your users and your platform from unsafe websites.",
     "ImageBase64": "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",
-    "SvgImage": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg id=\"Layer_1\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"> <defs> <style> .cls-1 { stroke-width: 0px; } </style> </defs> <path class=\"cls-1\" d=\"M4,18V6h8V4H3A1,1,0,0,0,2,5V19a1,1,0,0,0,1,1h9V18ZM21,4H12V6h8V18H12v2h9a1,1,0,0,0,1-1V5a1,1,0,0,0-1-1M9,12l0-2,3-1V7L7,9v3c0,2.38,3,5,5,5V15c-.89,0-3-1.38-3-3M15,12c0,1.62-2.1,3-3,3v2c2,0,5-2.62,5-5V9L12,7V9l3,1,0,2M12.59,12.8a.86.86,0,0,1-1.19,0l-1-1.22L11,11l1,1.09,3-3,.6.59Z\"/></svg>",
-    "IsCustom": false,
-    "PythonVersion": 3,
-    "IntegrationProperties": [
-        {
-            "IntegrationIdentifier": "WebRisk",
-            "PropertyName": "API Root",
-            "PropertyDescription": "API Root of the Web Risk integration.",
-            "PropertyDisplayName": "API Root",
-            "PropertyType": 2,
-            "IsMandatory": true,
-            "Value": "https://webrisk.googleapis.com/v1",
-            "Id": 0,
-            "CreationTimeUnixTimeInMs": 1781778754897,
-            "ModificationTimeUnixTimeInMs": 1781778754897
-        },
-        {
-            "IntegrationIdentifier": "WebRisk",
-            "PropertyName": "Workload Identity Email",
-            "PropertyDescription": "The client email address of your workload identity. You can configure either this parameter or the Service Account Json File Content parameter. To impersonate service accounts with the workload identity email address, grant the Service Account Token Creator role to your service account.",
-            "PropertyDisplayName": "Workload Identity Email",
-            "PropertyType": 2,
-            "IsMandatory": false,
-            "Value": "",
-            "Id": 0,
-            "CreationTimeUnixTimeInMs": 1781778754897,
-            "ModificationTimeUnixTimeInMs": 1781778754897
-        },
-        {
-            "IntegrationIdentifier": "WebRisk",
-            "PropertyName": "Service Account Json File Content",
-            "PropertyDescription": "The content of the service account key JSON file. You can configure either this parameter or the Workload Identity Email parameter. To configure this parameter, provide the full content of the service account key JSON file that you downloaded when creating a service account.",
-            "PropertyDisplayName": "Service Account Json File Content",
-            "PropertyType": 3,
-            "IsMandatory": false,
-            "Value": null,
-            "Id": 0,
-            "CreationTimeUnixTimeInMs": 1781778754897,
-            "ModificationTimeUnixTimeInMs": 1781778754897
-        },
-        {
-            "IntegrationIdentifier": "WebRisk",
-            "PropertyName": "Quota Project ID",
-            "PropertyDescription": "The Google Cloud project ID which you use for Google Cloud APIs and billing. This parameter requires you to grant the Service Usage Consumer role to your service account.\nThe integration attaches this parameter value to all API requests. If you don't set a value for this parameter, the integration retrieves the quota project ID from your Google Cloud service account.",
-            "PropertyDisplayName": "Quota Project ID",
-            "PropertyType": 2,
-            "IsMandatory": false,
-            "Value": "",
-            "Id": 0,
-            "CreationTimeUnixTimeInMs": 1781778754897,
-            "ModificationTimeUnixTimeInMs": 1781778754897
-        },
-        {
-            "IntegrationIdentifier": "WebRisk",
-            "PropertyName": "Project ID",
-            "PropertyDescription": "The project ID to use in the integration. If you don't set a value for this parameter, the integration retrieves the project ID from your Google Cloud service account.",
-            "PropertyDisplayName": "Project ID",
-            "PropertyType": 2,
-            "IsMandatory": false,
-            "Value": "",
-            "Id": 0,
-            "CreationTimeUnixTimeInMs": 1781778754897,
-            "ModificationTimeUnixTimeInMs": 1781778754897
-        },
-        {
-            "IntegrationIdentifier": "WebRisk",
-            "PropertyName": "Verify SSL",
-            "PropertyDescription": "If selected, the integration verifies that the SSL certificate for connecting to Vertex AI is valid. Selected by default.",
-            "PropertyDisplayName": "Verify SSL",
-            "PropertyType": 0,
-            "IsMandatory": false,
-            "Value": "true",
-            "Id": 0,
-            "CreationTimeUnixTimeInMs": 1781778754897,
-            "ModificationTimeUnixTimeInMs": 1781778754897
-        }
-    ],
-    "IntegrationSupportedActions": [
-        {
-            "Name": "Ping",
-            "Description": "Use the Ping action to test the connectivity to Web Risk.",
-            "Id": 439,
-            "CreationTimeUnixTimeInMs": 1781778754909,
-            "ModificationTimeUnixTimeInMs": 1781778754909
-        },
-        {
-            "Name": "Submit Entities",
-            "Description": "Use the Submit Entities action to submit entities to Web Risk for analysis. This action runs on the Google SecOps URL entity. This action is asynchronous. Adjust the script timeout value in the Google SecOps IDE for the action as needed.",
-            "Id": 440,
-            "CreationTimeUnixTimeInMs": 1781778754909,
-            "ModificationTimeUnixTimeInMs": 1781778754909
-        },
-        {
-            "Name": "Enrich Entities",
-            "Description": "Use the Enrich Entities action to return information about Google SecOps entities from Web Risk. This action runs on the following Google SecOps entities: URL.",
-            "Id": 441,
-            "CreationTimeUnixTimeInMs": 1781778754909,
-            "ModificationTimeUnixTimeInMs": 1781778754909
-        }
-    ],
+    "SvgIcon": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg id=\"Layer_1\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"> <defs> <style> .cls-1 { stroke-width: 0px; } </style> </defs> <path class=\"cls-1\" d=\"M4,18V6h8V4H3A1,1,0,0,0,2,5V19a1,1,0,0,0,1,1h9V18ZM21,4H12V6h8V18H12v2h9a1,1,0,0,0,1-1V5a1,1,0,0,0-1-1M9,12l0-2,3-1V7L7,9v3c0,2.38,3,5,5,5V15c-.89,0-3-1.38-3-3M15,12c0,1.62-2.1,3-3,3v2c2,0,5-2.62,5-5V9L12,7V9l3,1,0,2M12.59,12.8a.86.86,0,0,1-1.19,0l-1-1.22L11,11l1,1.09,3-3,.6.59Z\"/></svg>",
+    "PythonVersion": "V3_11",
     "Categories": [
         "IT & Infrastructure",
         "Google",
@@ -113,21 +78,6 @@
         "Cloud Security",
         "Threat Intelligence"
     ],
-    "HasConnectors": false,
-    "DocumentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/web-risk",
-    "IsCertified": false,
-    "UploaderFullName": null,
-    "PublishComment": null,
-    "UploaderEmail": null,
-    "UploaderImageBase64": null,
-    "UploaderProfileLink": null,
-    "MinimumSystemVersion": 0.0,
-    "ProductionIntegrationIdentifier": null,
-    "Type": 0,
-    "Internal": false,
-    "GoogleSecOpsProduct": false,
-    "Id": 0,
-    "CreationTimeUnixTimeInMs": 1781778754897,
-    "ModificationTimeUnixTimeInMs": 1781778754897,
-    "Custom": false
+    "Staging": false,
+    "IsCustom": false
 }

@@ -7,7 +7,7 @@
         "product": "Data Security Platform",
         "eventName": null,
         "mappingStatus": null,
-        "changeSource": 0,
+        "changeSource": "ChangeSourceUnspecified",
         "exampleEventFields": []
     }
 ]

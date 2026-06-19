@@ -3,7 +3,7 @@
 
 X-Force - Deep security research expertise and global threat intelligence for enhanced security solutions
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
@@ -50,42 +50,6 @@ Timeout - 600 Seconds
 
 
 
-#### Get IP By Category
-
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Category|Category for IP.|True|String|None|
-
-
-
-##### JSON Results
-```json
-[{"ip": "string", "score": "integer", "created": "string"}]
-```
-
-
-
-#### Get Hash Info
-Query XForce for hash information
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Threshold|The value of the threshold can be: low, medium or high.|False|String||
-
-
-
-##### JSON Results
-```json
-[{"EntityResult": {"malware": {"hash": "0x474B9CCF5AB9D72CA8A333889BBB3000", "family": ["tsunami"], "origins": {"downloadServers": {}, "subjects": {}, "CnCServers": {"count": 1, "rows": [{"count": 483, "origin": "CnC", "domain": "domain.net", "filepath": "v.html", "ip": "1.1.1.1", "uri": "http://domain.net/v.html", "lastseen": "2014-10-20T23:19:00Z", "md5": "474B9CCF5AB9D72CA8A333889BBB3000", "type": "CnC", "firstseen": "2014-10-20T23:19:00Z", "schema": "http"}]}, "emails": {}, "external": {"detectionCoverage": 46, "family": ["heuristic", "trojan"]}}, "created": "2014-10-20T23:19:00Z", "familyMembers": {"tsunami": {"count": 61}}, "md5": "0x474B9CCF5AB9D72CA8A333889BBB3000", "type": "md5", "risk": "high"}, "tags": []}, "Entity": "474B9CCF5AB9D72CA8A333889BBB3000"}]
-```
-
-
-
 #### Get IP Info
 Query XForce for IP information
 Timeout - 600 Seconds
@@ -104,6 +68,24 @@ Timeout - 600 Seconds
 
 
 
+#### Get IP By Category
+
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Category|Category for IP.|True|String|None|
+
+
+
+##### JSON Results
+```json
+[{"ip": "string", "score": "integer", "created": "string"}]
+```
+
+
+
 #### Get IP Malware
 Query XForce for the malware associated with an IP address
 Timeout - 600 Seconds
@@ -113,6 +95,24 @@ Timeout - 600 Seconds
 ##### JSON Results
 ```json
 [{"EntityResult": {"malware": [{"count": 13, "origin": "CnC", "domain": "domain-example.info", "last": "2016-10-29T06:31:00Z", "family": ["kasidet"], "filepath": "dom/tasks.php", "ip": "0x00000000000000000000ffff08080808", "uri": "http://domain-example.info/dom/tasks.php", "first": "2016-10-29T06:31:00Z", "host": "dom", "lastseen": "2016-10-29T06:31:00Z", "md5": "4C10F74CE20328B7CC4207245BC9D000", "type": "CnC", "firstseen": "2016-10-29T06:31:00Z", "schema": "http"}]}, "Entity": "1.1.1.1"}]
+```
+
+
+
+#### Get Hash Info
+Query XForce for hash information
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Threshold|The value of the threshold can be: low, medium or high.|False|String||
+
+
+
+##### JSON Results
+```json
+[{"EntityResult": {"malware": {"hash": "0x474B9CCF5AB9D72CA8A333889BBB3000", "family": ["tsunami"], "origins": {"downloadServers": {}, "subjects": {}, "CnCServers": {"count": 1, "rows": [{"count": 483, "origin": "CnC", "domain": "domain.net", "filepath": "v.html", "ip": "1.1.1.1", "uri": "http://domain.net/v.html", "lastseen": "2014-10-20T23:19:00Z", "md5": "474B9CCF5AB9D72CA8A333889BBB3000", "type": "CnC", "firstseen": "2014-10-20T23:19:00Z", "schema": "http"}]}, "emails": {}, "external": {"detectionCoverage": 46, "family": ["heuristic", "trojan"]}}, "created": "2014-10-20T23:19:00Z", "familyMembers": {"tsunami": {"count": 61}}, "md5": "0x474B9CCF5AB9D72CA8A333889BBB3000", "type": "md5", "risk": "high"}, "tags": []}, "Entity": "474B9CCF5AB9D72CA8A333889BBB3000"}]
 ```
 
 

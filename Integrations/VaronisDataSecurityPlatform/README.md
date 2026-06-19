@@ -3,7 +3,7 @@
 
 Capture and search every important action at petabyte scale. Varonis creates a normalized record of every important action on your data—on-premises and in the cloud.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
@@ -63,18 +63,15 @@ Connector can be used to fetch alerts from the Varonis Data Security Platform. T
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|DeviceProductField|A framework parameter that must be set for every connector. Describes the name of the event field where the product name is stored.|True|String|device_product|
-|EventClassId|A framework parameter that must be set for every connector. Describes the name of the event field where the event name is stored.|True|String|Type|
 |Environment Field Name|Describes the name of the event field where the environment name is stored.If the environment field isn't found, the environment is "".|False|String||
 |Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field.Default is .* to catch all and return value unchanged.Used to allow the user to manipulate the environment field through regex logicIf the regex pattern is null or empty, or the environment value is null, the final environment result is "".|False|String|.*|
-|PythonProcessTimeout|Timeout limit for the python process running the connector.|True|Integer|300|
 |API Root|Specify the API URL for the target Varonis Data Security Platform instance.|True|String|https://{ip address}:{port}|
 |Username|Specify the username to connect with.|True|String||
 |Password|Specify the password to connect with.|True|Password|*****|
 |Verify SSL|If enabled, the certificate configured for the API root is validated.|False|Boolean|false|
-|Max Days Backwards|Number of days before the first connector iteration to retrieve alerts from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|Integer|3|
-|Max Alerts per Cycle|Fetch X alerts per connector cycle.|True|Integer|10|
-|Max Events per Varonis alert|Maximum number of events that the connector fetches for the Data Security Platform alert.|True|Integer|25|
+|Max Days Backwards|Number of days before the first connector iteration to retrieve alerts from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|Int|3|
+|Max Alerts per Cycle|Fetch X alerts per connector cycle.|True|Int|10|
+|Max Events per Varonis alert|Maximum number of events that the connector fetches for the Data Security Platform alert.|True|Int|25|
 |Status|Data Security Platform alert statuses to fetch.|True|String|Open, Under Investigation, Closed|
 |Severity|Data Security Platform alert severities to fetch.|True|String|Low, Medium, High|
 |Disable Overflow|If enabled, the connector ignores the Chronicle SOAR overflow mechanism when creating alerts.|False|Boolean|false|

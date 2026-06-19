@@ -3,7 +3,7 @@
 
 Sumo Logic Cloud SIEM provides threat detection and incident response for modern IT environments such as hybrid, multi-cloud, and microservices. Whether you’re looking for your first cloud SIEM, replacing your legacy SIEM, looking for an add-on solution to monitor cloud workloads, or seeking to consolidate your SIEM tools, Sumo Logic is the leading solution in the market.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
@@ -33,6 +33,27 @@ Python Version - 3
 
 
 ## Actions
+#### Update Insight
+Update insight status in Sumo Logic Cloud SIEM.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Insight ID|Specify the ID of the insight needs to be updated.|True|String||
+|Status|Specify what status to set for the insight.|True|List|Select One|
+|Assignee Type|Specify the assignee type for the "Assignee" parameter.|True|List|User|
+|Assignee|Specify the assignee identifier.|False|String||
+
+
+
+##### JSON Results
+```json
+{"data": {"artifacts": [], "assignedTo": null, "assignee": null, "closed": null, "closedBy": null, "confidence": 0.25, "created": "2022-03-28T09:31:19.593192", "description": "Detects multiple failed login attempts for the same username over a 1 hour timeframe. This is designed to catch attacks leveraging domain resources to attempt credential validation. The threshold and time frame can be adjusted based on the customer's environment.", "entity": {"entityType": "_username", "hostname": null, "id": "_username-administrator", "macAddress": null, "name": "administrator", "sensorZone": "", "value": "administrator"}, "id": "2fe4e9f8-xxxx-4849-8a9f-1fxxxxxxxxxx", "lastUpdated": "2022-04-04T10:16:13.397311", "lastUpdatedBy": null, "name": "Initial Access", "orgId": "test", "readableId": "INSIGHT-13xxx", "recordSummaryFields": [], "resolution": null, "severity": "LOW", "source": "USER", "status": {"displayName": "New", "name": "new"}, "subResolution": null, "tags": ["_mitreAttackTactic:TA0xxx", "_mitreAttackTactic:TA0xxx"], "teamAssignedTo": null, "timeToDetection": 290.810192, "timeToRemediation": null, "timeToResponse": 607493.8023, "timestamp": "2022-03-28T09:27:11.557000"}, "errors": []}
+```
+
+
+
 #### Add Tags To Insight
 Add tags to insight in Sumo Logic Cloud SIEM.
 Timeout - 600 Seconds
@@ -66,27 +87,6 @@ Timeout - 600 Seconds
 ##### JSON Results
 ```json
 [{"Entity": "172.30.xxx.xxx", "EntityResult": {"activityScore": 8, "criticality": "severity / 7", "entityType": "_ip", "firstSeen": null, "hostname": null, "id": "_ip-172.30.xxx.xxx", "inventory": [], "isSuppressed": false, "isWhitelisted": false, "lastSeen": "2022-03-11T09:44:53", "macAddress": null, "name": "172.30.xxx.xxx", "sensorZone": null, "tags": [], "value": "172.30.xxx.xxx"}}, {"Entity": "defaultaccount", "EntityResult": {"activityScore": 0, "criticality": null, "entityType": "_username", "firstSeen": null, "hostname": null, "id": "_username-defaultaccount", "inventory": [{"department": null, "emails": [], "givenName": null, "groups": [], "lastName": null, "metadata": {"accountExpires": "92233720325598xxxxx", "cn": "DefaultAccount", "distinguishedName": "CN=DefaultAccount,CN=Users,DC=exlab,DC=local", "lastLogon": 0, "objectCategory": "CN=Person,CN=Schema,CN=Configuration,DC=exlab,DC=local", "objectClass": "top;person;organizationalPerson;user", "objectGUID": "{914a0d9a-xxxx-4dd7-b992-d6xxxxxxxxxx}", "objectSid": "S-1-5-21-34797xxxxx-4256118348-xxxxxxxxxx-xxx", "primaryGroupId": "5xx", "pwdLastSet": 0, "sAMAccountName": "DefaultAccount", "userAccountControl": "66xxx", "whenCreated": "3/17/2022 2:59:39 PM"}, "middleName": null, "normalizedUsername": "defaultaccount", "parsedTime": "2022-03-24 14:56:38.546000", "source": "Active Directory", "timestamp": "2022-03-24 14:56:38.546000", "uniqueId": "S-1-5-21-34797xxxxx-4256118348-xxxxxxxxxx-xxx", "username": "DefaultAccount"}], "isSuppressed": false, "isWhitelisted": false, "lastSeen": null, "macAddress": null, "name": "defaultaccount", "sensorZone": null, "tags": [], "value": "defaultaccount"}}, {"Entity": "ex16-xxxx.exlab", "EntityResult": {"activityScore": 0, "criticality": "Test2", "entityType": "_hostname", "firstSeen": null, "hostname": "ex16-xxxx.exlab", "id": "_hostname-ex16--xxxx.exlab", "inventory": [{"computerName": "EX16-xxxx", "groups": [], "hostname": "ex16-xxxx.exlab.local", "ip": [], "location": null, "mac": null, "metadata": {"accountExpires": "92233720325598xxxxx", "cn": "EX16-xxxx", "dNSHostName": "ex16-xxxx.exlab.local", "distinguishedName": "CN=EX16-xxxx,OU=Domain Controllers,DC=exlab,DC=local", "lastLogon": "13292605xxxxxxxxxx", "objectCategory": "CN=Computer,CN=Schema,CN=Configuration,DC=exlab,DC=local", "objectClass": "top;person;organizationalPerson;user;computer", "objectGUID": "{a9d03316-bda8-xxxx-bea7-05xxxxxxxxxx}", "objectSid": "S-1-5-21-34797xxxxx-4256118348-xxxxxxxxxx-xxxx", "operatingSystem": "Windows Server 2016 Standard Evaluation", "operatingSystemVersion": "10.0 (14393)", "primaryGroupId": "5xx", "pwdLastSet": "13292002xxxxxxxxxx", "sAMAccountName": "EX16-xxxx$", "userAccountControl": "532xxx", "whenCreated": "3/17/2022 3:00:58 PM"}, "natIp": [], "normalizedComputerName": null, "normalizedHostname": "ex16-xxxx.exlab", "os": "Windows Server 2016 Standard Evaluation", "osVersion": "10.0 (14393)", "parsedTime": "2022-03-24 14:56:38.802000", "source": "Active Directory", "timestamp": "2022-03-24 14:56:38.802000", "uniqueId": "{a9d03316-bda8-xxxx-bea7-05xxxxxxxxxx}"}], "isSuppressed": false, "isWhitelisted": false, "lastSeen": null, "macAddress": null, "name": "ex16-xxxx.exlab", "sensorZone": null, "tags": [], "value": "ex16-xxxx.exlab"}}]
-```
-
-
-
-#### Update Insight
-Update insight status in Sumo Logic Cloud SIEM.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Insight ID|Specify the ID of the insight needs to be updated.|True|String||
-|Status|Specify what status to set for the insight.|True|List|Select One|
-|Assignee Type|Specify the assignee type for the "Assignee" parameter.|True|List|User|
-|Assignee|Specify the assignee identifier.|False|String||
-
-
-
-##### JSON Results
-```json
-{"data": {"artifacts": [], "assignedTo": null, "assignee": null, "closed": null, "closedBy": null, "confidence": 0.25, "created": "2022-03-28T09:31:19.593192", "description": "Detects multiple failed login attempts for the same username over a 1 hour timeframe. This is designed to catch attacks leveraging domain resources to attempt credential validation. The threshold and time frame can be adjusted based on the customer's environment.", "entity": {"entityType": "_username", "hostname": null, "id": "_username-administrator", "macAddress": null, "name": "administrator", "sensorZone": "", "value": "administrator"}, "id": "2fe4e9f8-xxxx-4849-8a9f-1fxxxxxxxxxx", "lastUpdated": "2022-04-04T10:16:13.397311", "lastUpdatedBy": null, "name": "Initial Access", "orgId": "test", "readableId": "INSIGHT-13xxx", "recordSummaryFields": [], "resolution": null, "severity": "LOW", "source": "USER", "status": {"displayName": "New", "name": "new"}, "subResolution": null, "tags": ["_mitreAttackTactic:TA0xxx", "_mitreAttackTactic:TA0xxx"], "teamAssignedTo": null, "timeToDetection": 290.810192, "timeToRemediation": null, "timeToResponse": 607493.8023, "timestamp": "2022-03-28T09:27:11.557000"}, "errors": []}
 ```
 
 
@@ -150,19 +150,16 @@ Pull information about insights from Sumo Logic Cloud SIEM. Note: dynamic list f
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|DeviceProductField|Enter the source field name in order to retrieve the Product Field name.|True|String|Product Name|
-|EventClassId|Enter the source field name in order to retrieve the Event Field name.|True|String|generalized_data_name|
 |Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|String||
 |Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|String|.*|
-|PythonProcessTimeout|Timeout limit for the python process running the current script.|True|Integer|180|
 |API Root|API root of the Sumo Logic Cloud SIEM instance.|True|String|https://{instance}|
 |API Key|API Key of the Sumo Logic Cloud SIEM account. Note: API key has priority over other authentication method.|False|Password|*****|
 |Access ID|Access ID of the Sumo Logic Cloud SIEM account. Note: both Access ID and Access Key are required for this type of authentication.|False|String||
 |Access Key|Access Key of the Sumo Logic Cloud SIEM account. Note: both Access ID and Access Key are required for this type of authentication.|False|Password|*****|
 |Verify SSL|If enabled, verify the SSL certificate for the connection to the Sumo Logic Cloud SIEM server is valid.|False|Boolean|true|
 |Lowest Severity To Fetch|Lowest severity that needs to be used to fetch insights. Possible values: Low, Medium, High, Critical. If nothing is specified, the connector will ingest insights with all severities.|False|String||
-|Max Hours Backwards|Number of hours before the first connector iteration to retrieve insights from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|Integer|1|
-|Max Insights To Fetch|How many insights to process per one connector iteration. Default: 20.|False|Integer|20|
+|Max Hours Backwards|Number of hours before the first connector iteration to retrieve insights from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|Int|1|
+|Max Insights To Fetch|How many insights to process per one connector iteration. Default: 20.|False|Int|20|
 |Use dynamic list as a blacklist|If enabled, dynamic lists will be used as a blacklist.|False|Boolean|false|
 |Proxy Server Address|The address of the proxy server to use.|False|String||
 |Proxy Username|The proxy username to authenticate with.|False|String||

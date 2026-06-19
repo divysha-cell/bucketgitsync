@@ -3,7 +3,7 @@
 
 Cloud-based threat analysis and prevention engine for highly evasive zero-day exploits and malware.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
@@ -18,26 +18,20 @@ Python Version - 3
 
 
 ## Actions
-#### Ping
-Test connectivity to Wildfire
-Timeout - 600 Seconds
-
-
-
 #### GetReport
 Get a detonation report from WildFire
 Timeout - 600 Seconds
 
 
 
-#### GetFile
-Download and save a sample from WildFire
+#### GetPcap
+Download and save the PCAP file of a sample from WildFire
 Timeout - 600 Seconds
 
 
 
-#### GetPcap
-Download and save the PCAP file of a sample from WildFire
+#### GetFile
+Download and save a sample from WildFire
 Timeout - 600 Seconds
 
 
@@ -50,6 +44,12 @@ Timeout - 600 Seconds
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
 |File Paths|File Paths|True|String|Detonate file from path(e.g: C:\temp\NPPJSONViewer.dll).|
+
+
+
+#### Ping
+Test connectivity to Wildfire
+Timeout - 600 Seconds
 
 
 

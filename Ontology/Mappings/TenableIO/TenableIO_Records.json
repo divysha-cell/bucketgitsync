@@ -7,7 +7,7 @@
         "product": "Tenable.io",
         "eventName": null,
         "mappingStatus": null,
-        "changeSource": 0,
+        "changeSource": "ChangeSourceUnspecified",
         "exampleEventFields": []
     }
 ]

@@ -3,51 +3,11 @@
 
 Windows Management Instrumentation (WMI) is the infrastructure for management data and operations on Windows-based operating systems.
 
-Python Version - 3
+Python Version - V3_11
 
 
 
 ## Actions
-#### ListUsers
-List all users configured on a system
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Server Address|Server Address|True|String||
-|Username|Username|False|String||
-|Password|Password|False|Password|*****|
-
-
-
-##### JSON Results
-```json
-[{"Status": "Degraded", "Domain": "PC-01", "Description": "Built-in account for administering the computer/domain", "InstallDate": null, "Caption": "PC-01\\Administrator", "Disabled": true, "PasswordChangeable": true, "Lockout": false, "AccountType": 512, "SID": "S-1-5-21-3501119061-1410835827-1917537121-500", "LocalAccount": true, "FullName": "", "SIDType": 1, "PasswordRequired": true, "PasswordExpires": false, "Name": "Administrator"}]
-```
-
-
-
-#### ListServices
-Get the list of installed services on the system
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Server Address|Server Address|True|String||
-|Username|Username|False|String||
-|Password|Password|False|Password|*****|
-
-
-
-##### JSON Results
-```json
-[{"DisplayName": "Adobe Flash Player Update Service", "ServiceSpecificExitCode": 0, "State": "Stopped", "SystemName": "PC-01", "ErrorControl": "Normal", "Status": "OK", "ProcessId": 0, "DesktopInteract": false, "Started": false, "AcceptStop": false, "CheckPoint": 0, "PathName": "C:\\Windows\\SysWOW64\\Macromed\\Flash\\FlashPlayerUpdateService.exe", "WaitHint": 0, "Name": "AdobeFlashPlayerUpdateSvc", "InstallDate": null, "Caption": "Adobe Flash Player Update Service", "StartMode": "Manual", "Description": "This service keeps your Adobe Flash Player installation up to date with the latest enhancements and security fixes.", "ServiceType": "Own Process", "TagId": 0, "DelayedAutoStart": false, "StartName": "LocalSystem", "AcceptPause": false, "CreationClassName": "Win32_Service", "SystemCreationClassName": "Win32_ComputerSystem", "ExitCode": 0}]
-```
-
-
-
 #### GetSystemInfo
 Get information about a system
 Timeout - 600 Seconds
@@ -89,9 +49,49 @@ Timeout - 600 Seconds
 
 
 
+#### ListUsers
+List all users configured on a system
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Server Address|Server Address|True|String||
+|Username|Username|False|String||
+|Password|Password|False|Password|*****|
+
+
+
+##### JSON Results
+```json
+[{"Status": "Degraded", "Domain": "PC-01", "Description": "Built-in account for administering the computer/domain", "InstallDate": null, "Caption": "PC-01\\Administrator", "Disabled": true, "PasswordChangeable": true, "Lockout": false, "AccountType": 512, "SID": "S-1-5-21-3501119061-1410835827-1917537121-500", "LocalAccount": true, "FullName": "", "SIDType": 1, "PasswordRequired": true, "PasswordExpires": false, "Name": "Administrator"}]
+```
+
+
+
 #### Ping
 Test Connectivity
 Timeout - 600 Seconds
+
+
+
+#### ListServices
+Get the list of installed services on the system
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Server Address|Server Address|True|String||
+|Username|Username|False|String||
+|Password|Password|False|Password|*****|
+
+
+
+##### JSON Results
+```json
+[{"DisplayName": "Adobe Flash Player Update Service", "ServiceSpecificExitCode": 0, "State": "Stopped", "SystemName": "PC-01", "ErrorControl": "Normal", "Status": "OK", "ProcessId": 0, "DesktopInteract": false, "Started": false, "AcceptStop": false, "CheckPoint": 0, "PathName": "C:\\Windows\\SysWOW64\\Macromed\\Flash\\FlashPlayerUpdateService.exe", "WaitHint": 0, "Name": "AdobeFlashPlayerUpdateSvc", "InstallDate": null, "Caption": "Adobe Flash Player Update Service", "StartMode": "Manual", "Description": "This service keeps your Adobe Flash Player installation up to date with the latest enhancements and security fixes.", "ServiceType": "Own Process", "TagId": 0, "DelayedAutoStart": false, "StartName": "LocalSystem", "AcceptPause": false, "CreationClassName": "Win32_Service", "SystemCreationClassName": "Win32_ComputerSystem", "ExitCode": 0}]
+```
 
 
 

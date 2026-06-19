@@ -7,7 +7,7 @@
         "product": "Trend Vision One",
         "eventName": null,
         "mappingStatus": null,
-        "changeSource": 0,
+        "changeSource": "ChangeSourceUnspecified",
         "exampleEventFields": []
     }
 ]

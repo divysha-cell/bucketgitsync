@@ -2,6 +2,7 @@
 |Product|Event Name|Visual Family|
 |-------|----------|-------------|
 |None|None|Default|
+|None|EMAIL_TRANSACTION|Default|
 |IOC|None|Default|
 |EXTERNAL|None|Default|
 |EXTERNAL|EMAIL_TRANSACTION|Default|

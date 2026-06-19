@@ -1,0 +1,35 @@
+{
+    "name": "projects/project/locations/location/instances/instance/integrations/Siemplify/jobs/5/jobInstances/29",
+    "id": 0,
+    "job": "Logs Collector",
+    "integration": "Siemplify",
+    "createTime": 1781862804104,
+    "updateTime": 1781862835850,
+    "custom": false,
+    "script": "import json\n\nfrom PublisherAPIManager import PublisherAPIManager\nfrom SiemplifyJob import SiemplifyJob\nfrom SiemplifyUtils import convert_unixtime_to_datetime, output_handler, unix_now\n\n\n@output_handler\ndef main():\n    siemplify = SiemplifyJob()\n    siemplify.script_name = \"Logs Collector\"\n    siemplify.LOGGER.info(\"----Logs Collector started---\")\n    publisher_id = siemplify.parameters.get(\"Publisher Id\")\n    verify_ssl = (\n        str(siemplify.parameters.get(\"Verify SSL\")).lower() == str(True).lower()\n    )\n    finished_successfully = False\n    now_timestamp = unix_now()\n    try:\n        publisher_details = siemplify.get_publisher_by_id(publisher_id)\n        publisher_api_root = publisher_details[\"server_api_root\"]\n        api_token = publisher_details[\"api_token\"]\n        publisher_api_manager = PublisherAPIManager(\n            publisher_api_root, api_token, verify_ssl\n        )\n        unix_ms_last_run_time = siemplify.fetch_timestamp()\n        # Get logs.\n        siemplify.LOGGER.info(\n            f\"Fetching logs since {unix_ms_last_run_time} ({convert_unixtime_to_datetime(unix_ms_last_run_time)})\"\n        )\n        log_records = publisher_api_manager.fetch_log_records_since_timestamp(\n            since=unix_ms_last_run_time\n        )\n        # Sort the records by updating time\n        log_records = sorted(log_records, key=lambda record: record.get(\"updated\", 0))\n        siemplify.LOGGER.info(f\"Found {len(log_records)} log records.\")\n        if not log_records:\n            siemplify.LOGGER.info(\"No log records were found.\")\n            finished_successfully = True\n\n        else:\n            try:\n                siemplify.LOGGER.info(\"Saving records\")\n                siemplify.save_publisher_logs(log_records)\n            except Exception as e:\n                siemplify.LOGGER.error(\"Failed to save records\")\n                siemplify.LOGGER.exception(e)\n            # In case we succeeded to save the records delete those records\n            else:\n                publisher_api_manager.delete_log_records_since_timestamp(\n                    since=unix_ms_last_run_time\n                )\n\n                siemplify.save_timestamp(new_timestamp=now_timestamp)\n                siemplify.LOGGER.info(\n                    f\"Saved last_run_time: {now_timestamp} ({convert_unixtime_to_datetime(now_timestamp)})\"\n                )\n                for log in log_records:\n                    if log[\"level\"] == \"ERROR\":\n                        siemplify.LOGGER.exception(json.dumps(log).encode(\"utf-8\"))\n                finished_successfully = True\n\n    except Exception as e:\n        siemplify.LOGGER.error(\"An error occurred while running Logs Collector\")\n        siemplify.LOGGER.exception(e)\n        raise e\n    finally:\n        siemplify.LOGGER.info(\"----Logs Collector finished---\")\n    if siemplify.LOGGER.error_logged and not finished_successfully:\n        raise Exception(\"Error was logged during execution, check the logs.s\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "author": "Siemplify System",
+    "lastRunStatus": "Error",
+    "lastRunTime": 1781862835840,
+    "uniqueIdentifier": "c8a9f444-699f-47e9-b935-82e2f38b6d8b",
+    "enabled": true,
+    "displayName": "Job_30",
+    "description": "Automated test job 30",
+    "intervalSeconds": 60,
+    "advanced": false,
+    "parameters": [
+        {
+            "id": 172,
+            "mandatory": true,
+            "type": "Int",
+            "displayName": "Publisher Id",
+            "value": "dummy_val"
+        },
+        {
+            "id": 173,
+            "mandatory": false,
+            "type": "Boolean",
+            "displayName": "Verify SSL",
+            "value": "False"
+        }
+    ]
+}

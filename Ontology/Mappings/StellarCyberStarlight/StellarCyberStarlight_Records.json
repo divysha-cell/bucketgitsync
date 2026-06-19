@@ -7,7 +7,7 @@
         "product": "Starlight",
         "eventName": null,
         "mappingStatus": null,
-        "changeSource": 0,
+        "changeSource": "ChangeSourceUnspecified",
         "exampleEventFields": []
     }
 ]

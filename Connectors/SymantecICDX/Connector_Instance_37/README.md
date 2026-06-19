@@ -1,0 +1,24 @@
+# Connector_Instance_37
+Automated connector 37
+
+
+Integration: SymantecICDX
+
+Integration Version: 10
+
+Device Product Field: device_product
+
+Event Name Field: name
+### Parameters
+|Name|Description|Is Mandatory|Value|
+|----|-----------|------------|-----|
+|Api Root|Api Root|True|dummy_val|
+|Api Token|Api Token|True|*****|
+|Verify SSL|Whether to use ssl on connection or not|False|FALSE|
+|Search Query|Search Query|True|dummy_val|
+|Events Limit|Max count of events to pull in one cycle. e.g. 20|True|10|
+|Max Days Backwards|Max number of days to fetch events since. e.g. 3|True|1|
+|Proxy Server Address|The address of the proxy server to use.|False||
+|Proxy Username|The proxy username to authenticate with.|False||
+|Proxy Password|The proxy password to authenticate with.|False|*****|
+

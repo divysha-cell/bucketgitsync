@@ -3,7 +3,7 @@
 
 Zoho Desk is context-aware customer service software that helps you put your customers at the heart of the company.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
@@ -48,15 +48,9 @@ Python Version - 3
 
 
 ## Actions
-#### Mark Ticket As Spam
-Mark ticket as spam in Zoho Desk.
+#### Ping
+Test connectivity to the Zoho Desk with parameters provided at the integration configuration page on the Marketplace tab.
 Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Ticket ID|Specify an id of the ticket that needs to be marked as spam.|True|String||
-|Mark Contact|If enabled, the contact that created the ticket will be marked as spammer.|False|Boolean|true|
 
 
 
@@ -94,61 +88,15 @@ Timeout - 600 Seconds
 
 
 
-#### Create Ticket
-Create a ticket in Zoho Desk.
+#### Mark Ticket As Spam
+Mark ticket as spam in Zoho Desk.
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Title|Specify the title for the ticket.|True|String||
-|Description|Specify the description of the ticket.|True|String||
-|Department Name|Specify the name of the department in which you want to create a ticket.|True|String||
-|Contact|Specify the email of the contact for the ticket.|True|String||
-|Assignee Type|Specify the type of the assignee. If "Agent" or "Team" is selected "Assignee Name" is required.|False|List|Select One|
-|Assignee Name|Specify the name of the assignee for the ticket. For the agent type you can provide an email address or display name.|False|String||
-|Priority|Specify the priority for the ticket.|False|List|No Priority|
-|Classification|Specify the classification type for the ticket.|False|List|No Classification|
-|Channel|Specify the channel for the ticket.|False|List|Email|
-|Category|Specify the category for the ticket.|False|String||
-|Sub Category|Specify the subcategory for the ticket.|False|String||
-|Due Date|Specify the due date for the ticket. Format: ISO 8601. Example: 2022-07-06T07:05:43Z.|False|String||
-|Custom Fields|Specify a json object containing the custom fields that need to be added. Note: you need to provide the API names of the keys.|False|String||
-
-
-
-##### JSON Results
-```json
-{"modifiedTime":"2022-07-01T11:00:33.000Z","subCategory":null,"statusType":"On Hold","subject":"Here's your first ticket.","dueDate":null,"departmentId":"9770xxxxxxxxxxx","channel":"Chat","onholdTime":"2022-07-01T09:32:14.717Z","language":"English","source":{"appName":null,"extId":null,"permalink":null,"type":"SYSTEM","appPhotoURL":null},"resolution":"Koko","sharedDepartments":[],"closedTime":null,"approvalCount":"0","isOverDue":true,"isTrashed":false,"createdTime":"2022-06-27T17:02:17.000Z","id":"9770xxxxxxxxxxx","isResponseOverdue":false,"customerResponseTime":"2022-06-27T17:02:17.000Z","productId":null,"contactId":"9770xxxxxxxxxxx","threadCount":"1","secondaryContacts":[],"priority":null,"classification":null,"commentCount":"1","taskCount":"0","accountId":"9770xxxxxxxxxxx","phone":"1 888 xxx xxxx","webUrl":"https://desk.zoho.eu/support/siemplify/ShowHomePage.do#Cases/dv/9770xxxxxxxxxxx","isSpam":false,"status":"On Hold","entitySkills":[],"ticketNumber":"xxx","customFields":{},"isArchived":false,"description":"Hello<","timeEntryCount":"0","channelRelatedInfo":null,"responseDueDate":null,"isDeleted":false,"modifiedBy":"9770xxxxxxxxxxx","email":"support@zohosupport.com","layoutDetails":{"id":"9770xxxxxxxxxxx","layoutName":"Siemplify"},"channelCode":null,"cf":{},"slaId":null,"layoutId":"9770xxxxxxxxxxx","assigneeId":null,"teamId":"9770xxxxxxxxxxx","attachmentCount":"0","isEscalated":false,"category":null}
-```
-
-
-
-#### Add Comment To Ticket
-Add a comment to a ticket in Zoho Desk. Note: Action is running as async if "Wait For Reply" is enabled, please adjust script timeout value in Siemplify IDE for action as needed.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Ticket ID|Specify an id of the ticket to which you want to add a comment.|True|String||
-|Visibility|Specify if the comment should be public or private.|False|List|Public|
-|Type|Specify what should be the type of the comment.|False|List|Plain Text|
-|Text|Specify the content of the comment.|True|String||
-|Wait For Reply|If enabled, action will wait for reply.|False|Boolean|false|
-
-
-
-##### JSON Results
-```json
-{"content":"zsu[@user:115xxxxx]zsu Please fix this ASAP","commentedTime":"2022-07-01T11:18:43.935Z","modifiedTime":"2022-07-01T11:18:43.935Z","contentType":"plainText","impersonatedUser":null,"encodedContent":"zsu&#x5b;&#x40;user&#x3a;115xxxxx&#x5d;zsu Please fix this ASAP","id":"9770xxxxxxxxxxxxx","commenterId":"9770xxxxxxxxxxxxx","commenter":{"id":"9770xxxxxxxxxxxxx","name":"TIP Labops","email":"tip.labops@siemplify.co","photoURL":"https://desk.zoho.eu/api/v1/agents/9770xxxxxxxxxxxxx/photo?orgId=2008xxxxxxxx","type":"AGENT","firstName":"TIP","lastName":"Labops","roleName":"CEO"},"attachments":[],"isPublic":false}
-```
-
-
-
-#### Ping
-Test connectivity to the Zoho Desk with parameters provided at the integration configuration page on the Marketplace tab.
-Timeout - 600 Seconds
+|Ticket ID|Specify an id of the ticket that needs to be marked as spam.|True|String||
+|Mark Contact|If enabled, the contact that created the ticket will be marked as spammer.|False|Boolean|true|
 
 
 
@@ -247,6 +195,58 @@ Timeout - 600 Seconds
     "category": null  
 }  
 
+```
+
+
+
+#### Create Ticket
+Create a ticket in Zoho Desk.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Title|Specify the title for the ticket.|True|String||
+|Description|Specify the description of the ticket.|True|String||
+|Department Name|Specify the name of the department in which you want to create a ticket.|True|String||
+|Contact|Specify the email of the contact for the ticket.|True|String||
+|Assignee Type|Specify the type of the assignee. If "Agent" or "Team" is selected "Assignee Name" is required.|False|List|Select One|
+|Assignee Name|Specify the name of the assignee for the ticket. For the agent type you can provide an email address or display name.|False|String||
+|Priority|Specify the priority for the ticket.|False|List|No Priority|
+|Classification|Specify the classification type for the ticket.|False|List|No Classification|
+|Channel|Specify the channel for the ticket.|False|List|Email|
+|Category|Specify the category for the ticket.|False|String||
+|Sub Category|Specify the subcategory for the ticket.|False|String||
+|Due Date|Specify the due date for the ticket. Format: ISO 8601. Example: 2022-07-06T07:05:43Z.|False|String||
+|Custom Fields|Specify a json object containing the custom fields that need to be added. Note: you need to provide the API names of the keys.|False|String||
+
+
+
+##### JSON Results
+```json
+{"modifiedTime":"2022-07-01T11:00:33.000Z","subCategory":null,"statusType":"On Hold","subject":"Here's your first ticket.","dueDate":null,"departmentId":"9770xxxxxxxxxxx","channel":"Chat","onholdTime":"2022-07-01T09:32:14.717Z","language":"English","source":{"appName":null,"extId":null,"permalink":null,"type":"SYSTEM","appPhotoURL":null},"resolution":"Koko","sharedDepartments":[],"closedTime":null,"approvalCount":"0","isOverDue":true,"isTrashed":false,"createdTime":"2022-06-27T17:02:17.000Z","id":"9770xxxxxxxxxxx","isResponseOverdue":false,"customerResponseTime":"2022-06-27T17:02:17.000Z","productId":null,"contactId":"9770xxxxxxxxxxx","threadCount":"1","secondaryContacts":[],"priority":null,"classification":null,"commentCount":"1","taskCount":"0","accountId":"9770xxxxxxxxxxx","phone":"1 888 xxx xxxx","webUrl":"https://desk.zoho.eu/support/siemplify/ShowHomePage.do#Cases/dv/9770xxxxxxxxxxx","isSpam":false,"status":"On Hold","entitySkills":[],"ticketNumber":"xxx","customFields":{},"isArchived":false,"description":"Hello<","timeEntryCount":"0","channelRelatedInfo":null,"responseDueDate":null,"isDeleted":false,"modifiedBy":"9770xxxxxxxxxxx","email":"support@zohosupport.com","layoutDetails":{"id":"9770xxxxxxxxxxx","layoutName":"Siemplify"},"channelCode":null,"cf":{},"slaId":null,"layoutId":"9770xxxxxxxxxxx","assigneeId":null,"teamId":"9770xxxxxxxxxxx","attachmentCount":"0","isEscalated":false,"category":null}
+```
+
+
+
+#### Add Comment To Ticket
+Add a comment to a ticket in Zoho Desk. Note: Action is running as async if "Wait For Reply" is enabled, please adjust script timeout value in Siemplify IDE for action as needed.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Ticket ID|Specify an id of the ticket to which you want to add a comment.|True|String||
+|Visibility|Specify if the comment should be public or private.|False|List|Public|
+|Type|Specify what should be the type of the comment.|False|List|Plain Text|
+|Text|Specify the content of the comment.|True|String||
+|Wait For Reply|If enabled, action will wait for reply.|False|Boolean|false|
+
+
+
+##### JSON Results
+```json
+{"content":"zsu[@user:115xxxxx]zsu Please fix this ASAP","commentedTime":"2022-07-01T11:18:43.935Z","modifiedTime":"2022-07-01T11:18:43.935Z","contentType":"plainText","impersonatedUser":null,"encodedContent":"zsu&#x5b;&#x40;user&#x3a;115xxxxx&#x5d;zsu Please fix this ASAP","id":"9770xxxxxxxxxxxxx","commenterId":"9770xxxxxxxxxxxxx","commenter":{"id":"9770xxxxxxxxxxxxx","name":"TIP Labops","email":"tip.labops@siemplify.co","photoURL":"https://desk.zoho.eu/api/v1/agents/9770xxxxxxxxxxxxx/photo?orgId=2008xxxxxxxx","type":"AGENT","firstName":"TIP","lastName":"Labops","roleName":"CEO"},"attachments":[],"isPublic":false}
 ```
 
 

@@ -3,7 +3,7 @@
 
 ZeroFox is the leading Threat Intelligence and Digital Risk Protection platform, helping you secure your digital world.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
@@ -46,18 +46,6 @@ Python Version - 3
 
 
 ## Actions
-#### Add Evidence To Alert
-Use the Add Evidence To Alert action to add evidence to alert in Zerofox.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Alert ID|ID of the Zerofox Alert.|True|String||
-|Filepath|Absolute file path for the evidence that needs to be submitted to the alert.|True|String||
-
-
-
 #### Request Takedown
 Use the Request Takedown action to request takedown in Zerofox.
 Timeout - 600 Seconds
@@ -80,6 +68,12 @@ Timeout - 600 Seconds
 
 
 
+#### Ping
+Use the Ping action to test the connectivity to Zerofox.
+Timeout - 600 Seconds
+
+
+
 #### Add Note To Alert
 Use the Add Note To Alert action to add a note to alert in Zerofox.
 Timeout - 600 Seconds
@@ -92,9 +86,15 @@ Timeout - 600 Seconds
 
 
 
-#### Ping
-Use the Ping action to test the connectivity to Zerofox.
+#### Add Evidence To Alert
+Use the Add Evidence To Alert action to add evidence to alert in Zerofox.
 Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Alert ID|ID of the Zerofox Alert.|True|String||
+|Filepath|Absolute file path for the evidence that needs to be submitted to the alert.|True|String||
 
 
 
