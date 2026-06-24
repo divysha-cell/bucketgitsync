@@ -22,5 +22,29 @@
         "aliases": [],
         "instanceUrl": null,
         "dataAccessScopes": []
+    },
+    {
+        "id": 0,
+        "name": "Test Environment",
+        "description": "Test Environment",
+        "contactName": "Test Environment",
+        "contactEmails": "TestEnvironment@gmail.com",
+        "contactEmailsList": null,
+        "contactPhone": "122345666669",
+        "allowedActions": null,
+        "remediationDurationInDays": 0,
+        "shouldAllowRemediationActions": false,
+        "shouldNotifyOnRemediationActions": false,
+        "retentionDurationInMonths": 3,
+        "retentionDurationInMonthsInternal": null,
+        "base64Image": "",
+        "forDBMigration": false,
+        "environmentAllowedForAllUsers": false,
+        "dynamicParameters": [],
+        "properties": {},
+        "isSystem": false,
+        "aliases": [],
+        "instanceUrl": "",
+        "dataAccessScopes": []
     }
 ]
