@@ -1,0 +1,58 @@
+{
+    "cases": [
+        {
+            "creatorUserId": null,
+            "events": [
+                {
+                    "_fields": {
+                        "baseEventIds": [],
+                        "parentEventId": 0,
+                        "deviceEventClassId": "SimulatedRule_29",
+                        "startTime": "1781529725517",
+                        "endTime": "1781529725517",
+                        "deviceProduct": "SimulatedProduct"
+                    },
+                    "_rawDataFields": {
+                        "deviceEventClassId": "SimulatedEvent_29",
+                        "deviceProduct": "SimulatedProduct",
+                        "name": "SimulatedEvent_29"
+                    },
+                    "environment": null,
+                    "sourceSystemName": null,
+                    "extensions": []
+                }
+            ],
+            "environment": null,
+            "sourceSystemName": "SimulatedSource",
+            "ticketId": "SimulatedAlert_29",
+            "description": null,
+            "displayId": null,
+            "reason": null,
+            "name": "SimulatedAlert_29",
+            "deviceVendor": "SimulatedProduct",
+            "deviceProduct": "SimulatedProduct",
+            "startTime": 1781529725517,
+            "endTime": 1781529725517,
+            "type": 0,
+            "priority": -1,
+            "ruleGenerator": "SimulatedRule_29",
+            "sourceGroupingIdentifier": null,
+            "playbookTriggerKeywords": [],
+            "extensions": [],
+            "attachments": null,
+            "isTrimmed": false,
+            "dataType": 1,
+            "sourceType": 1,
+            "sourceSystemUrl": null,
+            "sourceRuleIdentifier": null,
+            "siemAlertId": null,
+            "updatedFields": [],
+            "alertUpdateSupported": false,
+            "alertMetadata": {},
+            "dataAccessScope": null
+        }
+    ],
+    "type": 0,
+    "connectorIdentifier": null,
+    "debugOutput": null
+}

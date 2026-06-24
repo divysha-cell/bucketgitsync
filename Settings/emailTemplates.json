@@ -1,497 +1,491 @@
 [
     {
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/61",
+        "templateType": "Template",
+        "id": 61,
+        "content": "Subject: This is email template 60\n\nHi!\n\nThis is the auto-generated template number 60.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate60",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/60",
+        "templateType": "Template",
+        "id": 60,
+        "content": "Subject: This is email template 59\n\nHi!\n\nThis is the auto-generated template number 59.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate59",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/59",
+        "templateType": "Template",
+        "id": 59,
+        "content": "Subject: This is email template 58\n\nHi!\n\nThis is the auto-generated template number 58.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate58",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/58",
+        "templateType": "Template",
+        "id": 58,
+        "content": "Subject: This is email template 57\n\nHi!\n\nThis is the auto-generated template number 57.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate57",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/57",
+        "templateType": "Template",
+        "id": 57,
+        "content": "Subject: This is email template 56\n\nHi!\n\nThis is the auto-generated template number 56.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate56",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/56",
+        "templateType": "Template",
+        "id": 56,
+        "content": "Subject: This is email template 55\n\nHi!\n\nThis is the auto-generated template number 55.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate55",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
+    },
+    {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/55",
         "templateType": "Template",
-        "author": "admin",
         "id": 55,
-        "content": "Automated email body content for template 54",
-        "displayName": "EmailTemplate54",
-        "environments": "[\"Network_4\"]"
+        "content": "Subject: This is email template 54\n\nHi!\n\nThis is the auto-generated template number 54.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate54",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/54",
         "templateType": "Template",
-        "author": "admin",
         "id": 54,
-        "content": "Automated email body content for template 55",
-        "displayName": "EmailTemplate55",
-        "environments": "[\"Network_5\"]"
+        "content": "Subject: This is email template 53\n\nHi!\n\nThis is the auto-generated template number 53.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate53",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/53",
         "templateType": "Template",
-        "author": "admin",
         "id": 53,
-        "content": "Automated email body content for template 53",
-        "displayName": "EmailTemplate53",
-        "environments": "[\"Network_3\"]"
+        "content": "Subject: This is email template 52\n\nHi!\n\nThis is the auto-generated template number 52.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate52",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/52",
         "templateType": "Template",
-        "author": "admin",
         "id": 52,
-        "content": "Automated email body content for template 50",
-        "displayName": "EmailTemplate50",
-        "environments": "[\"Network_50\"]"
+        "content": "Subject: This is email template 51\n\nHi!\n\nThis is the auto-generated template number 51.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate51",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/51",
         "templateType": "Template",
-        "author": "admin",
         "id": 51,
-        "content": "Automated email body content for template 49",
-        "displayName": "EmailTemplate49",
-        "environments": "[\"Network_49\"]"
+        "content": "Subject: This is email template 50\n\nHi!\n\nThis is the auto-generated template number 50.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate50",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/50",
         "templateType": "Template",
-        "author": "admin",
         "id": 50,
-        "content": "Automated email body content for template 47",
-        "displayName": "EmailTemplate47",
-        "environments": "[\"Network_47\"]"
+        "content": "Subject: This is email template 49\n\nHi!\n\nThis is the auto-generated template number 49.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate49",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/49",
         "templateType": "Template",
-        "author": "admin",
         "id": 49,
-        "content": "Automated email body content for template 48",
-        "displayName": "EmailTemplate48",
-        "environments": "[\"Network_48\"]"
+        "content": "Subject: This is email template 48\n\nHi!\n\nThis is the auto-generated template number 48.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate48",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/48",
         "templateType": "Template",
-        "author": "admin",
         "id": 48,
-        "content": "Automated email body content for template 51",
-        "displayName": "EmailTemplate51",
-        "environments": "[\"Network_1\"]"
+        "content": "Subject: This is email template 47\n\nHi!\n\nThis is the auto-generated template number 47.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate47",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/47",
         "templateType": "Template",
-        "author": "admin",
         "id": 47,
-        "content": "Automated email body content for template 52",
-        "displayName": "EmailTemplate52",
-        "environments": "[\"Network_2\"]"
+        "content": "Subject: This is email template 46\n\nHi!\n\nThis is the auto-generated template number 46.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate46",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/46",
         "templateType": "Template",
-        "author": "admin",
         "id": 46,
-        "content": "Automated email body content for template 44",
-        "displayName": "EmailTemplate44",
-        "environments": "[\"Network_44\"]"
+        "content": "Subject: This is email template 45\n\nHi!\n\nThis is the auto-generated template number 45.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate45",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/45",
         "templateType": "Template",
-        "author": "admin",
         "id": 45,
-        "content": "Automated email body content for template 45",
-        "displayName": "EmailTemplate45",
-        "environments": "[\"Network_45\"]"
+        "content": "Subject: This is email template 44\n\nHi!\n\nThis is the auto-generated template number 44.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate44",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/44",
         "templateType": "Template",
-        "author": "admin",
         "id": 44,
-        "content": "Automated email body content for template 46",
-        "displayName": "EmailTemplate46",
-        "environments": "[\"Network_46\"]"
+        "content": "Subject: This is email template 43\n\nHi!\n\nThis is the auto-generated template number 43.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate43",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/43",
         "templateType": "Template",
-        "author": "admin",
         "id": 43,
-        "content": "Automated email body content for template 43",
-        "displayName": "EmailTemplate43",
-        "environments": "[\"Network_43\"]"
+        "content": "Subject: This is email template 42\n\nHi!\n\nThis is the auto-generated template number 42.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate42",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/42",
         "templateType": "Template",
-        "author": "admin",
         "id": 42,
-        "content": "Automated email body content for template 42",
-        "displayName": "EmailTemplate42",
-        "environments": "[\"Network_42\"]"
+        "content": "Subject: This is email template 41\n\nHi!\n\nThis is the auto-generated template number 41.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate41",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/41",
         "templateType": "Template",
-        "author": "admin",
         "id": 41,
-        "content": "Automated email body content for template 41",
-        "displayName": "EmailTemplate41",
-        "environments": "[\"Network_41\"]"
+        "content": "Subject: This is email template 40\n\nHi!\n\nThis is the auto-generated template number 40.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate40",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/40",
         "templateType": "Template",
-        "author": "admin",
         "id": 40,
-        "content": "Automated email body content for template 34",
-        "displayName": "EmailTemplate34",
-        "environments": "[\"Network_34\"]"
+        "content": "Subject: This is email template 39\n\nHi!\n\nThis is the auto-generated template number 39.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate39",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/39",
         "templateType": "Template",
-        "author": "admin",
         "id": 39,
-        "content": "Automated email body content for template 37",
-        "displayName": "EmailTemplate37",
-        "environments": "[\"Network_37\"]"
+        "content": "Subject: This is email template 36\n\nHi!\n\nThis is the auto-generated template number 36.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate36",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/38",
         "templateType": "Template",
-        "author": "admin",
         "id": 38,
-        "content": "Automated email body content for template 39",
-        "displayName": "EmailTemplate39",
-        "environments": "[\"Network_39\"]"
+        "content": "Subject: This is email template 35\n\nHi!\n\nThis is the auto-generated template number 35.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate35",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/37",
         "templateType": "Template",
-        "author": "admin",
         "id": 37,
-        "content": "Automated email body content for template 40",
-        "displayName": "EmailTemplate40",
-        "environments": "[\"Network_40\"]"
+        "content": "Subject: This is email template 34\n\nHi!\n\nThis is the auto-generated template number 34.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate34",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/36",
         "templateType": "Template",
-        "author": "admin",
         "id": 36,
-        "content": "Automated email body content for template 36",
-        "displayName": "EmailTemplate36",
-        "environments": "[\"Network_36\"]"
+        "content": "Subject: This is email template 33\n\nHi!\n\nThis is the auto-generated template number 33.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate33",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/35",
         "templateType": "Template",
-        "author": "admin",
         "id": 35,
-        "content": "Automated email body content for template 35",
-        "displayName": "EmailTemplate35",
-        "environments": "[\"Network_35\"]"
+        "content": "Subject: This is email template 32\n\nHi!\n\nThis is the auto-generated template number 32.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate32",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/34",
         "templateType": "Template",
-        "author": "admin",
         "id": 34,
-        "content": "Automated email body content for template 38",
-        "displayName": "EmailTemplate38",
-        "environments": "[\"Network_38\"]"
+        "content": "Subject: This is email template 31\n\nHi!\n\nThis is the auto-generated template number 31.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate31",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/33",
         "templateType": "Template",
-        "author": "admin",
         "id": 33,
-        "content": "Automated email body content for template 32",
-        "displayName": "EmailTemplate32",
-        "environments": "[\"Network_32\"]"
+        "content": "Subject: This is email template 30\n\nHi!\n\nThis is the auto-generated template number 30.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate30",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/32",
         "templateType": "Template",
-        "author": "admin",
         "id": 32,
-        "content": "Automated email body content for template 33",
-        "displayName": "EmailTemplate33",
-        "environments": "[\"Network_33\"]"
+        "content": "Subject: This is email template 29\n\nHi!\n\nThis is the auto-generated template number 29.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate29",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/31",
         "templateType": "Template",
-        "author": "admin",
         "id": 31,
-        "content": "Automated email body content for template 31",
-        "displayName": "EmailTemplate31",
-        "environments": "[\"Network_31\"]"
+        "content": "Subject: This is email template 28\n\nHi!\n\nThis is the auto-generated template number 28.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate28",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/30",
         "templateType": "Template",
-        "author": "admin",
         "id": 30,
-        "content": "Automated email body content for template 28",
-        "displayName": "EmailTemplate28",
-        "environments": "[\"Network_28\"]"
+        "content": "Subject: This is email template 27\n\nHi!\n\nThis is the auto-generated template number 27.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate27",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/29",
         "templateType": "Template",
-        "author": "admin",
         "id": 29,
-        "content": "Automated email body content for template 23",
-        "displayName": "EmailTemplate23",
-        "environments": "[\"Network_23\"]"
+        "content": "Subject: This is email template 26\n\nHi!\n\nThis is the auto-generated template number 26.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate26",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/28",
         "templateType": "Template",
-        "author": "admin",
         "id": 28,
-        "content": "Automated email body content for template 22",
-        "displayName": "EmailTemplate22",
-        "environments": "[\"Network_22\"]"
+        "content": "Subject: This is email template 25\n\nHi!\n\nThis is the auto-generated template number 25.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate25",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/27",
         "templateType": "Template",
-        "author": "admin",
         "id": 27,
-        "content": "Automated email body content for template 27",
-        "displayName": "EmailTemplate27",
-        "environments": "[\"Network_27\"]"
+        "content": "Subject: This is email template 24\n\nHi!\n\nThis is the auto-generated template number 24.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate24",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/26",
         "templateType": "Template",
-        "author": "admin",
         "id": 26,
-        "content": "Automated email body content for template 30",
-        "displayName": "EmailTemplate30",
-        "environments": "[\"Network_30\"]"
+        "content": "Subject: This is email template 23\n\nHi!\n\nThis is the auto-generated template number 23.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate23",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/25",
         "templateType": "Template",
-        "author": "admin",
         "id": 25,
-        "content": "Automated email body content for template 24",
-        "displayName": "EmailTemplate24",
-        "environments": "[\"Network_24\"]"
+        "content": "Subject: This is email template 22\n\nHi!\n\nThis is the auto-generated template number 22.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate22",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/24",
         "templateType": "Template",
-        "author": "admin",
         "id": 24,
-        "content": "Automated email body content for template 26",
-        "displayName": "EmailTemplate26",
-        "environments": "[\"Network_26\"]"
+        "content": "Subject: This is email template 21\n\nHi!\n\nThis is the auto-generated template number 21.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate21",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/23",
         "templateType": "Template",
-        "author": "admin",
         "id": 23,
-        "content": "Automated email body content for template 29",
-        "displayName": "EmailTemplate29",
-        "environments": "[\"Network_29\"]"
+        "content": "Subject: This is email template 20\n\nHi!\n\nThis is the auto-generated template number 20.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate20",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/22",
         "templateType": "Template",
-        "author": "admin",
         "id": 22,
-        "content": "Automated email body content for template 25",
-        "displayName": "EmailTemplate25",
-        "environments": "[\"Network_25\"]"
+        "content": "Subject: This is email template 19\n\nHi!\n\nThis is the auto-generated template number 19.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate19",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/21",
         "templateType": "Template",
-        "author": "admin",
         "id": 21,
-        "content": "Automated email body content for template 21",
-        "displayName": "EmailTemplate21",
-        "environments": "[\"Network_21\"]"
+        "content": "Subject: This is email template 18\n\nHi!\n\nThis is the auto-generated template number 18.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate18",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/20",
         "templateType": "Template",
-        "author": "admin",
         "id": 20,
-        "content": "Automated email body content for template 13",
-        "displayName": "EmailTemplate13",
-        "environments": "[\"Network_13\"]"
+        "content": "Subject: This is email template 17\n\nHi!\n\nThis is the auto-generated template number 17.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate17",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/19",
         "templateType": "Template",
-        "author": "admin",
         "id": 19,
-        "content": "Automated email body content for template 11",
-        "displayName": "EmailTemplate11",
-        "environments": "[\"Network_11\"]"
+        "content": "Subject: This is email template 38\n\nHi!\n\nThis is the auto-generated template number 38.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate38",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/18",
         "templateType": "Template",
-        "author": "admin",
         "id": 18,
-        "content": "Automated email body content for template 14",
-        "displayName": "EmailTemplate14",
-        "environments": "[\"Network_14\"]"
+        "content": "Subject: This is email template 37\n\nHi!\n\nThis is the auto-generated template number 37.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate37",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/17",
         "templateType": "Template",
-        "author": "admin",
         "id": 17,
-        "content": "Automated email body content for template 16",
-        "displayName": "EmailTemplate16",
-        "environments": "[\"Network_16\"]"
+        "content": "Subject: This is email template 14\n\nHi!\n\nThis is the auto-generated template number 14.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate14",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/16",
         "templateType": "Template",
-        "author": "admin",
         "id": 16,
-        "content": "Automated email body content for template 15",
-        "displayName": "EmailTemplate15",
-        "environments": "[\"Network_15\"]"
+        "content": "Subject: This is email template 12\n\nHi!\n\nThis is the auto-generated template number 12.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate12",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/15",
         "templateType": "Template",
-        "author": "admin",
         "id": 15,
-        "content": "Automated email body content for template 17",
-        "displayName": "EmailTemplate17",
-        "environments": "[\"Network_17\"]"
+        "content": "Subject: This is email template 10\n\nHi!\n\nThis is the auto-generated template number 10.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate10",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/14",
         "templateType": "Template",
-        "author": "admin",
         "id": 14,
-        "content": "Automated email body content for template 19",
-        "displayName": "EmailTemplate19",
-        "environments": "[\"Network_19\"]"
+        "content": "Subject: This is email template 8\n\nHi!\n\nThis is the auto-generated template number 8.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate8",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/13",
         "templateType": "Template",
-        "author": "admin",
         "id": 13,
-        "content": "Automated email body content for template 20",
-        "displayName": "EmailTemplate20",
-        "environments": "[\"Network_20\"]"
+        "content": "Subject: This is email template 16\n\nHi!\n\nThis is the auto-generated template number 16.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate16",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/12",
         "templateType": "Template",
-        "author": "admin",
         "id": 12,
-        "content": "Automated email body content for template 18",
-        "displayName": "EmailTemplate18",
-        "environments": "[\"Network_18\"]"
+        "content": "Subject: This is email template 15\n\nHi!\n\nThis is the auto-generated template number 15.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate15",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/11",
         "templateType": "Template",
-        "author": "admin",
         "id": 11,
-        "content": "Automated email body content for template 12",
-        "displayName": "EmailTemplate12",
-        "environments": "[\"Network_12\"]"
+        "content": "Subject: This is email template 13\n\nHi!\n\nThis is the auto-generated template number 13.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate13",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/10",
         "templateType": "Template",
-        "author": "admin",
         "id": 10,
-        "content": "Automated email body content for template 8",
-        "displayName": "EmailTemplate8",
-        "environments": "[\"Network_8\"]"
+        "content": "Subject: This is email template 11\n\nHi!\n\nThis is the auto-generated template number 11.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate11",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/9",
         "templateType": "Template",
-        "author": "admin",
         "id": 9,
-        "content": "Automated email body content for template 4",
-        "displayName": "EmailTemplate4",
-        "environments": "[\"Network_4\"]"
+        "content": "Subject: This is email template 9\n\nHi!\n\nThis is the auto-generated template number 9.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate9",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/8",
         "templateType": "Template",
-        "author": "admin",
         "id": 8,
-        "content": "Automated email body content for template 2",
-        "displayName": "EmailTemplate2",
-        "environments": "[\"Network_2\"]"
+        "content": "Subject: This is email template 7\n\nHi!\n\nThis is the auto-generated template number 7.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate7",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/7",
         "templateType": "Template",
-        "author": "admin",
         "id": 7,
-        "content": "Automated email body content for template 6",
-        "displayName": "EmailTemplate6",
-        "environments": "[\"Network_6\"]"
+        "content": "Subject: This is email template 6\n\nHi!\n\nThis is the auto-generated template number 6.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate6",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/6",
         "templateType": "Template",
-        "author": "admin",
         "id": 6,
-        "content": "Automated email body content for template 1",
-        "displayName": "EmailTemplate1",
-        "environments": "[\"Network_1\"]"
+        "content": "Subject: This is email template 5\n\nHi!\n\nThis is the auto-generated template number 5.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate5",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/5",
         "templateType": "Template",
-        "author": "admin",
         "id": 5,
-        "content": "Automated email body content for template 5",
-        "displayName": "EmailTemplate5",
-        "environments": "[\"Network_5\"]"
+        "content": "Subject: This is email template 4\n\nHi!\n\nThis is the auto-generated template number 4.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate4",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/4",
         "templateType": "Template",
-        "author": "admin",
         "id": 4,
-        "content": "Automated email body content for template 10",
-        "displayName": "EmailTemplate10",
-        "environments": "[\"Network_10\"]"
+        "content": "Subject: This is email template 3\n\nHi!\n\nThis is the auto-generated template number 3.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate3",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/3",
         "templateType": "Template",
-        "author": "admin",
         "id": 3,
-        "content": "Automated email body content for template 9",
-        "displayName": "EmailTemplate9",
-        "environments": "[\"Network_9\"]"
+        "content": "Subject: This is email template 2\n\nHi!\n\nThis is the auto-generated template number 2.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate2",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/2",
         "templateType": "Template",
-        "author": "admin",
         "id": 2,
-        "content": "Automated email body content for template 7",
-        "displayName": "EmailTemplate7",
-        "environments": "[\"Network_7\"]"
+        "content": "Subject: This is email template 1\n\nHi!\n\nThis is the auto-generated template number 1.\n\nThanks,\nAutomation Agent.",
+        "displayName": "SOAREmailTemplate1",
+        "environments": "[\"Default Environment\",\"Manual-Env-1001\",\"Manual-Env-1002\",\"Manual-Env-1003\",\"Manual-Env-1004\",\"Manual-Env-1005\",\"Manual-Env-1006\",\"Manual-Env-1007\",\"Manual-Env-1008\",\"Manual-Env-1009\",\"Manual-Env-101\",\"Manual-Env-1010\",\"Manual-Env-102\",\"Manual-Env-103\",\"Manual-Env-104\",\"Manual-Env-105\",\"Manual-Env-106\",\"Manual-Env-107\",\"Manual-Env-108\",\"Manual-Env-109\",\"Manual-Env-110\",\"Manual-Env-201\",\"Manual-Env-202\",\"Manual-Env-203\",\"Manual-Env-204\",\"Manual-Env-205\",\"Manual-Env-206\",\"Manual-Env-207\",\"Manual-Env-208\",\"Manual-Env-209\",\"Manual-Env-210\",\"Manual-Env-301\",\"Manual-Env-302\",\"Manual-Env-303\",\"Manual-Env-304\",\"Manual-Env-305\",\"Manual-Env-306\",\"Manual-Env-307\",\"Manual-Env-308\",\"Manual-Env-309\",\"Manual-Env-310\",\"Manual-Env-401\",\"Manual-Env-402\",\"Manual-Env-403\",\"Manual-Env-404\",\"Manual-Env-405\",\"Manual-Env-406\",\"Manual-Env-407\",\"Manual-Env-408\",\"Manual-Env-409\",\"Manual-Env-410\",\"Manual-Env-501\",\"Manual-Env-502\",\"Manual-Env-503\",\"Manual-Env-504\",\"Manual-Env-505\"]"
     },
     {
         "name": "projects/project/locations/location/instances/instance/emailTemplates/1",
         "templateType": "Template",
-        "author": "admin",
+        "author": "c00a0cc4-4c54-4557-b935-4f970a5001d9",
         "id": 1,
-        "content": "Automated email body content for template 3",
-        "displayName": "EmailTemplate3",
-        "environments": "[\"Network_3\"]"
+        "content": "Subject: Following up on [Original Subject Line]\n\nHi [Name],\n\nI hope you're doing well.\n\nI wanted to quickly follow up on the email I sent last week regarding [briefly mention topic]. I know your schedule is likely packed, but I wanted to ensure this didn't get buried in your inbox.\n\nWhenever you have a moment, please let me know your thoughts on [the specific question or deadline].\n\nThank you,\n\n[Your Name] > [Your Title]",
+        "displayName": "Email-template1",
+        "environments": "[\"Default Environment\"]"
     }
 ]

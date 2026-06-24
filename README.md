@@ -1,10 +1,22 @@
 # GitSync
 
+## Integrations
+|Name|Description|
+|----|-----------|
+|AWS Cloud Trail|AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure. CloudTrail provides event history of your AWS account activity, including actions taken through the AWS Management Console, AWS SDKs, command line tools, and other AWS services. This event history simplifies security analysis, resource change tracking, and troubleshooting. In addition, you can use CloudTrail to detect unusual activity in your AWS accounts. These capabilities help simplify operational analysis and troubleshooting.|
+|CA Service Desk Manager|CA Service Desk Manager is designed to help IT service desk analysts make every moment count through a dynamic experience so they can deliver great customer service without the fear of overbearing processes or metrics. With the solution, teams can embrace teamwork rather than working from siloed knowledge stashes and disjointed communications.|
+|Google Chronicle|Google SecOps enables you to examine the aggregated security information for your enterprise going back for months or longer. Use Google SecOps to search across all of the domains accessed from within your enterprise. To enable the Google API client to communicate with the Backstory API you will need Google Developer Service Account Credential, https://developers.google.com/identity/protocols/OAuth2#serviceaccount.|
+|Google SecOps AI Agents|This integration provides first-party AI agents for Google Chronicle. It allows users to leverage Google's advanced AI capabilities for security operations and threat intelligence within the Chronicle platform.|
+|McAfee Mvision EDR V2|McAfee MVISION Endpoint Detection and Response (MVISION EDR) is a cloud-delivered service that enables you to detect advanced device threats, fully investigate, and quickly respond. Continuous data collection and advanced analytics detect suspicious behavior.|
+
+
 ## Connectors
 |Name|Description|Has Mappings|
 |----|-----------|------------|
-|Connector_35_AWSCloudTrail|Pull insights from AWS Cloud Trail.|False|
-|Connector_54_AmazonMacie|Pull findings from Amazon Macie. Note: Whitelist works with Finding types, for example, SensitiveData:S3Object/Personal.|False|
+|101 AWS Cloud Trail - Insights Connector|Pull insights from AWS Cloud Trail.|True|
+|AWS Cloud Trail - Insights Connector|Pull insights from AWS Cloud Trail.|True|
+|Connector_35_AWSCloudTrail|Pull insights from AWS Cloud Trail.|True|
+|Connector_54_AmazonMacie|Pull findings from Amazon Macie. Note: Whitelist works with Finding types, for example, SensitiveData:S3Object/Personal.|True|
 |Connector_23_AnomaliStaxx|Pull indicators from Anomali Staxx|False|
 |Connector_19_Arcsight|Arcsight ESM Connector|False|
 |Connector_31_AzureADIdentityProtection|Pull information about risk detections from Azure AD Identity Protection. Note: whitelist filter works with "riskEventType" parameter.|False|
@@ -129,13 +141,85 @@
 |MITRE Enrichment|This block retrieves detailed information about MITRE ATT&CK techniques and their associated mitigations, providing valuable context to understand adversary behaviors and possible defensive actions.|
 |New Block|An embedded workflow that can receive inputs and return an output.|
 |New Playbook||
+|Playbook1- block and widget||
 |fresh New Block|An embedded workflow that can receive inputs and return an output.|
 |fresh New Playbook||
+|testing single block|An embedded workflow that can receive inputs and return an output.|
+
+
+## Visual Families
+|Name|Description|
+|----|-----------|
+|Copy of Copy of Visual Family 1|Test Description|
+|Copy of Visual Family 1|Test Description|
+|Generated Visual Family 1|Auto-generated description for Generated Visual Family 1|
+|Generated Visual Family 10|Auto-generated description for Generated Visual Family 10|
+|Generated Visual Family 11|Auto-generated description for Generated Visual Family 11|
+|Generated Visual Family 12|Auto-generated description for Generated Visual Family 12|
+|Generated Visual Family 13|Auto-generated description for Generated Visual Family 13|
+|Generated Visual Family 14|Auto-generated description for Generated Visual Family 14|
+|Generated Visual Family 15|Auto-generated description for Generated Visual Family 15|
+|Generated Visual Family 16|Auto-generated description for Generated Visual Family 16|
+|Generated Visual Family 17|Auto-generated description for Generated Visual Family 17|
+|Generated Visual Family 18|Auto-generated description for Generated Visual Family 18|
+|Generated Visual Family 19|Auto-generated description for Generated Visual Family 19|
+|Generated Visual Family 2|Auto-generated description for Generated Visual Family 2|
+|Generated Visual Family 20|Auto-generated description for Generated Visual Family 20|
+|Generated Visual Family 21|Auto-generated description for Generated Visual Family 21|
+|Generated Visual Family 22|Auto-generated description for Generated Visual Family 22|
+|Generated Visual Family 23|Auto-generated description for Generated Visual Family 23|
+|Generated Visual Family 24|Auto-generated description for Generated Visual Family 24|
+|Generated Visual Family 25|Auto-generated description for Generated Visual Family 25|
+|Generated Visual Family 26|Auto-generated description for Generated Visual Family 26|
+|Generated Visual Family 27|Auto-generated description for Generated Visual Family 27|
+|Generated Visual Family 28|Auto-generated description for Generated Visual Family 28|
+|Generated Visual Family 29|Auto-generated description for Generated Visual Family 29|
+|Generated Visual Family 3|Auto-generated description for Generated Visual Family 3|
+|Generated Visual Family 30|Auto-generated description for Generated Visual Family 30|
+|Generated Visual Family 31|Auto-generated description for Generated Visual Family 31|
+|Generated Visual Family 32|Auto-generated description for Generated Visual Family 32|
+|Generated Visual Family 33|Auto-generated description for Generated Visual Family 33|
+|Generated Visual Family 34|Auto-generated description for Generated Visual Family 34|
+|Generated Visual Family 35|Auto-generated description for Generated Visual Family 35|
+|Generated Visual Family 36|Auto-generated description for Generated Visual Family 36|
+|Generated Visual Family 37|Auto-generated description for Generated Visual Family 37|
+|Generated Visual Family 38|Auto-generated description for Generated Visual Family 38|
+|Generated Visual Family 39|Auto-generated description for Generated Visual Family 39|
+|Generated Visual Family 4|Auto-generated description for Generated Visual Family 4|
+|Generated Visual Family 40|Auto-generated description for Generated Visual Family 40|
+|Generated Visual Family 41|Auto-generated description for Generated Visual Family 41|
+|Generated Visual Family 42|Auto-generated description for Generated Visual Family 42|
+|Generated Visual Family 43|Auto-generated description for Generated Visual Family 43|
+|Generated Visual Family 44|Auto-generated description for Generated Visual Family 44|
+|Generated Visual Family 45|Auto-generated description for Generated Visual Family 45|
+|Generated Visual Family 46|Auto-generated description for Generated Visual Family 46|
+|Generated Visual Family 47|Auto-generated description for Generated Visual Family 47|
+|Generated Visual Family 48|Auto-generated description for Generated Visual Family 48|
+|Generated Visual Family 49|Auto-generated description for Generated Visual Family 49|
+|Generated Visual Family 5|Auto-generated description for Generated Visual Family 5|
+|Generated Visual Family 50|Auto-generated description for Generated Visual Family 50|
+|Generated Visual Family 51|Auto-generated description for Generated Visual Family 51|
+|Generated Visual Family 52|Auto-generated description for Generated Visual Family 52|
+|Generated Visual Family 53|Auto-generated description for Generated Visual Family 53|
+|Generated Visual Family 54|Auto-generated description for Generated Visual Family 54|
+|Generated Visual Family 55|Auto-generated description for Generated Visual Family 55|
+|Generated Visual Family 56|Auto-generated description for Generated Visual Family 56|
+|Generated Visual Family 57|Auto-generated description for Generated Visual Family 57|
+|Generated Visual Family 58|Auto-generated description for Generated Visual Family 58|
+|Generated Visual Family 59|Auto-generated description for Generated Visual Family 59|
+|Generated Visual Family 6|Auto-generated description for Generated Visual Family 6|
+|Generated Visual Family 60|Auto-generated description for Generated Visual Family 60|
+|Generated Visual Family 7|Auto-generated description for Generated Visual Family 7|
+|Generated Visual Family 8|Auto-generated description for Generated Visual Family 8|
+|Generated Visual Family 9|Auto-generated description for Generated Visual Family 9|
+|Visual Family 1|Test Description|
+|v1alpha Test Family With Rule|Test Description|
 
 
 ## Jobs
 |Name|Description|
 |----|-----------|
+|CA Close Ticket In CA For Closed Case|Sync closure of the tickets at the CA Desk Manager with Siemplify cases closure.|
 |Job_1|Automated marketplace job 1 for QRadar|
 |Job_10|Automated marketplace job 10 for ServiceNow|
 |Job_11|Automated marketplace job 11 for Splunk|
@@ -186,4 +270,7 @@
 |Job_7|Automated marketplace job 7 for ServiceNow|
 |Job_8|Automated marketplace job 8 for ServiceNow|
 |Job_9|Automated marketplace job 9 for ServiceNow|
+|Sync Comments|Sync comments from CA Desk Manager to Siemplify.|
+|Sync Incidents V2|Use the Sync Incidents V2 job to synchronize Google SecOps alerts with Microsoft Sentinel incidents. This job ensures that comments, statuses, and tags are synchronized bi-directionally between both systems. Note: Assignee and severity synchronization occurs exclusively from Microsoft Sentinel to Google SecOps. For the job to identify the correct information, the Google SecOps case must have the Microsoft Sentinel Incident tag. This job only works on alerts from the Microsoft Azure Sentinel Incident Connector v2.|
+|Sync Incidents|Deprecated. This job synchronizes Google SecOps Alerts and Microsoft Sentinel Incidents. It ensures that comments, status, and tags are kept in sync between the two systems. For the job to identify the correct information, the Google SecOps case must have the “Microsoft Sentinel Incident” tag. If the alert didn’t originate from “Microsoft Azure Sentinel Incident Connector v2”,  you will need to add an “Incident_ID” context value to the case for the job to be able to find the correct information.|
 

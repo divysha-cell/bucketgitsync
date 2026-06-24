@@ -15,17 +15,6 @@
         "source": "GoogleChronicle",
         "familyName": "Default",
         "familyId": 0,
-        "product": null,
-        "eventName": "EMAIL_TRANSACTION",
-        "mappingStatus": null,
-        "changeSource": "ChangeSourceUnspecified",
-        "exampleEventFields": []
-    },
-    {
-        "id": 0,
-        "source": "GoogleChronicle",
-        "familyName": "Default",
-        "familyId": 0,
         "product": "IOC",
         "eventName": null,
         "mappingStatus": null,
