@@ -8,3 +8,9 @@
 |AlgoSec|Manage your network security effectively, swiftly, and confidently. No matter where your network lives. Gain complete visibility, automate changes, and always be compliant.|
 |Google Chronicle|Google SecOps enables you to examine the aggregated security information for your enterprise going back for months or longer. Use Google SecOps to search across all of the domains accessed from within your enterprise. To enable the Google API client to communicate with the Backstory API you will need Google Developer Service Account Credential, https://developers.google.com/identity/protocols/OAuth2#serviceaccount.|
 
+
+## Visual Families
+|Name|Description|
+|----|-----------|
+|Copy of OS|User activity on machine|
+
