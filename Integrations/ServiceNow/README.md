@@ -3,7 +3,7 @@
 
 An incident ticketing integration exchanges ticket data between your ServiceNow instance and Google SecOps system.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
@@ -112,9 +112,9 @@ Timeout - 600 Seconds
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
 |Short Description|Specify short description of the incident.|True|String||
-|Impact|Specify impact of the incident. Possible values: 1 for High, 2 for Medium and 3 for Low.|True|String|1|
-|Urgency|Specify urgency of the incident. Possible values: 1 for High, 2 for Medium and 3 for Low.|True|String|1|
-|Category|Specify category of the incident.|False|String|network|
+|Impact|Specify impact of the incident. Possible values: 1 for High, 2 for Medium and 3 for Low.|True|String||
+|Urgency|Specify urgency of the incident. Possible values: 1 for High, 2 for Medium and 3 for Low.|True|String||
+|Category|Specify category of the incident.|False|String||
 |Assignment group ID|Specify full name of the group that was assigned to the incident.|False|String||
 |Assigned User ID|Specify full name or the username of the user that was assigned to the incident.|False|String||
 |Description|Specify description of the incident.|False|Content||
@@ -201,7 +201,7 @@ Timeout - 600 Seconds
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
 |Incident Number|Specify number of the incident. Format: INCxxxxxxx|True|String||
-|Comment|Specify what comment to add to the incident.|True|Content||
+|Comment|Specify what comment to add to the incident.|True|Content|test|
 
 
 
@@ -570,7 +570,7 @@ This job will synchronize closed ServiceNow incidents and Google SecOps alerts. 
 |Client Secret|False|Password|*****|
 |Refresh Token|False|Password|*****|
 |Use Oauth Authentication|False|Boolean|false|
-|Max Hours Backwards|False|Integer|24|
+|Max Hours Backwards|False|Int|24|
 |Table Name|True|String||
 
 #### Sync Incidents Job
@@ -582,7 +582,7 @@ This job will synchronize incidents fields and attachments that are related to c
 |Username|True|String||
 |Password|True|Password|*****|
 |Sync Level|True|String|Case|
-|Max Hours Backwards|True|Integer|24|
+|Max Hours Backwards|True|Int|24|
 |Verify SSL|False|Boolean|true|
 
 
@@ -593,9 +593,6 @@ Fetching incidents from ServiceNow to Siemplify
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|DeviceProductField|The field name used to determine the device product|True|String|Product Name|
-|EventClassId|The field name used to determine the event name (sub-type)|False|String|sys_class_name|
-|PythonProcessTimeout|The timeout limit (in seconds) for the python process running current script|True|String|60|
 |Rule Generator|The field name used to determine the rule generator.|False|String||
 |Api Root|https://{dev-instance}.service-now.com/api/now/v1/|True|String||
 |Incident Table|This parameter is defining what API root ServiceNow integration is going to use for actions that revolve around incidents. By default the integration uses the “table/incident” path. |False|String|incident|
@@ -608,9 +605,9 @@ Fetching incidents from ServiceNow to Siemplify
 |Assignment Group|Name of the assignment group for which you want to ingest records.|False|String||
 |Use sys_domain Environment|When enabled, the connector will use the incident's 'sys_domain' from ServiceNow as the environment for the ingested case. If the field doesn't exist, connector will use the environment defined in the 'Environment' parameter.|False|Boolean|true|
 |Use Oauth Authentication|If enabled, integration will use Oauth authentication. Parameters “Client ID“, “Client Secret“ and “Refresh Token“ are mandatory.|False|Boolean|false|
-|Days Backwards|Fetch incidents from 'x' days backwards. e.g. 3|False|Integer|5|
+|Days Backwards|Fetch incidents from 'x' days backwards. e.g. 3|False|Int|5|
 |Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|Boolean|false|
-|Max Incidents Per Cycle|Fetch max 'x' incidents. e.g. 10|False|Integer|10|
+|Max Incidents Per Cycle|Fetch max 'x' incidents. e.g. 10|False|Int|10|
 |Server Time Zone|The timezone configured in the server, ex. UTC, Asia/Jerusalem etc.|False|String|UTC|
 |Environments Whitelist|The environments (domains) to ingest into Siemplify, comma separated list (env1,env2)|False|String||
 |Table Name|The table to fetch from. e.g. incident|False|String||

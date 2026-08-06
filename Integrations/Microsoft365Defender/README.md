@@ -3,7 +3,7 @@
 
 Microsoft 365 Defender is a unified pre- and post-breach enterprise defense suite that natively coordinates detection, prevention, investigation, and response across endpoints, identities, email, and applications to provide integrated protection against sophisticated attacks.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
@@ -57,53 +57,6 @@ Python Version - 3
 
 
 ## Actions
-#### Ping
-Test connectivity to the Microsoft 365 Defender with parameters provided at the integration configuration page on the Marketplace tab.
-Timeout - 600 Seconds
-
-
-
-#### Execute Query
-Execute hunting query in Microsoft 365 Defender.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|End Time|Specify the end time for the results. Format: ISO 8601. If nothing is provided and "Custom" is selected for the "Time Frame" parameter then this parameter will use current time.|False|String||
-|Fields To Return|Specify what fields to return.|False|String||
-|Sort Field|Specify what parameter should be used for sorting.|False|String|Timestamp|
-|Sort Order|Specify the order of sorting.|False|List|ASC|
-|Max Results To Return|Specify how many results to return. Default: 50.|False|String|50|
-|Table Names|Specify what tables should be queried.|True|String||
-|Query|Specify the query that needs to be executed. Use this parameter to provide |where clauses. Note: you don’t need to provide time filter, limiting and sorting.|False|String||
-|Time Frame|Specify a time frame for the results. If "Custom" is selected, you also need to provide "Start Time".|False|List|Last Hour|
-|Start Time|Specify the start time for the results. This parameter is mandatory, if "Custom" is selected for the "Time Frame" parameter. Format: ISO 8601|False|String||
-
-
-
-##### JSON Results
-```json
-[{"Timestamp":"2021-04-12T07:25:00Z","AlertId":"fa7a318954-6c4c-eaab-xxx-xxxxxxxxxx","Title":"CC_Sensitive information","Category":"InitialAccess","Severity":"Medium","ServiceSource":"Microsoft Defender for Office 365","DetectionSource":"Microsoft Defender for Office 365","AttackTechniques":""}]
-```
-
-
-
-#### Update Incident
-Update incident in Microsoft 365 Defender.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Incident ID|Specify the id of the incident that needs to be updated.|True|String||
-|Status|Specify what status to set for the incident.|False|List|Select One|
-|Classification|Specify what classification to set for the incident..|False|List|Select One|
-|Determination|Specify what determination to set for the incident. Note: determination can only be set, when classification is true positive.|False|List|Select One|
-|Assign To|Specify to whom to assign this incident.|False|String||
-
-
-
 #### Add Comment To Incident
 Add comment to incident in Microsoft 365 Defender.
 Timeout - 600 Seconds
@@ -113,25 +66,6 @@ Timeout - 600 Seconds
 |----|-----------|-----------|----|------------|
 |Incident ID|Specify the id of the incident that needs to be updated.|True|String||
 |Comment|Specify the comment that needs to be added to the incident.|True|String||
-
-
-
-#### Execute Custom Query
-Execute a custom hunting query in Microsoft 365 Defender.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Query|Specify the query that needs to be executed. Use this parameter to provide |where clauses. Note: Note: you don't need to provide a limiting ("top" keyword).|True|String||
-|Max Results To Return|Specify how many results to return. Default: 50.|False|String|50|
-
-
-
-##### JSON Results
-```json
-[{"Timestamp":"2021-04-12T07:25:00Z","AlertId":"fa7a318954-6c4c-eaab-xxx-xxxxxxxxxx","Title":"CC_Sensitive information","Category":"InitialAccess","Severity":"Medium","ServiceSource":"Microsoft Defender for Office 365","DetectionSource":"Microsoft Defender for Office 365","AttackTechniques":""}]
-```
 
 
 
@@ -168,6 +102,72 @@ Timeout - 600 Seconds
 
 
 
+#### Execute Query
+Execute hunting query in Microsoft 365 Defender.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Table Names|Specify what tables should be queried.|True|String||
+|Query|Specify the query that needs to be executed. Use this parameter to provide |where clauses. Note: you don’t need to provide time filter, limiting and sorting.|False|String||
+|Time Frame|Specify a time frame for the results. If "Custom" is selected, you also need to provide "Start Time".|False|List|Last Hour|
+|Start Time|Specify the start time for the results. This parameter is mandatory, if "Custom" is selected for the "Time Frame" parameter. Format: ISO 8601|False|String||
+|End Time|Specify the end time for the results. Format: ISO 8601. If nothing is provided and "Custom" is selected for the "Time Frame" parameter then this parameter will use current time.|False|String||
+|Fields To Return|Specify what fields to return.|False|String||
+|Sort Field|Specify what parameter should be used for sorting.|False|String|Timestamp|
+|Sort Order|Specify the order of sorting.|False|List|ASC|
+|Max Results To Return|Specify how many results to return. Default: 50.|False|String|50|
+
+
+
+##### JSON Results
+```json
+[{"Timestamp":"2021-04-12T07:25:00Z","AlertId":"fa7a318954-6c4c-eaab-xxx-xxxxxxxxxx","Title":"CC_Sensitive information","Category":"InitialAccess","Severity":"Medium","ServiceSource":"Microsoft Defender for Office 365","DetectionSource":"Microsoft Defender for Office 365","AttackTechniques":""}]
+```
+
+
+
+#### Ping
+Test connectivity to the Microsoft 365 Defender with parameters provided at the integration configuration page on the Marketplace tab.
+Timeout - 600 Seconds
+
+
+
+#### Update Incident
+Update incident in Microsoft 365 Defender.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Incident ID|Specify the id of the incident that needs to be updated.|True|String||
+|Status|Specify what status to set for the incident.|False|List|Select One|
+|Classification|Specify what classification to set for the incident..|False|List|Select One|
+|Determination|Specify what determination to set for the incident. Note: determination can only be set, when classification is true positive.|False|List|Select One|
+|Assign To|Specify to whom to assign this incident.|False|String||
+
+
+
+#### Execute Custom Query
+Execute a custom hunting query in Microsoft 365 Defender.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Query|Specify the query that needs to be executed. Use this parameter to provide |where clauses. Note: Note: you don't need to provide a limiting ("top" keyword).|True|String||
+|Max Results To Return|Specify how many results to return. Default: 50.|False|String|50|
+
+
+
+##### JSON Results
+```json
+[{"Timestamp":"2021-04-12T07:25:00Z","AlertId":"fa7a318954-6c4c-eaab-xxx-xxxxxxxxxx","Title":"CC_Sensitive information","Category":"InitialAccess","Severity":"Medium","ServiceSource":"Microsoft Defender for Office 365","DetectionSource":"Microsoft Defender for Office 365","AttackTechniques":""}]
+```
+
+
+
 
 
 
@@ -185,7 +185,7 @@ This job synchronizes Google SecOps Alerts and Microsoft Defender XDR Alerts. It
 |Tenant ID|True|String||
 |Client ID|True|String||
 |Client Secret|True|Password|*****|
-|Max Hours Backwards|True|Integer|24|
+|Max Hours Backwards|True|Int|24|
 |Sync Assignee|False|Boolean|false|
 |Verify SSL|False|Boolean|true|
 
@@ -197,14 +197,17 @@ Pull information about incidents and related alerts from Microsoft 365 Defender.
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
+|Incident Assignee Filter|A comma-separated list of assignees of incidents that need to be ingested.|False|String||
+|Incident Tags Filter|A comma-separated list of tags of incidents that need to be ingested.|False|String||
+|Use whitelist as a blacklist|If enabled, whitelist will be used as a blacklist.|False|Boolean|false|
+|Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|Boolean|true|
+|Lowest Alert Severity To Fetch|Lowest severity that will be used to fetch alerts. Possible values: Informational, Low, Medium, High.|False|String||
+|Disable Alert Tracking|If enabled, the connector will stop tracking updates associated with alerts.|False|Boolean|false|
 |Proxy Server Address|The address of the proxy server to use.|False|String||
 |Proxy Username|The proxy username to authenticate with.|False|String||
 |Proxy Password|The proxy password to authenticate with.|False|Password|*****|
-|DeviceProductField|Enter the source field name in order to retrieve the Product Field name.|True|String|event_type|
-|EventClassId|Enter the source field name in order to retrieve the Event Field name.|True|String|@odata.type|
 |Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|String||
 |Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|String|.*|
-|PythonProcessTimeout|Timeout limit for the python process running the current script.|True|Integer|180|
 |Login API Root|Login API root of the Microsoft 365 Defender instance.|True|String|https://login.microsoftonline.com|
 |Graph API Root|API root of the Microsoft Graph service.|True|String|https://graph.microsoft.com|
 |Tenant ID|Microsoft 365 Defender account tenant ID.|True|String||
@@ -212,16 +215,12 @@ Pull information about incidents and related alerts from Microsoft 365 Defender.
 |Client Secret|Microsoft 365 Defender account client secret.|True|Password|*****|
 |Verify SSL|If enabled, verify the SSL certificate for the connection to the Microsoft 365 Defender server is valid.|False|Boolean|true|
 |Lowest Severity To Fetch|Lowest severity that will be used to fetch incidents. Possible values: Informational, Low, Medium, High.|False|String||
-|Max Hours Backwards|Number of hours before the first connector iteration to retrieve incidents from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|Integer|1|
-|Max Incidents To Fetch|How many incidents  to process per one connector iteration. Maximum is 20.|False|Integer|10|
+|Max Hours Backwards|Number of hours before the first connector iteration to retrieve incidents from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|Int|1|
+|Max Incidents To Fetch|How many incidents  to process per one connector iteration. Maximum is 20.|False|Int|10|
 |Dynamic List Field|Field that can be used in the dynamic list for filtering. Possible values: Incident Name, Alert Name. If nothing is provided, connector will work with the incident name.|False|String|Incident Name|
 |Incident Status Filter|A comma-separated list of incident statuses that need to be ingested. If nothing is provided, the connector will ingest incidents with status “Active” and “In Progress”. Possible values:Active, In Progress, Resolved, Redirected.Note: it’s not recommended to ingest redirected incidents, because in most situations they will be empty.|False|String|Active, In Progress|
 |Alert Detection Source Filter|A comma-separated list of detection sources of alerts that need to be ingested. Note: this is a case sensitive parameter. Example of the values:antivirus, microsoftDefenderForEndpoint|False|String||
 |Alert Service Source Filter|A comma-separated list of service sources of alerts that need to be ingested. Note: this is a case sensitive parameter. Example of the values:antivirus, microsoftDefenderForEndpoint|False|String||
-|Use whitelist as a blacklist|If enabled, whitelist will be used as a blacklist.|False|Boolean|false|
-|Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|Boolean|true|
-|Lowest Alert Severity To Fetch|Lowest severity that will be used to fetch alerts. Possible values: Informational, Low, Medium, High.|False|String||
-|Disable Alert Tracking|If enabled, the connector will stop tracking updates associated with alerts.|False|Boolean|false|
 
 
 
