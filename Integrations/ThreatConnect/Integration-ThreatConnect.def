@@ -1,0 +1,106 @@
+{
+    "IsAvailableForCommunity": false,
+    "Identifier": "ThreatConnect",
+    "ShouldInstalledInSystem": false,
+    "Version": 19.0,
+    "DisplayName": "Threat Connect",
+    "Description": "An integration utilizing the ThreatConnect v3 REST API to manage and enrich threat intelligence indicators.",
+    "ImageBase64": "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",
+    "SvgImage": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 50 50\" style=\"enable-background:new 0 0 50 50;\" xml:space=\"preserve\">\n<path d=\"M11.5,15.6c2.7-0.5,4.5-2.9,4.2-5.6c-0.2-2.1-1.8-3.9-3.9-4.4c-0.3-0.1-0.5-0.1-0.8-0.2h-0.8C9.9,5.5,9.6,5.5,9.4,5.6\n\tc-2,0.5-3.6,2.2-3.9,4.2c0,0.1,0,0.2-0.1,0.3V11c0,0.2,0.1,0.4,0.1,0.6C6.1,14.2,8.6,16.2,11.5,15.6z M37,18.1\n\tc1.3-1.1,2.7-2,4.3-2.7c0.6-0.3,1.2-0.6,1.7-1.1c0.8-0.8,1.4-1.8,1.5-3c0-0.1,0-0.3,0.1-0.4v-0.7c-0.1-0.3-0.1-0.6-0.2-0.9\n\tc-0.5-2-2.2-3.6-4.3-3.9c-0.1,0-0.2,0-0.4-0.1H39c-0.3,0.1-0.6,0.1-0.9,0.2c-1.7,0.5-2.9,1.5-3.5,3.1c-1.7,4.1-4.6,6.8-8.9,8\n\tc-0.6,0.2-1.2,0.3-1.9,0.4c-3.5,0.9-6.4,3.9-7,7.5c-0.6,3.7-2.6,6.5-5.6,8.6c-0.8,0.6-1.7,1-2.7,1.4c-1.9,0.8-2.9,2.2-3.2,4.2\n\tc0,0,0,0.1,0,0.1v0.9c0,0.2,0.1,0.4,0.1,0.7c0.4,2.1,2.2,3.7,4.3,4c0.1,0,0.2,0,0.3,0.1H11c0.3-0.1,0.6-0.1,0.8-0.2\n\tc1.5-0.4,2.7-1.3,3.4-2.8c0.9-2,2.1-3.8,3.6-5.4c1-1.1,2.2-2,3.6-2.6c2.1-0.9,4.1-0.6,6.1,0.4c1.4,0.8,2.5,1.8,3.4,3\n\tc1.1,1.4,2,2.9,2.8,4.4c0.8,1.8,2.3,2.8,4.2,3c0,0,0.1,0,0.1,0h0.8c0.3-0.1,0.6-0.1,0.9-0.2c2-0.5,3.6-2.2,3.8-4.3\n\tc0-0.1,0-0.2,0.1-0.4v-0.7c0-0.3-0.1-0.6-0.1-0.8c-0.4-1.7-1.4-2.8-3-3.6c-1.9-0.9-3.7-2.1-5.3-3.5c-0.9-0.8-1.6-1.7-2.2-2.8\n\tc-0.6-1.2-1-2.4-0.9-3.7c0.1-1.2,0.4-2.2,1-3.2C34.9,20.1,35.9,19.1,37,18.1z M25,27.7c-1.5,0-2.7-1.2-2.7-2.7\n\tc0-1.5,1.2-2.7,2.7-2.7c1.5,0,2.7,1.2,2.7,2.7C27.7,26.5,26.5,27.7,25,27.7z\"/>\n</svg>\n",
+    "IsCustom": false,
+    "PythonVersion": 3,
+    "IntegrationProperties": [
+        {
+            "IntegrationIdentifier": "ThreatConnect",
+            "PropertyName": "API Root",
+            "PropertyDescription": "The base URL of the ThreatConnect API instance.",
+            "PropertyDisplayName": "API Root",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": "https://partners.threatconnect.com/api",
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1786095430353,
+            "ModificationTimeUnixTimeInMs": 1786095430353
+        },
+        {
+            "IntegrationIdentifier": "ThreatConnect",
+            "PropertyName": "API Access ID",
+            "PropertyDescription": "The Unique Access ID generated from the ThreatConnect platform.",
+            "PropertyDisplayName": "API Access ID",
+            "PropertyType": 2,
+            "IsMandatory": true,
+            "Value": null,
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1786095430353,
+            "ModificationTimeUnixTimeInMs": 1786095430353
+        },
+        {
+            "IntegrationIdentifier": "ThreatConnect",
+            "PropertyName": "API Secret Key",
+            "PropertyDescription": "The Secret Key associated with the Access ID.",
+            "PropertyDisplayName": "API Secret Key",
+            "PropertyType": 3,
+            "IsMandatory": true,
+            "Value": null,
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1786095430353,
+            "ModificationTimeUnixTimeInMs": 1786095430353
+        },
+        {
+            "IntegrationIdentifier": "ThreatConnect",
+            "PropertyName": "Verify SSL",
+            "PropertyDescription": "If selected, the integration validates the SSL certificate when connecting to the server. Selected by default.",
+            "PropertyDisplayName": "Verify SSL",
+            "PropertyType": 0,
+            "IsMandatory": false,
+            "Value": "true",
+            "Id": 0,
+            "CreationTimeUnixTimeInMs": 1786095430353,
+            "ModificationTimeUnixTimeInMs": 1786095430353
+        }
+    ],
+    "IntegrationSupportedActions": [
+        {
+            "Name": "Ping",
+            "Description": "Use the Ping action to test the connectivity to the ThreatConnect platform.",
+            "Id": 429,
+            "CreationTimeUnixTimeInMs": 1786095430371,
+            "ModificationTimeUnixTimeInMs": 1786095430371
+        },
+        {
+            "Name": "Enrich Entities",
+            "Description": "Enrich IP addresses, hosts, URLs and hashes with information from ThreatConnect",
+            "Id": 430,
+            "CreationTimeUnixTimeInMs": 1786095430371,
+            "ModificationTimeUnixTimeInMs": 1786095430371
+        },
+        {
+            "Name": "Execute HTTP Request",
+            "Description": "Use the Execute HTTP Request action to construct and execute a customized HTTP API request against a target URL.",
+            "Id": 431,
+            "CreationTimeUnixTimeInMs": 1786095430371,
+            "ModificationTimeUnixTimeInMs": 1786095430371
+        }
+    ],
+    "Categories": [
+        "Threat Intelligence",
+        "Security"
+    ],
+    "HasConnectors": false,
+    "DocumentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/threatconnect",
+    "IsCertified": false,
+    "UploaderFullName": null,
+    "PublishComment": null,
+    "UploaderEmail": null,
+    "UploaderImageBase64": null,
+    "UploaderProfileLink": null,
+    "MinimumSystemVersion": 0.0,
+    "ProductionIntegrationIdentifier": null,
+    "Type": 0,
+    "Internal": false,
+    "GoogleSecOpsProduct": false,
+    "Id": 0,
+    "CreationTimeUnixTimeInMs": 1786095430353,
+    "ModificationTimeUnixTimeInMs": 1786095430353,
+    "Custom": false
+}

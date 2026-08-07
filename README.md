@@ -3,9 +3,13 @@
 ## Integrations
 |Name|Description|
 |----|-----------|
+|CrowdStrike Falcon|CrowdStrike Falcon is the leader in next-generation endpoint protection, threat intelligence and incident response through cloud-based endpoint protection.|
 |Google Chronicle|Google SecOps enables you to examine the aggregated security information for your enterprise going back for months or longer. Use Google SecOps to search across all of the domains accessed from within your enterprise. To enable the Google API client to communicate with the Backstory API you will need Google Developer Service Account Credential, https://developers.google.com/identity/protocols/OAuth2#serviceaccount.|
+|MISP|MISP is an open source software solution for collecting, storing, distributing and sharing cyber security indicators and threat about cyber security incidents|
 |Microsoft 365 Defender|Microsoft 365 Defender is a unified pre- and post-breach enterprise defense suite that natively coordinates detection, prevention, investigation, and response across endpoints, identities, email, and applications to provide integrated protection against sophisticated attacks.|
 |ServiceNow|An incident ticketing integration exchanges ticket data between your ServiceNow instance and Google SecOps system.|
+|Threat Connect|An integration utilizing the ThreatConnect v3 REST API to manage and enrich threat intelligence indicators.|
+|Tools|A set of utility actions for data manipulation and common platform tasks to power up playbook capabilities.|
 
 
 ## Visual Families
